@@ -11425,7 +11425,7 @@ section.resume-section .resume-section-content {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 70vh;
+    min-height: 65vh;
   }
 }
 @media (min-width: 992px) {
