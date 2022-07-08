@@ -14,7 +14,6 @@ jobs:
         with: 
           repository: vanvuvuong/vanvuvuong.github.io.git
           token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
-          # token: ${{ secrets.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 }}
 
       - name: Pull & update submodules recursively
         run: |
