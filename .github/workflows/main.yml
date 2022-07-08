@@ -7,10 +7,15 @@ on:
 
 jobs:
   update:
+    name: 'Submodule Sync'
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        shell: bash
     steps:
-      - uses: actions/checkout@v2
+      # checkout the repository to githubaction runner
+      - name: Checkout
+        uses: actions/checkout@v2
         with: 
           repository: vanvuvuong/vanvuvuong.github.io.git
           token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
