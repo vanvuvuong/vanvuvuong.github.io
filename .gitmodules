@@ -6,4 +6,4 @@
 	url = https://github.com/vanvuvuong/codium_configuration.git
 [submodule "nla-python"]
 	path = nla-python
-	url = git@github.com:vanvuvuong/nla-python.git
+	url = https://github.com/vanvuvuong/nla-python.git
