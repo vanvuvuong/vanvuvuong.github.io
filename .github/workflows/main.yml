@@ -13,12 +13,18 @@ jobs:
       run:
         shell: bash
     steps:
-      # checkout the repository to githubaction runner
+      # checkout the repository to github action runner
       - name: Checkout
         uses: actions/checkout@v3
         with: 
           repository: vanvuvuong/vanvuvuong.github.io.git
           token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
+          run: |
+            echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
+            echo "github.workspace = ${{ github.workspace }}"
+            echo "pr.ref = ${{github.event.pull_request.head.ref}}"
+            echo "github.ref = ${{ github.ref }}"
+            echo "$GITHUB_CONTEXT"
 
       - name: Pull & update submodules recursively
         run: |
