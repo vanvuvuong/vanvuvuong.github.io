@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          repository: https://github.com/vanvuvuong/vanvuvuong.github.io.git
+          repository: vanvuvuong/vanvuvuong.github.io.git
           token: ${{ secrets.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 }}
 
       - name: Pull & update submodules recursively
