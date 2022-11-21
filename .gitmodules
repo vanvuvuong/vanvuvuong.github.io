@@ -7,3 +7,6 @@
 [submodule "nla-python"]
 	path = nla-python
 	url = https://github.com/vanvuvuong/nla-python.git
+[submodule "telegram-frontendd"]
+	path = telegram-frontendd
+	url = git@github.com:vanvuvuong/telegram-frontendd.git
