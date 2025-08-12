@@ -3,6 +3,7 @@
 
 ### NextJS ###
 # Dependencies
+*.pdf
 /node_modules
 /.pnp
 .pnp.js
