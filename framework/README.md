@@ -1,15 +1,15 @@
 # Bộ khung tư duy nền tảng
 
-## [Bộ câu hỏi của Edward de Bono](./câu%20hỏi.md)
+## [Bộ câu hỏi của Edward de Bono](./ch.html)
 
-## [Kiểm soát hành vi](./kshv.md)
+## [Kiểm soát hành vi](./kshv.html)
 
-## [Nền tảng tự nhiên MBTI](./nn-mbti.md)
+## [Nền tảng tự nhiên MBTI](./nn-mbti.html)
 
-## [Nền tảng tự nhiên OCEAN](./nn-big5.md)
+## [Nền tảng tự nhiên OCEAN](./nn-big5.html)
 
-## [Quan sát nhân viên](./qsnv.md)
+## [Quan sát nhân viên](./qsnv.html)
 
-## [Quan sát phụ nữ](./qspn.md)
+## [Quan sát phụ nữ](./qspn.html)
 
-## [Thần chú của Luật tự nhiên](./nl-mantra.md)
+## [Thần chú của Luật tự nhiên](./nl-mantra.html)
