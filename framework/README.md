@@ -4,6 +4,8 @@
 
 ## [Kiểm soát hành vi](./kshv.html)
 
+## [Lãnh đạo và quản lý<](./lm.html)
+
 ## [Nền tảng tự nhiên MBTI](./nn-mbti.html)
 
 ## [Nền tảng tự nhiên OCEAN](./nn-big5.html)
