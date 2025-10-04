@@ -1,3 +1,14 @@
+# Generated files by hugo
+public/
+resources/_gen/
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# End of https://mrkandreev.name/snippets/gitignore-generator/#Hugo
+
 # Created by https://www.toptal.com/developers/gitignore/api/node,react,reactnative,nextjs,storybookjs,yarn
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,react,reactnative,nextjs,storybookjs,yarn
 
