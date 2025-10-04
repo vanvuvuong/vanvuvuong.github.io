@@ -1,3 +1,9 @@
 [submodule "ltvtd"]
 	path = ltvtd
 	url = https://github.com/vanvuvuong/ltvtd
+[submodule "blogs/themes/ananke"]
+	path = blogs/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "blogs/themes/doks"]
+	path = blogs/themes/doks
+	url = https://github.com/thuliteio/doks.git
