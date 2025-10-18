@@ -1,6 +1,6 @@
 # Generated files by hugo
-public/
-resources/_gen/
+acme-corporation/public/
+acme-corporation/resources/_gen/
 
 # Executable may be added to repository
 hugo.exe
