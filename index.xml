@@ -1,1 +1,228 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tran Dinh Dong Personal Blog on Tran Dinh Dong Blog</title><link>https://example.org/</link><description>Recent content in Tran Dinh Dong Personal Blog on Tran Dinh Dong Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://example.org/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/contact/</guid><description/></item><item><title/><link>https://example.org/terms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/terms/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/</link><description>Recent content on Trang mạng của Đồng</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://vanvuvuong.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://vanvuvuong.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/contact/</guid><description/></item><item><title/><link>https://vanvuvuong.github.io/terms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/terms/</guid><description/></item><item><title>Tóm tắt cuốn sách "Pragmatic Programmer" - (tạm dịch) Lập trình viên thực dụng</title><link>https://vanvuvuong.github.io/post/ltvtd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/post/ltvtd/</guid><description>&lt;h2 id="mục-lục">Mục lục
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="#c%e1%ba%a9m-nang-l%e1%ba%adp-tr%c3%acnh-vi%c3%aan-th%e1%bb%b1c-d%e1%bb%a5ng" >(cẩm nang) Lập trình viên thực dụng&lt;/a>
+&lt;ul>
+&lt;li>&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >I. Triết lý thực dụng&lt;/a>
+&lt;ul>
+&lt;li>&lt;a class="link" href="#1-%c4%91%c3%b3-l%c3%a0-cu%e1%bb%99c-%c4%91%e1%bb%9di-c%e1%bb%a7a-b%e1%ba%a1n" >1. Đó là cuộc đời của bạn&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#2-m%c3%a8o-%c4%91%e1%bb%9bp-m%e1%ba%a5t-source-code-c%e1%bb%a7a-t%c3%b4i-r%e1%bb%93i" >2. Mèo đớp mất source code của tôi rồi&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#3-t%c3%adnh-b%e1%ba%a5t-%e1%bb%95n-c%e1%bb%a7a-ph%e1%ba%a7n-m%e1%bb%81m" >3. (Tính) Bất ổn (của) Phần mềm&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#4-n%e1%bb%93i-s%c3%bap-%c4%91%c3%a1-cu%e1%bb%99i-v%c3%a0-lu%e1%bb%99c-%e1%ba%bfch" >4. Nồi súp đá (cuội) và Luộc ếch&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#5-ph%e1%ba%a7n-m%e1%bb%81m-%c4%91%e1%bb%a7-t%e1%bb%91t" >5. Phần mềm Đủ-Tốt&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#6-danh-m%e1%bb%a5c-ki%e1%ba%bfn-th%e1%bb%a9c-c%e1%bb%a7a-b%e1%ba%a1n" >6. Danh mục kiến thức của bạn&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#7-giao-ti%e1%ba%bfp" >7. Giao tiếp&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#ii-c%c3%a1ch-ti%e1%ba%bfp-c%e1%ba%adn-th%e1%bb%b1c-d%e1%bb%a5ng" >II. (Cách) Tiếp cận thực dụng&lt;/a>
+&lt;ul>
+&lt;li>&lt;a class="link" href="#8-%c4%91i%e1%bb%81u-c%e1%ba%a7n-thi%e1%ba%bft-c%e1%bb%a7a-m%e1%bb%99t-thi%e1%ba%bft-k%e1%ba%bf-t%e1%bb%91t" >8. Điều cần thiết của một thiết kế tốt&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#9-dry---nh%e1%bb%afng-con-qu%e1%bb%b7-c%e1%bb%a7a-vi%e1%bb%87c-tr%c3%b9ng-l%e1%ba%b7p" >9. DRY - Những con quỷ của việc trùng lặp&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#iii-c%c3%b4ng-c%e1%bb%a5-c%c6%a1-b%e1%ba%a3n" >III. Công cụ cơ bản&lt;/a>
+&lt;ul>
+&lt;li>&lt;a class="link" href="#16-s%e1%bb%a9c-m%e1%ba%a1nh-c%e1%bb%a7a-v%c4%83n-b%e1%ba%a3n-thu%e1%ba%a7n-t%c3%bay" >16. Sức mạnh của văn bản thuần túy&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#17-shell-games" >17. Shell games&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#l%e1%bb%9di-th%e1%bb%81-c%e1%bb%a7a-l%e1%ba%adp-tr%c3%acnh-vi%c3%aan-web" >Lời thề của lập trình viên web&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="cẩm-nang-lập-trình-viên-thực-dụngmục-lục">&lt;a class="link" href="#m%e1%bb%a5c-l%e1%bb%a5c" >(cẩm nang) Lập trình viên thực dụng&lt;/a>
+&lt;/h1>&lt;blockquote>
+&lt;p>Đây là nội dung tổng hợp từ cuốn sách The Pragmatic Programmer. Mua sách tại &lt;a class="link" href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" target="_blank" rel="noopener"
+>The Pragmatic Programmer, 20th Anniversary Edition: your journey to mastery by David Thomas, Andrew Hunt&lt;/a> để ủng hộ tác giả.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Tuyên bố miễn trừ trách nhiệm: Toàn bộ nội dung thuộc repo này được tạo ra với mục đích tự giáo dục phi thương mại. Những hoạt động thương mại liên quan đến nội dung repo này đều thuộc trách nhiệm của những cá nhân &amp;amp; tổ chức trực tiếp thực hiện. Chủ của repo này không có bất cứ mối quan hệ tài chính nào với các cá nhân &amp;amp; tổ chức thực hiện hành vi đó.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Nếu bạn là nhà xuất bản &amp;amp; thấy rằng repo này không nên để public, hãy liên hệ tôi qua Gmail: &lt;a class="link" href="mailto:dinhdong24@proton.me" >dinhdong24@proton.me&lt;/a> tôi sẽ đổi sang trạng thái private.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="i-triết-lý-thực-dụngmục-lục">&lt;a class="link" href="#m%e1%bb%a5c-l%e1%bb%a5c" >I. Triết lý thực dụng&lt;/a>
+&lt;/h2>&lt;h3 id="1-đó-là-cuộc-đời-của-bạni-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >1. Đó là cuộc đời của bạn&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>Tôi sống trên đời không phải để đáp ứng kỳ vọng của bạn, và bạn sống trên đời cũng không phải để đáp ứng kỳ vọng của tôi. ~Lý Tiểu Long&lt;/p>
+&lt;/blockquote>
+&lt;p>Cuộc sống của bạn, bạn sở hữu nó, lăn lộn &amp;amp; kiến tạo nó. Rất nhiều lập trình viên liên tục than vãn về những thất vọng của họ, rằng họ muốn chuyển đi sống ở một nơi khác, ở châu Âu, châu Á hoặc làm việc từ xa.&lt;/p>
+&lt;p>Câu trả lời của chúng tôi luôn là: &lt;em>&amp;ldquo;Tại sao bạn không tạo ra sự thay đổi?&amp;rdquo;&lt;/em>&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Bạn có quyền tự chủ.&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>Môi trường làm việc tồi tệ? Công việc nhàm chán? Hãy có gắng sửa chúng. Nhưng đừng thử sửa mãi mãi.&lt;/p>
+&lt;p>Nếu công nghệ (này) trông có vẻ cỗ lỗ, hãy dành thời gian để học thứ mới mẻ trông có vẻ thú vị hơn. Bạn đầu tư vào bản thân, làm việc đó khi ngoài giờ làm việc là hợp lý rồi.&lt;/p>
+&lt;p>Muốn làm từ xa? Bạn đã thử hỏi (sếp) chưa? Nếu họ nói không, hãy tìm ai đồng ý.&lt;/p>
+&lt;h3 id="2-mèo-đớp-mất-source-code-của-tôi-rồii-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >2. Mèo đớp mất source code của tôi rồi&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>Sợ bị trông là yếu đuối là chính sự yếu đuối kinh khủng nhất. ~J.B. Bossuet, Politics from Holy Writ, 1709&lt;/p>
+&lt;/blockquote>
+&lt;p>Một trong những nền tảng của triết lý thực dụng là nhận trách nhiệm của bản thân &amp;amp; hành động của mình trong sự nghiệp, học hành, những dự án của mình &amp;amp; công việc hàng ngày.&lt;/p>
+&lt;p>Lập trình viên thực dụng (LTVTD) nắm mọi quyền trong việc lựa chọn sự nghiệp &amp;amp; không ngại thừa nhận sự thiếu hiểu biết hay sai lầm.&lt;/p>
+&lt;p>Dù cho một dự án có suôn sẻ đến đâu, trải qua thử nghiệm, tài liệu chỉnh chu, tự động hóa tốt, những vấn đề kỹ thuật không lường trước sẽ xuất hiện gây ảnh hưởng đến việc bàn giao hệ thống.&lt;/p>
+&lt;p>Chúng diễn ra và chúng ta nỗ lực xử lý chúng chuyên nghiệp nhất có thể. &lt;strong>Điều này có nghĩa là hãy trung thực &amp;amp; thẳng thắn.&lt;/strong> Chúng ta có thể tự hào về năng lực của mình nhưng chúng ta phải thừa nhận những thiếu sót, sự ngu muội &amp;amp; sai lầm của mình.&lt;/p>
+&lt;p>&lt;strong>Lòng tin đội ngũ&lt;/strong>&lt;/p>
+&lt;p>Trên tất cả, đội ngũ của bạn tin tưởng &amp;amp; dựa vào bạn - và bạn cần thoải mái với việc dựa vào người khác nữa. Lòng tin trong đội ngũ là một điều thiết yếu cho sự sáng tạo &amp;amp; hợp tác.&lt;/p>
+&lt;p>&lt;strong>Nhận trách nhiệm&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>Tip 4: Hãy đưa ra những lựa chọn, đừng đưa ra những lời đổ lỗi vô nghĩa.&lt;/p>
+&lt;/blockquote>
+&lt;p>Trách nhiệm là thứ gì đó bạn chủ động đồng ý. Bạn cam kết làm một cái gì đó xong, nhưng bạn không cần phải kiểm soát mọi khía cạnh của nó.&lt;/p>
+&lt;p>Trong khi bạn làm mọi thứ có thể, bạn cần phải phân tích những rủi ro nằm ngoài tầm với của mình &amp;amp; bạn có quyền không chịu trách nhiệm cho những tình huống bất khả thi, hoặc rủi ro quá lớn.&lt;/p>
+&lt;p>Trước khi bạn đến nói với ai đó điều gì không thể hoàn thành bởi vì bla, bla, bla&amp;hellip; Hãy nói điều đó với cái màn hình, hay với con mèo ấy. Bạn thấy cái lí do đó nghe có hợp lý ko, hay ngu xuẩn? Bạn nghĩ sếp bạn nghe cái lý do đó nghĩ sao?&lt;/p>
+&lt;p>Trước khi bạn kể lể vấn đề với người khác, bạn đã thử điều này, điều kia chưa?&lt;/p>
+&lt;p>Đừng viện cớ này nọ, hãy đưa giải pháp.&lt;/p>
+&lt;h3 id="3-tính-bất-ổn-của-phần-mềmi-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >3. (Tính) Bất ổn (của) Phần mềm&lt;/a>
+&lt;/h3>&lt;p>Trong luật vật lý, định luật nhiệt động lực học đảm bảo rằng sự hỗn độn trong vũ trụ sẽ có xu hướng tiến tới mức tối đa. Khi sự hỗn độn của phần mềm tăng dần, chúng tôi gọi nó là &amp;ldquo;phần mềm thối rữa&amp;rdquo;, hoặc &amp;ldquo;món nợ kỹ thuật&amp;rdquo; - với ý nghĩa là chúng cần phải được trả vào lúc nào đó.&lt;/p>
+&lt;p>Dù có cái tên gì đi nữa những sự hư hại có thể lây lan một cách không thể kiểm soát. Vậy ta cần làm gì?&lt;/p>
+&lt;p>Ở một thành phố nọ, có những tòa nhà đẹp đẽ và sạch sẽ, trong khi những tòa nhà khác lại bẩn thỉu, hôi hám. Tại sao? Những nghiên cứu trong lĩnh vực tội phạm và suy đồi (ở) đô thị khám phá ra một điểm kích hoạt thú vị, điều mà nhanh chóng biến một khu vực sạch sẽ, nguyên vẹn, nhiều người ở thành một đống hỗ độn, khu vực tan hoang.&lt;/p>
+&lt;p>Một chiếc cửa sổ hỏng.&lt;/p>
+&lt;p>Một chiếc cửa sổ hỏng, mặc kệ không được sửa chữa trong một khoảng thời gian dài, gieo vào cư dần của tòa nhà cảm giác bỏ bê - có vẻ như những nhà quản lý không quan tâm tới toà nhà. Nên những chiếc của sổ khác bị hỏng. Mọi người bắt đầu nhếch nhác. Những hình vẽ bậy xuất hiện. Sự hư hại nặng hơn bắt đầu xuất hiện. Trong một thời gian ngắn, toà nhà trở nên hư hỏng nặng quá sức sửa chữa mà người chủ có thể sửa được. Cảm giác bỏ bê bỗng chốc trở thành sự thật.&lt;/p>
+&lt;blockquote>
+&lt;p>Đừng sống với chiêc cửa sổ hỏng&lt;/p>
+&lt;/blockquote>
+&lt;p>Đừng để &amp;ldquo;những chiếc của sổ hỏng&amp;rdquo; (thiết kế tệ hại, quyết định sai lầm, những dòng mã ngớ ngẩn) ko được sửa. Sửa từng cái một ngay khi chúng được phát hiện. Nếu không đủ thời gian để sửa chúng một cách chính xác, hãy vã nó lại. Thêm dòng bình luận vào đoạn mã, hiển thị thông báo &amp;ldquo;Chưa triển khai&amp;rdquo;. Chí ít hãy làm điều gì đó để ngăn chặn những thiệt hai và cho thấy bạn kiểm soát tình hình.&lt;/p>
+&lt;h3 id="4-nồi-súp-đá-cuội-và-luộc-ếchi-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >4. Nồi súp đá (cuội) và Luộc ếch&lt;/a>
+&lt;/h3>&lt;p>&lt;em>Ba người lính trở về nhà sau cuộc chiến đang đói vô cùng. Khi họ thấy ngôi làng phía trước lòng họ thấy ấm dần - họ chắc mẩm rằng những người của ngôi làng sẽ cho họ một bữa ăn no. Nhưng khi họ tới, họ phát hiện những cánh cửa đã khóa, cửa sổ đóng kín. Sau nhiều năm chiến tranh, ngôi làng đã cạn kiệt đồ ăn, và đồ tích trữ mà họ có&lt;/em>&lt;/p>
+&lt;p>&lt;em>Không hề nao núng, những người lính nấu một nồi nước sôi và cẩn thận cho vào đó 3 hòn đá. Những người trong làng tò mò tới xem.&lt;/em>&lt;/p>
+&lt;p>&lt;em>&amp;ldquo;Đây là súp đá&amp;rdquo; những người lính giải thích. &amp;ldquo;Đó là tất cả những gì bọn anh cho vào sao?&amp;rdquo; Dân làng hỏi.&lt;/em>&lt;/p>
+&lt;p>&lt;em>&amp;ldquo;Tất nhiên rồi - dù thế, có vài người nói là nó sẽ ngon hơn nếu cho thêm ít cà rốt&amp;hellip;&amp;rdquo; Một dân làng chạy đi, rồi trở lại với một rổ cà rốt từ kho dự trữ của ông.&lt;/em>&lt;/p>
+&lt;blockquote>
+&lt;p>Hãy trở thành nhân tố xúc tách cho sự thay đổi
+Hãy nhớ bức tranh tổng quan&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="5-phần-mềm-đủ-tốti-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >5. Phần mềm Đủ-Tốt&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>Biến chất lượng thành đòi hỏi bắt buộc&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="6-danh-mục-kiến-thức-của-bạni-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >6. Danh mục kiến thức của bạn&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>Đầu tư vào kiến thức luôn là lãi nhất ~ Benjamin Franklin&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>Danh mục kiến thức của bạn&lt;/strong>&lt;/p>
+&lt;p>Quản lý danh mục kiến thức cũng hệt như quản lý danh mục đầu tư:&lt;/p>
+&lt;ol>
+&lt;li>Nhà đầu tư nghiên túc đầu tư đều đặn - như một thói quen&lt;/li>
+&lt;li>Đa dạng hóa là chìa khóa cho thành công dài hạn&lt;/li>
+&lt;li>Nhà đầu tư thông minh cân bằng giữa những danh mục ít rủi ro và rủi ro cao, lãi cao&lt;/li>
+&lt;li>Nhà đầu tư cố mua thấp và bán cao để tối đa hóa lợi nhuận&lt;/li>
+&lt;li>Danh mục cần được xem và tái cân bằng định kỳ&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Xây dựng danh mục của bạn&lt;/strong>&lt;/p>
+&lt;p>&lt;em>Đầu tư đều đặn&lt;/em>&lt;/p>
+&lt;p>Lên kế hoạch kiên trì sử dụng một khoảng thời gian và địa điểm, trốn khỏi mọi sự phiền nhiễu để hoàn thành mục tiêu.&lt;/p>
+&lt;p>&lt;em>Đa dạng hóa&lt;/em>&lt;/p>
+&lt;p>Bạn càng biết nhiều thứ khác nhau, bạn càng có nhiều giá trị. Bạn càng thành thạo nhiều công nghệ khác nhau, bạn càng dễ thích nghi với thay đổi. Và đừng quên cải thiện cả những kỹ năng ko-liên-quan tới kỹ thuật.&lt;/p>
+&lt;p>&lt;em>Quản trị rủi ro&lt;/em>&lt;/p>
+&lt;p>&lt;em>Mua thấp, bán cao&lt;/em>&lt;/p>
+&lt;p>Học một loại công nghệ trước khi chúng trở nên phổ biến cũng khó như là việc đi kiếm những cổ phiếu được định giá thấp vậy, nhưng đổi lại là phần thưởng lớn.&lt;/p>
+&lt;p>&lt;em>Xem lại và tái cân bằng&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Mục tiêu&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>Học ít nhất một ngôn ngữ lập trình mỗi năm&lt;/em>&lt;/li>
+&lt;li>&lt;em>Đọc một cuốn sách kỹ thuật mỗi tháng&lt;/em>&lt;/li>
+&lt;li>&lt;em>Đọc một cuốn sách không liên quan tới kỹ thuật nữa&lt;/em>&lt;/li>
+&lt;li>&lt;em>Tham gia các khóa học&lt;/em>&lt;/li>
+&lt;li>&lt;em>Tham gia các hội nhóm địa phương&lt;/em>&lt;/li>
+&lt;li>&lt;em>Thử nghiệm môi trường khác nhau&lt;/em>&lt;/li>
+&lt;li>&lt;em>Cập nhật tin tức&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Cơ hội cho việc học hành&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Suy nghĩ chín chắn&lt;/strong>&lt;/p>
+&lt;p>Bạn cần chắc chắn rằng những kiến thức trong danh mục của bạn là chính xác và không bị cường điệu hóa bởi nhà cung cấp hay bởi truyền thông. Cảnh giác với những kẻ cuồng tính khăng khăng giáo điều của họ là câu trả lời duy nhất - chúng có thể hoặc ko thể áp dụng cho bạn và dự án của bạn.&lt;/p>
+&lt;p>Đừng bao giờ đánh giá thấp sức mạnh của thương mại hóa.&lt;/p>
+&lt;blockquote>
+&lt;p>Phân tích thận trọng những gì bạn đọc và nghe&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;em>Hỏi &amp;ldquo;tại sao&amp;rdquo; 5 lần&lt;/em>&lt;/p>
+&lt;p>Lý do gì khiến điều này xảy ra? Lý do gì khiến người ta làm điều này? Lý do gì &amp;hellip;? Lý do gì&amp;hellip;? Lý do gì&amp;hellip;? Mục tiêu là để mở rộng tư duy và lối mòn suy nghĩ của bạn để tới gần nhất với gốc rễ vấn đề.&lt;/p>
+&lt;p>&lt;em>Ai sẽ hưởng lợi?&lt;/em>&lt;/p>
+&lt;p>Điều này nghe hoài nghi, tuy nhiên &lt;em>hãy đi theo dòng tiền&lt;/em> là cách tốt để phân tích. Lợi ích của người hoặc tổ chức khác có thể khớp hoặc không khớp với lợi ích của bạn.&lt;/p>
+&lt;p>&lt;em>Bối cảnh là gì?&lt;/em>&lt;/p>
+&lt;p>Tất cả mọi thứ đều đi kèm với bối cảnh cụ thể. Đó là lý do giải pháp &amp;ldquo;một cho tất cả&amp;rdquo; thường không thực hiện được. Khi xem xét một bài viết hoặc cuốn sách nói về &amp;ldquo;(Giải pháp) thực tiễn tốt nhất&amp;rdquo;. Câu hỏi hay cần xem xét là &amp;ldquo;tốt nhất cho ai?&amp;rdquo;. Điều kiện cần là gì? Hậu quả ngắn, dài hạn xảy ra là gì?&lt;/p>
+&lt;p>&lt;em>Khi nào hay ở đâu nó sẽ thành công?&lt;/em>&lt;/p>
+&lt;p>Ở điều kiên nào? Bây giờ là quá sớm, hay quá muộn? Đừng chỉ dừng lại với câu trả lời đầu tiên, hãy tiếp tục. &lt;em>Điều gì sẽ diễn ra sau đó?&lt;/em>&lt;/p>
+&lt;p>&lt;em>Lý do gì điều này là vấn đề?&lt;/em>&lt;/p>
+&lt;p>Có một mô hình cơ bản nào không? Mô hình đó hoạt động như thế nào?&lt;/p>
+&lt;h3 id="7-giao-tiếpi-triết-lý-thực-dụng">&lt;a class="link" href="#i-tri%e1%ba%bft-l%c3%bd-th%e1%bb%b1c-d%e1%bb%a5ng" >7. Giao tiếp&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>Tiếng anh chỉ là một ngôn ngữ lập trình khác&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>Biết Khán Giả của Bạn&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Biết Điều Bạn Muốn Nói&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Chọn Thời Điểm cho mình&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Chọn Phong Cách&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Làm cho nó trông tốt&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>Nó là cả những điều bạn nói và cách bạn nói chúng.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>Trở thành Người Lắng Nghe&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Tài liệu&lt;/strong>&lt;/p>
+&lt;h2 id="ii-cách-tiếp-cận-thực-dụngmục-lục">&lt;a class="link" href="#m%e1%bb%a5c-l%e1%bb%a5c" >II. (Cách) Tiếp cận thực dụng&lt;/a>
+&lt;/h2>&lt;h3 id="8-điều-cần-thiết-của-một-thiết-kế-tốtii-cách-tiếp-cận-thực-dụng">&lt;a class="link" href="#ii-c%c3%a1ch-ti%e1%ba%bfp-c%e1%ba%adn-th%e1%bb%b1c-d%e1%bb%a5ng" >8. Điều cần thiết của một thiết kế tốt&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>Thiết kế tốt sẽ dễ để thay đổi hơn là một thiết kế tồi&lt;/p>
+&lt;/blockquote>
+&lt;p>Một thứ được thiết kế tốt nếu chúng thích nghi với những người sử dụng chúng.&lt;/p>
+&lt;p>Tại sao tránh trùng lặp lại tốt? Bởi chúng cô lập những mối lo ngại để chúng ta dễ thay đổi chúng hơn&lt;/p>
+&lt;p>Tại sao nguyên tắc một trách nhiệm duy nhất hữu hiệu? Bởi vì thay đổi yêu cầu sẽ chỉ dẫn tới sự thay đổi của chỉ một mô-đun.&lt;/p>
+&lt;p>Tại sao đặt tên lại quan trọng? Bởi tên đặt tốt khiến mã dễ
+đọc hơn và chúng ta phải đọc nó để thay đổi nó.&lt;/p>
+&lt;p>&lt;strong>Easy to change (ETC) - Dễ để thay đổi là một giá trị, không phải một quy tắc&lt;/strong>&lt;/p>
+&lt;p>Hãy tự hỏi bản thân: &amp;ldquo;Cái mình vừa làm có khiến hệ thống dễ hay khó thay đổi hơn?&amp;rdquo;. Tự hỏi lúc bạn lưu một tệp tin, tự hỏi lúc bạn viết một (đoạn mã) kiểm tra, tự hỏi lúc bạn sửa một lỗi.&lt;/p>
+&lt;p>Nhiều lúc bạn không biết bắt đầu từ đâu, hãy làm 2 điều sau:&lt;/p>
+&lt;ol>
+&lt;li>Viết ra những điều bạn không chắc là nên thay đổi như thế nào.&lt;/li>
+&lt;li>Viết lại tình huống đó vào Nhật ký kỹ sư của bạn: những lựa chọn bạn có, những dự đoán về sự thay đổi. Để rồi sau này bạn có xem lại, bạn sẽ biết được bạn cần làm tốt hơn ntn.&lt;/li>
+&lt;/ol>
+&lt;h3 id="9-dry---những-con-quỷ-của-việc-trùng-lặpii-cách-tiếp-cận-thực-dụng">&lt;a class="link" href="#ii-c%c3%a1ch-ti%e1%ba%bfp-c%e1%ba%adn-th%e1%bb%b1c-d%e1%bb%a5ng" >9. DRY - Những con quỷ của việc trùng lặp&lt;/a>
+&lt;/h3>&lt;p>Là lập trình viên, chúng ta thu thập, tổ chức, bảo trì và tận dụng kiến thức. Không may là, kiến thức lại không ổn định. Yêu cầu của khách hàng thay đổi mỗi cuộc họp.&lt;/p>
+&lt;h2 id="iii-công-cụ-cơ-bảnmục-lục">&lt;a class="link" href="#m%e1%bb%a5c-l%e1%bb%a5c" >III. Công cụ cơ bản&lt;/a>
+&lt;/h2>&lt;h3 id="16-sức-mạnh-của-văn-bản-thuần-túycông-cụ-cơ-bản">&lt;a class="link" href="#c%c3%b4ng-c%e1%bb%a5-c%c6%a1-b%e1%ba%a3n" >16. Sức mạnh của văn bản thuần túy&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>văn bản thuần túy: plain text
+Tip 25: Lưu kiến thức ở dạng văn bản thuần túy&lt;/p>
+&lt;/blockquote>
+&lt;p>Vấn đề của các định dạng văn bản kiểu binary là cần 1 ứng dụng hoặc môi trường tương ứng để giải mã chúng. Nó đã tách biệt dữ liệu &amp;amp; ý nghĩa của chúng. Dữ liệu được mã hóa thì vô nghĩa nếu như không có 1 ứng dụng giải mã tương ứng. Còn văn bản thuần túy thì khác.&lt;/p>
+&lt;p>Văn bản thuần túy (VBTT) là kiểu dạng:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>* đây là một
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* danh sách
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hoặc một cụm chữ vô nghĩa như: fndasicdasf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>VBTT có thể lưu ở các dạng HTML, JSON, YAML, XML &amp;hellip; chứ không nhất thiết phải là &lt;code>.txt&lt;/code>.&lt;/p>
+&lt;h3 id="17-shell-gamescông-cụ-cơ-bản">&lt;a class="link" href="#c%c3%b4ng-c%e1%bb%a5-c%c6%a1-b%e1%ba%a3n" >17. Shell games&lt;/a>
+&lt;/h3>&lt;p>Để lập trình viên có thể quản trị các file văn bản, công cụ hữu dụng nhất là shell. Từ shell, bạn có thể tận dụng được toàn bộ những chúng năng của công cụ, kết hợp output theo cái cách mà đến cả những người tạo ra những tools đó còn không nghĩ ra được. Từ shell, bạn có thể tìm kiếp files, debug, mở trình duyệt, mở editor &amp;amp; những công cụ khác.&lt;/p>
+&lt;p>Không phải là chúng ta có thể thực hiện những điều trên bằng GUI sao? Vậy sao chúng ta không làm trên GUI cho tiện?
+Câu trả lời là không.&lt;/p>
+&lt;blockquote>
+&lt;p>Hãy tận dụng sức mạnh của Câu lệnh Shells (Command Shells)&lt;/p>
+&lt;/blockquote>
+&lt;p>Lợi ích của GUI là &lt;strong>WYSIWYG&lt;/strong> (What You See Is What You Get) - những gì bạn thấy là tất cả những gì bạn nhận (được) &amp;amp; bất lợi là &lt;strong>WYSIAYG&lt;/strong> (What You See Is All You Get) - những gì bạn thấy là &lt;strong>tất cả&lt;/strong> những gì bạn nhận (được)&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>grep &lt;span style="color:#e6db74">&amp;#39;^import &amp;#39;&lt;/span> *.java | sed -e&lt;span style="color:#e6db74">&amp;#39;s/^import *//&amp;#39;&lt;/span> -e&lt;span style="color:#e6db74">&amp;#39;s/;.*$//&amp;#39;&lt;/span> | sort -u &amp;gt;list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="lời-thề-của-lập-trình-viên-webmục-lục">&lt;a class="link" href="#m%e1%bb%a5c-l%e1%bb%a5c" >Lời thề của lập trình viên web&lt;/a>
+&lt;/h1>&lt;blockquote>
+&lt;p>Nguyên gốc từ &lt;a class="link" href="https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps#web-programmers-oath" target="_blank" rel="noopener"
+>đây&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>Tôi sẽ mở &lt;code>console&lt;/code> mọi lúc khi tôi mở trình duyệt lên.&lt;/li>
+&lt;li>Tôi sẽ phát triển một cách từ từ.&lt;/li>
+&lt;li>Tôi sẽ viết rất nhiều câu lệnh &lt;code>console.log&lt;/code> để tôi có thể chắc luồng code chạy như thế nào &amp;amp; xác định được bug nhanh chóng.&lt;/li>
+&lt;li>Nếu code của tôi không chạy được, tôi sẽ dừng viết code &amp;amp; xóa code cho đến khi nó chạy được hoặc chuyển thể code về phiên bản có thể chạy được.&lt;/li>
+&lt;li>Khi tôi cần tới sự giúp đỡ, tôi sẽ chuẩn bị câu hỏi một cách đầy đủ &amp;amp; rõ ràng.&lt;/li>
+&lt;/ul></description></item></channel></rss>
