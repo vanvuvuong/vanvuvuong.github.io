@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/</link><description>Recent content on Trang mạng của Đồng</description><generator>Hugo -- gohugo.io</generator><language>vi-vn</language><atom:link href="https://vanvuvuong.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Giới thiệu</title><link>https://vanvuvuong.github.io/gioi-thieu/</link><pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/gioi-thieu/</guid><description/></item><item><title/><link>https://vanvuvuong.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/contact/</guid><description/></item><item><title/><link>https://vanvuvuong.github.io/sach/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/sach/</guid><description>&lt;h1 id="những-cuốn-sách-hay">Những cuốn sách hay:
-&lt;/h1>&lt;ol>
-&lt;li>&lt;a class="link" href="./ltvtd" >Lập trình viên thực dụng&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title/><link>https://vanvuvuong.github.io/terms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/terms/</guid><description/></item><item><title>Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/linux/network-troubleshooting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/bai-viet/linux/network-troubleshooting/</guid><description>&lt;h1 id="công-cụ-cần-sử-dụng-nslookup-dig-echo-ip-ifconfig-nmcli-traceroute">Công cụ cần sử dụng: &lt;code>nslookup&lt;/code>, &lt;code>dig&lt;/code>, &lt;code>echo&lt;/code>, &lt;code>ip&lt;/code>, &lt;code>ifconfig&lt;/code>, &lt;code>nmcli&lt;/code>, &lt;code>traceroute&lt;/code>
-&lt;/h1>&lt;h1 id="trình-tự-điều-tra">Trình tự điều tra
-&lt;/h1>&lt;ul>
-&lt;li>Kiểm tra tình trạng giao diện mạng&lt;/li>
-&lt;li>Kiểm tra tình trạng kết nối của giao diện mạng (với switch / router)&lt;/li>
-&lt;li>Kiểm tra tình trạng phân giải tên miền&lt;/li>
-&lt;li>Kiểm tra đường đi của đường mạng&lt;/li>
-&lt;li>Kiểm tra các quy tắc của tường lửa&lt;/li>
-&lt;li>Kiểm tra các kết nối với một máy:cổng cụ thể&lt;/li>
-&lt;/ul>
-&lt;h1 id="câu-lệnh">Câu lệnh
-&lt;/h1>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># echo &amp;gt; /dev/tcp/ip-máy-cần-kiểm-tra/cổng-máy-cần-kiểm-tra &amp;amp;&amp;amp; echo &amp;#34;Open&amp;#34; || echo &amp;#34;Closed&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &amp;gt; /dev/tcp/8.8.8.8/53 &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> echo &lt;span style="color:#e6db74">&amp;#34;Open&amp;#34;&lt;/span> &lt;span style="color:#f92672">||&lt;/span> echo &lt;span style="color:#e6db74">&amp;#34;Closed&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/linux/networking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/bai-viet/linux/networking/</guid><description>&lt;h1 id="quản-lý-mạng-trong-hđh-linux">Quản lý mạng trong HĐH Linux
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags/Cấu Hình on Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/tags/c%E1%BA%A5u-h%C3%ACnh/</link><description>Recent content in Tags/Cấu Hình on Trang mạng của Đồng</description><generator>Hugo -- gohugo.io</generator><language>vi-vn</language><atom:link href="https://vanvuvuong.github.io/tags/c%E1%BA%A5u-h%C3%ACnh/index.xml" rel="self" type="application/rss+xml"/><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/linux/networking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/bai-viet/linux/networking/</guid><description>&lt;h1 id="quản-lý-mạng-trong-hđh-linux">Quản lý mạng trong HĐH Linux
 &lt;/h1>&lt;p>Bài này bao gồm những nội dung:&lt;/p>
 &lt;ul>
 &lt;li>bật / tắt phần cứng của mạng (wifi card, ethernet card)&lt;/li>
@@ -123,4 +99,4 @@ Máy tính như trên ví vụ có 2 giao diện mạng &lt;code>enp2s0f0&lt;/co
 &lt;/div>&lt;h2 id="ngặn-chặn--cho-phép-kết-nối-dải-mạng">Ngặn chặn / Cho phép kết nối dải mạng
 &lt;/h2>&lt;ul>
 &lt;li>Câu lệnh sử dụng: &lt;code>iptables&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Tìm kiếm</title><link>https://vanvuvuong.github.io/tim-kiem/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/tim-kiem/</guid><description/></item></channel></rss>
+&lt;/ul></description></item></channel></rss>
