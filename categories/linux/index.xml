@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - Tác giả - Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/categories/linux/</link><description>Linux - Tác giả - Trang mạng của Đồng</description><generator>Hugo -- gohugo.io</generator><language>vi</language><atom:link href="https://vanvuvuong.github.io/categories/linux/" rel="self" type="application/rss+xml"/><item><title>Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/dieu-tra-loi-mang-trong-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>Đồng</author><guid>https://vanvuvuong.github.io/bai-viet/dieu-tra-loi-mang-trong-linux/</guid><description><![CDATA[<p>Những công cụ &amp; bước để điều tra khi gặp lỗi mạng trong hệ thống Linux</p>
+<h2 id="công-cụ-cần-sử-dụng-nslookup-dig-echo-ip-ifconfig-nmcli-traceroute">Công cụ cần sử dụng: <code>nslookup</code>, <code>dig</code>, <code>echo</code>, <code>ip</code>, <code>ifconfig</code>, <code>nmcli</code>, <code>traceroute</code></h2>
+<h2 id="trình-tự-điều-tra">Trình tự điều tra</h2>
+<ul>
+<li>Kiểm tra tình trạng giao diện mạng</li>
+<li>Kiểm tra tình trạng kết nối của giao diện mạng (với switch / router)</li>
+<li>Kiểm tra tình trạng phân giải tên miền</li>
+<li>Kiểm tra đường đi của đường mạng</li>
+<li>Kiểm tra các quy tắc của tường lửa</li>
+<li>Kiểm tra các kết nối với một máy:cổng cụ thể</li>
+</ul>
+<h2 id="câu-lệnh">Câu lệnh</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># echo &gt; /dev/tcp/ip-máy-cần-kiểm-tra/cổng-máy-cần-kiểm-tra &amp;&amp; echo &#34;Open&#34; || echo &#34;Closed&#34;</span>
+</span></span><span style="display:flex;"><span>echo &gt; /dev/tcp/8.8.8.8/53 <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;Open&#34;</span> <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#34;Closed&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/mang-trong-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>Đồng</author><guid>https://vanvuvuong.github.io/bai-viet/mang-trong-linux/</guid><description><![CDATA[<p>Bài này bao gồm những nội dung:</p>
+<ul>
+<li>bật / tắt phần cứng của mạng (wifi card, ethernet card)</li>
+<li>cấu hình DHCP (tự động / thủ công)</li>
+<li>cấu hình DNS</li>
+<li>cấu hình đường đi của mạng (routing)</li>
+<li>chặn/cho phép các kết nối mạng ra/vào hệ thống</li>
+</ul>
+<p>Thư mục cần cấu hình:</p>
+<ul>
+<li><code>NETWORK_HOME=&quot;/etc/NetworkManager/&quot;</code></li>
+</ul>
+<h2 id="quản-lý-phần-cứng">Quản lý phần cứng</h2>
+<p>Với hầu hết máy tính hiện đại, bất kể đang là HĐH họ Gentoo, Debian (Ubuntu, Lubuntu, Mint), Arch (Manjero, ArchLinux), openSUSE, hay họ REHL (CentOS, Fedora, Amazon Linux,&hellip;) đều sẽ sử dụng dịch vụ <code>NetworkManger</code> để quản lý phần cứng &amp; kết nối mạng</p>]]></description></item></channel></rss>
