@@ -1,126 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/</link><description>Recent content on Trang mạng của Đồng</description><generator>Hugo -- gohugo.io</generator><language>vi-vn</language><atom:link href="https://vanvuvuong.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Giới thiệu</title><link>https://vanvuvuong.github.io/gioi-thieu/</link><pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/gioi-thieu/</guid><description/></item><item><title/><link>https://vanvuvuong.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/contact/</guid><description/></item><item><title/><link>https://vanvuvuong.github.io/sach/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/sach/</guid><description>&lt;h1 id="những-cuốn-sách-hay">Những cuốn sách hay:
-&lt;/h1>&lt;ol>
-&lt;li>&lt;a class="link" href="./ltvtd" >Lập trình viên thực dụng&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title/><link>https://vanvuvuong.github.io/terms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/terms/</guid><description/></item><item><title>Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/linux/network-troubleshooting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/bai-viet/linux/network-troubleshooting/</guid><description>&lt;h1 id="công-cụ-cần-sử-dụng-nslookup-dig-echo-ip-ifconfig-nmcli-traceroute">Công cụ cần sử dụng: &lt;code>nslookup&lt;/code>, &lt;code>dig&lt;/code>, &lt;code>echo&lt;/code>, &lt;code>ip&lt;/code>, &lt;code>ifconfig&lt;/code>, &lt;code>nmcli&lt;/code>, &lt;code>traceroute&lt;/code>
-&lt;/h1>&lt;h1 id="trình-tự-điều-tra">Trình tự điều tra
-&lt;/h1>&lt;ul>
-&lt;li>Kiểm tra tình trạng giao diện mạng&lt;/li>
-&lt;li>Kiểm tra tình trạng kết nối của giao diện mạng (với switch / router)&lt;/li>
-&lt;li>Kiểm tra tình trạng phân giải tên miền&lt;/li>
-&lt;li>Kiểm tra đường đi của đường mạng&lt;/li>
-&lt;li>Kiểm tra các quy tắc của tường lửa&lt;/li>
-&lt;li>Kiểm tra các kết nối với một máy:cổng cụ thể&lt;/li>
-&lt;/ul>
-&lt;h1 id="câu-lệnh">Câu lệnh
-&lt;/h1>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># echo &amp;gt; /dev/tcp/ip-máy-cần-kiểm-tra/cổng-máy-cần-kiểm-tra &amp;amp;&amp;amp; echo &amp;#34;Open&amp;#34; || echo &amp;#34;Closed&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &amp;gt; /dev/tcp/8.8.8.8/53 &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> echo &lt;span style="color:#e6db74">&amp;#34;Open&amp;#34;&lt;/span> &lt;span style="color:#f92672">||&lt;/span> echo &lt;span style="color:#e6db74">&amp;#34;Closed&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/linux/networking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/bai-viet/linux/networking/</guid><description>&lt;h1 id="quản-lý-mạng-trong-hđh-linux">Quản lý mạng trong HĐH Linux
-&lt;/h1>&lt;p>Bài này bao gồm những nội dung:&lt;/p>
-&lt;ul>
-&lt;li>bật / tắt phần cứng của mạng (wifi card, ethernet card)&lt;/li>
-&lt;li>cấu hình DHCP (tự động / thủ công)&lt;/li>
-&lt;li>cấu hình DNS&lt;/li>
-&lt;li>cấu hình đường đi của mạng (routing)&lt;/li>
-&lt;li>chặn/cho phép các kết nối mạng ra/vào hệ thống&lt;/li>
-&lt;/ul>
-&lt;p>Thư mục cần cấu hình:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>NETWORK_HOME=&amp;quot;/etc/NetworkManager/&amp;quot;&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="quản-lý-phần-cứng">Quản lý phần cứng
-&lt;/h2>&lt;p>Với hầu hết máy tính hiện đại, bất kể đang là HĐH họ Gentoo, Debian (Ubuntu, Lubuntu, Mint), Arch (Manjero, ArchLinux), openSUSE, hay họ REHL (CentOS, Fedora, Amazon Linux,&amp;hellip;) đều sẽ sử dụng dịch vụ &lt;code>NetworkManger&lt;/code> để quản lý phần cứng &amp;amp; kết nối mạng&lt;/p>
-&lt;ul>
-&lt;li>Câu lệnh sử dụng: &lt;code>nmcli&lt;/code>, &lt;code>nmtui&lt;/code>, &lt;code>ip&lt;/code>&lt;/li>
-&lt;li>Thư mục cấu hình: &lt;code>/etc/NetworkManager/conf.d&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Trước khi cần quản lý bật/tắt phần cứng điều đầu tiên cần xem xét là Linux đã &amp;ldquo;nhận ra&amp;rdquo; phần cứng của máy bạn hay chưa. Để kiểm tra điều đó, bạn nhập câu lệnh:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ ip addr show
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu &lt;span style="color:#ae81ff">65536&lt;/span> qdisc noqueue state UNKNOWN group default qlen &lt;span style="color:#ae81ff">1000&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> inet 127.0.0.1/8 scope host lo
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> valid_lft forever preferred_lft forever
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> inet6 ::1/128 scope host noprefixroute
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> valid_lft forever preferred_lft forever
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2: enp2s0f0: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu &lt;span style="color:#ae81ff">1500&lt;/span> qdisc fq_codel state DOWN group default qlen &lt;span style="color:#ae81ff">1000&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> link/ether 84:a9:38:d3:9a:95 brd ff:ff:ff:ff:ff:ff
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> altname enx84a938d39a95
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3: wlp3s0: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu &lt;span style="color:#ae81ff">1500&lt;/span> qdisc noqueue state DOWN group default qlen &lt;span style="color:#ae81ff">1000&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> link/ether fe:9e:bf:24:5e:4e brd ff:ff:ff:ff:ff:ff permaddr 10:6f:d9:a1:89:b3
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> altname wlx106fd9a189b3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Trong đó &lt;code>lo&lt;/code> là giao diện lặp lại (loopback interface) để cho phép những câu lệnh quản lý mạng có thể chạy được.
-Máy tính như trên ví vụ có 2 giao diện mạng &lt;code>enp2s0f0&lt;/code> (giao điện nối với dây mạng) và &lt;code>wlp3s0&lt;/code> (giao diện mạng không dây) đều đang trong trạng thái &lt;code>DOWN&lt;/code> nghĩa là đang không nói dây mạng và tắt mạng không giây&lt;/p>
-&lt;h2 id="quản-lý-kết-nối">Quản lý kết nối
-&lt;/h2>&lt;ul>
-&lt;li>Câu lệnh sử dụng: &lt;code>nmcli&lt;/code>, &lt;code>nmtui&lt;/code>&lt;/li>
-&lt;li>Thư mục cấu hình: ``&lt;/li>
-&lt;/ul>
-&lt;h2 id="quản-lý-dịch-vụ-phân-giải-dns">Quản lý dịch vụ phân giải DNS
-&lt;/h2>&lt;p>Thứ tự phân giải tên miền trong hệ thống Linux: &lt;code>cat /etc/nsswitch.conf&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>Câu lệnh sử dụng: &lt;code>resolvectl&lt;/code>, &lt;code>dig&lt;/code>, &lt;code>nslookup&lt;/code>&lt;/li>
-&lt;li>Thư mục cấu hình: &lt;code>/etc/NetworkManager/&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;code>dnsmasq&lt;/code> là dịch vụ cache DNS sử dụng tệp cấu hình ở &lt;code>/etc/dnsmasq.conf&lt;/code>&lt;/p>
-&lt;h2 id="quản-lý-đường-đi-của-dải-mạng">Quản lý đường đi của dải mạng
-&lt;/h2>&lt;ul>
-&lt;li>Câu lệnh sử dụng: &lt;code>ip&lt;/code>&lt;/li>
-&lt;li>Thư mục cấu hình: &lt;code>/etc/NetworkManager/&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Để kiểm tra các đường đi của giải mạng, bạn cần chạy câu lệnh:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ route -n
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Kernel IP routing table
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Destination Gateway Genmask Flags Metric Ref Use Iface
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>0.0.0.0 192.168.0.1 0.0.0.0 UG &lt;span style="color:#ae81ff">600&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span> wlp3s0
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>192.168.0.0 0.0.0.0 255.255.255.0 U &lt;span style="color:#ae81ff">600&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span> wlp3s0
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># hoặc câu lệnh này&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ ip route show
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>default via 192.168.0.1 dev wlp3s0 proto dhcp src 192.168.0.40 metric &lt;span style="color:#ae81ff">600&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>192.168.0.0/24 dev wlp3s0 proto kernel scope link src 192.168.0.40 metric &lt;span style="color:#ae81ff">600&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="ngặn-chặn--cho-phép-kết-nối-dải-mạng">Ngặn chặn / Cho phép kết nối dải mạng
-&lt;/h2>&lt;ul>
-&lt;li>Câu lệnh sử dụng: &lt;code>iptables&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Tìm kiếm</title><link>https://vanvuvuong.github.io/tim-kiem/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://vanvuvuong.github.io/tim-kiem/</guid><description/></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/</link><description>Trang mạng của Đồng</description><generator>Hugo -- gohugo.io</generator><language>vi</language><atom:link href="https://vanvuvuong.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/dieu-tra-loi-mang-trong-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>Đồng</author><guid>https://vanvuvuong.github.io/bai-viet/dieu-tra-loi-mang-trong-linux/</guid><description><![CDATA[<p>Những công cụ &amp; bước để điều tra khi gặp lỗi mạng trong hệ thống Linux</p>
+<h2 id="công-cụ-cần-sử-dụng-nslookup-dig-echo-ip-ifconfig-nmcli-traceroute">Công cụ cần sử dụng: <code>nslookup</code>, <code>dig</code>, <code>echo</code>, <code>ip</code>, <code>ifconfig</code>, <code>nmcli</code>, <code>traceroute</code></h2>
+<h2 id="trình-tự-điều-tra">Trình tự điều tra</h2>
+<ul>
+<li>Kiểm tra tình trạng giao diện mạng</li>
+<li>Kiểm tra tình trạng kết nối của giao diện mạng (với switch / router)</li>
+<li>Kiểm tra tình trạng phân giải tên miền</li>
+<li>Kiểm tra đường đi của đường mạng</li>
+<li>Kiểm tra các quy tắc của tường lửa</li>
+<li>Kiểm tra các kết nối với một máy:cổng cụ thể</li>
+</ul>
+<h2 id="câu-lệnh">Câu lệnh</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># echo &gt; /dev/tcp/ip-máy-cần-kiểm-tra/cổng-máy-cần-kiểm-tra &amp;&amp; echo &#34;Open&#34; || echo &#34;Closed&#34;</span>
+</span></span><span style="display:flex;"><span>echo &gt; /dev/tcp/8.8.8.8/53 <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;Open&#34;</span> <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#34;Closed&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/mang-trong-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>Đồng</author><guid>https://vanvuvuong.github.io/bai-viet/mang-trong-linux/</guid><description><![CDATA[<p>Bài này bao gồm những nội dung:</p>
+<ul>
+<li>bật / tắt phần cứng của mạng (wifi card, ethernet card)</li>
+<li>cấu hình DHCP (tự động / thủ công)</li>
+<li>cấu hình DNS</li>
+<li>cấu hình đường đi của mạng (routing)</li>
+<li>chặn/cho phép các kết nối mạng ra/vào hệ thống</li>
+</ul>
+<p>Thư mục cần cấu hình:</p>
+<ul>
+<li><code>NETWORK_HOME=&quot;/etc/NetworkManager/&quot;</code></li>
+</ul>
+<h2 id="quản-lý-phần-cứng">Quản lý phần cứng</h2>
+<p>Với hầu hết máy tính hiện đại, bất kể đang là HĐH họ Gentoo, Debian (Ubuntu, Lubuntu, Mint), Arch (Manjero, ArchLinux), openSUSE, hay họ REHL (CentOS, Fedora, Amazon Linux,&hellip;) đều sẽ sử dụng dịch vụ <code>NetworkManger</code> để quản lý phần cứng &amp; kết nối mạng</p>]]></description></item><item><title>Tóm tắt cuốn sách "Pragmatic Programmer" - (tạm dịch) Lập trình viên thực dụng</title><link>https://vanvuvuong.github.io/sach-hay/ltvtd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>Đồng</author><guid>https://vanvuvuong.github.io/sach-hay/ltvtd/</guid><description><![CDATA[<blockquote>
+<p>Đây là nội dung tổng hợp từ cuốn sách The Pragmatic Programmer. Mua sách tại <a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" target="_blank" rel="noopener noreffer ">The Pragmatic Programmer, 20th Anniversary Edition: your journey to mastery by David Thomas, Andrew Hunt</a> để ủng hộ tác giả.</p>
+</blockquote>
+<blockquote>
+<p>Tuyên bố miễn trừ trách nhiệm: Toàn bộ nội dung thuộc repo này được tạo ra với mục đích tự giáo dục phi thương mại. Những hoạt động thương mại liên quan đến nội dung repo này đều thuộc trách nhiệm của những cá nhân &amp; tổ chức trực tiếp thực hiện. Chủ của repo này không có bất cứ mối quan hệ tài chính nào với các cá nhân &amp; tổ chức thực hiện hành vi đó.</p>]]></description></item></channel></rss>
