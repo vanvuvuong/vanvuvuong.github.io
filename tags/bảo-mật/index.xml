@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags/Bảo Mật - author - Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/tags/b%E1%BA%A3o-m%E1%BA%ADt/</link><description>Trang mạng của Đồng</description><generator>Hugo 0.142.0 &amp; FixIt v0.3.20</generator><language>vi</language><lastBuildDate>Tue, 18 Nov 2025 15:47:55 +0700</lastBuildDate><atom:link href="https://vanvuvuong.github.io/tags/b%E1%BA%A3o-m%E1%BA%ADt/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG cơ bản</title><link>https://vanvuvuong.github.io/bai-viet/gpg-co-ban/</link><pubDate>Tue, 18 Nov 2025 19:58:20 +0700</pubDate><guid>https://vanvuvuong.github.io/bai-viet/gpg-co-ban/</guid><category domain="https://vanvuvuong.github.io/categories/b%E1%BA%A3o-m%E1%BA%ADt/">Categories/Bảo Mật</category><category domain="https://vanvuvuong.github.io/categories/linux/">Linux</category><description>&lt;p>Bài này bao gồm những nội dung:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>GPG là gì? Đạt được mục đích khi sử dụng?&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Những hướng dẫn sử dụng cơ bản&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Cấu hình tốt nhất (nên) áp dụng&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Một vài ví dụ cụ thể
-Thư mục cần cấu hình:&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>GNUPGHOME=~/.gnupg&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 class="heading-element" id="dẫn-nhập">&lt;span>Dẫn nhập&lt;/span>
- &lt;a href="#d%e1%ba%abn-nh%e1%ba%adp" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>Trong thế giới bảo mật sẽ chia làm nhiều phần với những mục đích khác nhau, mỗi một danh mục nhỏ lại có thể chia ra hàng tá những danh mục nhỏ hơn và sẽ khiến ta rối đầu với những danh mục &amp;amp; khái niệm đó. Hôm nay chúng ta sẽ chỉ quan tâm đến 2 phân mục rất nhỏ, đó là mã băm (hash) và mã hóa (encryption).&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags/Bảo Mật - author - Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/tags/b%E1%BA%A3o-m%E1%BA%ADt/</link><description>Trang mạng của Đồng</description><generator>Hugo 0.152.2 &amp; FixIt v0.3.20</generator><language>vi</language><lastBuildDate>Thu, 20 Nov 2025 21:20:27 +0700</lastBuildDate><atom:link href="https://vanvuvuong.github.io/tags/b%E1%BA%A3o-m%E1%BA%ADt/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG cơ bản</title><link>https://vanvuvuong.github.io/bai-viet/gpg-co-ban/</link><pubDate>Tue, 18 Nov 2025 19:58:20 +0700</pubDate><guid>https://vanvuvuong.github.io/bai-viet/gpg-co-ban/</guid><category domain="https://vanvuvuong.github.io/categories/b%E1%BA%A3o-m%E1%BA%ADt/">Categories/Bảo Mật</category><category domain="https://vanvuvuong.github.io/categories/linux/">Linux</category><description>&lt;p&gt;Bài này bao gồm những nội dung:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GPG là gì? Đạt được mục đích khi sử dụng?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Những hướng dẫn sử dụng cơ bản&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cấu hình tốt nhất (nên) áp dụng&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Một vài ví dụ cụ thể
+Thư mục cần cấu hình:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;GNUPGHOME=~/.gnupg&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="heading-element" id="dẫn-nhập"&gt;&lt;span&gt;Dẫn nhập&lt;/span&gt;
+ &lt;a href="#d%e1%ba%abn-nh%e1%ba%adp" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Trong thế giới bảo mật sẽ chia làm nhiều phần với những mục đích khác nhau, mỗi một danh mục nhỏ lại có thể chia ra hàng tá những danh mục nhỏ hơn và sẽ khiến ta rối đầu với những danh mục &amp;amp; khái niệm đó. Hôm nay chúng ta sẽ chỉ quan tâm đến 2 phân mục rất nhỏ, đó là mã băm (hash) và mã hóa (encryption).&lt;/p&gt;</description></item></channel></rss>
