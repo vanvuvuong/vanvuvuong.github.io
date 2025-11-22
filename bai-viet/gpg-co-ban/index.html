@@ -1,0 +1,476 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=vi><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>GPG Cơ Bản - Trang mạng của Đồng</title><meta name=author content="Đồng"><meta name=description content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta name=keywords content='GPG cơ bản,bảo mật,mã hóa,gpg'><meta itemprop=name content="GPG cơ bản"><meta itemprop=description content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta itemprop=datePublished content="2025-11-18T19:58:20+07:00"><meta itemprop=dateModified content="2025-11-20T21:20:27+07:00"><meta itemprop=wordCount content="2733"><meta itemprop=keywords content="GPG cơ bản,bảo mật,mã hóa,gpg"><meta property="og:url" content="https://vanvuvuong.github.io/bai-viet/gpg-co-ban/"><meta property="og:site_name" content="Trang mạng của Đồng"><meta property="og:title" content="GPG cơ bản"><meta property="og:description" content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="bai-viet"><meta property="article:published_time" content="2025-11-18T19:58:20+07:00"><meta property="article:modified_time" content="2025-11-20T21:20:27+07:00"><meta property="article:tag" content="Tags/Bảo Mật"><meta property="article:tag" content="Tags/Mã Hóa"><meta property="article:tag" content="Tags/Gpg"><meta name=twitter:card content="summary"><meta name=twitter:title content="GPG cơ bản"><meta name=twitter:description content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta name=application-name content="Trang mạng của Đồng"><meta name=apple-mobile-web-app-title content="Trang mạng của Đồng"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical type=text/html href=https://vanvuvuong.github.io/bai-viet/gpg-co-ban/ title="GPG cơ bản - Trang mạng của Đồng"><link rel=prev type=text/html href=https://vanvuvuong.github.io/bai-viet/mang-trong-linux/ title="Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux"><link rel=next type=text/html href=https://vanvuvuong.github.io/bai-viet/linux-shell/ title="Những điều cơ bản về Bash & Fish shell trong Linux"><link rel=alternate type=text/markdown href=https://vanvuvuong.github.io/bai-viet/gpg-co-ban/index.md title="GPG cơ bản - Trang mạng của Đồng"><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"GPG cơ bản","inLanguage":"vi","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/vanvuvuong.github.io\/bai-viet\/gpg-co-ban\/"},"genre":"posts","keywords":"bảo mật, mã hóa, gpg","wordcount":2733,"url":"https:\/\/vanvuvuong.github.io\/bai-viet\/gpg-co-ban\/","datePublished":"2025-11-18T19:58:20+07:00","dateModified":"2025-11-20T21:20:27+07:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Đồng"},"description":"Những điều cần biết khi sử dụng Gnu Privacy Guard"}</script><script src=/js/head/color-scheme.min.js></script></head><body data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Trang mạng của Đồng"><span class=header-title-text>Trang chủ</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/gioi-thieu/ title="Giới thiệu">Giới thiệu</a></li><li class=menu-item><a class=menu-link href=/bai-viet>Bài viết</a></li><li class=menu-item><a class=menu-link href=/sach-hay>Sách hay</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Trang mạng của Đồng"><span class=header-title-text>Trang chủ</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Huỷ</a></li><li class=menu-item><a class=menu-link href=/gioi-thieu/ title="Giới thiệu">Giới thiệu</a></li><li class=menu-item><a class=menu-link href=/bai-viet>Bài viết</a></li><li class=menu-item><a class=menu-link href=/sach-hay>Sách hay</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=container><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Bộ sưu tập"></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>GPG Cơ Bản</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://vanvuvuong.github.io title="Tác giả" target=_blank rel="external nofollow noopener noreferrer author" class=author><i class="fa-solid fa-user-circle" aria-hidden=true></i>
+Đồng</a></span><span class=post-included-in>&nbsp;trong <a href=/collections/b%E1%BA%A3o-m%E1%BA%ADt/ class=post-collection title="Bộ sưu tập - Bảo Mật"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Bảo Mật</a>&ensp;<a href=/collections/linux/ class=post-collection title="Bộ sưu tập - Linux"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Linux</a></span></div><div class=post-meta-line><span title="đăng ngày 2025-11-18 19:58:20"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2025-11-18>2025-11-18</time></span>&nbsp;<span title="Cập nhật ngày 2025-11-20 21:20:27"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2025-11-20>2025-11-20</time></span>&nbsp;<span title="2733 từ"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>Khoảng 2800 từ</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>13 phút</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Nội dung</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#dẫn-nhập>Dẫn nhập</a><ul><li><a href=#mã-băm-hashing>Mã băm (hashing)</a></li><li><a href=#mã-hóa-encryption>Mã hóa (encryption)</a></li></ul></li><li><a href=#gpg-là-gì>GPG là gì?</a></li><li><a href=#gpg-với-thuật-toán-bất-đối-xứng>GPG với thuật toán bất đối xứng</a><ul><li><a href=#ví-dụ-minh-họa>Ví dụ minh họa:</a></li></ul></li></ul></nav></div></div><div class=content id=content><p>Bài này bao gồm những nội dung:</p><ul><li><p>GPG là gì? Đạt được mục đích khi sử dụng?</p></li><li><p>Những hướng dẫn sử dụng cơ bản</p></li><li><p>Cấu hình tốt nhất (nên) áp dụng</p></li><li><p>Một vài ví dụ cụ thể
+Thư mục cần cấu hình:</p></li><li><p><code>GNUPGHOME=~/.gnupg</code></p></li></ul><h2 class=heading-element id=dẫn-nhập><span>Dẫn nhập</span>
+<a href=#d%e1%ba%abn-nh%e1%ba%adp class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><p>Trong thế giới bảo mật sẽ chia làm nhiều phần với những mục đích khác nhau, mỗi một danh mục nhỏ lại có thể chia ra hàng tá những danh mục nhỏ hơn và sẽ khiến ta rối đầu với những danh mục & khái niệm đó. Hôm nay chúng ta sẽ chỉ quan tâm đến 2 phân mục rất nhỏ, đó là mã băm (hash) và mã hóa (encryption).</p><h3 class=heading-element id=mã-băm-hashing><span>Mã băm (hashing)</span>
+<a href=#m%c3%a3-b%c4%83m-hashing class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>Mỗi một máy tính sẽ bao gồm rất nhiều ty tỷ phần mềm, tệp, thư viện, &mldr; sử dụng kết hợp với nhau để có thể &ldquo;điều hành&rdquo; phần cứng của chiếc máy tính. Mỗi khi chúng ta trao đổi những thứ nhạy cảm như vậy qua mạng Internet, chúng ta cần chắc chắn rằng, những gì người lập trình viên tạo ra sau đó họ gửi lên mạnh chính xác 100% với những gì chúng ta tìm kiếm & tải xuống.</p><p>Đó là khi mã băm được phát minh ra. Mỗi một chữ, tệp, gói, hay phần mềm đều có một mã băm đặc biệt và không hề giống nhau:</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>kris@fedora:~$ echo <span style=color:#e6db74>&#34;ví dụ&#34;</span> | sha256sum
+</span></span><span style=display:flex><span>9737a22a063c9c8219a2b6c024cf20ecb33163be41f891885280d1d4350dca1f  -
+</span></span><span style=display:flex><span>kris@fedora:~$ echo <span style=color:#e6db74>&#34;ví dụ &#34;</span> | sha256sum
+</span></span><span style=display:flex><span>250eefdd4605412b81e927612d83e49332d8a53c9286386f3bbdef796554c901  -</span></span></code></pre></td></tr></table></div></div><p>Như các bạn có thể thấy, sự khác biệt của 2 từ chỉ là dấu cách đã cho ra một chuỗi mã băm khác nhau. Điều này đảm bảo việc người lập trình tạo một thứ và chia sẻ cho người khác dùng sẽ được đảm bảo là không bị thay đổi trong qua trình gửi/nhận trên mạng.</p><h3 class=heading-element id=mã-hóa-encryption><span>Mã hóa (encryption)</span>
+<a href=#m%c3%a3-h%c3%b3a-encryption class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>Khác với mục đích sử dụng của mã băm, mã hóa là một biện pháp sử dụng để chỉ người có đúng quyền hạn nhất định mới có thể đọc được nội dung của một mẩu tin, tệp,&mldr;</p><p>Mục đích của mã hóa là khiến cho một nội dung dễ hiểu trở nên khó hiểu cho máy tính và con người, chỉ người biết cách giải mới có thể &ldquo;biến&rdquo; nó thành một nội dung dễ hiểu trở lại.</p><p>Với những công cụ mã hóa, sẽ có 2 kiểu mã hóa được hình thành: đối xứng và bất đối xứng.</p><ul><li>Đối xứng có nghĩa là cùng một mẩu thông tin sẽ được mã hóa và giải mã theo cùng một cách, ví dụ như đặt mật khẩu khóa & nhập mật khẩu để mở khóa, sử dụng một thuật toán ngẫu nhiên để xáo trộn thông tin & dùng cách tương tự để giải</li><li>Bất đối xứng nghĩa là mã hóa dùng một phương pháp A, nhưng giải mã lại dùng phương pháp B.</li></ul><p>Mỗi một kiểu mã hóa sẽ có những lợi/bất lợi riêng, hãy xem bảng sau để hiểu rõ:</p><h2 class=heading-element id=gpg-là-gì><span>GPG là gì?</span>
+<a href=#gpg-l%c3%a0-g%c3%ac class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><p>Gnu Privacy Guard là một công cụ dùng để mã hóa (đối xứng hoặc bất đối xứng) một tệp, gói hoặc một tin nhắn,&mldr; bằng thuật toán đối xứng hay bất đối xứng. Ngoài công dụng này ra, GPG còn có thể sử dụng để xác nhận xem một tin nhắn, tệp hay gói,&mldr; có phải đã được tạo ra bởi một cá nhân/tổ chức nào đó hay không bằng cách kiểm tra <code>chữ ký số</code> (digital signature).</p><p>Không giống với mã băm (chỉ có tác dụng xác định xem một tệp,&mldr; có bị sửa đổi hay không), chữ ký số - cũng giống như chữ ký - mang đặc trưng định danh nhiều hơn, nghĩa là xác định cái gì đó có phải được tạo ra từ một cá nhân/tổ chức cụ thể hay không, đồng thời nó cũng có tác dụng xác định tính toàn vẹn của tin nhắn, tệp, gói,&mldr;</p><ul><li><p>Sử dụng GPG với thuật toán đối xứng có thể sử dụng như ví dụ sau:</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>kris@fedora:/tmp/gpg$ echo <span style=color:#e6db74>&#34;ví dụ &#34;</span> &gt; test
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ cat test
+</span></span><span style=display:flex><span>ví dụ
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --symmetric test
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật(passphrase)</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ ll
+</span></span><span style=display:flex><span>total <span style=color:#ae81ff>8</span>
+</span></span><span style=display:flex><span>-rw-r--r--. <span style=color:#ae81ff>1</span> kris kris <span style=color:#ae81ff>10</span> Nov <span style=color:#ae81ff>18</span> 14:33 test
+</span></span><span style=display:flex><span>-rw-r--r--. <span style=color:#ae81ff>1</span> kris kris <span style=color:#ae81ff>84</span> Nov <span style=color:#ae81ff>18</span> 14:34 test.gpg
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --decrypt test.gpg
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>gpg: AES256.CFB encrypted data
+</span></span><span style=display:flex><span>gpg: encrypted with <span style=color:#ae81ff>1</span> passphrase
+</span></span><span style=display:flex><span>ví dụ</span></span></code></pre></td></tr></table></div></div></li></ul><h2 class=heading-element id=gpg-với-thuật-toán-bất-đối-xứng><span>GPG với thuật toán bất đối xứng</span>
+<a href=#gpg-v%e1%bb%9bi-thu%e1%ba%adt-to%c3%a1n-b%e1%ba%a5t-%c4%91%e1%bb%91i-x%e1%bb%a9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><ul><li>Những khái niệm cần nắm:<ul><li>Khóa công khai (public key): là khóa dùng để mã hóa tệp tin, lý tưởng nhất là người bạn muốn trò chuyện, trao đổi có thể xem/tải khóa này về được.</li><li>Khóa riêng tư (private key): là khóa dùng để giải mã, cần lưu trữ cẩn thận không được chia sẻ cho ai, cài cụm từ bảo mật mạnh (strong passphrase)</li><li>Khóa chủ (master key): là khóa mẹ dùng để tạo ra một cặp khóa riêng tư/công khai con</li><li>Khóa con (subkey): là khóa con, sẽ có thuộc về một khóa chủ nào đó sử dụng để mã hóa/giải mã (có thể là khóa chủ riêng tư/công khai)</li></ul></li></ul><p>Khi tạo cặp khóa riêng tư/công khai bằng câu lệnh, GPG sẽ tạo ra một chiếc khóa chủ (master key) cùng với một cặp khóa riêng tư/công khai con (private/public subkey).</p><h3 class=heading-element id=ví-dụ-minh-họa><span>Ví dụ minh họa:</span>
+<a href=#v%c3%ad-d%e1%bb%a5-minh-h%e1%bb%8da class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>Mục đích đằng sau thiết kế phức tạp này là để giảm thiểu rủi ro cho khóa chủ, tối ưu việc sử dụng nhiều cặp khóa riêng tư/công khai con. Mỗi một khóa chủ có thể tạo ra một định danh cho nhiều cặp khóa riêng tư/công khai con dùng cho mục đích mã hóa/giải mã trên nhiều thiết bị khác nhau.</p><p>Ví dụ như bạn có 3 thiết bị, 1 cái là máy tính cá nhân, 1 là máy tính công ty và 1 là máy tính cho việc viết báo, vậy bạn sẽ quản lý chúng như thế nào:</p><ul><li><p>việc tạo 3 cặp khóa khác nhau trên 3 máy không thể đảm bảo đồng bộ dữ liệu giữa các máy được, vì mỗi cặp khóa lại có khóa công khai khác nhau nên cần cặp khóa riêng tư khác nhau để giải mã.</p></li><li><p>việc tạo 1 cặp khóa rồi chia sẻ giữa các máy lại mang lại rủi ro nếu một trong những thiết bị bị mất/trộm thì bắt buộc phải tạo một cặp khóa mới để sử dụng.</p></li><li><p>giải pháp tốt nhất là sử dụng mô hình sau:</p><ul><li><p>tạo một khóa chủ trên một máy (trong quá trình này sẽ tự động tạo ra cặp khóa riêng tư/công khai con), liệt kê những khóa riêng tư, công khai ngay khi mới tạo khóa</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>kris@fedora:/tmp/gpg$ export GNUPGHOME<span style=color:#f92672>=</span>/tmp/gpg <span style=color:#75715e># để tách biệt thư mục mặc định với khóa hiện tại mình đang dùng</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --full-generate-key
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span>gpg <span style=color:#f92672>(</span>GnuPG<span style=color:#f92672>)</span> 2.4.7; Copyright <span style=color:#f92672>(</span>C<span style=color:#f92672>)</span> <span style=color:#ae81ff>2024</span> g10 Code GmbH
+</span></span><span style=display:flex><span>This is free software: you are free to change and redistribute it.
+</span></span><span style=display:flex><span>There is NO WARRANTY, to the extent permitted by law.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Please <span style=color:#66d9ef>select</span> what kind of key you want:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span> RSA and RSA
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>2<span style=color:#f92672>)</span> DSA and Elgamal
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>3<span style=color:#f92672>)</span> DSA <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>4<span style=color:#f92672>)</span> RSA <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>9<span style=color:#f92672>)</span> ECC <span style=color:#f92672>(</span>sign and encrypt<span style=color:#f92672>)</span> *default*
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>10<span style=color:#f92672>)</span> ECC <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>14<span style=color:#f92672>)</span> Existing key from card
+</span></span><span style=display:flex><span>Your selection? <span style=color:#ae81ff>9</span>
+</span></span><span style=display:flex><span>Please <span style=color:#66d9ef>select</span> which elliptic curve you want:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span> Curve <span style=color:#ae81ff>25519</span> *default*
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>4<span style=color:#f92672>)</span> NIST P-384
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>6<span style=color:#f92672>)</span> Brainpool P-256
+</span></span><span style=display:flex><span>Your selection? <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>Please specify how long the key should be valid.
+</span></span><span style=display:flex><span>        0 <span style=color:#f92672>=</span> key does not expire
+</span></span><span style=display:flex><span>      &lt;n&gt;  <span style=color:#f92672>=</span> key expires in n days
+</span></span><span style=display:flex><span>      &lt;n&gt;w <span style=color:#f92672>=</span> key expires in n weeks
+</span></span><span style=display:flex><span>      &lt;n&gt;m <span style=color:#f92672>=</span> key expires in n months
+</span></span><span style=display:flex><span>      &lt;n&gt;y <span style=color:#f92672>=</span> key expires in n years
+</span></span><span style=display:flex><span>Key is valid <span style=color:#66d9ef>for</span>? <span style=color:#f92672>(</span>0<span style=color:#f92672>)</span> 1y
+</span></span><span style=display:flex><span>Key expires at Wed <span style=color:#ae81ff>18</span> Nov <span style=color:#ae81ff>2026</span> 02:50:02 PM +07
+</span></span><span style=display:flex><span>Is this correct? <span style=color:#f92672>(</span>y/N<span style=color:#f92672>)</span> y
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>GnuPG needs to construct a user ID to identify your key.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Real name: khoa-vi-du
+</span></span><span style=display:flex><span>Email address: vi-du@gnupg.org
+</span></span><span style=display:flex><span>Comment: Khoa vi du minh hoa
+</span></span><span style=display:flex><span>You selected this USER-ID:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;khoa-vi-du (Khoa vi du minh hoa) &lt;vi-du@gnupg.org&gt;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Change <span style=color:#f92672>(</span>N<span style=color:#f92672>)</span>ame, <span style=color:#f92672>(</span>C<span style=color:#f92672>)</span>omment, <span style=color:#f92672>(</span>E<span style=color:#f92672>)</span>mail or <span style=color:#f92672>(</span>O<span style=color:#f92672>)</span>kay/<span style=color:#f92672>(</span>Q<span style=color:#f92672>)</span>uit? o
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span style=display:flex><span>some other action <span style=color:#f92672>(</span>type on the keyboard, move the mouse, utilize the
+</span></span><span style=display:flex><span>disks<span style=color:#f92672>)</span> during the prime generation; this gives the random number
+</span></span><span style=display:flex><span>generator a better chance to gain enough entropy.
+</span></span><span style=display:flex><span>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span style=display:flex><span>some other action <span style=color:#f92672>(</span>type on the keyboard, move the mouse, utilize the
+</span></span><span style=display:flex><span>disks<span style=color:#f92672>)</span> during the prime generation; this gives the random number
+</span></span><span style=display:flex><span>generator a better chance to gain enough entropy.
+</span></span><span style=display:flex><span>gpg: /tmp/gpg/trustdb.gpg: trustdb created
+</span></span><span style=display:flex><span>gpg: directory <span style=color:#e6db74>&#39;/tmp/gpg/openpgp-revocs.d&#39;</span> created
+</span></span><span style=display:flex><span>gpg: revocation certificate stored as <span style=color:#e6db74>&#39;/tmp/gpg/openpgp-revocs.d/B94F9101C1665938968DAF797B314495163FC656.rev&#39;</span>
+</span></span><span style=display:flex><span>public and secret key created and signed.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>pub   ed25519 2025-11-18 <span style=color:#f92672>[</span>SC<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span style=display:flex><span>uid                      khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>sub   cv25519 2025-11-18 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --list-secret-keys --with-subkey-fingerprint
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span>/tmp/gpg/pubring.kbx
+</span></span><span style=display:flex><span>--------------------
+</span></span><span style=display:flex><span>sec   ed25519 2025-11-18 <span style=color:#f92672>[</span>SC<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span style=display:flex><span>uid           <span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>ssb   cv25519 2025-11-18 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --list-keys --with-subkey-fingerprint
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span>/tmp/gpg/pubring.kbx
+</span></span><span style=display:flex><span>--------------------
+</span></span><span style=display:flex><span>pub   ed25519 2025-11-18 <span style=color:#f92672>[</span>SC<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span style=display:flex><span>uid           <span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>sub   cv25519 2025-11-18 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$</span></span></code></pre></td></tr></table></div></div><blockquote><p>Một khóa chủ + cặp mã khóa riêng tư/công khai vừa được tạo với &ldquo;mã vân tay&rdquo;(fingerprint) lần lượt là khóa chủ <code>B94F9101C1665938968DAF797B314495163FC656</code>, khóa riêng tư/công khai <code>0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B</code></p></blockquote></li><li><p>tạo thêm 2 khóa con riêng tư cho 2 máy khác để mã hóa bằng cách chỉnh sửa khóa chủ có mã vân tay <code>B94F9101C1665938968DAF797B314495163FC656</code> (trong quá trình này sẽ tự động tạo ra 2 cặp khóa công khai con tương ứng)</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">97
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --edit-key B94F9101C1665938968DAF797B314495163FC656
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span>gpg <span style=color:#f92672>(</span>GnuPG<span style=color:#f92672>)</span> 2.4.7; Copyright <span style=color:#f92672>(</span>C<span style=color:#f92672>)</span> <span style=color:#ae81ff>2024</span> g10 Code GmbH
+</span></span><span style=display:flex><span>This is free software: you are free to change and redistribute it.
+</span></span><span style=display:flex><span>There is NO WARRANTY, to the extent permitted by law.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Secret key is available.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sec  ed25519/7B314495163FC656
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: SC
+</span></span><span style=display:flex><span>    trust: ultimate      validity: ultimate
+</span></span><span style=display:flex><span>ssb  cv25519/4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>. khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>gpg&gt; addkey
+</span></span><span style=display:flex><span>Please <span style=color:#66d9ef>select</span> what kind of key you want:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>3<span style=color:#f92672>)</span> DSA <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>4<span style=color:#f92672>)</span> RSA <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>5<span style=color:#f92672>)</span> Elgamal <span style=color:#f92672>(</span>encrypt only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>6<span style=color:#f92672>)</span> RSA <span style=color:#f92672>(</span>encrypt only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>10<span style=color:#f92672>)</span> ECC <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>12<span style=color:#f92672>)</span> ECC <span style=color:#f92672>(</span>encrypt only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>14<span style=color:#f92672>)</span> Existing key from card
+</span></span><span style=display:flex><span>Your selection? <span style=color:#ae81ff>12</span>
+</span></span><span style=display:flex><span>Please <span style=color:#66d9ef>select</span> which elliptic curve you want:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span> Curve <span style=color:#ae81ff>25519</span> *default*
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>4<span style=color:#f92672>)</span> NIST P-384
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>6<span style=color:#f92672>)</span> Brainpool P-256
+</span></span><span style=display:flex><span>Your selection? <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>Please specify how long the key should be valid.
+</span></span><span style=display:flex><span>        0 <span style=color:#f92672>=</span> key does not expire
+</span></span><span style=display:flex><span>      &lt;n&gt;  <span style=color:#f92672>=</span> key expires in n days
+</span></span><span style=display:flex><span>      &lt;n&gt;w <span style=color:#f92672>=</span> key expires in n weeks
+</span></span><span style=display:flex><span>      &lt;n&gt;m <span style=color:#f92672>=</span> key expires in n months
+</span></span><span style=display:flex><span>      &lt;n&gt;y <span style=color:#f92672>=</span> key expires in n years
+</span></span><span style=display:flex><span>Key is valid <span style=color:#66d9ef>for</span>? <span style=color:#f92672>(</span>0<span style=color:#f92672>)</span> 1y
+</span></span><span style=display:flex><span>Key expires at Wed <span style=color:#ae81ff>18</span> Nov <span style=color:#ae81ff>2026</span> 03:02:44 PM +07
+</span></span><span style=display:flex><span>Is this correct? <span style=color:#f92672>(</span>y/N<span style=color:#f92672>)</span> y
+</span></span><span style=display:flex><span>Really create? <span style=color:#f92672>(</span>y/N<span style=color:#f92672>)</span> y
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span style=display:flex><span>some other action <span style=color:#f92672>(</span>type on the keyboard, move the mouse, utilize the
+</span></span><span style=display:flex><span>disks<span style=color:#f92672>)</span> during the prime generation; this gives the random number
+</span></span><span style=display:flex><span>generator a better chance to gain enough entropy.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sec  ed25519/7B314495163FC656
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: SC
+</span></span><span style=display:flex><span>    trust: ultimate      validity: ultimate
+</span></span><span style=display:flex><span>ssb  cv25519/4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span style=display:flex><span>ssb  cv25519/35D0125B7F62907E
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>. khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>gpg&gt; addkey
+</span></span><span style=display:flex><span>Please <span style=color:#66d9ef>select</span> what kind of key you want:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>3<span style=color:#f92672>)</span> DSA <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>4<span style=color:#f92672>)</span> RSA <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>5<span style=color:#f92672>)</span> Elgamal <span style=color:#f92672>(</span>encrypt only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>6<span style=color:#f92672>)</span> RSA <span style=color:#f92672>(</span>encrypt only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>10<span style=color:#f92672>)</span> ECC <span style=color:#f92672>(</span>sign only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>12<span style=color:#f92672>)</span> ECC <span style=color:#f92672>(</span>encrypt only<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>14<span style=color:#f92672>)</span> Existing key from card
+</span></span><span style=display:flex><span>Your selection? <span style=color:#ae81ff>12</span>
+</span></span><span style=display:flex><span>Please <span style=color:#66d9ef>select</span> which elliptic curve you want:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span> Curve <span style=color:#ae81ff>25519</span> *default*
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>4<span style=color:#f92672>)</span> NIST P-384
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>6<span style=color:#f92672>)</span> Brainpool P-256
+</span></span><span style=display:flex><span>Your selection? <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>Please specify how long the key should be valid.
+</span></span><span style=display:flex><span>        0 <span style=color:#f92672>=</span> key does not expire
+</span></span><span style=display:flex><span>      &lt;n&gt;  <span style=color:#f92672>=</span> key expires in n days
+</span></span><span style=display:flex><span>      &lt;n&gt;w <span style=color:#f92672>=</span> key expires in n weeks
+</span></span><span style=display:flex><span>      &lt;n&gt;m <span style=color:#f92672>=</span> key expires in n months
+</span></span><span style=display:flex><span>      &lt;n&gt;y <span style=color:#f92672>=</span> key expires in n years
+</span></span><span style=display:flex><span>Key is valid <span style=color:#66d9ef>for</span>? <span style=color:#f92672>(</span>0<span style=color:#f92672>)</span> 1y
+</span></span><span style=display:flex><span>Key expires at Wed <span style=color:#ae81ff>18</span> Nov <span style=color:#ae81ff>2026</span> 03:03:01 PM +07
+</span></span><span style=display:flex><span>Is this correct? <span style=color:#f92672>(</span>y/N<span style=color:#f92672>)</span> y
+</span></span><span style=display:flex><span>Really create? <span style=color:#f92672>(</span>y/N<span style=color:#f92672>)</span> y
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span style=display:flex><span>some other action <span style=color:#f92672>(</span>type on the keyboard, move the mouse, utilize the
+</span></span><span style=display:flex><span>disks<span style=color:#f92672>)</span> during the prime generation; this gives the random number
+</span></span><span style=display:flex><span>generator a better chance to gain enough entropy.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sec  ed25519/7B314495163FC656
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: SC
+</span></span><span style=display:flex><span>    trust: ultimate      validity: ultimate
+</span></span><span style=display:flex><span>ssb  cv25519/4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span style=display:flex><span>ssb  cv25519/35D0125B7F62907E
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span style=display:flex><span>ssb  cv25519/2669A0060F0D7ACA
+</span></span><span style=display:flex><span>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> <span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>. khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>gpg&gt; save</span></span></code></pre></td></tr></table></div></div></li><li><p>liệt kê các khóa 1 lần nữa, xuất 1 khóa chủ, 3 khóa riêng tư con và khóa công khai ra thành những tệp</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --list-secret-keys --with-subkey-fingerprint
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span>/tmp/gpg/pubring.kbx
+</span></span><span style=display:flex><span>--------------------
+</span></span><span style=display:flex><span>sec   ed25519 2025-11-18 <span style=color:#f92672>[</span>SC<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span style=display:flex><span>uid           <span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> khoa-vi-du <span style=color:#f92672>(</span>Khoa vi du minh hoa<span style=color:#f92672>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span style=display:flex><span>ssb   cv25519 2025-11-18 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>ssb   cv25519 2025-11-18 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      7D42F1C441FBD540E631259F35D0125B7F62907E
+</span></span><span style=display:flex><span>ssb   cv25519 2025-11-18 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>expires: 2026-11-18<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>      2C05E3354FEC3496C3B14B522669A0060F0D7ACA
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-chu.gpg --export-secret-keys B94F9101C1665938968DAF797B314495163FC656 <span style=color:#75715e># hoặc sử dụng `vi-du@gnupg.org` thay cho mã vân tay</span>
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-1.gpg --export-secret-subkeys 0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-2.gpg --export-secret-subkeys 7D42F1C441FBD540E631259F35D0125B7F62907E
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-3.gpg --export-secret-subkeys 2C05E3354FEC3496C3B14B522669A0060F0D7ACA
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-cong-khai.gpg --export vi-du@gnupg.org
+</span></span><span style=display:flex><span>gpg: WARNING: unsafe permissions on homedir <span style=color:#e6db74>&#39;/tmp/gpg&#39;</span>
+</span></span><span style=display:flex><span>kris@fedora:/tmp/gpg$ ll | grep gpg
+</span></span><span style=display:flex><span>-rw-r--r--. <span style=color:#ae81ff>1</span> kris kris    <span style=color:#ae81ff>84</span> Nov <span style=color:#ae81ff>18</span> 14:34 test.gpg
+</span></span><span style=display:flex><span>-rw-------. <span style=color:#ae81ff>1</span> kris kris  <span style=color:#ae81ff>1280</span> Nov <span style=color:#ae81ff>18</span> 14:52 trustdb.gpg
+</span></span><span style=display:flex><span>-rw-------. <span style=color:#ae81ff>1</span> kris kris  <span style=color:#ae81ff>1641</span> Nov <span style=color:#ae81ff>18</span> 15:08 vidu-khoa-chu.gpg
+</span></span><span style=display:flex><span>-rw-r--r--. <span style=color:#ae81ff>1</span> kris kris  <span style=color:#ae81ff>1189</span> Nov <span style=color:#ae81ff>18</span> 15:11 vidu-khoa-cong-khai.gpg
+</span></span><span style=display:flex><span>-rw-------. <span style=color:#ae81ff>1</span> kris kris  <span style=color:#ae81ff>1540</span> Nov <span style=color:#ae81ff>18</span> 15:09 vidu-khoa-rieng-tu-may-1.gpg
+</span></span><span style=display:flex><span>-rw-------. <span style=color:#ae81ff>1</span> kris kris  <span style=color:#ae81ff>1540</span> Nov <span style=color:#ae81ff>18</span> 15:10 vidu-khoa-rieng-tu-may-2.gpg
+</span></span><span style=display:flex><span>-rw-------. <span style=color:#ae81ff>1</span> kris kris  <span style=color:#ae81ff>1540</span> Nov <span style=color:#ae81ff>18</span> 15:10 vidu-khoa-rieng-tu-may-3.gpg</span></span></code></pre></td></tr></table></div></div></li><li><p>xóa khóa chủ, và các khóa riêng tư con trên máy vừa tạo</p></li><li><p>nhập lại từng khóa riêng tư con và khóa công khai lên từng máy</p></li><li><p>nhập khóa chủ và khóa công khai vào thiết bị khóa bảo mật (security key) (nếu có)</p></li></ul></li></ul></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Cập nhật ngày 2025-11-20 21:20:27">Cập nhật ngày 2025-11-20&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>CC BY-NC-SA 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md><span><a href=/bai-viet/gpg-co-ban/index.md title="Đọc với định dạng Markdown" class=link-to-markdown>Đọc với định dạng Markdown</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="Chia sẻ trên X" data-sharer=twitter data-url=https://vanvuvuong.github.io/bai-viet/gpg-co-ban/ data-title="GPG Cơ Bản" data-hashtags="bảo mật,mã hóa,gpg"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên Facebook" data-sharer=facebook data-url=https://vanvuvuong.github.io/bai-viet/gpg-co-ban/ data-hashtag="bảo mật"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên 微博" data-sharer=weibo data-url=https://vanvuvuong.github.io/bai-viet/gpg-co-ban/ data-title="GPG Cơ Bản"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/b%E1%BA%A3o-m%E1%BA%ADt/ class=post-tag title="Nhãn - Tags/Bảo Mật">Tags/Bảo Mật</a><a href=/tags/m%C3%A3-h%C3%B3a/ class=post-tag title="Nhãn - Tags/Mã Hóa">Tags/Mã Hóa</a><a href=/tags/gpg/ class=post-tag title="Nhãn - Tags/Gpg">Tags/Gpg</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Quay lại</a></span>&nbsp;|&nbsp;<span><a href=/>Trang chủ</a></span></section></div><div class=post-nav><a href=/bai-viet/mang-trong-linux/ class=post-nav-item rel=prev title="Quản Lý / Cấu Hình Mạng Trong Hệ Điều Hành (HĐH) Linux"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i>Quản Lý / Cấu Hình Mạng Trong Hệ Điều Hành (HĐH) Linux</a><a href=/bai-viet/linux-shell/ class=post-nav-item rel=next title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article><aside class=toc id=toc-auto aria-label="Nội dung"><h2 class=toc-title>Nội dung&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside></main><footer class=footer><div class=footer-container><div class="footer-line powered">Cung cấp bởi <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreferrer" title="Hugo 0.152.2"><img class=hugo-icon src=/images/hugo.min.svg alt="Hugo logo"> Hugo</a> | Chủ đề - <a href=https://github.com/hugo-fixit/FixIt target=_blank rel=external title="FixIt v0.3.20"><img class=fixit-icon src=/images/fixit.min.svg alt="FixIt logo"> FixIt</a></div><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2025</span></div></div></footer></div><div class=widgets><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role=button aria-label="Lên trên"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><span class="variant-numeric d-none">0%</span></div></div><div id=mask></div><noscript><div class=noscript-warning>Trang web này hoạt động tốt nhất khi JavaScript được kích hoạt.</div></noscript></div><link rel=preload href=/lib/katex/katex.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/katex/katex.min.css></noscript><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/katex/katex.min.js defer></script><script src=/lib/katex/auto-render.min.js defer></script><script src=/lib/katex/copy-tex.min.js defer></script><script src=/lib/katex/mhchem.min.js defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script>window.config={code:{copyTitle:"Sao chép vào bộ nhớ tạm",editLockTitle:"Khóa khối mã có thể chỉnh sửa",editUnLockTitle:"Mở khóa khối mã có thể chỉnh sửa",editable:!0,maxShownLines:10},comment:{enable:!1},cookieconsent:{content:{dismiss:"Đã hiểu!",link:"Tìm hiểu thêm",message:"Trang web này sử dụng Cookies để cải thiện trải nghiệm của bạn."},enable:!0,palette:{button:{background:"#f0f0f0"},popup:{background:"#1aa3ff"}},theme:"edgeless"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"\\begin{equation}",right:"\\end{equation}"},{display:!0,left:"\\begin{equation*}",right:"\\end{equation*}"},{display:!0,left:"\\begin{align}",right:"\\end{align}"},{display:!0,left:"\\begin{align*}",right:"\\end{align*}"},{display:!0,left:"\\begin{alignat}",right:"\\end{alignat}"},{display:!0,left:"\\begin{alignat*}",right:"\\end{alignat*}"},{display:!0,left:"\\begin{gather}",right:"\\end{gather}"},{display:!0,left:"\\begin{CD}",right:"\\end{CD}"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},search:{distance:100,findAllMatches:!0,fuseIndexURL:"/search.json",highlightTag:"em",ignoreFieldNorm:!1,ignoreLocation:!1,isCaseSensitive:!1,location:0,maxResultLength:10,minMatchCharLength:1,noResultsFound:"Không tìm thấy",snippetLength:30,threshold:.3,type:"fuse",useExtendedSearch:!1},version:"v0.3.20"}</script><script src=/js/theme.min.js defer></script></body></html>
