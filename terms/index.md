@@ -4,6 +4,6 @@
 
 ---
 
-> Tác giả: [Đồng](https://vanvuvuong.github.io)  
+> Tác giả: <no value>  
 > URL: https://vanvuvuong.github.io/terms/  
 

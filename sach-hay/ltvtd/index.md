@@ -4,6 +4,6 @@ _**Bài viết này đã được mã hóa, nên nội dung gốc không thể n
 
 ---
 
-> Tác giả: [Đồng](https://vanvuvuong.github.io)  
+> Tác giả: [Kaizen Teams](https://vanvuvuong.github.io)  
 > URL: https://vanvuvuong.github.io/sach-hay/ltvtd/  
 
