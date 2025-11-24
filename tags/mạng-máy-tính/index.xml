@@ -1,25 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mạng Máy Tính - author - Trang mạng của Đồng</title><link>https://vanvuvuong.github.io/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</link><description>Trang mạng của Đồng</description><generator>Hugo 0.152.2 &amp; FixIt v0.3.20</generator><language>vi</language><managingEditor>dinhdong24+blog@proton.me (Đồng)</managingEditor><webMaster>dinhdong24+blog@proton.me (Đồng)</webMaster><lastBuildDate>Thu, 20 Nov 2025 21:20:27 +0700</lastBuildDate><atom:link href="https://vanvuvuong.github.io/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/index.xml" rel="self" type="application/rss+xml"/><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/mang-trong-linux/</link><pubDate>Sat, 15 Nov 2025 09:58:20 +0700</pubDate><author>dinhdong24+blog@proton.me (Đồng)</author><guid>https://vanvuvuong.github.io/bai-viet/mang-trong-linux/</guid><description>&lt;p&gt;Bài này bao gồm những nội dung:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;bật / tắt phần cứng của mạng (wifi card, ethernet card)&lt;/li&gt;
-&lt;li&gt;cấu hình thiết bị mạng (network device), giao diện mạng (network interface), kết nối mạng (network connection)&lt;/li&gt;
-&lt;li&gt;cấu hình DHCP (tự động / thủ công)&lt;/li&gt;
-&lt;li&gt;cấu hình DNS&lt;/li&gt;
-&lt;li&gt;cấu hình đường đi của mạng (routing)&lt;/li&gt;
-&lt;li&gt;chặn/cho phép các kết nối mạng ra/vào hệ thống&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Thư mục cần cấu hình:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;NETWORK_HOME=&amp;quot;/etc/NetworkManager/&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="heading-element" id="quản-lý-phần-cứng"&gt;&lt;span&gt;Quản lý phần cứng&lt;/span&gt;
- &lt;a href="#qu%e1%ba%a3n-l%c3%bd-ph%e1%ba%a7n-c%e1%bb%a9ng" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Câu lệnh sử dụng: &lt;code&gt;nmcli&lt;/code&gt;, &lt;code&gt;nmtui&lt;/code&gt;, &lt;code&gt;ip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Thư mục cấu hình: &lt;code&gt;/etc/NetworkManager/conf.d&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Với hầu hết máy tính hiện đại, bất kể đang là HĐH họ Gentoo, Debian (Ubuntu, Lubuntu, Mint), Arch (Manjero, ArchLinux), openSUSE, hay họ REHL (CentOS, Fedora, Amazon Linux,&amp;hellip;) đều sẽ sử dụng dịch vụ &lt;code&gt;NetworkManger&lt;/code&gt; để quản lý phần cứng &amp;amp; kết nối mạng.&lt;/p&gt;</description></item><item><title>Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/loi-mang-trong-linux/</link><pubDate>Sat, 15 Nov 2025 08:58:20 +0700</pubDate><author>dinhdong24+blog@proton.me (Đồng)</author><guid>https://vanvuvuong.github.io/bai-viet/loi-mang-trong-linux/</guid><description>&lt;p&gt;Những công cụ &amp;amp; bước để điều tra khi gặp lỗi mạng trong hệ thống Linux&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mạng Máy Tính - Nhãn - Kaizen - tốt hơn mỗi ngày</title><link>https://vanvuvuong.github.io/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</link><description>Kaizen - tốt hơn mỗi ngày</description><generator>Hugo 0.152.2 &amp; FixIt v0.3.20</generator><language>vi</language><managingEditor>kaizen-vn-team@proton.me (Kaizen Teams)</managingEditor><webMaster>kaizen-vn-team@proton.me (Kaizen Teams)</webMaster><lastBuildDate>Mon, 24 Nov 2025 14:41:47 +0700</lastBuildDate><atom:link href="https://vanvuvuong.github.io/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/index.xml" rel="self" type="application/rss+xml"/><item><title>Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/loi-mang-trong-linux/</link><pubDate>Mon, 24 Nov 2025 14:41:47 +0700</pubDate><author>kaizen-vn-team@proton.me (Kaizen Teams)</author><guid>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/loi-mang-trong-linux/</guid><description>&lt;p&gt;Những công cụ &amp;amp; bước để điều tra khi gặp lỗi mạng trong hệ thống Linux&lt;/p&gt;
 &lt;h2 class="heading-element" id="công-cụ-cần-sử-dụng-nslookup-dig-echo-ip-ifconfig-nmcli-traceroute"&gt;&lt;span&gt;Công cụ cần sử dụng: &lt;code&gt;nslookup&lt;/code&gt;, &lt;code&gt;dig&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;, &lt;code&gt;ip&lt;/code&gt;, &lt;code&gt;ifconfig&lt;/code&gt;, &lt;code&gt;nmcli&lt;/code&gt;, &lt;code&gt;traceroute&lt;/code&gt;&lt;/span&gt;
  &lt;a href="#c%c3%b4ng-c%e1%bb%a5-c%e1%ba%a7n-s%e1%bb%ad-d%e1%bb%a5ng-nslookup-dig-echo-ip-ifconfig-nmcli-traceroute" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -40,13 +19,34 @@
  &lt;a href="#c%c3%a2u-l%e1%bb%87nh" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# echo &amp;gt; /dev/tcp/ip-máy-cần-kiểm-tra/cổng-máy-cần-kiểm-tra &amp;amp;&amp;amp; echo &amp;#34;Open&amp;#34; || echo &amp;#34;Closed&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &amp;gt; /dev/tcp/8.8.8.8/53 &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;Open&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;||&lt;/span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;Closed&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# echo &amp;gt; /dev/tcp/ip-máy-cần-kiểm-tra/cổng-máy-cần-kiểm-tra &amp;amp;&amp;amp; echo &amp;#34;Open&amp;#34; || echo &amp;#34;Closed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &amp;gt; /dev/tcp/8.8.8.8/53 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Open&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Closed&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item></channel></rss>
+&lt;/div&gt;</description></item><item><title>Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux</title><link>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/mang-trong-linux/</link><pubDate>Mon, 24 Nov 2025 14:41:47 +0700</pubDate><author>kaizen-vn-team@proton.me (Kaizen Teams)</author><guid>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/mang-trong-linux/</guid><description>&lt;p&gt;Bài này bao gồm những nội dung:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bật / tắt phần cứng của mạng (wifi card, ethernet card)&lt;/li&gt;
+&lt;li&gt;cấu hình thiết bị mạng (network device), giao diện mạng (network interface), kết nối mạng (network connection)&lt;/li&gt;
+&lt;li&gt;cấu hình DHCP (tự động / thủ công)&lt;/li&gt;
+&lt;li&gt;cấu hình DNS&lt;/li&gt;
+&lt;li&gt;cấu hình đường đi của mạng (routing)&lt;/li&gt;
+&lt;li&gt;chặn/cho phép các kết nối mạng ra/vào hệ thống&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thư mục cần cấu hình:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;NETWORK_HOME=&amp;quot;/etc/NetworkManager/&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="heading-element" id="quản-lý-phần-cứng"&gt;&lt;span&gt;Quản lý phần cứng&lt;/span&gt;
+ &lt;a href="#qu%e1%ba%a3n-l%c3%bd-ph%e1%ba%a7n-c%e1%bb%a9ng" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Câu lệnh sử dụng: &lt;code&gt;nmcli&lt;/code&gt;, &lt;code&gt;nmtui&lt;/code&gt;, &lt;code&gt;ip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Thư mục cấu hình: &lt;code&gt;/etc/NetworkManager/conf.d&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Với hầu hết máy tính hiện đại, bất kể đang là HĐH họ Gentoo, Debian (Ubuntu, Lubuntu, Mint), Arch (Manjero, ArchLinux), openSUSE, hay họ REHL (CentOS, Fedora, Amazon Linux,&amp;hellip;) đều sẽ sử dụng dịch vụ &lt;code&gt;NetworkManger&lt;/code&gt; để quản lý phần cứng &amp;amp; kết nối mạng.&lt;/p&gt;</description></item></channel></rss>
