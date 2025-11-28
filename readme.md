@@ -1,18 +1,27 @@
 # Kaizen - tốt hơn mỗi ngày
 
-10 bài viết
+19 bài viết
 
 ## 2025
 
-10 bài viết
+19 bài viết
 
-- 11-24 [3 Kỹ năng quan trọng nhất (giai đoạn 3) - Chế độ Đòn bẩy](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-3/ "2025-11-24 21:42:01")
-- 11-24 [3 Kỹ năng quan trọng nhất (giai đoạn 2) - Tối ưu hóa](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-2/ "2025-11-24 21:42:00")
-- 11-24 [3 Kỹ năng quan trọng nhất (giai đoạn 1) - Thỏa mãn nhu cầu](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-1/ "2025-11-24 21:41:54")
-- 11-24 [Thần Chú của Học Viện Luật Tự nhiên ( HVLTN)](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/than-chu/ "2025-11-24 21:08:45")
-- 11-24 [Thuyết hấp thụ ngôn ngữ, chân lý của ngôn ngữ học](https://vanvuvuong.github.io/bai-viet/cuoc-song/phuong-phap-orca/ "2025-11-24 15:24:11")
-- 11-24 [GPG cơ bản](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ "2025-11-24 15:24:11")
-- 11-24 [Sử dụng cửa sổ câu lệnh (terminal) Linux nhanh gấp 10 lần người bình thường](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/10x-terminal/ "2025-11-24 14:41:47")
-- 11-24 [Quản lý / cấu hình mạng trong hệ điều hành (HĐH) Linux](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/mang-trong-linux/ "2025-11-24 14:41:47")
-- 11-24 [Những điều cơ bản về Bash & Fish shell trong Linux](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-shell/ "2025-11-24 14:41:47")
-- 11-24 [Điều tra những vấn đề liên quan tới mạng trong hệ điều hành (HĐH) Linux](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/loi-mang-trong-linux/ "2025-11-24 14:41:47")
+- 11-28 [Xây dựng trật tự và năng suất làm việc](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/00-mo-dau/ "2025-11-28 22:01:05")
+- 11-28 [Tóm tắt cuốn sách "Pragmatic Programmer" - (tạm dịch) Lập trình viên thực dụng](https://vanvuvuong.github.io/sach-hay/ltvtd/ "2025-11-28 22:01:05")
+- 11-28 [Những nguyên tắc điều hướng khỏi khủng hoảng nợ (Phần 2)](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/3-part-2-detailed-case-study/ "2025-11-28 22:01:05")
+- 11-28 [Những nguyên tắc điều hướng khỏi khủng hoảng nợ (Phần 1)](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/2-part-1-archtype-of-big-debt-cycle/ "2025-11-28 22:01:05")
+- 11-28 [Những nguyên tắc điều hướng khỏi khủng hoảng nợ (Giới thiệu)](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/1-acknowledgements-intro/ "2025-11-28 22:01:05")
+- 11-28 [Chương 9 - Khéo Léo Dụ Dö Người Không Quan Trọng Bằng Lợi Ích](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/09-kheo-leo-du-do-nguoi/ "2025-11-28 22:01:05")
+- 11-28 [Chương 8 - Khoảng Cách Và Cảm Giác Bí Ẩn](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/08-khoang-cach-va-bi-an/ "2025-11-28 22:01:05")
+- 11-28 [Chương 7 - Tẩy Não Ấn Tượng Và Tiếp Thị Thương Hiệu](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/07-an-tuong-va-thuong-hieu/ "2025-11-28 22:01:05")
+- 11-28 [Chương 6 - Khả Năng Thuyết Phục "Người Khác Tin Bạn Một Cách Vô Điều Kiện"](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/06-thuyet-phuc/ "2025-11-28 22:01:05")
+- 11-28 [Chương 5 - Tẩy Não Kiểu Tôn Giáo](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/05-tay-nao-kieu-ton-giao/ "2025-11-28 22:01:05")
+- 11-28 [Chương 4 - Bạn Nên Làm Thế Nào Để Che Đậy Sự Thật?](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/04-che-day-su-that/ "2025-11-28 22:01:05")
+- 11-28 [Chương 3 - Bùng Phát Tâm Lý](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/03-bung-phat-tam-ly/ "2025-11-28 22:01:05")
+- 11-28 [Chương 2 - Hương Vị Quả Táo](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/02-huong-vi-qua-tao/ "2025-11-28 22:01:05")
+- 11-28 [Chương 10 - Ai Cũng Có Sức Hấp Dẫn _"Chết Người"_](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/10-ai-cung-co-suc-hap-dan/ "2025-11-28 22:01:05")
+- 11-28 [Chương 1 - Những Điều Kẻ Chiến Thắng Sẽ Không Bao Giờ Nói Với Bạn](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/01-ke-chien-thang/ "2025-11-28 22:01:05")
+- 11-28 [Cẩm nang Chó Sói (quyển 4)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-4/ "2025-11-28 22:01:05")
+- 11-28 [Cẩm nang Chó Sói (quyển 3)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-3/ "2025-11-28 22:01:05")
+- 11-28 [Cẩm nang Chó Sói (quyển 2)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-2/ "2025-11-28 22:01:05")
+- 11-28 [Cẩm nang Chó Sói (quyển 1)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-1/ "2025-11-28 22:01:05")
