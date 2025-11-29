@@ -6,11 +6,11 @@
 
 19 bài viết
 
-- 11-28 [Xây dựng trật tự và năng suất làm việc](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/00-mo-dau/ "2025-11-28 22:01:05")
+- 11-29 [Phần Giới thiệu](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/1-acknowledgements-intro/ "2025-11-29 10:03:04")
+- 11-29 [Phần 2 - Các Nghiên Cứu Trường Hợp Chi Tiết](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/3-part-2-detailed-case-study/ "2025-11-29 10:03:04")
+- 11-29 [Phần 1 - Nguyên Mẫu Chu Kỳ Nợ Lớn](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/2-part-1-archtype-of-big-debt-cycle/ "2025-11-29 10:03:04")
+- 11-29 [Chương mở đầu - Xây dựng trật tự và năng suất làm việc](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/00-mo-dau/ "2025-11-29 10:03:04")
 - 11-28 [Tóm tắt cuốn sách "Pragmatic Programmer" - (tạm dịch) Lập trình viên thực dụng](https://vanvuvuong.github.io/sach-hay/ltvtd/ "2025-11-28 22:01:05")
-- 11-28 [Những nguyên tắc điều hướng khỏi khủng hoảng nợ (Phần 2)](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/3-part-2-detailed-case-study/ "2025-11-28 22:01:05")
-- 11-28 [Những nguyên tắc điều hướng khỏi khủng hoảng nợ (Phần 1)](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/2-part-1-archtype-of-big-debt-cycle/ "2025-11-28 22:01:05")
-- 11-28 [Những nguyên tắc điều hướng khỏi khủng hoảng nợ (Giới thiệu)](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/1-acknowledgements-intro/ "2025-11-28 22:01:05")
 - 11-28 [Chương 9 - Khéo Léo Dụ Dö Người Không Quan Trọng Bằng Lợi Ích](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/09-kheo-leo-du-do-nguoi/ "2025-11-28 22:01:05")
 - 11-28 [Chương 8 - Khoảng Cách Và Cảm Giác Bí Ẩn](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/08-khoang-cach-va-bi-an/ "2025-11-28 22:01:05")
 - 11-28 [Chương 7 - Tẩy Não Ấn Tượng Và Tiếp Thị Thương Hiệu](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/07-an-tuong-va-thuong-hieu/ "2025-11-28 22:01:05")
