@@ -1,0 +1,517 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=vi><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux - Kaizen - tốt hơn mỗi ngày</title><meta name=author content="Kaizen Teams"><meta name=description content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta name=keywords content='ai generated post'><meta itemprop=name content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta itemprop=description content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta itemprop=datePublished content="2025-11-20T20:17:23+07:00"><meta itemprop=dateModified content="2025-12-11T05:02:01+07:00"><meta itemprop=wordCount content="2183"><meta itemprop=keywords content="Ai Generated Post"><meta property="og:url" content="https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/"><meta property="og:site_name" content="Kaizen - tốt hơn mỗi ngày"><meta property="og:title" content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta property="og:description" content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="bai-viet"><meta property="article:published_time" content="2025-11-20T20:17:23+07:00"><meta property="article:modified_time" content="2025-12-11T05:02:01+07:00"><meta property="article:tag" content="Ai Generated Post"><meta name=twitter:card content="summary"><meta name=twitter:title content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta name=twitter:description content="Những điều cơ bản về Bash & Fish shell trong Linux"><meta name=application-name content="Kaizen - tốt hơn mỗi ngày"><meta name=apple-mobile-web-app-title content="Kaizen - tốt hơn mỗi ngày"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#2d89ef"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#FF7359><link rel=manifest href=/site.webmanifest><link rel=canonical type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những điều cơ bản về Bash & Fish shell trong Linux - Kaizen - tốt hơn mỗi ngày"><link rel=prev type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ title="GPG cơ bản"><link rel=next type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/10x-terminal/ title="Sử dụng cửa sổ câu lệnh (terminal) Linux nhanh gấp 10 lần người bình thường"><link rel=stylesheet href=/css/config.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Những điều cơ bản về Bash \u0026 Fish shell trong Linux","inLanguage":"vi","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/shell-co-ban\/"},"image":[{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}],"genre":"posts","keywords":"ai generated post","wordcount":2183,"url":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/shell-co-ban\/","datePublished":"2025-11-20T20:17:23+07:00","dateModified":"2025-12-11T05:02:01+07:00","publisher":{"@type":"Organization","name":"Kaizen","logo":{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}},"author":{"@type":"Person","name":"Kaizen Teams"},"description":"Những điều cơ bản về Bash \u0026 Fish shell trong Linux"}</script><script src=/js/head/color-scheme.min.js></script></head><body data-instant-intensity=viewport data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=32 width=32><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class="menu-item has-children"><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=26 width=26><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Huỷ</a></li><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class=menu-item><span class=nested-item><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a>
+<i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden=true></i></span><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=fi-container><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Bộ sưu tập"><div class="details collection-details open"><div class="details-summary collection-summary"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i>
+<span class=collection-name title="Bộ sưu tập">Linux Cli</span>
+<span class=collection-count>10</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content collection-content"><nav><ul class=collection-list><li class=collection-item><span class=active title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</span></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu">Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ title="Linux Network Commands - Hướng Dẫn Chuyên Sâu">Linux Network Commands - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu">Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ title="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer">Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu">Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/user-group/ title="Linux User & Group Management - Hướng Dẫn Chuyên Sâu">Linux User & Group Management - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/encryption-and-security/ title="Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu">Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/package-manager/ title="Linux Package Management - Hướng Dẫn Chuyên Sâu">Linux Package Management - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/selinux/ title="Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc">Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc</a></li></ul><div class=collection-nav-simple><i class="fa-solid fa-angle-left fa-fw collection-nav-item text-secondary" aria-hidden=true></i><span class=text-secondary>1/10</span><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ class=collection-nav-item rel=next title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></nav></div></div></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://vanvuvuong.github.io title="Tác giả" target=_blank rel="external nofollow noopener noreferrer author" class=author><i class="fa-solid fa-user-circle" aria-hidden=true></i>
+Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collections/linux-cli/ class=post-collection title="Bộ sưu tập - Linux Cli"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Linux Cli</a></span></div><div class=post-meta-line><span title="đăng ngày 2025-11-20 20:17:23"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2025-11-20>2025-11-20</time></span>&nbsp;<span title="Cập nhật ngày 2025-12-11 05:02:01"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-11>2025-12-11</time></span>&nbsp;<span title="2183 từ"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>Khoảng 2200 từ</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>11 phút</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Nội dung</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#bashshell>Bash/Shell</a><ul><li><a href=#biến-đặc-biệt>Biến đặc biệt</a></li><li><a href=#từ-khóa-trong-bash-shell>Từ khóa trong bash shell</a></li><li><a href=#biểu-thức>Biểu thức</a></li><li><a href=#ý-nghĩa-của-mã-thoát-bash-exit-status-code>Ý nghĩa của mã thoát Bash (exit status code)</a></li><li><a href=#làm-chủ-kết-quả-xuất-hiện-trên-màn-hình-linux-stdout>Làm chủ kết quả (xuất hiện) trên màn hình Linux (stdout)</a></li><li><a href=#điều-khỉển-kết-quả-xuất-hiện-trên-cửa-sổ-câu-lệnh>Điều khỉển kết quả (xuất hiện trên cửa sổ câu lệnh)</a></li><li><a href=#bash-error-code-meaning>Bash error code meaning</a></li><li><a href=#condition>Condition</a></li><li><a href=#loop>Loop</a></li><li><a href=#handy-snippets>Handy snippets</a></li></ul></li><li><a href=#fishshell>Fish/Shell</a><ul><li><a href=#từ-khóa-trong-fish-shell>Từ khóa trong fish shell</a></li><li><a href=#fish-builtins>Fish builtins</a></li></ul></li><li><a href=#những-câu-lệnh-cơ-bản-trong-linux>Những câu lệnh cơ bản trong Linux</a><ul><li><a href=#người-dùng--nhóm>Người dùng & Nhóm</a></li><li><a href=#tệp--thư-mục>Tệp & Thư mục</a></li><li><a href=#kiểm-soát-đầu-vàokết-quả-tiêu-chuẩn>(kiểm soát) Đầu vào/kết quả tiêu chuẩn</a></li><li><a href=#đĩa--phân-vùng>Đĩa & phân vùng</a></li><li><a href=#quản-lý-mạng>(quản lý) Mạng</a></li><li><a href=#quản-lý-tiến-trình--dịch-vụ>(quản lý) Tiến trình & Dịch vụ</a></li><li><a href=#câu-lệnh-hỗ-trợ>Câu lệnh hỗ trợ</a></li><li><a href=#quản-lý-góiphần-mềm>Quản lý gói/phần mềm</a></li><li><a href=#liên-quan-tới-phần-cứng>Liên quan tới phần cứng</a></li><li><a href=#mã-băm>Mã băm</a></li><li><a href=#mã-hóa>Mã hóa</a></li><li><a href=#khác>Khác</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><h2 class=heading-element id=bashshell><span>Bash/Shell</span>
+<a href=#bashshell class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=biến-đặc-biệt><span>Biến đặc biệt</span>
+<a href=#bi%e1%ba%bfn-%c4%91%e1%ba%b7c-bi%e1%bb%87t class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th>Symbol</th><th>Meaning</th></tr></thead><tbody><tr><td>$0</td><td>Tên của script Bash.</td></tr><tr><td><span class=katex><span class=katex-mathml><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo></mrow><annotation encoding="application/x-tex">1-</annotation></semantics></math></span><span class=katex-html aria-hidden=true><span class=base><span class=strut style=height:.7278em;vertical-align:-.0833em></span><span class=mord>1</span><span class=mord>−</span></span></span></span>9</td><td>9 tham số đầu tiên truyền vào script Bash.</td></tr><tr><td>$#</td><td>Số lượng tham số được truyền vào script.</td></tr><tr><td>$@</td><td>Toàn bộ tham số truyền vào script.</td></tr><tr><td>$?</td><td>Mã thoát (exit status) của tiến trình vừa chạy gần nhất.</td></tr><tr><td>$$</td><td>PID của script hiện tại.</td></tr><tr><td>$USER</td><td>Tên user đang chạy script.</td></tr><tr><td>$HOSTNAME</td><td>Hostname của máy đang chạy script.</td></tr><tr><td>$SECONDS</td><td>Số giây tính từ khi script bắt đầu.</td></tr><tr><td>$RANDOM</td><td>Trả về một số ngẫu nhiên khác nhau mỗi lần gọi.</td></tr><tr><td>$LINENO</td><td>Trả về số dòng hiện tại trong script Bash.</td></tr></tbody></table><h3 class=heading-element id=từ-khóa-trong-bash-shell><span>Từ khóa trong bash shell</span>
+<a href=#t%e1%bb%ab-kh%c3%b3a-trong-bash-shell class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th>-</th><th>-</th><th>-</th><th>-</th><th>-</th><th>-</th></tr></thead><tbody><tr><td>if</td><td>then</td><td>elif</td><td>else</td><td>fi</td><td>time</td></tr><tr><td>for</td><td>in</td><td>until</td><td>while</td><td>do</td><td>done</td></tr><tr><td>case</td><td>esac</td><td>coproc</td><td>select</td><td>function</td><td></td></tr><tr><td>{</td><td>}</td><td>[[</td><td>]]</td><td>!</td><td></td></tr></tbody></table><h3 class=heading-element id=biểu-thức><span>Biểu thức</span>
+<a href=#bi%e1%bb%83u-th%e1%bb%a9c class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><ul><li><p>Cách đánh giá biểu thức:</p><ul><li><code>test</code> expression</li><li>[[expression]]</li></ul></li><li><p>Toán tử:</p><ul><li><p><code>&&</code>: chạy lệnh tiếp theo nếu lệnh trước đó thành công</p><p>Ví dụ:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>test</span> -d <span class=s2>&#34;</span><span class=nv>$directory</span><span class=s2>&#34;</span> <span class=o>&amp;&amp;</span> <span class=nb>cd</span> <span class=s2>&#34;</span><span class=nv>$directory</span><span class=s2>&#34;</span></span></span></code></pre></td></tr></table></div></div></li></ul><ul><li><p><code>||</code>: run next command if the previous is failed</p><p>Ví dụ:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>cd</span> <span class=s2>&#34;</span><span class=nv>$directory</span><span class=s2>&#34;</span> <span class=o>&amp;&amp;</span> <span class=nb>echo</span> <span class=s2>&#34;Success&#34;</span> <span class=o>||</span> <span class=nb>echo</span> <span class=s2>&#34;Failed&#34;</span></span></span></code></pre></td></tr></table></div></div></li></ul></li></ul><h3 class=heading-element id=ý-nghĩa-của-mã-thoát-bash-exit-status-code><span>Ý nghĩa của mã thoát Bash (exit status code)</span>
+<a href=#%c3%bd-ngh%c4%a9a-c%e1%bb%a7a-m%c3%a3-tho%c3%a1t-bash-exit-status-code class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th>Mã thoát Bash</th><th>Ý nghĩa</th></tr></thead><tbody><tr><td>0</td><td>(câu lệnh chạy) thành công</td></tr><tr><td>1</td><td>(câu lệnh chạy) thất bại, theo định nghĩa của chương trình (program)</td></tr><tr><td>2</td><td>Câu lệnh sử dụng sai cách</td></tr><tr><td>mã khác</td><td>Mã tùy biến của chương trình</td></tr></tbody></table><p>Source: <a href=https://www.adminschoice.com/exit-error-codes-in-bash-and-linux-os target=_blank rel="external nofollow noopener noreferrer">Exit & Error Codes in bash and Linux OS</a></p><h3 class=heading-element id=làm-chủ-kết-quả-xuất-hiện-trên-màn-hình-linux-stdout><span>Làm chủ kết quả (xuất hiện) trên màn hình Linux (stdout)</span>
+<a href=#l%c3%a0m-ch%e1%bb%a7-k%e1%ba%bft-qu%e1%ba%a3-xu%e1%ba%a5t-hi%e1%bb%87n-tr%c3%aan-m%c3%a0n-h%c3%acnh-linux-stdout class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th></th><th style=text-align:right>hiển thị ở cửa sổ câu lệnh</th><th style=text-align:left></th><th style=text-align:right>hiển thị trong tệp</th><th style=text-align:left></th><th style=text-align:right>(nếu) tệp tồn tại</th></tr></thead><tbody><tr><td><strong>Cú pháp</strong></td><td style=text-align:right><strong>Kết quả thường(stdout)</strong></td><td style=text-align:left><strong>Kết quả lỗi(stderr)</strong></td><td style=text-align:right><strong>Kết quả thường</strong></td><td style=text-align:left><strong>Kết quả lỗi</strong></td><td style=text-align:right><strong>tệp</strong></td></tr><tr><td>></td><td style=text-align:right>không</td><td style=text-align:left>có</td><td style=text-align:right>có</td><td style=text-align:left>không</td><td style=text-align:right>ghi đè</td></tr><tr><td>&#187;</td><td style=text-align:right>không</td><td style=text-align:left>có</td><td style=text-align:right>có</td><td style=text-align:left>không</td><td style=text-align:right>chèn vào cuối</td></tr><tr><td>2></td><td style=text-align:right>có</td><td style=text-align:left>không</td><td style=text-align:right>không</td><td style=text-align:left>có</td><td style=text-align:right>ghi đè</td></tr><tr><td>2&#187;</td><td style=text-align:right>có</td><td style=text-align:left>không</td><td style=text-align:right>không</td><td style=text-align:left>có</td><td style=text-align:right>chèn vào cuối</td></tr><tr><td>&></td><td style=text-align:right>không</td><td style=text-align:left>không</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>ghi đè</td></tr><tr><td>&&#187;</td><td style=text-align:right>không</td><td style=text-align:left>không</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>chèn vào cuối</td></tr><tr><td>tee</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>có</td><td style=text-align:left>không</td><td style=text-align:right>ghi đè</td></tr><tr><td>tee -a</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>có</td><td style=text-align:left>không</td><td style=text-align:right>chèn vào cuối</td></tr><tr><td>n.e. (*)</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>không</td><td style=text-align:left>có</td><td style=text-align:right>ghi đè</td></tr><tr><td>n.e. (*)</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>không</td><td style=text-align:left>có</td><td style=text-align:right>chèn vào cuối</td></tr><tr><td>& tee</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>ghi đè</td></tr><tr><td>& tee -a</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>có</td><td style=text-align:left>có</td><td style=text-align:right>chèn vào cuối</td></tr></tbody></table><p>Giải thích thêm:</p><ul><li><p><code>command > output.txt</code></p><p>Kết quả tiêu chuẩn sẽ chỉ được chuyển hướng đến tệp, không hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ bị ghi đè.</p></li><li><p><code>command >> output.txt</code></p><p>Kết quả tiêu chuẩn sẽ chỉ được chuyển hướng đến tệp, không hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ được chèn vào cuối.</p></li></ul><hr><ul><li><p><code>command 2> output.txt</code></p><p>Kết quả lỗi sẽ chỉ được chuyển hướng đến tệp, không hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ bị ghi đè.</p></li><li><p><code>command 2>> output.txt</code></p><p>Kết quả lỗi sẽ chỉ được chuyển hướng đến tệp, không hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ được chèn vào cuối.</p></li></ul><hr><ul><li><p><code>command &> output.txt</code></p><p>Kết quả tiêu chuẩn và lỗi sẽ chỉ được chuyển hướng đến tệp, không hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ bị ghi đè.</p></li><li><p><code>command &>> output.txt</code></p><p>Kết quả tiêu chuẩn và lỗi sẽ chỉ được chuyển hướng đến tệp, không hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ được chèn vào cuối.</p></li></ul><hr><ul><li><p><code>command | tee output.txt</code></p><p>Kết quả tiêu chuẩn sẽ chỉ được sao chép đến tệp, và vẫn hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ bị ghi đè.</p></li><li><p><code>command | tee -a output.txt</code></p><p>Kết quả tiêu chuẩn sẽ chỉ được sao chép đến tệp, và vẫn hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ được chèn vào cuối.</p></li></ul><hr><ul><li><p><code>command |& tee output.txt</code></p><p>Kết quả tiêu chuẩn và lỗi sẽ chỉ được sao chép đến tệp, và vẫn hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ bị ghi đè.</p></li><li><p><code>command |& tee -a output.txt</code></p><p>Kết quả tiêu chuẩn và lỗi sẽ chỉ được sao chép đến tệp, và vẫn hiển thị trong cửa sổ câu lệnh. Nếu tệp đã tồn tại thì nó sẽ được chèn vào cuối.</p></li></ul><p><a href=https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file target=_blank rel="external nofollow noopener noreferrer"><strong>Original Post</strong></a></p><h3 class=heading-element id=điều-khỉển-kết-quả-xuất-hiện-trên-cửa-sổ-câu-lệnh><span>Điều khỉển kết quả (xuất hiện trên cửa sổ câu lệnh)</span>
+<a href=#%c4%91i%e1%bb%81u-kh%e1%bb%89%e1%bb%83n-k%e1%ba%bft-qu%e1%ba%a3-xu%e1%ba%a5t-hi%e1%bb%87n-tr%c3%aan-c%e1%bb%ada-s%e1%bb%95-c%c3%a2u-l%e1%bb%87nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><ul><li><code>> /dev/null</code> bỏ đi kết quả tiêu chuẩn</li><li><code>1> /dev/null</code> bỏ đi kết quả tiêu chuẩn</li><li><code>2> /dev/null</code> bỏ đi kết quả lỗi</li><li><code>&> /dev/null</code> bỏ đi kết quả tiêu chuẩn và kết quả lỗi</li></ul><h3 class=heading-element id=bash-error-code-meaning><span>Bash error code meaning</span>
+<a href=#bash-error-code-meaning class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th>Exit Code Number</th><th>Meaning</th><th>Examples</th><th>Comments</th></tr></thead><tbody><tr><td>1</td><td>Lỗi chung</td><td>let &ldquo;var1 = 1/0&rdquo;</td><td>Lỗi ngẫu nhiên như chia 0, thao tác không hợp lệ</td></tr><tr><td>2</td><td>Dùng sai shell builtin</td><td></td><td>Thiếu keyword/command, quyền chưa đủ, so sánh file lỗi, v.v.</td></tr><tr><td><em>124</em></td><td>Cần quyền root</td><td></td><td>Script hệ thống bị chạy bởi user không phải root</td></tr><tr><td><em>125</em></td><td>Chưa cấu hình</td><td></td><td>Thiếu file cấu hình hoặc giá trị</td></tr><tr><td>126</td><td>Command gọi nhưng không thực thi được</td><td></td><td>Không đủ quyền hoặc file không phải executable</td></tr><tr><td>127</td><td>&ldquo;command not found&rdquo;</td><td></td><td>PATH lỗi hoặc gõ sai</td></tr><tr><td>128</td><td>Tham số exit không hợp lệ</td><td>exit 3.14159</td><td>exit chỉ nhận số nguyên 0–255</td></tr><tr><td>128+n</td><td>Lỗi do tín hiệu “n”</td><td>kill -9 $PPID</td><td>128+9=137</td></tr><tr><td>130</td><td>Script bị dừng bằng Ctrl-C</td><td></td><td>Ctrl-C là tín hiệu số 2 → 128+2=130</td></tr><tr><td>255</td><td>Exit status ngoài phạm vi</td><td>exit -1</td><td>exit chỉ nhận 0–255</td></tr></tbody></table><p>Github source: <a href=https://github.com/szepeviktor/debian-server-tools/blob/master/Bash-exit-codes.md target=_blank rel="external nofollow noopener noreferrer">debian-server-tools</a></p><p>Source: <a href=https://www.tldp.org/LDP/abs/html/exitcodes.html target=_blank rel="external nofollow noopener noreferrer">Advanced Bash-Scripting Guide Appendix E.</a> & <a href=https://www.linuxdoc.org/LDP/abs/html/exitcodes.html target=_blank rel="external nofollow noopener noreferrer">Appendix C. Exit Codes With Special Meanings</a></p><p>Custom Exit Code Numbers are marked in <em>italic</em>.</p><h3 class=heading-element id=condition><span>Condition</span>
+<a href=#condition class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><ul><li><p>IF#condition</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> -d <span class=s2>&#34;</span><span class=nv>$directory</span><span class=s2>&#34;</span> <span class=o>]</span> <span class=o>&amp;&amp;</span> <span class=nb>cd</span> <span class=s2>&#34;</span><span class=nv>$directory</span><span class=s2>&#34;</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Run command&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span></span></span></code></pre></td></tr></table></div></div></li><li><p>IF-ELIF</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> -z <span class=nv>$0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Run command 1&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=o>[</span> -n <span class=nv>$0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Run command 2&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span></span></span></code></pre></td></tr></table></div></div></li><li><p>IF-ELIF-ELSE</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> -z <span class=nv>$0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Run command 1&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=o>[</span> -n <span class=nv>$0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Run command 2&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Run command 3&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span></span></span></code></pre></td></tr></table></div></div></li><li><p>CASE</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>case</span> <span class=nv>$#</span> in
+</span></span><span class=line><span class=cl>3<span class=o>)</span> <span class=p>;;</span> <span class=c1>## We need 3 args, so do nothing</span>
+</span></span><span class=line><span class=cl>*<span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=nb>printf</span> <span class=s2>&#34;%s\n&#34;</span> <span class=s2>&#34;Please provide three names&#34;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=cl>    <span class=nb>exit</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl>    <span class=p>;;</span>
+</span></span><span class=line><span class=cl><span class=k>esac</span></span></span></code></pre></td></tr></table></div></div></li><li><p>IF statement</p><table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody><tr><td>! EXPRESSION</td><td>The EXPRESSION is false.</td></tr><tr><td>condition 1 -a condition 2</td><td>CONDITION 1 and CONDITION 2.</td></tr><tr><td>condition 1 -o condition 2</td><td>CONDITION 1 or CONDITION 2.</td></tr><tr><td>-n STRING</td><td>The length of STRING is greater than zero.</td></tr><tr><td>-z STRING</td><td>lengh of STRING is zero (ie it is empty).</td></tr><tr><td>STRING1 =/!= STRING2</td><td>STRING1 is equal/not-equal to STRING2</td></tr><tr><td>INTEGER1 -eq/ne INTEGER2</td><td>INTEGER1 is numerically equal/not-equal to INTEGER2</td></tr><tr><td>INTEGER1 -gt/lt INTEGER2</td><td>INTEGER1 is numerically greater than or less than INTEGER2</td></tr><tr><td>INTEGER1 -ge/le INTEGER2</td><td>INTEGER1 is numerically greater-than/less-than or equal to INTEGER2</td></tr><tr><td>-b/c FILE</td><td>FILE is a block/character device.</td></tr><tr><td>-d/f/p/S FILE</td><td>FILE exists and is a directory/regular-file/pipe/socket.</td></tr><tr><td>-e FILE</td><td>FILE exists.</td></tr><tr><td>-h/L FILE</td><td>FILE is a symbolic link.</td></tr><tr><td>-s FILE</td><td>FILE exists and it&rsquo;s SIZE is greater than ZERO (ie. it is not empty).</td></tr><tr><td>-r/w/x FILE</td><td>FILE exists and read/write/execute permission is granted.</td></tr><tr><td>f1 -nt/ot/ef f2</td><td>FILE 1 is newer-than/older-than/has-hard-link-to-same-file</td></tr></tbody></table></li></ul><p>Source: <a href=https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php target=_blank rel="external nofollow noopener noreferrer">Bash Script Tutorial - 5. If Statements</a> & <a href=https://tldp.org/LDP/abs/html/fto.html target=_blank rel="external nofollow noopener noreferrer">File test operators</a></p><h3 class=heading-element id=loop><span>Loop</span>
+<a href=#loop class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><ul><li><p>Read a file line by line assigning the value to a variable:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>while</span> <span class=nb>read</span> -r line<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Text read from file: </span><span class=nv>$line</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>done</span> &lt; my_filename.txt</span></span></code></pre></td></tr></table></div></div></li><li><p>Loop string in array:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>array</span><span class=o>=(</span><span class=s2>&#34;string1&#34;</span> <span class=s2>&#34;string2&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> string in <span class=si>${</span><span class=nv>array</span><span class=p>[@]</span><span class=si>}</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=nv>$string</span>
+</span></span><span class=line><span class=cl><span class=k>done</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Loop string in array with array index</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>allThreads</span><span class=o>=(</span><span class=s2>&#34;string1&#34;</span> <span class=s2>&#34;string2&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> i in <span class=si>${</span><span class=p>!allThreads[@]</span><span class=si>}</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=si>${</span><span class=nv>allThreads</span><span class=p>[</span><span class=nv>$i</span><span class=p>]</span><span class=si>}</span>
+</span></span><span class=line><span class=cl><span class=k>done</span></span></span></code></pre></td></tr></table></div></div></li></ul><h3 class=heading-element id=handy-snippets><span>Handy snippets</span>
+<a href=#handy-snippets class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><ul><li><p>Read a file line by line assigning the value to a variable</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>while</span> <span class=nb>read</span> -r line<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Text read from file: </span><span class=nv>$line</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>done</span> &lt; my_filename.txt</span></span></code></pre></td></tr></table></div></div></li><li><p>Simple multiple files/folders maker</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>mkdir -p project/<span class=o>{</span>app,frontend,backend<span class=o>}</span>
+</span></span><span class=line><span class=cl>touch <span class=o>{</span>main,variables,provider<span class=o>}</span>.tf</span></span></code></pre></td></tr></table></div></div></li><li><p>Loop in a string array</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>b</span><span class=o>=(</span><span class=s2>&#34;aa&#34;</span> <span class=s2>&#34;ab&#34;</span><span class=o>)</span><span class=p>;</span> <span class=k>for</span> t in <span class=si>${</span><span class=nv>b</span><span class=p>[@]</span><span class=si>}</span> <span class=p>;</span> <span class=k>do</span> <span class=nb>echo</span> <span class=nv>$t</span> <span class=p>;</span> <span class=k>done</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=si>${#</span><span class=nv>b</span><span class=p>[@]</span><span class=si>}</span> <span class=c1># get array length</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Run multiple replicated command with multiple files</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>for</span> a in *.yml<span class=p>;</span> ansible-playbook <span class=s2>&#34;</span><span class=nv>$a</span><span class=s2>&#34;</span> --syntax-check <span class=p>;</span> <span class=k>done</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Do multiple silent task</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=k>for</span> file in <span class=k>$(</span>find /home/ec2-user/ -type f<span class=k>)</span><span class=p>;</span> <span class=k>do</span> cmd1 <span class=nv>$file</span> <span class=p>|</span> cmd2 <span class=p>&amp;</span><span class=nb>disown</span> <span class=p>;</span> <span class=k>done</span></span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>command</span> &gt; file.log 2&gt;<span class=p>&amp;</span><span class=m>1</span> <span class=p>&amp;</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Backgroud process to file (stdout + stderr)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>command</span> &gt; file.log 2&gt;<span class=p>&amp;</span><span class=m>1</span> <span class=p>&amp;</span></span></span></code></pre></td></tr></table></div></div><p>Explanation:</p><ul><li><code>></code> stdout to file</li><li><code>2>&amp;1</code>: redirect stderr to stdout</li><li><code>&</code>: run process in backgroud</li></ul></li><li><p>Update multiple files&rsquo; name in 1 command</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>find . -name <span class=s2>&#34;*_f&#34;</span><span class=p>|</span> sed <span class=s2>&#34;s/.\///g&#34;</span> <span class=p>|</span> <span class=k>while</span> <span class=nb>read</span> f <span class=p>;</span> <span class=k>do</span> mv <span class=s2>&#34;</span><span class=nv>$f</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>f</span><span class=p>%?????</span><span class=si>}</span><span class=s2>_f&#34;</span><span class=p>;</span> <span class=k>done</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Manage IP tables</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>iptables -P INPUT ACCEPT
+</span></span><span class=line><span class=cl>iptables -I INPUT <span class=m>1</span> -p tcp -s 159.89.202.45 -j ACCEPT
+</span></span><span class=line><span class=cl>iptables -P FORWARD ACCEPT
+</span></span><span class=line><span class=cl>iptables -P OUTPUT ACCEPT
+</span></span><span class=line><span class=cl>iptables -P INPUT DROP</span></span></code></pre></td></tr></table></div></div></li><li><p><code>telnet</code></p><ul><li>Without interaction</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s1>&#39;\x1dclose\x0d&#39;</span> <span class=p>|</span> telnet <span class=o>{</span><span class=nv>$IP_ADDRESS</span><span class=o>}</span> <span class=o>{</span><span class=nv>$PORT</span><span class=o>}</span></span></span></code></pre></td></tr></table></div></div><ul><li>Multiple IPs with SSH port</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>PORT</span><span class=o>=</span><span class=m>22</span> <span class=nv>list</span><span class=o>=(</span><span class=s2>&#34;172.29.211.1&#34;</span> <span class=s2>&#34;172.29.211.2&#34;</span><span class=o>)</span> <span class=p>;</span> <span class=k>for</span> ip in <span class=s2>&#34;</span><span class=si>${</span><span class=nv>list</span><span class=p>[@]</span><span class=si>}</span><span class=s2>&#34;</span> <span class=p>;</span> <span class=k>do</span> <span class=nb>echo</span> -e <span class=s1>&#39;\x1dclose\x0d&#39;</span> <span class=p>|</span> timeout <span class=m>2</span> telnet <span class=nv>$ip</span> <span class=o>{</span><span class=nv>$PORT</span><span class=o>}</span> <span class=o>&amp;&amp;</span> <span class=nb>echo</span> <span class=s2>&#34;connect </span><span class=nv>$ip</span><span class=s2> success&#34;</span> <span class=o>||</span> <span class=nb>echo</span> <span class=s2>&#34;connect </span><span class=nv>$ip</span><span class=s2> failed&#34;</span> <span class=p>;</span> <span class=k>done</span></span></span></code></pre></td></tr></table></div></div></li><li><p><code>sed</code> common use cases</p><ul><li>Replace string directly on file</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sed -i <span class=s1>&#39;s/pattern1/pattern2/g&#39;</span> filename</span></span></code></pre></td></tr></table></div></div></li><li><p>Concatenate file common use cases</p><ul><li>Insert multiple-lines text in to new file</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>cat <span class=s>&lt;&lt;EOF &gt; filename
+</span></span></span><span class=line><span class=cl><span class=s>Multiple
+</span></span></span><span class=line><span class=cl><span class=s>Lines
+</span></span></span><span class=line><span class=cl><span class=s>Text
+</span></span></span><span class=line><span class=cl><span class=s>Data
+</span></span></span><span class=line><span class=cl><span class=s>EOF</span></span></span></code></pre></td></tr></table></div></div><ul><li>Appending multiple-lines text in to existed file</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>cat <span class=s>&lt;&lt;EOF &gt;&gt; filename
+</span></span></span><span class=line><span class=cl><span class=s>Multiple
+</span></span></span><span class=line><span class=cl><span class=s>Lines
+</span></span></span><span class=line><span class=cl><span class=s>Text
+</span></span></span><span class=line><span class=cl><span class=s>Data
+</span></span></span><span class=line><span class=cl><span class=s>EOF</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Append text with sudoers (persistent mount point)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;\nnfs-uuid:/  /mnt/efs nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport,_netdev 0 0&#34;</span> <span class=p>|</span> sudo tee -a /etc/fstab</span></span></code></pre></td></tr></table></div></div></li><li><p>Append content to file with sudo privileges</p><ul><li>Create multiple-lines text file as sudoer</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo tee /etc/systemd/system/custom-service.service &gt; /dev/null <span class=s>&lt;&lt;-EOF
+</span></span></span><span class=line><span class=cl><span class=s># *****************************************************************
+</span></span></span><span class=line><span class=cl><span class=s># *********************** Custom Service **************************
+</span></span></span><span class=line><span class=cl><span class=s># *****************************************************************
+</span></span></span><span class=line><span class=cl><span class=s>
+</span></span></span><span class=line><span class=cl><span class=s>[Unit]
+</span></span></span><span class=line><span class=cl><span class=s>Description=Custom Service
+</span></span></span><span class=line><span class=cl><span class=s>After=network.target
+</span></span></span><span class=line><span class=cl><span class=s>
+</span></span></span><span class=line><span class=cl><span class=s>[Service]
+</span></span></span><span class=line><span class=cl><span class=s>ExecStart=/start/script/for/custom-service
+</span></span></span><span class=line><span class=cl><span class=s>ExecStop=/stop/script/for/custom-service
+</span></span></span><span class=line><span class=cl><span class=s>User=root
+</span></span></span><span class=line><span class=cl><span class=s>
+</span></span></span><span class=line><span class=cl><span class=s>[Install]
+</span></span></span><span class=line><span class=cl><span class=s>WantedBy=multi-user.target
+</span></span></span><span class=line><span class=cl><span class=s>EOF</span></span></span></code></pre></td></tr></table></div></div><ul><li>Create json file with variable in bash</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>SAMPLE</span><span class=o>=</span><span class=s1>&#39;
+</span></span></span><span class=line><span class=cl><span class=s1>{
+</span></span></span><span class=line><span class=cl><span class=s1>    &#34;Comment&#34;: &#34;Update DNSName.&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>    &#34;Changes&#34;: [
+</span></span></span><span class=line><span class=cl><span class=s1>        {
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;Action&#34;: &#34;UPSERT&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;ResourceRecordSet&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;Name&#34;: &#34;alex.&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;Type&#34;: &#34;A&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;AliasTarget&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;HostedZoneId&#34;: &#34;-##&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;DNSName&#34;: &#34;$bar&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;EvaluateTargetHealth&#34;: false
+</span></span></span><span class=line><span class=cl><span class=s1>                }
+</span></span></span><span class=line><span class=cl><span class=s1>            }
+</span></span></span><span class=line><span class=cl><span class=s1>        }
+</span></span></span><span class=line><span class=cl><span class=s1>    ]
+</span></span></span><span class=line><span class=cl><span class=s1>}
+</span></span></span><span class=line><span class=cl><span class=s1>&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>SAMPLE</span><span class=si>}</span><span class=s2>&#34;</span> <span class=p>|</span> tee output-file-path.json &gt; /dev/null</span></span></code></pre></td></tr></table></div></div></li><li><p>Trim 2 last string</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>new_string</span><span class=o>=</span><span class=si>${</span><span class=nv>string</span><span class=p>%??</span><span class=si>}</span></span></span></code></pre></td></tr></table></div></div></li><li><p>Convert string to array</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>IFS</span><span class=o>=</span><span class=s2>&#34; &#34;</span> <span class=nb>read</span> -a array <span class=o>&lt;&lt;&lt;</span> <span class=s2>&#34;1 2 3 4&#34;</span></span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nv>array</span><span class=o>=(</span><span class=k>$(</span><span class=nb>echo</span> <span class=s2>&#34;one,two,three&#34;</span> <span class=p>|</span> tr <span class=s1>&#39;,&#39;</span> <span class=s1>&#39;\n&#39;</span><span class=k>)</span><span class=o>)</span></span></span></code></pre></td></tr></table></div></div></li></ul><h2 class=heading-element id=fishshell><span>Fish/Shell</span>
+<a href=#fishshell class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=từ-khóa-trong-fish-shell><span>Từ khóa trong fish shell</span>
+<a href=#t%e1%bb%ab-kh%c3%b3a-trong-fish-shell class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th>-</th><th>-</th><th>-</th><th>-</th><th>-</th></tr></thead><tbody><tr><td>and</td><td>begin</td><td>break</td><td>builtin</td><td>case</td></tr><tr><td>command</td><td>continue</td><td>else</td><td>end</td><td>exec</td></tr><tr><td>for</td><td>function</td><td>if</td><td>in</td><td>not</td></tr><tr><td>or</td><td>return</td><td>switch</td><td>time</td><td>while</td></tr></tbody></table><h3 class=heading-element id=fish-builtins><span>Fish builtins</span>
+<a href=#fish-builtins class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><table><thead><tr><th>-</th><th>-</th><th>-</th><th>-</th><th>-</th></tr></thead><tbody><tr><td>abbr</td><td>argparse</td><td>bind</td><td>cd</td><td>commandline</td></tr><tr><td>complete</td><td>contains</td><td>count</td><td>echo</td><td>eval</td></tr><tr><td>fish_config</td><td>math</td><td>printf</td><td>random</td><td>read</td></tr><tr><td>set</td><td>set_color</td><td>source</td><td>status</td><td>string</td></tr><tr><td>test</td><td>type</td><td></td><td></td><td></td></tr></tbody></table><h2 class=heading-element id=những-câu-lệnh-cơ-bản-trong-linux><span>Những câu lệnh cơ bản trong Linux</span>
+<a href=#nh%e1%bb%afng-c%c3%a2u-l%e1%bb%87nh-c%c6%a1-b%e1%ba%a3n-trong-linux class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=người-dùng--nhóm><span>Người dùng & Nhóm</span>
+<a href=#ng%c6%b0%e1%bb%9di-d%c3%b9ng--nh%c3%b3m class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>chage
+</span></span><span class=line><span class=cl>chgrp
+</span></span><span class=line><span class=cl>chown
+</span></span><span class=line><span class=cl>chfn
+</span></span><span class=line><span class=cl>id
+</span></span><span class=line><span class=cl>passwd
+</span></span><span class=line><span class=cl>su
+</span></span><span class=line><span class=cl>useradd
+</span></span><span class=line><span class=cl>userdel
+</span></span><span class=line><span class=cl>usermod
+</span></span><span class=line><span class=cl>who
+</span></span><span class=line><span class=cl>whoami</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=tệp--thư-mục><span>Tệp & Thư mục</span>
+<a href=#t%e1%bb%87p--th%c6%b0-m%e1%bb%a5c class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>chattr
+</span></span><span class=line><span class=cl>chmod
+</span></span><span class=line><span class=cl>file
+</span></span><span class=line><span class=cl>find
+</span></span><span class=line><span class=cl>ln
+</span></span><span class=line><span class=cl>locate
+</span></span><span class=line><span class=cl>ls
+</span></span><span class=line><span class=cl>lsof
+</span></span><span class=line><span class=cl>mkdir
+</span></span><span class=line><span class=cl>mv
+</span></span><span class=line><span class=cl><span class=nb>pwd</span>
+</span></span><span class=line><span class=cl>rm
+</span></span><span class=line><span class=cl>rmdir
+</span></span><span class=line><span class=cl>rename
+</span></span><span class=line><span class=cl>tar
+</span></span><span class=line><span class=cl>touch
+</span></span><span class=line><span class=cl>tree
+</span></span><span class=line><span class=cl>zip/unzip/gzip</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=kiểm-soát-đầu-vàokết-quả-tiêu-chuẩn><span>(kiểm soát) Đầu vào/kết quả tiêu chuẩn</span>
+<a href=#ki%e1%bb%83m-so%c3%a1t-%c4%91%e1%ba%a7u-v%c3%a0ok%e1%ba%bft-qu%e1%ba%a3-ti%c3%aau-chu%e1%ba%a9n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>awk
+</span></span><span class=line><span class=cl>cat
+</span></span><span class=line><span class=cl>cut
+</span></span><span class=line><span class=cl>diff
+</span></span><span class=line><span class=cl>grep
+</span></span><span class=line><span class=cl>head
+</span></span><span class=line><span class=cl>jq
+</span></span><span class=line><span class=cl>less
+</span></span><span class=line><span class=cl>more
+</span></span><span class=line><span class=cl>nano
+</span></span><span class=line><span class=cl>sed
+</span></span><span class=line><span class=cl>sort
+</span></span><span class=line><span class=cl>tail
+</span></span><span class=line><span class=cl>tee
+</span></span><span class=line><span class=cl>uniq
+</span></span><span class=line><span class=cl>vi
+</span></span><span class=line><span class=cl>vim
+</span></span><span class=line><span class=cl>watch
+</span></span><span class=line><span class=cl>wc</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=đĩa--phân-vùng><span>Đĩa & phân vùng</span>
+<a href=#%c4%91%c4%a9a--ph%c3%a2n-v%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>blkid
+</span></span><span class=line><span class=cl>dd
+</span></span><span class=line><span class=cl>df
+</span></span><span class=line><span class=cl>du
+</span></span><span class=line><span class=cl>duc
+</span></span><span class=line><span class=cl>fdisk
+</span></span><span class=line><span class=cl>mkisofs
+</span></span><span class=line><span class=cl>mkswap
+</span></span><span class=line><span class=cl>mount</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=quản-lý-mạng><span>(quản lý) Mạng</span>
+<a href=#qu%e1%ba%a3n-l%c3%bd-m%e1%ba%a1ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>arp
+</span></span><span class=line><span class=cl>curl
+</span></span><span class=line><span class=cl>dig
+</span></span><span class=line><span class=cl>dnf
+</span></span><span class=line><span class=cl>ftp
+</span></span><span class=line><span class=cl>hostname
+</span></span><span class=line><span class=cl>hostnamectl
+</span></span><span class=line><span class=cl>ifconfig
+</span></span><span class=line><span class=cl>iostat
+</span></span><span class=line><span class=cl>ip
+</span></span><span class=line><span class=cl>iptables
+</span></span><span class=line><span class=cl>lftp
+</span></span><span class=line><span class=cl>lpadmin
+</span></span><span class=line><span class=cl>lpstat
+</span></span><span class=line><span class=cl>nc
+</span></span><span class=line><span class=cl>netstat
+</span></span><span class=line><span class=cl>nmap
+</span></span><span class=line><span class=cl>nmtui
+</span></span><span class=line><span class=cl>nslookup
+</span></span><span class=line><span class=cl>ping
+</span></span><span class=line><span class=cl>rsync
+</span></span><span class=line><span class=cl>scp
+</span></span><span class=line><span class=cl>sftp
+</span></span><span class=line><span class=cl>ss
+</span></span><span class=line><span class=cl>ssh
+</span></span><span class=line><span class=cl>telnet
+</span></span><span class=line><span class=cl>traceroute
+</span></span><span class=line><span class=cl>wget</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=quản-lý-tiến-trình--dịch-vụ><span>(quản lý) Tiến trình & Dịch vụ</span>
+<a href=#qu%e1%ba%a3n-l%c3%bd-ti%e1%ba%bfn-tr%c3%acnh--d%e1%bb%8bch-v%e1%bb%a5 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>at
+</span></span><span class=line><span class=cl>crontab
+</span></span><span class=line><span class=cl>dmesg
+</span></span><span class=line><span class=cl>free
+</span></span><span class=line><span class=cl>htop
+</span></span><span class=line><span class=cl><span class=nb>kill</span>
+</span></span><span class=line><span class=cl>lsof
+</span></span><span class=line><span class=cl>nice
+</span></span><span class=line><span class=cl>pgrep
+</span></span><span class=line><span class=cl>pkill
+</span></span><span class=line><span class=cl>ps
+</span></span><span class=line><span class=cl>pstree
+</span></span><span class=line><span class=cl>renice
+</span></span><span class=line><span class=cl>sar
+</span></span><span class=line><span class=cl>service
+</span></span><span class=line><span class=cl>systemctl
+</span></span><span class=line><span class=cl>top
+</span></span><span class=line><span class=cl>vmstat
+</span></span><span class=line><span class=cl>w</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=câu-lệnh-hỗ-trợ><span>Câu lệnh hỗ trợ</span>
+<a href=#c%c3%a2u-l%e1%bb%87nh-h%e1%bb%97-tr%e1%bb%a3 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>apropos
+</span></span><span class=line><span class=cl>cheat
+</span></span><span class=line><span class=cl><span class=nb>history</span>
+</span></span><span class=line><span class=cl>info
+</span></span><span class=line><span class=cl>man
+</span></span><span class=line><span class=cl>tldr</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=quản-lý-góiphần-mềm><span>Quản lý gói/phần mềm</span>
+<a href=#qu%e1%ba%a3n-l%c3%bd-g%c3%b3iph%e1%ba%a7n-m%e1%bb%81m class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>apk
+</span></span><span class=line><span class=cl>apt
+</span></span><span class=line><span class=cl>apt-get
+</span></span><span class=line><span class=cl>dnf
+</span></span><span class=line><span class=cl>pacman
+</span></span><span class=line><span class=cl>rpm
+</span></span><span class=line><span class=cl>yum
+</span></span><span class=line><span class=cl>zypper</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=liên-quan-tới-phần-cứng><span>Liên quan tới phần cứng</span>
+<a href=#li%c3%aan-quan-t%e1%bb%9bi-ph%e1%ba%a7n-c%e1%bb%a9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>arch
+</span></span><span class=line><span class=cl>dmidecode
+</span></span><span class=line><span class=cl>lsblk
+</span></span><span class=line><span class=cl>lscpu
+</span></span><span class=line><span class=cl>lsmem
+</span></span><span class=line><span class=cl>lspci
+</span></span><span class=line><span class=cl>lsusb</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=mã-băm><span>Mã băm</span>
+<a href=#m%c3%a3-b%c4%83m class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>cksum
+</span></span><span class=line><span class=cl>md5sum
+</span></span><span class=line><span class=cl>sha1sum
+</span></span><span class=line><span class=cl>sha224sum
+</span></span><span class=line><span class=cl>sha256sum
+</span></span><span class=line><span class=cl>sha384sum
+</span></span><span class=line><span class=cl>sha512sum
+</span></span><span class=line><span class=cl>shasum</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=mã-hóa><span>Mã hóa</span>
+<a href=#m%c3%a3-h%c3%b3a class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>gpg
+</span></span><span class=line><span class=cl>gpgv
+</span></span><span class=line><span class=cl>ssh-keygen</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=khác><span>Khác</span>
+<a href=#kh%c3%a1c class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=nb>alias</span>
+</span></span><span class=line><span class=cl>date
+</span></span><span class=line><span class=cl>figlet
+</span></span><span class=line><span class=cl>last
+</span></span><span class=line><span class=cl>lastb
+</span></span><span class=line><span class=cl>make
+</span></span><span class=line><span class=cl>poweroff
+</span></span><span class=line><span class=cl>reboot
+</span></span><span class=line><span class=cl>screen
+</span></span><span class=line><span class=cl>shutdown
+</span></span><span class=line><span class=cl>timedatectl
+</span></span><span class=line><span class=cl><span class=nb>unalias</span>
+</span></span><span class=line><span class=cl>uptime</span></span></code></pre></td></tr></table></div></div></div><div class=collection-card><div class="collection-title text-secondary">Trong <a href=/collections/linux-cli/><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> <span>Bộ sưu tập・Linux Cli</span></span></a> 10</div><div class=collection-nav><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ class=collection-nav-item rel=next title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><span>Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</span><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Cập nhật ngày 2025-12-11 05:02:01">Cập nhật ngày 2025-12-11&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>CC BY-NC-SA 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Chia sẻ trên X" data-sharer=twitter data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ data-title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux" data-hashtags="ai generated post"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên Facebook" data-sharer=facebook data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ data-hashtag="ai generated post"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên 微博" data-sharer=weibo data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ data-title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/ai-generated-post/ class=post-tag title="Nhãn - Ai Generated Post">Ai Generated Post</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Quay lại</a></span>&nbsp;|&nbsp;<span><a href=/>Trang chủ</a></span></section></div><div class=post-nav><a href=/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ class=post-nav-item rel=prev title="GPG Cơ Bản"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i>GPG Cơ Bản</a><a href=/bai-viet/khoa-hoc-may-tinh/10x-terminal/ class=post-nav-item rel=next title="Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường">Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article><aside class=toc id=toc-auto aria-label="Nội dung"><h2 class=toc-title>Nội dung&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside><dialog id=toc-dialog aria-labelledby=toc-dialog-title role=dialog><div class=toc><h2 class=toc-title>Nội dung</h2><div class=toc-content id=toc-content-drawer><nav><ul><li><ul><li><a href=#bashshell>Bash/Shell</a><ul><li><a href=#biến-đặc-biệt>Biến đặc biệt</a></li><li><a href=#từ-khóa-trong-bash-shell>Từ khóa trong bash shell</a></li><li><a href=#biểu-thức>Biểu thức</a></li><li><a href=#ý-nghĩa-của-mã-thoát-bash-exit-status-code>Ý nghĩa của mã thoát Bash (exit status code)</a></li><li><a href=#làm-chủ-kết-quả-xuất-hiện-trên-màn-hình-linux-stdout>Làm chủ kết quả (xuất hiện) trên màn hình Linux (stdout)</a></li><li><a href=#điều-khỉển-kết-quả-xuất-hiện-trên-cửa-sổ-câu-lệnh>Điều khỉển kết quả (xuất hiện trên cửa sổ câu lệnh)</a></li><li><a href=#bash-error-code-meaning>Bash error code meaning</a></li><li><a href=#condition>Condition</a></li><li><a href=#loop>Loop</a></li><li><a href=#handy-snippets>Handy snippets</a></li></ul></li><li><a href=#fishshell>Fish/Shell</a><ul><li><a href=#từ-khóa-trong-fish-shell>Từ khóa trong fish shell</a></li><li><a href=#fish-builtins>Fish builtins</a></li></ul></li><li><a href=#những-câu-lệnh-cơ-bản-trong-linux>Những câu lệnh cơ bản trong Linux</a><ul><li><a href=#người-dùng--nhóm>Người dùng & Nhóm</a></li><li><a href=#tệp--thư-mục>Tệp & Thư mục</a></li><li><a href=#kiểm-soát-đầu-vàokết-quả-tiêu-chuẩn>(kiểm soát) Đầu vào/kết quả tiêu chuẩn</a></li><li><a href=#đĩa--phân-vùng>Đĩa & phân vùng</a></li><li><a href=#quản-lý-mạng>(quản lý) Mạng</a></li><li><a href=#quản-lý-tiến-trình--dịch-vụ>(quản lý) Tiến trình & Dịch vụ</a></li><li><a href=#câu-lệnh-hỗ-trợ>Câu lệnh hỗ trợ</a></li><li><a href=#quản-lý-góiphần-mềm>Quản lý gói/phần mềm</a></li><li><a href=#liên-quan-tới-phần-cứng>Liên quan tới phần cứng</a></li><li><a href=#mã-băm>Mã băm</a></li><li><a href=#mã-hóa>Mã hóa</a></li><li><a href=#khác>Khác</a></li></ul></li></ul></li></ul></nav></div></div></dialog></main><footer class=footer><div class=footer-container><div class="footer-line powered">Cung cấp bởi <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreferrer" title="Hugo 0.152.0"><img class=hugo-icon src=/images/hugo.min.svg alt="Hugo logo"> Hugo</a> | Chủ đề - <a href=https://github.com/hugo-fixit/FixIt target=_blank rel=external title="FixIt v0.4.0-alpha.2"><img class=fixit-icon src=/images/fixit.min.svg alt="FixIt logo"> FixIt</a></div><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2025</span></div></div></footer></div><div class=widgets><div class=fixed-buttons><div class="fixed-button back-to-top animate__faster" role=button aria-label="Lên trên"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="50"/><circle class="progress" cx="50" cy="50" r="50"/></svg></div><div id=toc-drawer-button class="fixed-button toc-drawer-button" role=button aria-label="Nội dung"><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></div></div><div id=mask></div><div class=reading-progress-bar style=left:0;top:0;--bg-progress:#000;--bg-progress-dark:#fff></div><noscript><div class=noscript-warning>Trang web này hoạt động tốt nhất khi JavaScript được kích hoạt.</div></noscript></div><link rel=preload href=/lib/katex/katex.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/katex/katex.min.css></noscript><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><link rel=stylesheet href=/lib/pace/themes/blue/pace-theme-minimal.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/instant-page/instantpage.min.js async defer type=module></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/katex/copy-tex.min.js defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script src=/lib/pace/pace.min.js async defer></script><script src=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/config/page.js defer></script><script src=/js/theme.min.js defer></script></body></html>

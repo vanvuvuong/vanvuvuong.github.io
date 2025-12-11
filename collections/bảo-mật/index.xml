@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bảo Mật - Bộ sưu tập - Kaizen - tốt hơn mỗi ngày</title><link>https://vanvuvuong.github.io/collections/b%E1%BA%A3o-m%E1%BA%ADt/</link><description>Kaizen - tốt hơn mỗi ngày</description><generator>Hugo 0.152.2 &amp; FixIt v0.3.20</generator><language>vi</language><managingEditor>kaizen-vn-team@proton.me (Kaizen Teams)</managingEditor><webMaster>kaizen-vn-team@proton.me (Kaizen Teams)</webMaster><lastBuildDate>Fri, 28 Nov 2025 22:01:05 +0700</lastBuildDate><atom:link href="https://vanvuvuong.github.io/collections/b%E1%BA%A3o-m%E1%BA%ADt/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG cơ bản</title><link>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/</link><pubDate>Fri, 28 Nov 2025 22:01:05 +0700</pubDate><author>kaizen-vn-team@proton.me (Kaizen Teams)</author><guid>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/</guid><description>&lt;p&gt;Bài này bao gồm những nội dung:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bảo Mật - Bộ sưu tập - Kaizen - tốt hơn mỗi ngày</title><link>https://vanvuvuong.github.io/collections/b%E1%BA%A3o-m%E1%BA%ADt/</link><description>Kaizen - tốt hơn mỗi ngày</description><generator>Hugo 0.152.0 &amp; FixIt v0.4.0-alpha.2</generator><language>vi</language><managingEditor>kaizen-vn-team@proton.me (Kaizen Teams)</managingEditor><webMaster>kaizen-vn-team@proton.me (Kaizen Teams)</webMaster><lastBuildDate>Fri, 28 Nov 2025 22:01:05 +0700</lastBuildDate><atom:link href="https://vanvuvuong.github.io/collections/b%E1%BA%A3o-m%E1%BA%ADt/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG cơ bản</title><link>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/</link><pubDate>Tue, 18 Nov 2025 19:58:20 +0700</pubDate><author>kaizen-vn-team@proton.me (Kaizen Teams)</author><guid>https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/</guid><description>&lt;p&gt;Bài này bao gồm những nội dung:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;GPG là gì? Đạt được mục đích khi sử dụng?&lt;/p&gt;
@@ -28,20 +28,11 @@ Thư mục cần cấu hình:&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h3&gt;&lt;p&gt;Mỗi một máy tính sẽ bao gồm rất nhiều ty tỷ phần mềm, tệp, thư viện, &amp;hellip; sử dụng kết hợp với nhau để có thể &amp;ldquo;điều hành&amp;rdquo; phần cứng của chiếc máy tính. Mỗi khi chúng ta trao đổi những thứ nhạy cảm như vậy qua mạng Internet, chúng ta cần chắc chắn rằng, những gì người lập trình viên tạo ra sau đó họ gửi lên mạnh chính xác 100% với những gì chúng ta tìm kiếm &amp;amp; tải xuống.&lt;/p&gt;
 &lt;p&gt;Đó là khi mã băm được phát minh ra. Mỗi một chữ, tệp, gói, hay phần mềm đều có một mã băm đặc biệt và không hề giống nhau:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;ví dụ&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sha256sum
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;9737a22a063c9c8219a2b6c024cf20ecb33163be41f891885280d1d4350dca1f -
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;ví dụ &amp;#34;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sha256sum
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;250eefdd4605412b81e927612d83e49332d8a53c9286386f3bbdef796554c901 -&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Như các bạn có thể thấy, sự khác biệt của 2 từ chỉ là dấu cách đã cho ra một chuỗi mã băm khác nhau. Điều này đảm bảo việc người lập trình tạo một thứ và chia sẻ cho người khác dùng sẽ được đảm bảo là không bị thay đổi trong qua trình gửi/nhận trên mạng.&lt;/p&gt;
+
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;#34;&lt;/span&gt;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;sha256sum
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;9737a22a063c9c8219a2b6c024cf20ecb33163be41f891885280d1d4350dca1f&amp;ensp;&amp;ensp;-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;ensp;&amp;#34;&lt;/span&gt;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;sha256sum
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;250eefdd4605412b81e927612d83e49332d8a53c9286386f3bbdef796554c901&amp;ensp;&amp;ensp;-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Như các bạn có thể thấy, sự khác biệt của 2 từ chỉ là dấu cách đã cho ra một chuỗi mã băm khác nhau. Điều này đảm bảo việc người lập trình tạo một thứ và chia sẻ cho người khác dùng sẽ được đảm bảo là không bị thay đổi trong qua trình gửi/nhận trên mạng.&lt;/p&gt;
 &lt;h3 class="heading-element" id="mã-hóa-encryption"&gt;&lt;span&gt;Mã hóa (encryption)&lt;/span&gt;
  &lt;a href="#m%c3%a3-h%c3%b3a-encryption" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -58,45 +49,26 @@ Thư mục cần cấu hình:&lt;/p&gt;
  &lt;a href="#gpg-l%c3%a0-g%c3%ac" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;Gnu Privacy Guard là một công cụ dùng để mã hóa (đối xứng hoặc bất đối xứng) một tệp, gói hoặc một tin nhắn,&amp;hellip; bằng thuật toán đối xứng hay bất đối xứng. Ngoài công dụng này ra, GPG còn có thể sử dụng để xác nhận xem một tin nhắn, tệp hay gói,&amp;hellip; có phải đã được tạo ra bởi một cá nhân/tổ chức nào đó hay không bằng cách kiểm tra &lt;code&gt;chữ ký số&lt;/code&gt; (digital signature).&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;Gnu Privacy Guard là một công cụ dùng để mã hóa (đối xứng hoặc bất đối xứng) một tệp, gói hoặc một tin nhắn,&amp;hellip; bằng thuật toán đối xứng hay bất đối xứng. Ngoài công dụng này ra, GPG còn có thể sử dụng để xác nhận xem một tin nhắn, tệp hay gói,&amp;hellip; có phải đã được tạo ra bởi một cá nhân/tổ chức nào đó hay không bằng cách kiểm tra &lt;code&gt;chữ&amp;ensp;ký&amp;ensp;số&lt;/code&gt; (digital signature).&lt;/p&gt;
 &lt;p&gt;Không giống với mã băm (chỉ có tác dụng xác định xem một tệp,&amp;hellip; có bị sửa đổi hay không), chữ ký số - cũng giống như chữ ký - mang đặc trưng định danh nhiều hơn, nghĩa là xác định cái gì đó có phải được tạo ra từ một cá nhân/tổ chức cụ thể hay không, đồng thời nó cũng có tác dụng xác định tính toàn vẹn của tin nhắn, tệp, gói,&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Sử dụng GPG với thuật toán đối xứng có thể sử dụng như ví dụ sau:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;ví dụ &amp;#34;&lt;/span&gt; &amp;gt; &lt;span class="nb"&gt;test&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ cat &lt;span class="nb"&gt;test&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví dụ
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --symmetric &lt;span class="nb"&gt;test&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật(passphrase)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ ll
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;total &lt;span class="m"&gt;8&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;10&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 14:33 &lt;span class="nb"&gt;test&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;84&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 14:34 test.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --decrypt test.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: AES256.CFB encrypted data
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: encrypted with &lt;span class="m"&gt;1&lt;/span&gt; passphrase
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví dụ&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
+
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;ensp;&amp;#34;&lt;/span&gt;&amp;ensp;&amp;gt;&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;cat&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví&amp;ensp;dụ
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--symmetric&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật(passphrase)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;ll
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;total&amp;ensp;&lt;span class="m"&gt;8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&lt;span class="m"&gt;10&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;14:33&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&lt;span class="m"&gt;84&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;14:34&amp;ensp;test.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--decrypt&amp;ensp;test.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;AES256.CFB&amp;ensp;encrypted&amp;ensp;data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;encrypted&amp;ensp;with&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;passphrase
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví&amp;ensp;dụ&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 class="heading-element" id="gpg-với-thuật-toán-bất-đối-xứng"&gt;&lt;span&gt;GPG với thuật toán bất đối xứng&lt;/span&gt;
  &lt;a href="#gpg-v%e1%bb%9bi-thu%e1%ba%adt-to%c3%a1n-b%e1%ba%a5t-%c4%91%e1%bb%91i-x%e1%bb%a9ng" class="heading-mark"&gt;
@@ -131,457 +103,229 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;tạo một khóa chủ trên một máy (trong quá trình này sẽ tự động tạo ra cặp khóa riêng tư/công khai con), liệt kê những khóa riêng tư, công khai ngay khi mới tạo khóa&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
-&lt;/span&gt;&lt;span class="lnt"&gt;44
-&lt;/span&gt;&lt;span class="lnt"&gt;45
-&lt;/span&gt;&lt;span class="lnt"&gt;46
-&lt;/span&gt;&lt;span class="lnt"&gt;47
-&lt;/span&gt;&lt;span class="lnt"&gt;48
-&lt;/span&gt;&lt;span class="lnt"&gt;49
-&lt;/span&gt;&lt;span class="lnt"&gt;50
-&lt;/span&gt;&lt;span class="lnt"&gt;51
-&lt;/span&gt;&lt;span class="lnt"&gt;52
-&lt;/span&gt;&lt;span class="lnt"&gt;53
-&lt;/span&gt;&lt;span class="lnt"&gt;54
-&lt;/span&gt;&lt;span class="lnt"&gt;55
-&lt;/span&gt;&lt;span class="lnt"&gt;56
-&lt;/span&gt;&lt;span class="lnt"&gt;57
-&lt;/span&gt;&lt;span class="lnt"&gt;58
-&lt;/span&gt;&lt;span class="lnt"&gt;59
-&lt;/span&gt;&lt;span class="lnt"&gt;60
-&lt;/span&gt;&lt;span class="lnt"&gt;61
-&lt;/span&gt;&lt;span class="lnt"&gt;62
-&lt;/span&gt;&lt;span class="lnt"&gt;63
-&lt;/span&gt;&lt;span class="lnt"&gt;64
-&lt;/span&gt;&lt;span class="lnt"&gt;65
-&lt;/span&gt;&lt;span class="lnt"&gt;66
-&lt;/span&gt;&lt;span class="lnt"&gt;67
-&lt;/span&gt;&lt;span class="lnt"&gt;68
-&lt;/span&gt;&lt;span class="lnt"&gt;69
-&lt;/span&gt;&lt;span class="lnt"&gt;70
-&lt;/span&gt;&lt;span class="lnt"&gt;71
-&lt;/span&gt;&lt;span class="lnt"&gt;72
-&lt;/span&gt;&lt;span class="lnt"&gt;73
-&lt;/span&gt;&lt;span class="lnt"&gt;74
-&lt;/span&gt;&lt;span class="lnt"&gt;75
-&lt;/span&gt;&lt;span class="lnt"&gt;76
-&lt;/span&gt;&lt;span class="lnt"&gt;77
-&lt;/span&gt;&lt;span class="lnt"&gt;78
-&lt;/span&gt;&lt;span class="lnt"&gt;79
-&lt;/span&gt;&lt;span class="lnt"&gt;80
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GNUPGHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/tmp/gpg &lt;span class="c1"&gt;# để tách biệt thư mục mặc định với khóa hiện tại mình đang dùng&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --full-generate-key
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg &lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt; 2.4.7&lt;span class="p"&gt;;&lt;/span&gt; Copyright &lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="m"&gt;2024&lt;/span&gt; g10 Code GmbH
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This is free software: you are free to change and redistribute it.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There is NO WARRANTY, to the extent permitted by law.
+
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;&lt;span class="nb"&gt;export&lt;/span&gt;&amp;ensp;&lt;span class="nv"&gt;GNUPGHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/tmp/gpg&amp;ensp;&lt;span class="c1"&gt;#&amp;ensp;để&amp;ensp;tách&amp;ensp;biệt&amp;ensp;thư&amp;ensp;mục&amp;ensp;mặc&amp;ensp;định&amp;ensp;với&amp;ensp;khóa&amp;ensp;hiện&amp;ensp;tại&amp;ensp;mình&amp;ensp;đang&amp;ensp;dùng&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--full-generate-key
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;2.4.7&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;Copyright&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&lt;span class="m"&gt;2024&lt;/span&gt;&amp;ensp;g10&amp;ensp;Code&amp;ensp;GmbH
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This&amp;ensp;is&amp;ensp;free&amp;ensp;software:&amp;ensp;you&amp;ensp;are&amp;ensp;free&amp;ensp;to&amp;ensp;change&amp;ensp;and&amp;ensp;redistribute&amp;ensp;it.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There&amp;ensp;is&amp;ensp;NO&amp;ensp;WARRANTY,&amp;ensp;to&amp;ensp;the&amp;ensp;extent&amp;ensp;permitted&amp;ensp;by&amp;ensp;law.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please &lt;span class="k"&gt;select&lt;/span&gt; what kind of key you want:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt; RSA and RSA
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;2&lt;span class="o"&gt;)&lt;/span&gt; DSA and Elgamal
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt; DSA &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; RSA &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;9&lt;span class="o"&gt;)&lt;/span&gt; ECC &lt;span class="o"&gt;(&lt;/span&gt;sign and encrypt&lt;span class="o"&gt;)&lt;/span&gt; *default*
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt; ECC &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;14&lt;span class="o"&gt;)&lt;/span&gt; Existing key from card
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your selection? &lt;span class="m"&gt;9&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please &lt;span class="k"&gt;select&lt;/span&gt; which elliptic curve you want:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt; Curve &lt;span class="m"&gt;25519&lt;/span&gt; *default*
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; NIST P-384
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt; Brainpool P-256
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your selection? &lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please specify how long the key should be valid.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; key does not expire
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt; &lt;span class="o"&gt;=&lt;/span&gt; key expires in n days
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;w &lt;span class="o"&gt;=&lt;/span&gt; key expires in n weeks
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;m &lt;span class="o"&gt;=&lt;/span&gt; key expires in n months
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;y &lt;span class="o"&gt;=&lt;/span&gt; key expires in n years
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key is valid &lt;span class="k"&gt;for&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt; 1y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key expires at Wed &lt;span class="m"&gt;18&lt;/span&gt; Nov &lt;span class="m"&gt;2026&lt;/span&gt; 02:50:02 PM +07
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Is this correct? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;&lt;span class="k"&gt;select&lt;/span&gt;&amp;ensp;what&amp;ensp;kind&amp;ensp;of&amp;ensp;key&amp;ensp;you&amp;ensp;want:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;RSA&amp;ensp;and&amp;ensp;RSA
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;2&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;DSA&amp;ensp;and&amp;ensp;Elgamal
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;DSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;RSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;9&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;ECC&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;and&amp;ensp;encrypt&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;*default*
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;ECC&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;14&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Existing&amp;ensp;key&amp;ensp;from&amp;ensp;card
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your&amp;ensp;selection?&amp;ensp;&lt;span class="m"&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;&lt;span class="k"&gt;select&lt;/span&gt;&amp;ensp;which&amp;ensp;elliptic&amp;ensp;curve&amp;ensp;you&amp;ensp;want:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Curve&amp;ensp;&lt;span class="m"&gt;25519&lt;/span&gt;&amp;ensp;*default*
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;NIST&amp;ensp;P-384
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Brainpool&amp;ensp;P-256
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your&amp;ensp;selection?&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;specify&amp;ensp;how&amp;ensp;long&amp;ensp;the&amp;ensp;key&amp;ensp;should&amp;ensp;be&amp;ensp;valid.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="nv"&gt;0&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;does&amp;ensp;not&amp;ensp;expire
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;days
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;w&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;weeks
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;m&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;months
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;y&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;years
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key&amp;ensp;is&amp;ensp;valid&amp;ensp;&lt;span class="k"&gt;for&lt;/span&gt;?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;1y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key&amp;ensp;expires&amp;ensp;at&amp;ensp;Wed&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;2026&lt;/span&gt;&amp;ensp;02:50:02&amp;ensp;PM&amp;ensp;+07
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Is&amp;ensp;this&amp;ensp;correct?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;y
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;GnuPG needs to construct a user ID to identify your key.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;GnuPG&amp;ensp;needs&amp;ensp;to&amp;ensp;construct&amp;ensp;a&amp;ensp;user&amp;ensp;ID&amp;ensp;to&amp;ensp;identify&amp;ensp;your&amp;ensp;key.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Real name: khoa-vi-du
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Email address: vi-du@gnupg.org
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Comment: Khoa vi du minh hoa
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;You selected this USER-ID:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;khoa-vi-du (Khoa vi du minh hoa) &amp;lt;vi-du@gnupg.org&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Real&amp;ensp;name:&amp;ensp;khoa-vi-du
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Email&amp;ensp;address:&amp;ensp;vi-du@gnupg.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Comment:&amp;ensp;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;You&amp;ensp;selected&amp;ensp;this&amp;ensp;USER-ID:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;khoa-vi-du&amp;ensp;(Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa)&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Change &lt;span class="o"&gt;(&lt;/span&gt;N&lt;span class="o"&gt;)&lt;/span&gt;ame, &lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt;omment, &lt;span class="o"&gt;(&lt;/span&gt;E&lt;span class="o"&gt;)&lt;/span&gt;mail or &lt;span class="o"&gt;(&lt;/span&gt;O&lt;span class="o"&gt;)&lt;/span&gt;kay/&lt;span class="o"&gt;(&lt;/span&gt;Q&lt;span class="o"&gt;)&lt;/span&gt;uit? o
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We need to generate a lot of random bytes. It is a good idea to perform
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some other action &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt; on the keyboard, move the mouse, utilize the
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt; during the prime generation&lt;span class="p"&gt;;&lt;/span&gt; this gives the random number
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator a better chance to gain enough entropy.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We need to generate a lot of random bytes. It is a good idea to perform
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some other action &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt; on the keyboard, move the mouse, utilize the
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt; during the prime generation&lt;span class="p"&gt;;&lt;/span&gt; this gives the random number
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator a better chance to gain enough entropy.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: /tmp/gpg/trustdb.gpg: trustdb created
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: directory &lt;span class="s1"&gt;&amp;#39;/tmp/gpg/openpgp-revocs.d&amp;#39;&lt;/span&gt; created
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: revocation certificate stored as &lt;span class="s1"&gt;&amp;#39;/tmp/gpg/openpgp-revocs.d/B94F9101C1665938968DAF797B314495163FC656.rev&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;public and secret key created and signed.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Change&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;N&lt;span class="o"&gt;)&lt;/span&gt;ame,&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt;omment,&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;E&lt;span class="o"&gt;)&lt;/span&gt;mail&amp;ensp;or&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;O&lt;span class="o"&gt;)&lt;/span&gt;kay/&lt;span class="o"&gt;(&lt;/span&gt;Q&lt;span class="o"&gt;)&lt;/span&gt;uit?&amp;ensp;o
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We&amp;ensp;need&amp;ensp;to&amp;ensp;generate&amp;ensp;a&amp;ensp;lot&amp;ensp;of&amp;ensp;random&amp;ensp;bytes.&amp;ensp;It&amp;ensp;is&amp;ensp;a&amp;ensp;good&amp;ensp;idea&amp;ensp;to&amp;ensp;perform
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some&amp;ensp;other&amp;ensp;action&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&amp;ensp;on&amp;ensp;the&amp;ensp;keyboard,&amp;ensp;move&amp;ensp;the&amp;ensp;mouse,&amp;ensp;utilize&amp;ensp;the
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;during&amp;ensp;the&amp;ensp;prime&amp;ensp;generation&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;this&amp;ensp;gives&amp;ensp;the&amp;ensp;random&amp;ensp;number
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator&amp;ensp;a&amp;ensp;better&amp;ensp;chance&amp;ensp;to&amp;ensp;gain&amp;ensp;enough&amp;ensp;entropy.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We&amp;ensp;need&amp;ensp;to&amp;ensp;generate&amp;ensp;a&amp;ensp;lot&amp;ensp;of&amp;ensp;random&amp;ensp;bytes.&amp;ensp;It&amp;ensp;is&amp;ensp;a&amp;ensp;good&amp;ensp;idea&amp;ensp;to&amp;ensp;perform
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some&amp;ensp;other&amp;ensp;action&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&amp;ensp;on&amp;ensp;the&amp;ensp;keyboard,&amp;ensp;move&amp;ensp;the&amp;ensp;mouse,&amp;ensp;utilize&amp;ensp;the
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;during&amp;ensp;the&amp;ensp;prime&amp;ensp;generation&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;this&amp;ensp;gives&amp;ensp;the&amp;ensp;random&amp;ensp;number
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator&amp;ensp;a&amp;ensp;better&amp;ensp;chance&amp;ensp;to&amp;ensp;gain&amp;ensp;enough&amp;ensp;entropy.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;/tmp/gpg/trustdb.gpg:&amp;ensp;trustdb&amp;ensp;created
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;directory&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg/openpgp-revocs.d&amp;#39;&lt;/span&gt;&amp;ensp;created
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;revocation&amp;ensp;certificate&amp;ensp;stored&amp;ensp;as&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg/openpgp-revocs.d/B94F9101C1665938968DAF797B314495163FC656.rev&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;public&amp;ensp;and&amp;ensp;secret&amp;ensp;key&amp;ensp;created&amp;ensp;and&amp;ensp;signed.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pub ed25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; B94F9101C1665938968DAF797B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sub cv25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pub&amp;ensp;&amp;ensp;&amp;ensp;ed25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sub&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --list-secret-keys --with-subkey-fingerprint
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--list-secret-keys&amp;ensp;--with-subkey-fingerprint
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/tmp/gpg/pubring.kbx
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;--------------------
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec ed25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; B94F9101C1665938968DAF797B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid &lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec&amp;ensp;&amp;ensp;&amp;ensp;ed25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --list-keys --with-subkey-fingerprint
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--list-keys&amp;ensp;--with-subkey-fingerprint
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/tmp/gpg/pubring.kbx
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;--------------------
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pub ed25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; B94F9101C1665938968DAF797B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid &lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sub cv25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pub&amp;ensp;&amp;ensp;&amp;ensp;ed25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sub&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;blockquote&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Một khóa chủ + cặp mã khóa riêng tư/công khai vừa được tạo với &amp;ldquo;mã vân tay&amp;rdquo;(fingerprint) lần lượt là khóa chủ &lt;code&gt;B94F9101C1665938968DAF797B314495163FC656&lt;/code&gt;, khóa riêng tư/công khai &lt;code&gt;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;tạo thêm 2 khóa con riêng tư cho 2 máy khác để mã hóa bằng cách chỉnh sửa khóa chủ có mã vân tay &lt;code&gt;B94F9101C1665938968DAF797B314495163FC656&lt;/code&gt; (trong quá trình này sẽ tự động tạo ra 2 cặp khóa công khai con tương ứng)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
-&lt;/span&gt;&lt;span class="lnt"&gt;44
-&lt;/span&gt;&lt;span class="lnt"&gt;45
-&lt;/span&gt;&lt;span class="lnt"&gt;46
-&lt;/span&gt;&lt;span class="lnt"&gt;47
-&lt;/span&gt;&lt;span class="lnt"&gt;48
-&lt;/span&gt;&lt;span class="lnt"&gt;49
-&lt;/span&gt;&lt;span class="lnt"&gt;50
-&lt;/span&gt;&lt;span class="lnt"&gt;51
-&lt;/span&gt;&lt;span class="lnt"&gt;52
-&lt;/span&gt;&lt;span class="lnt"&gt;53
-&lt;/span&gt;&lt;span class="lnt"&gt;54
-&lt;/span&gt;&lt;span class="lnt"&gt;55
-&lt;/span&gt;&lt;span class="lnt"&gt;56
-&lt;/span&gt;&lt;span class="lnt"&gt;57
-&lt;/span&gt;&lt;span class="lnt"&gt;58
-&lt;/span&gt;&lt;span class="lnt"&gt;59
-&lt;/span&gt;&lt;span class="lnt"&gt;60
-&lt;/span&gt;&lt;span class="lnt"&gt;61
-&lt;/span&gt;&lt;span class="lnt"&gt;62
-&lt;/span&gt;&lt;span class="lnt"&gt;63
-&lt;/span&gt;&lt;span class="lnt"&gt;64
-&lt;/span&gt;&lt;span class="lnt"&gt;65
-&lt;/span&gt;&lt;span class="lnt"&gt;66
-&lt;/span&gt;&lt;span class="lnt"&gt;67
-&lt;/span&gt;&lt;span class="lnt"&gt;68
-&lt;/span&gt;&lt;span class="lnt"&gt;69
-&lt;/span&gt;&lt;span class="lnt"&gt;70
-&lt;/span&gt;&lt;span class="lnt"&gt;71
-&lt;/span&gt;&lt;span class="lnt"&gt;72
-&lt;/span&gt;&lt;span class="lnt"&gt;73
-&lt;/span&gt;&lt;span class="lnt"&gt;74
-&lt;/span&gt;&lt;span class="lnt"&gt;75
-&lt;/span&gt;&lt;span class="lnt"&gt;76
-&lt;/span&gt;&lt;span class="lnt"&gt;77
-&lt;/span&gt;&lt;span class="lnt"&gt;78
-&lt;/span&gt;&lt;span class="lnt"&gt;79
-&lt;/span&gt;&lt;span class="lnt"&gt;80
-&lt;/span&gt;&lt;span class="lnt"&gt;81
-&lt;/span&gt;&lt;span class="lnt"&gt;82
-&lt;/span&gt;&lt;span class="lnt"&gt;83
-&lt;/span&gt;&lt;span class="lnt"&gt;84
-&lt;/span&gt;&lt;span class="lnt"&gt;85
-&lt;/span&gt;&lt;span class="lnt"&gt;86
-&lt;/span&gt;&lt;span class="lnt"&gt;87
-&lt;/span&gt;&lt;span class="lnt"&gt;88
-&lt;/span&gt;&lt;span class="lnt"&gt;89
-&lt;/span&gt;&lt;span class="lnt"&gt;90
-&lt;/span&gt;&lt;span class="lnt"&gt;91
-&lt;/span&gt;&lt;span class="lnt"&gt;92
-&lt;/span&gt;&lt;span class="lnt"&gt;93
-&lt;/span&gt;&lt;span class="lnt"&gt;94
-&lt;/span&gt;&lt;span class="lnt"&gt;95
-&lt;/span&gt;&lt;span class="lnt"&gt;96
-&lt;/span&gt;&lt;span class="lnt"&gt;97
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --edit-key B94F9101C1665938968DAF797B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg &lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt; 2.4.7&lt;span class="p"&gt;;&lt;/span&gt; Copyright &lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="m"&gt;2024&lt;/span&gt; g10 Code GmbH
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This is free software: you are free to change and redistribute it.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There is NO WARRANTY, to the extent permitted by law.
+
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--edit-key&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;2.4.7&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;Copyright&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&lt;span class="m"&gt;2024&lt;/span&gt;&amp;ensp;g10&amp;ensp;Code&amp;ensp;GmbH
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This&amp;ensp;is&amp;ensp;free&amp;ensp;software:&amp;ensp;you&amp;ensp;are&amp;ensp;free&amp;ensp;to&amp;ensp;change&amp;ensp;and&amp;ensp;redistribute&amp;ensp;it.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There&amp;ensp;is&amp;ensp;NO&amp;ensp;WARRANTY,&amp;ensp;to&amp;ensp;the&amp;ensp;extent&amp;ensp;permitted&amp;ensp;by&amp;ensp;law.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Secret key is available.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Secret&amp;ensp;key&amp;ensp;is&amp;ensp;available.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec ed25519/7B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: SC
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; trust: ultimate validity: ultimate
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519/4A9D2D0DB3A5612B
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;. khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec&amp;ensp;&amp;ensp;ed25519/7B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;SC
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;trust:&amp;ensp;ultimate&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;validity:&amp;ensp;ultimate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;.&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt; addkey
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please &lt;span class="k"&gt;select&lt;/span&gt; what kind of key you want:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt; DSA &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; RSA &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt; Elgamal &lt;span class="o"&gt;(&lt;/span&gt;encrypt only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt; RSA &lt;span class="o"&gt;(&lt;/span&gt;encrypt only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt; ECC &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;12&lt;span class="o"&gt;)&lt;/span&gt; ECC &lt;span class="o"&gt;(&lt;/span&gt;encrypt only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;14&lt;span class="o"&gt;)&lt;/span&gt; Existing key from card
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your selection? &lt;span class="m"&gt;12&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please &lt;span class="k"&gt;select&lt;/span&gt; which elliptic curve you want:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt; Curve &lt;span class="m"&gt;25519&lt;/span&gt; *default*
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; NIST P-384
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt; Brainpool P-256
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your selection? &lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please specify how long the key should be valid.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; key does not expire
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt; &lt;span class="o"&gt;=&lt;/span&gt; key expires in n days
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;w &lt;span class="o"&gt;=&lt;/span&gt; key expires in n weeks
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;m &lt;span class="o"&gt;=&lt;/span&gt; key expires in n months
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;y &lt;span class="o"&gt;=&lt;/span&gt; key expires in n years
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key is valid &lt;span class="k"&gt;for&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt; 1y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key expires at Wed &lt;span class="m"&gt;18&lt;/span&gt; Nov &lt;span class="m"&gt;2026&lt;/span&gt; 03:02:44 PM +07
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Is this correct? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Really create? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We need to generate a lot of random bytes. It is a good idea to perform
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some other action &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt; on the keyboard, move the mouse, utilize the
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt; during the prime generation&lt;span class="p"&gt;;&lt;/span&gt; this gives the random number
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator a better chance to gain enough entropy.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt;&amp;ensp;addkey
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;&lt;span class="k"&gt;select&lt;/span&gt;&amp;ensp;what&amp;ensp;kind&amp;ensp;of&amp;ensp;key&amp;ensp;you&amp;ensp;want:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;DSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;RSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Elgamal&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;encrypt&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;RSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;encrypt&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;ECC&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;12&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;ECC&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;encrypt&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;14&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Existing&amp;ensp;key&amp;ensp;from&amp;ensp;card
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your&amp;ensp;selection?&amp;ensp;&lt;span class="m"&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;&lt;span class="k"&gt;select&lt;/span&gt;&amp;ensp;which&amp;ensp;elliptic&amp;ensp;curve&amp;ensp;you&amp;ensp;want:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Curve&amp;ensp;&lt;span class="m"&gt;25519&lt;/span&gt;&amp;ensp;*default*
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;NIST&amp;ensp;P-384
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Brainpool&amp;ensp;P-256
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your&amp;ensp;selection?&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;specify&amp;ensp;how&amp;ensp;long&amp;ensp;the&amp;ensp;key&amp;ensp;should&amp;ensp;be&amp;ensp;valid.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="nv"&gt;0&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;does&amp;ensp;not&amp;ensp;expire
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;days
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;w&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;weeks
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;m&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;months
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;y&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;years
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key&amp;ensp;is&amp;ensp;valid&amp;ensp;&lt;span class="k"&gt;for&lt;/span&gt;?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;1y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key&amp;ensp;expires&amp;ensp;at&amp;ensp;Wed&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;2026&lt;/span&gt;&amp;ensp;03:02:44&amp;ensp;PM&amp;ensp;+07
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Is&amp;ensp;this&amp;ensp;correct?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Really&amp;ensp;create?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We&amp;ensp;need&amp;ensp;to&amp;ensp;generate&amp;ensp;a&amp;ensp;lot&amp;ensp;of&amp;ensp;random&amp;ensp;bytes.&amp;ensp;It&amp;ensp;is&amp;ensp;a&amp;ensp;good&amp;ensp;idea&amp;ensp;to&amp;ensp;perform
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some&amp;ensp;other&amp;ensp;action&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&amp;ensp;on&amp;ensp;the&amp;ensp;keyboard,&amp;ensp;move&amp;ensp;the&amp;ensp;mouse,&amp;ensp;utilize&amp;ensp;the
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;during&amp;ensp;the&amp;ensp;prime&amp;ensp;generation&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;this&amp;ensp;gives&amp;ensp;the&amp;ensp;random&amp;ensp;number
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator&amp;ensp;a&amp;ensp;better&amp;ensp;chance&amp;ensp;to&amp;ensp;gain&amp;ensp;enough&amp;ensp;entropy.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec ed25519/7B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: SC
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; trust: ultimate validity: ultimate
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519/4A9D2D0DB3A5612B
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519/35D0125B7F62907E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;. khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec&amp;ensp;&amp;ensp;ed25519/7B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;SC
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;trust:&amp;ensp;ultimate&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;validity:&amp;ensp;ultimate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/35D0125B7F62907E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;.&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt; addkey
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please &lt;span class="k"&gt;select&lt;/span&gt; what kind of key you want:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt; DSA &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; RSA &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt; Elgamal &lt;span class="o"&gt;(&lt;/span&gt;encrypt only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt; RSA &lt;span class="o"&gt;(&lt;/span&gt;encrypt only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt; ECC &lt;span class="o"&gt;(&lt;/span&gt;sign only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;12&lt;span class="o"&gt;)&lt;/span&gt; ECC &lt;span class="o"&gt;(&lt;/span&gt;encrypt only&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;14&lt;span class="o"&gt;)&lt;/span&gt; Existing key from card
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your selection? &lt;span class="m"&gt;12&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please &lt;span class="k"&gt;select&lt;/span&gt; which elliptic curve you want:
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt; Curve &lt;span class="m"&gt;25519&lt;/span&gt; *default*
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; NIST P-384
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt; Brainpool P-256
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your selection? &lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please specify how long the key should be valid.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; key does not expire
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt; &lt;span class="o"&gt;=&lt;/span&gt; key expires in n days
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;w &lt;span class="o"&gt;=&lt;/span&gt; key expires in n weeks
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;m &lt;span class="o"&gt;=&lt;/span&gt; key expires in n months
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;n&amp;gt;y &lt;span class="o"&gt;=&lt;/span&gt; key expires in n years
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key is valid &lt;span class="k"&gt;for&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt; 1y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key expires at Wed &lt;span class="m"&gt;18&lt;/span&gt; Nov &lt;span class="m"&gt;2026&lt;/span&gt; 03:03:01 PM +07
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Is this correct? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Really create? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We need to generate a lot of random bytes. It is a good idea to perform
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some other action &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt; on the keyboard, move the mouse, utilize the
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt; during the prime generation&lt;span class="p"&gt;;&lt;/span&gt; this gives the random number
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator a better chance to gain enough entropy.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt;&amp;ensp;addkey
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;&lt;span class="k"&gt;select&lt;/span&gt;&amp;ensp;what&amp;ensp;kind&amp;ensp;of&amp;ensp;key&amp;ensp;you&amp;ensp;want:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;DSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;RSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Elgamal&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;encrypt&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;RSA&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;encrypt&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;10&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;ECC&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;sign&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;12&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;ECC&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;encrypt&amp;ensp;only&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;14&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Existing&amp;ensp;key&amp;ensp;from&amp;ensp;card
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your&amp;ensp;selection?&amp;ensp;&lt;span class="m"&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;&lt;span class="k"&gt;select&lt;/span&gt;&amp;ensp;which&amp;ensp;elliptic&amp;ensp;curve&amp;ensp;you&amp;ensp;want:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Curve&amp;ensp;&lt;span class="m"&gt;25519&lt;/span&gt;&amp;ensp;*default*
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;NIST&amp;ensp;P-384
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;Brainpool&amp;ensp;P-256
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Your&amp;ensp;selection?&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Please&amp;ensp;specify&amp;ensp;how&amp;ensp;long&amp;ensp;the&amp;ensp;key&amp;ensp;should&amp;ensp;be&amp;ensp;valid.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="nv"&gt;0&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;does&amp;ensp;not&amp;ensp;expire
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;days
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;w&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;weeks
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;m&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;months
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;lt;n&amp;gt;y&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;&amp;ensp;key&amp;ensp;expires&amp;ensp;in&amp;ensp;n&amp;ensp;years
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key&amp;ensp;is&amp;ensp;valid&amp;ensp;&lt;span class="k"&gt;for&lt;/span&gt;?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;1y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Key&amp;ensp;expires&amp;ensp;at&amp;ensp;Wed&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;2026&lt;/span&gt;&amp;ensp;03:03:01&amp;ensp;PM&amp;ensp;+07
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Is&amp;ensp;this&amp;ensp;correct?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Really&amp;ensp;create?&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;We&amp;ensp;need&amp;ensp;to&amp;ensp;generate&amp;ensp;a&amp;ensp;lot&amp;ensp;of&amp;ensp;random&amp;ensp;bytes.&amp;ensp;It&amp;ensp;is&amp;ensp;a&amp;ensp;good&amp;ensp;idea&amp;ensp;to&amp;ensp;perform
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;some&amp;ensp;other&amp;ensp;action&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&amp;ensp;on&amp;ensp;the&amp;ensp;keyboard,&amp;ensp;move&amp;ensp;the&amp;ensp;mouse,&amp;ensp;utilize&amp;ensp;the
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;disks&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;during&amp;ensp;the&amp;ensp;prime&amp;ensp;generation&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;this&amp;ensp;gives&amp;ensp;the&amp;ensp;random&amp;ensp;number
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;generator&amp;ensp;a&amp;ensp;better&amp;ensp;chance&amp;ensp;to&amp;ensp;gain&amp;ensp;enough&amp;ensp;entropy.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec ed25519/7B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: SC
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; trust: ultimate validity: ultimate
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519/4A9D2D0DB3A5612B
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519/35D0125B7F62907E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519/2669A0060F0D7ACA
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; created: 2025-11-18 expires: 2026-11-18 usage: E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;. khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt; save&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec&amp;ensp;&amp;ensp;ed25519/7B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;SC
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;trust:&amp;ensp;ultimate&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;validity:&amp;ensp;ultimate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/35D0125B7F62907E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/2669A0060F0D7ACA
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;.&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt;&amp;ensp;save&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;liệt kê các khóa 1 lần nữa, xuất 1 khóa chủ, 3 khóa riêng tư con và khóa công khai ra thành những tệp&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --list-secret-keys --with-subkey-fingerprint
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--list-secret-keys&amp;ensp;--with-subkey-fingerprint
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/tmp/gpg/pubring.kbx
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;--------------------
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec ed25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; B94F9101C1665938968DAF797B314495163FC656
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid &lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; khoa-vi-du &lt;span class="o"&gt;(&lt;/span&gt;Khoa vi du minh hoa&lt;span class="o"&gt;)&lt;/span&gt; &amp;lt;vi-du@gnupg.org&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 7D42F1C441FBD540E631259F35D0125B7F62907E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb cv25519 2025-11-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 2C05E3354FEC3496C3B14B522669A0060F0D7ACA
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sec&amp;ensp;&amp;ensp;&amp;ensp;ed25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;uid&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;7D42F1C441FBD540E631259F35D0125B7F62907E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;2C05E3354FEC3496C3B14B522669A0060F0D7ACA
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-chu.gpg --export-secret-keys B94F9101C1665938968DAF797B314495163FC656 &lt;span class="c1"&gt;# hoặc sử dụng `vi-du@gnupg.org` thay cho mã vân tay&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-1.gpg --export-secret-subkeys 0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-2.gpg --export-secret-subkeys 7D42F1C441FBD540E631259F35D0125B7F62907E
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-3.gpg --export-secret-subkeys 2C05E3354FEC3496C3B14B522669A0060F0D7ACA
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-cong-khai.gpg --export vi-du@gnupg.org
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg: WARNING: unsafe permissions on homedir &lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$ ll &lt;span class="p"&gt;|&lt;/span&gt; grep gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;84&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 14:34 test.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;1280&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 14:52 trustdb.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;1641&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 15:08 vidu-khoa-chu.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;1189&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 15:11 vidu-khoa-cong-khai.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;1540&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 15:09 vidu-khoa-rieng-tu-may-1.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;1540&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 15:10 vidu-khoa-rieng-tu-may-2.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; kris kris &lt;span class="m"&gt;1540&lt;/span&gt; Nov &lt;span class="m"&gt;18&lt;/span&gt; 15:10 vidu-khoa-rieng-tu-may-3.gpg&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--armor&amp;ensp;--output&amp;ensp;vidu-khoa-chu.gpg&amp;ensp;--export-secret-keys&amp;ensp;B94F9101C1665938968DAF797B314495163FC656&amp;ensp;&lt;span class="c1"&gt;#&amp;ensp;hoặc&amp;ensp;sử&amp;ensp;dụng&amp;ensp;`vi-du@gnupg.org`&amp;ensp;thay&amp;ensp;cho&amp;ensp;mã&amp;ensp;vân&amp;ensp;tay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--armor&amp;ensp;--output&amp;ensp;vidu-khoa-rieng-tu-may-1.gpg&amp;ensp;--export-secret-subkeys&amp;ensp;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--armor&amp;ensp;--output&amp;ensp;vidu-khoa-rieng-tu-may-2.gpg&amp;ensp;--export-secret-subkeys&amp;ensp;7D42F1C441FBD540E631259F35D0125B7F62907E
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--armor&amp;ensp;--output&amp;ensp;vidu-khoa-rieng-tu-may-3.gpg&amp;ensp;--export-secret-subkeys&amp;ensp;2C05E3354FEC3496C3B14B522669A0060F0D7ACA
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--armor&amp;ensp;--output&amp;ensp;vidu-khoa-cong-khai.gpg&amp;ensp;--export&amp;ensp;vi-du@gnupg.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;ll&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;grep&amp;ensp;gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="m"&gt;84&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;14:34&amp;ensp;test.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1280&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;14:52&amp;ensp;trustdb.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1641&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:08&amp;ensp;vidu-khoa-chu.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1189&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:11&amp;ensp;vidu-khoa-cong-khai.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:09&amp;ensp;vidu-khoa-rieng-tu-may-1.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:10&amp;ensp;vidu-khoa-rieng-tu-may-2.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:10&amp;ensp;vidu-khoa-rieng-tu-may-3.gpg&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;xóa khóa chủ, và các khóa riêng tư con trên máy vừa tạo&lt;/p&gt;
 &lt;/li&gt;

@@ -1,27 +1,30 @@
-# Kaizen - tốt hơn mỗi ngày
+# [Kaizen - tốt hơn mỗi ngày](https://vanvuvuong.github.io/ "Trang chủ")
 
-19 bài viết
+> Kaizen - tốt hơn mỗi ngày
+
+17 bài viết by [Kaizen Teams](https://vanvuvuong.github.io).
 
 ## 2025
 
-19 bài viết
+<details open>
+<summary>17 bài viết</summary>
 
-- 11-29 [Phần Giới thiệu](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/1-acknowledgements-intro/ "2025-11-29 10:03:04")
-- 11-29 [Phần 2 - Các Nghiên Cứu Trường Hợp Chi Tiết](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/3-part-2-detailed-case-study/ "2025-11-29 10:03:04")
-- 11-29 [Phần 1 - Nguyên Mẫu Chu Kỳ Nợ Lớn](https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/2-part-1-archtype-of-big-debt-cycle/ "2025-11-29 10:03:04")
-- 11-29 [Chương mở đầu - Xây dựng trật tự và năng suất làm việc](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/00-mo-dau/ "2025-11-29 10:03:04")
-- 11-28 [Tóm tắt cuốn sách "Pragmatic Programmer" - (tạm dịch) Lập trình viên thực dụng](https://vanvuvuong.github.io/sach-hay/ltvtd/ "2025-11-28 22:01:05")
-- 11-28 [Chương 9 - Khéo Léo Dụ Dö Người Không Quan Trọng Bằng Lợi Ích](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/09-kheo-leo-du-do-nguoi/ "2025-11-28 22:01:05")
-- 11-28 [Chương 8 - Khoảng Cách Và Cảm Giác Bí Ẩn](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/08-khoang-cach-va-bi-an/ "2025-11-28 22:01:05")
-- 11-28 [Chương 7 - Tẩy Não Ấn Tượng Và Tiếp Thị Thương Hiệu](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/07-an-tuong-va-thuong-hieu/ "2025-11-28 22:01:05")
-- 11-28 [Chương 6 - Khả Năng Thuyết Phục "Người Khác Tin Bạn Một Cách Vô Điều Kiện"](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/06-thuyet-phuc/ "2025-11-28 22:01:05")
-- 11-28 [Chương 5 - Tẩy Não Kiểu Tôn Giáo](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/05-tay-nao-kieu-ton-giao/ "2025-11-28 22:01:05")
-- 11-28 [Chương 4 - Bạn Nên Làm Thế Nào Để Che Đậy Sự Thật?](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/04-che-day-su-that/ "2025-11-28 22:01:05")
-- 11-28 [Chương 3 - Bùng Phát Tâm Lý](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/03-bung-phat-tam-ly/ "2025-11-28 22:01:05")
-- 11-28 [Chương 2 - Hương Vị Quả Táo](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/02-huong-vi-qua-tao/ "2025-11-28 22:01:05")
-- 11-28 [Chương 10 - Ai Cũng Có Sức Hấp Dẫn _"Chết Người"_](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/10-ai-cung-co-suc-hap-dan/ "2025-11-28 22:01:05")
-- 11-28 [Chương 1 - Những Điều Kẻ Chiến Thắng Sẽ Không Bao Giờ Nói Với Bạn](https://vanvuvuong.github.io/sach-hay/thuat-tay-nao/01-ke-chien-thang/ "2025-11-28 22:01:05")
-- 11-28 [Cẩm nang Chó Sói (quyển 4)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-4/ "2025-11-28 22:01:05")
-- 11-28 [Cẩm nang Chó Sói (quyển 3)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-3/ "2025-11-28 22:01:05")
-- 11-28 [Cẩm nang Chó Sói (quyển 2)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-2/ "2025-11-28 22:01:05")
-- 11-28 [Cẩm nang Chó Sói (quyển 1)](https://vanvuvuong.github.io/sach-hay/cam-nang-cho-soi/quyen-1/ "2025-11-28 22:01:05")
+- 12-11 [Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/selinux/ "2025-12-11 11:17:23")
+- 12-11 [Linux Package Management - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/package-manager/ "2025-12-11 06:17:23")
+- 12-11 [Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/encryption-and-security/ "2025-12-11 06:17:23")
+- 12-11 [Linux User & Group Management - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/user-group/ "2025-12-11 05:00:23")
+- 12-11 [Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ "2025-12-11 04:17:23")
+- 12-10 [Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ "2025-12-10 14:17:23")
+- 12-10 [Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ "2025-12-10 13:17:23")
+- 12-10 [Linux Network Commands - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ "2025-12-10 10:17:23")
+- 12-10 [Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ "2025-12-10 09:17:23")
+- 11-24 [Thần Chú của Học Viện Luật Tự nhiên ( HVLTN)](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/than-chu/ "2025-11-24 20:48:03")
+- 11-24 [3 Kỹ năng quan trọng nhất (giai đoạn 3) - Chế độ Đòn bẩy](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-3/ "2025-11-24 20:48:03")
+- 11-24 [3 Kỹ năng quan trọng nhất (giai đoạn 2) - Tối ưu hóa](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-2/ "2025-11-24 20:48:03")
+- 11-24 [3 Kỹ năng quan trọng nhất (giai đoạn 1) - Thỏa mãn nhu cầu](https://vanvuvuong.github.io/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-1/ "2025-11-24 20:48:03")
+- 11-24 [Thuyết hấp thụ ngôn ngữ, chân lý của ngôn ngữ học](https://vanvuvuong.github.io/bai-viet/cuoc-song/phuong-phap-orca/ "2025-11-24 15:18:19")
+- 11-21 [Sử dụng cửa sổ câu lệnh (terminal) Linux nhanh gấp 10 lần người bình thường](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/10x-terminal/ "2025-11-21 21:58:20")
+- 11-20 [Những điều cơ bản về Bash & Fish shell trong Linux](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ "2025-11-20 20:17:23")
+- 11-18 [GPG cơ bản](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ "2025-11-18 19:58:20")
+
+</details>
