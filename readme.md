@@ -2,13 +2,14 @@
 
 > Kaizen - tốt hơn mỗi ngày
 
-17 bài viết by [Kaizen Teams](https://vanvuvuong.github.io).
+18 bài viết by [Kaizen Teams](https://vanvuvuong.github.io).
 
 ## 2025
 
 <details open>
-<summary>17 bài viết</summary>
+<summary>18 bài viết</summary>
 
+- 12-11 [Find, Ln, Lsof, Tar, Chmod - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/file-and-folder/ "2025-12-11 20:17:23")
 - 12-11 [Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/selinux/ "2025-12-11 11:17:23")
 - 12-11 [Linux Package Management - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/package-manager/ "2025-12-11 06:17:23")
 - 12-11 [Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu](https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/encryption-and-security/ "2025-12-11 06:17:23")
