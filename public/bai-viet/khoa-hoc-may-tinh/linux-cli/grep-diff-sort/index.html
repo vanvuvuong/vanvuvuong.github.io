@@ -1,0 +1,1165 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=vi><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu - Kaizen - tốt hơn mỗi ngày</title><meta name=author content="Kaizen Teams"><meta name=description content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta name=keywords content='ai generated post'><meta itemprop=name content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta itemprop=description content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta itemprop=datePublished content="2025-12-10T09:17:23+07:00"><meta itemprop=dateModified content="2025-12-11T16:05:24+07:00"><meta itemprop=wordCount content="4227"><meta itemprop=keywords content="Ai Generated Post"><meta property="og:url" content="https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/"><meta property="og:site_name" content="Kaizen - tốt hơn mỗi ngày"><meta property="og:title" content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta property="og:description" content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="bai-viet"><meta property="article:published_time" content="2025-12-10T09:17:23+07:00"><meta property="article:modified_time" content="2025-12-11T16:05:24+07:00"><meta property="article:tag" content="Ai Generated Post"><meta name=twitter:card content="summary"><meta name=twitter:title content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta name=twitter:description content="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><meta name=application-name content="Kaizen - tốt hơn mỗi ngày"><meta name=apple-mobile-web-app-title content="Kaizen - tốt hơn mỗi ngày"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#2d89ef"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#FF7359><link rel=manifest href=/site.webmanifest><link rel=canonical type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu - Kaizen - tốt hơn mỗi ngày"><link rel=prev type=text/html href=https://vanvuvuong.github.io/sach-hay/nguyen-tac-dieu-huong-khung-hoang-no/3-part-2-detailed-case-study/ title="Phần 2 - Các Nghiên Cứu Trường Hợp Chi Tiết"><link rel=next type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ title="Linux Network Commands - Hướng Dẫn Chuyên Sâu"><link rel=stylesheet href=/css/config.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu","inLanguage":"vi","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/grep-diff-sort\/"},"image":[{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}],"genre":"posts","keywords":"ai generated post","wordcount":4227,"url":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/grep-diff-sort\/","datePublished":"2025-12-10T09:17:23+07:00","dateModified":"2025-12-11T16:05:24+07:00","publisher":{"@type":"Organization","name":"Kaizen","logo":{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}},"author":{"@type":"Person","name":"Kaizen Teams"},"description":"Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"}</script><script src=/js/head/color-scheme.min.js></script></head><body data-instant-intensity=viewport data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=32 width=32><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class="menu-item has-children"><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=26 width=26><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Huỷ</a></li><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class=menu-item><span class=nested-item><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a>
+<i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden=true></i></span><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=fi-container><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Bộ sưu tập"><div class="details collection-details open"><div class="details-summary collection-summary"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i>
+<span class=collection-name title="Bộ sưu tập">Linux Cli</span>
+<span class=collection-count>11</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content collection-content"><nav><ul class=collection-list><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</a></li><li class=collection-item><span class=active title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu">Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</span></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ title="Linux Network Commands - Hướng Dẫn Chuyên Sâu">Linux Network Commands - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu">Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ title="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer">Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu">Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/user-group/ title="Linux User & Group Management - Hướng Dẫn Chuyên Sâu">Linux User & Group Management - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/encryption-and-security/ title="Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu">Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/package-manager/ title="Linux Package Management - Hướng Dẫn Chuyên Sâu">Linux Package Management - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/selinux/ title="Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc">Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/file-and-folder/ title="Find, Ln, Lsof, Tar, Chmod - Hướng Dẫn Chuyên Sâu">Find, Ln, Lsof, Tar, Chmod - Hướng Dẫn Chuyên Sâu</a></li></ul><div class=collection-nav-simple><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ class=collection-nav-item rel=prev title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i></a><span class=text-secondary>2/11</span><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ class=collection-nav-item rel=next title="Linux Network Commands - Hướng Dẫn Chuyên Sâu"><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></nav></div></div><div class="details related-details open"><div class="details-summary related-summary"><i class="fa-solid fa-fire fa-fade text-danger fa-fw" aria-hidden=true></i>
+<span class=related-title>Nội dung liên quan</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content related-content"><ul class=related-list><li class=related-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</a></li></ul></div></div></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://vanvuvuong.github.io title="Tác giả" target=_blank rel="external nofollow noopener noreferrer author" class=author><i class="fa-solid fa-user-circle" aria-hidden=true></i>
+Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collections/linux-cli/ class=post-collection title="Bộ sưu tập - Linux Cli"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Linux Cli</a></span></div><div class=post-meta-line><span title="đăng ngày 2025-12-10 09:17:23"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-10>2025-12-10</time></span>&nbsp;<span title="Cập nhật ngày 2025-12-11 16:05:24"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-11>2025-12-11</time></span>&nbsp;<span title="4227 từ"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>Khoảng 4300 từ</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>20 phút</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Nội dung</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#phần-1-grep---công-cụ-tìm-kiếm>PHẦN 1: GREP - CÔNG CỤ TÌM KIẾM</a><ul><li><a href=#11-các-biến-thể-của-grep>1.1 Các Biến Thể của grep</a></li><li><a href=#12-các-cờ-quan-trọng>1.2 Các Cờ Quan Trọng</a></li><li><a href=#13-kỹ-thuật-nâng-cao>1.3 Kỹ Thuật Nâng Cao</a></li><li><a href=#14-hiệu-năng-và-tối-ưu>1.4 Hiệu Năng và Tối Ưu</a></li><li><a href=#15-dùng-trong-script>1.5 Dùng Trong Script</a></li><li><a href=#16-các-mẫu-hay-dùng>1.6 Các Mẫu Hay Dùng</a></li></ul></li><li><a href=#phần-2-sort---sắp-xếp-dữ-liệu>PHẦN 2: SORT - SẮP XẾP DỮ LIỆU</a><ul><li><a href=#21-thuật-toán-bên-trong>2.1 Thuật Toán Bên Trong</a></li><li><a href=#22-các-cờ-sắp-xếp>2.2 Các Cờ Sắp Xếp</a></li><li><a href=#23-sắp-xếp-theo-cộttrường>2.3 Sắp Xếp Theo Cột/Trường</a></li><li><a href=#24-loại-bỏ-trùng-lặp>2.4 Loại Bỏ Trùng Lặp</a></li><li><a href=#25-kiểm-tra-đã-sắp-xếp-chưa>2.5 Kiểm Tra Đã Sắp Xếp Chưa</a></li><li><a href=#26-vấn-đề-locale>2.6 Vấn Đề Locale</a></li><li><a href=#27-merge-các-file-đã-sắp-xếp>2.7 Merge Các File Đã Sắp Xếp</a></li><li><a href=#28-ví-dụ-thực-tế>2.8 Ví Dụ Thực Tế</a></li></ul></li><li><a href=#phần-3-diff---so-sánh-file>PHẦN 3: DIFF - SO SÁNH FILE</a><ul><li><a href=#31-thuật-toán-bên-trong>3.1 Thuật Toán Bên Trong</a></li><li><a href=#32-các-định-dạng-output>3.2 Các Định Dạng Output</a></li><li><a href=#33-các-cờ-quan-trọng>3.3 Các Cờ Quan Trọng</a></li><li><a href=#34-patch-workflow>3.4 Patch Workflow</a></li><li><a href=#35-so-sánh-đặc-biệt>3.5 So Sánh Đặc Biệt</a></li><li><a href=#36-các-công-cụ-liên-quan>3.6 Các Công Cụ Liên Quan</a></li><li><a href=#37-ví-dụ-thực-tế>3.7 Ví Dụ Thực Tế</a></li></ul></li><li><a href=#phần-4-kết-hợp-các-công-cụ>PHẦN 4: KẾT HỢP CÁC CÔNG CỤ</a><ul><li><a href=#41-các-mẫu-pipeline-hay-dùng>4.1 Các Mẫu Pipeline Hay Dùng</a></li><li><a href=#42-xử-lý-log>4.2 Xử Lý Log</a></li></ul></li><li><a href=#tóm-tắt-nhanh>TÓM TẮT NHANH</a><ul><li><a href=#grep>grep</a></li><li><a href=#sort>sort</a></li><li><a href=#diff>diff</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><h2 class=heading-element id=phần-1-grep---công-cụ-tìm-kiếm><span>PHẦN 1: GREP - CÔNG CỤ TÌM KIẾM</span>
+<a href=#ph%e1%ba%a7n-1-grep---c%c3%b4ng-c%e1%bb%a5-t%c3%acm-ki%e1%ba%bfm class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=11-các-biến-thể-của-grep><span>1.1 Các Biến Thể của grep</span>
+<a href=#11-c%c3%a1c-bi%e1%ba%bfn-th%e1%bb%83-c%e1%bb%a7a-grep class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────┬──────────────────┬─────────────────────────────────┐
+</span></span><span class=line><span class=cl>│ Lệnh        │ Regex Engine     │ Khi nào dùng                    │
+</span></span><span class=line><span class=cl>├─────────────┼──────────────────┼─────────────────────────────────┤
+</span></span><span class=line><span class=cl>│ grep        │ BRE (cơ bản)     │ Mẫu đơn giản, tương thích POSIX │
+</span></span><span class=line><span class=cl>│ grep -E     │ ERE (mở rộng)    │ Cần +, ?, |, () không thoát     │
+</span></span><span class=line><span class=cl>│ egrep       │ ERE              │ Tương đương grep -E             │
+</span></span><span class=line><span class=cl>│ grep -F     │ Chuỗi cố định    │ Tìm chuỗi chính xác, NHANH NHẤT │
+</span></span><span class=line><span class=cl>│ fgrep       │ Chuỗi cố định    │ Tương đương grep -F             │
+</span></span><span class=line><span class=cl>│ grep -P     │ PCRE (Perl)      │ Cần \d, \w, lookahead, v.v.     │
+</span></span><span class=line><span class=cl>│ pcregrep    │ PCRE             │ PCRE đầy đủ tính năng hơn       │
+</span></span><span class=line><span class=cl>│ ripgrep(rg) │ Rust regex       │ Nhanh nhất, tự bỏ qua .git      │
+</span></span><span class=line><span class=cl>└─────────────┴──────────────────┴─────────────────────────────────┘</span></span></code></pre></td></tr></table></div></div><p><strong>Quan trọng về hiệu năng:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Từ NHANH đến CHẬM:</span>
+</span></span><span class=line><span class=cl>grep -F <span class=s1>&#39;chuỗi&#39;</span>    <span class=c1># O(n) - Boyer-Moore hoặc tương tự</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;chuỗi&#39;</span>       <span class=c1># O(n*m) - Regex engine, dù là literal</span>
+</span></span><span class=line><span class=cl>grep -E <span class=s1>&#39;a|b|c&#39;</span>    <span class=c1># O(n*k) - k là số lựa chọn</span>
+</span></span><span class=line><span class=cl>grep -P <span class=s1>&#39;...&#39;</span>      <span class=c1># Chậm nhất - PCRE có nhiều tính năng</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ thực tế - tìm trong file 1GB:</span>
+</span></span><span class=line><span class=cl><span class=nb>time</span> grep -F <span class=s1>&#39;ERROR&#39;</span> huge.log      <span class=c1># ~2 giây</span>
+</span></span><span class=line><span class=cl><span class=nb>time</span> grep <span class=s1>&#39;ERROR&#39;</span> huge.log         <span class=c1># ~3 giây</span>
+</span></span><span class=line><span class=cl><span class=nb>time</span> grep -P <span class=s1>&#39;ERROR&#39;</span> huge.log      <span class=c1># ~5 giây</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=12-các-cờ-quan-trọng><span>1.2 Các Cờ Quan Trọng</span>
+<a href=#12-c%c3%a1c-c%e1%bb%9d-quan-tr%e1%bb%8dng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Cờ cơ bản:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-i          <span class=c1># Không phân biệt hoa thường (ignore case)</span>
+</span></span><span class=line><span class=cl>-v          <span class=c1># Đảo ngược - in dòng KHÔNG khớp (invert)</span>
+</span></span><span class=line><span class=cl>-c          <span class=c1># Chỉ đếm số dòng khớp (count)</span>
+</span></span><span class=line><span class=cl>-n          <span class=c1># Hiện số dòng (line number)</span>
+</span></span><span class=line><span class=cl>-l          <span class=c1># Chỉ in tên file có chứa mẫu (files-with-matches)</span>
+</span></span><span class=line><span class=cl>-L          <span class=c1># Chỉ in tên file KHÔNG chứa mẫu</span>
+</span></span><span class=line><span class=cl>-h          <span class=c1># Ẩn tên file khi tìm nhiều file</span>
+</span></span><span class=line><span class=cl>-H          <span class=c1># Luôn hiện tên file</span></span></span></code></pre></td></tr></table></div></div><p><strong>Cờ ngữ cảnh (context):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-A NUM      <span class=c1># In NUM dòng SAU dòng khớp (After)</span>
+</span></span><span class=line><span class=cl>-B NUM      <span class=c1># In NUM dòng TRƯỚC dòng khớp (Before)</span>
+</span></span><span class=line><span class=cl>-C NUM      <span class=c1># In NUM dòng trước VÀ sau (Context)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ: Xem lỗi và ngữ cảnh</span>
+</span></span><span class=line><span class=cl>grep -B <span class=m>5</span> -A <span class=m>10</span> <span class=s1>&#39;Exception&#39;</span> app.log
+</span></span><span class=line><span class=cl>grep -C <span class=m>3</span> <span class=s1>&#39;ERROR&#39;</span> app.log</span></span></code></pre></td></tr></table></div></div><p><strong>Cờ đệ quy và file:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-r          <span class=c1># Tìm đệ quy trong thư mục</span>
+</span></span><span class=line><span class=cl>-R          <span class=c1># Như -r nhưng theo symlink</span>
+</span></span><span class=line><span class=cl>--include   <span class=c1># Chỉ tìm file khớp mẫu</span>
+</span></span><span class=line><span class=cl>--exclude   <span class=c1># Bỏ qua file khớp mẫu</span>
+</span></span><span class=line><span class=cl>--exclude-dir  <span class=c1># Bỏ qua thư mục</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ: Tìm trong code, bỏ qua thư mục không cần</span>
+</span></span><span class=line><span class=cl>grep -r --include<span class=o>=</span><span class=s1>&#39;*.py&#39;</span> --exclude-dir<span class=o>={</span>.git,__pycache__,venv<span class=o>}</span> <span class=s1>&#39;import&#39;</span> .</span></span></code></pre></td></tr></table></div></div><p><strong>Cờ nâng cao:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-o          <span class=c1># Chỉ in phần khớp, không in cả dòng</span>
+</span></span><span class=line><span class=cl>-w          <span class=c1># Khớp từ nguyên vẹn (word)</span>
+</span></span><span class=line><span class=cl>-x          <span class=c1># Khớp cả dòng (line)</span>
+</span></span><span class=line><span class=cl>-m NUM      <span class=c1># Dừng sau NUM dòng khớp</span>
+</span></span><span class=line><span class=cl>-q          <span class=c1># Im lặng, chỉ trả exit code (dùng trong script)</span>
+</span></span><span class=line><span class=cl>--color     <span class=c1># Tô màu phần khớp</span>
+</span></span><span class=line><span class=cl>-f FILE     <span class=c1># Đọc mẫu từ file</span>
+</span></span><span class=line><span class=cl>-e MẪU      <span class=c1># Chỉ định mẫu (dùng khi mẫu bắt đầu bằng -)</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=13-kỹ-thuật-nâng-cao><span>1.3 Kỹ Thuật Nâng Cao</span>
+<a href=#13-k%e1%bb%b9-thu%e1%ba%adt-n%c3%a2ng-cao class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Tìm nhiều mẫu:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Cách 1: Dùng -e</span>
+</span></span><span class=line><span class=cl>grep -e <span class=s1>&#39;mẫu1&#39;</span> -e <span class=s1>&#39;mẫu2&#39;</span> -e <span class=s1>&#39;mẫu3&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Cách 2: Dùng alternation (ERE)</span>
+</span></span><span class=line><span class=cl>grep -E <span class=s1>&#39;mẫu1|mẫu2|mẫu3&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Cách 3: Đọc mẫu từ file (hiệu quả cho nhiều mẫu)</span>
+</span></span><span class=line><span class=cl>cat &gt; mẫu.txt <span class=s>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span class=line><span class=cl><span class=s>mẫu1
+</span></span></span><span class=line><span class=cl><span class=s>mẫu2
+</span></span></span><span class=line><span class=cl><span class=s>mẫu3
+</span></span></span><span class=line><span class=cl><span class=s>EOF</span>
+</span></span><span class=line><span class=cl>grep -f mẫu.txt file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Cách 4: Dùng -F với file mẫu (NHANH NHẤT cho chuỗi cố định)</span>
+</span></span><span class=line><span class=cl>grep -Ff mẫu.txt file</span></span></code></pre></td></tr></table></div></div><p><strong>AND logic (tất cả mẫu phải khớp):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># grep mặc định là OR, muốn AND phải dùng pipe hoặc awk</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;mẫu1&#39;</span> file <span class=p>|</span> grep <span class=s1>&#39;mẫu2&#39;</span> <span class=p>|</span> grep <span class=s1>&#39;mẫu3&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Hoặc dùng awk</span>
+</span></span><span class=line><span class=cl>awk <span class=s1>&#39;/mẫu1/ &amp;&amp; /mẫu2/ &amp;&amp; /mẫu3/&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Hoặc grep -P với lookahead (không quan tâm thứ tự)</span>
+</span></span><span class=line><span class=cl>grep -P <span class=s1>&#39;(?=.*mẫu1)(?=.*mẫu2)(?=.*mẫu3)&#39;</span> file</span></span></code></pre></td></tr></table></div></div><p><strong>Trích xuất dữ liệu với -o:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Trích xuất tất cả địa chỉ IP</span>
+</span></span><span class=line><span class=cl>grep -oE <span class=s1>&#39;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Trích xuất tất cả email</span>
+</span></span><span class=line><span class=cl>grep -oE <span class=s1>&#39;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Trích xuất URL</span>
+</span></span><span class=line><span class=cl>grep -oP <span class=s1>&#39;https?://[^\s&lt;&gt;&#34;]+&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Trích xuất số</span>
+</span></span><span class=line><span class=cl>grep -oE <span class=s1>&#39;[0-9]+&#39;</span> file</span></span></code></pre></td></tr></table></div></div><p><strong>Đếm và thống kê:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Đếm số lần xuất hiện của mỗi mẫu</span>
+</span></span><span class=line><span class=cl>grep -oE <span class=s1>&#39;mẫu&#39;</span> file <span class=p>|</span> wc -l
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Đếm theo file</span>
+</span></span><span class=line><span class=cl>grep -c <span class=s1>&#39;mẫu&#39;</span> *.log <span class=p>|</span> sort -t: -k2 -rn
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Đếm dòng khớp trong tất cả file</span>
+</span></span><span class=line><span class=cl>grep -r -c <span class=s1>&#39;TODO&#39;</span> --include<span class=o>=</span><span class=s1>&#39;*.py&#39;</span> . <span class=p>|</span> awk -F: <span class=s1>&#39;$2&gt;0&#39;</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=14-hiệu-năng-và-tối-ưu><span>1.4 Hiệu Năng và Tối Ưu</span>
+<a href=#14-hi%e1%bb%87u-n%c4%83ng-v%c3%a0-t%e1%bb%91i-%c6%b0u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Nguyên tắc tối ưu:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. Dùng -F khi không cần regex</span>
+</span></span><span class=line><span class=cl>grep -F <span class=s1>&#39;chuỗi_cố_định&#39;</span> file    <span class=c1># Nhanh hơn grep &#39;chuỗi_cố_định&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. Neo mẫu khi có thể</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;^ERROR&#39;</span> file              <span class=c1># Nhanh hơn grep &#39;ERROR&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 3. Dùng -m để dừng sớm</span>
+</span></span><span class=line><span class=cl>grep -m <span class=m>1</span> <span class=s1>&#39;mẫu&#39;</span> file            <span class=c1># Dừng sau khi tìm thấy 1 dòng</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 4. Tắt Unicode nếu không cần</span>
+</span></span><span class=line><span class=cl><span class=nv>LC_ALL</span><span class=o>=</span>C grep <span class=s1>&#39;mẫu&#39;</span> file        <span class=c1># Nhanh hơn đáng kể</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 5. Dùng --mmap cho file lớn (GNU grep)</span>
+</span></span><span class=line><span class=cl>grep --mmap <span class=s1>&#39;mẫu&#39;</span> file_lớn
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 6. Song song hóa với xargs</span>
+</span></span><span class=line><span class=cl>find . -name <span class=s1>&#39;*.log&#39;</span> -print0 <span class=p>|</span> xargs -0 -P <span class=m>4</span> grep -l <span class=s1>&#39;ERROR&#39;</span></span></span></code></pre></td></tr></table></div></div><p><strong>So sánh hiệu năng các công cụ:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># File 1GB, tìm chuỗi đơn giản</span>
+</span></span><span class=line><span class=cl>grep -F <span class=s1>&#39;needle&#39;</span>     <span class=c1># ~2s</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;needle&#39;</span>        <span class=c1># ~3s</span>
+</span></span><span class=line><span class=cl>awk <span class=s1>&#39;/needle/&#39;</span>       <span class=c1># ~8s</span>
+</span></span><span class=line><span class=cl>sed -n <span class=s1>&#39;/needle/p&#39;</span>   <span class=c1># ~10s</span>
+</span></span><span class=line><span class=cl>ripgrep <span class=s1>&#39;needle&#39;</span>     <span class=c1># ~0.5s (nếu có cài)</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=15-dùng-trong-script><span>1.5 Dùng Trong Script</span>
+<a href=#15-d%c3%b9ng-trong-script class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Kiểm tra file có chứa mẫu không</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> grep -q <span class=s1>&#39;mẫu&#39;</span> file<span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Tìm thấy&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Không tìm thấy&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Exit code của grep:</span>
+</span></span><span class=line><span class=cl><span class=c1># 0 = tìm thấy ít nhất 1 dòng khớp</span>
+</span></span><span class=line><span class=cl><span class=c1># 1 = không tìm thấy</span>
+</span></span><span class=line><span class=cl><span class=c1># 2 = có lỗi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Đếm và gán vào biến</span>
+</span></span><span class=line><span class=cl><span class=nv>số_lỗi</span><span class=o>=</span><span class=k>$(</span>grep -c <span class=s1>&#39;ERROR&#39;</span> file<span class=k>)</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$số_lỗi</span><span class=s2>&#34;</span> -gt <span class=m>100</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;Quá nhiều lỗi: </span><span class=nv>$số_lỗi</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Lấy dòng khớp đầu tiên</span>
+</span></span><span class=line><span class=cl><span class=nv>dòng_đầu</span><span class=o>=</span><span class=k>$(</span>grep -m <span class=m>1</span> <span class=s1>&#39;mẫu&#39;</span> file<span class=k>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Kiểm tra nhiều file, lấy danh sách file có lỗi</span>
+</span></span><span class=line><span class=cl><span class=nv>file_lỗi</span><span class=o>=</span><span class=k>$(</span>grep -l <span class=s1>&#39;FATAL&#39;</span> *.log<span class=k>)</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=16-các-mẫu-hay-dùng><span>1.6 Các Mẫu Hay Dùng</span>
+<a href=#16-c%c3%a1c-m%e1%ba%abu-hay-d%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Tìm dòng trống</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;^$&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng không trống</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;.&#39;</span> file
+</span></span><span class=line><span class=cl><span class=c1># hoặc</span>
+</span></span><span class=line><span class=cl>grep -v <span class=s1>&#39;^$&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng comment (bắt đầu bằng #)</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;^#&#39;</span> file
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;^\s*#&#39;</span> file     <span class=c1># Cho phép khoảng trắng đầu</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng không phải comment</span>
+</span></span><span class=line><span class=cl>grep -v <span class=s1>&#39;^\s*#&#39;</span> file <span class=p>|</span> grep -v <span class=s1>&#39;^$&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm từ nguyên vẹn</span>
+</span></span><span class=line><span class=cl>grep -w <span class=s1>&#39;word&#39;</span> file   <span class=c1># Khớp &#39;word&#39; nhưng không khớp &#39;password&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng bắt đầu hoặc kết thúc bằng mẫu</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;^mẫu&#39;</span> file      <span class=c1># Bắt đầu</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;mẫu$&#39;</span> file      <span class=c1># Kết thúc</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm địa chỉ IP hợp lệ (đơn giản)</span>
+</span></span><span class=line><span class=cl>grep -E <span class=s1>&#39;\b([0-9]{1,3}\.){3}[0-9]{1,3}\b&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm ngày định dạng YYYY-MM-DD</span>
+</span></span><span class=line><span class=cl>grep -E <span class=s1>&#39;[0-9]{4}-[0-9]{2}-[0-9]{2}&#39;</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng có độ dài nhất định</span>
+</span></span><span class=line><span class=cl>grep -E <span class=s1>&#39;^.{80,}$&#39;</span> file    <span class=c1># Dòng &gt;= 80 ký tự</span></span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-2-sort---sắp-xếp-dữ-liệu><span>PHẦN 2: SORT - SẮP XẾP DỮ LIỆU</span>
+<a href=#ph%e1%ba%a7n-2-sort---s%e1%ba%afp-x%e1%ba%bfp-d%e1%bb%af-li%e1%bb%87u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=21-thuật-toán-bên-trong><span>2.1 Thuật Toán Bên Trong</span>
+<a href=#21-thu%e1%ba%adt-to%c3%a1n-b%c3%aan-trong class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>sort dùng merge sort bên ngoài (external merge sort):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────────────────────────────────────────┐
+</span></span><span class=line><span class=cl>│            THUẬT TOÁN MERGE SORT BÊN NGOÀI                  │
+</span></span><span class=line><span class=cl>└─────────────────────────────────────────────────────────────┘
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bước 1: Chia file thành các chunk vừa RAM
+</span></span><span class=line><span class=cl>         File 10GB, RAM 1GB → 10 chunks
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bước 2: Sắp xếp từng chunk trong RAM (quicksort)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bước 3: Ghi các chunk đã sắp xếp ra file tạm
+</span></span><span class=line><span class=cl>         /tmp/sort.XXXXX
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bước 4: Merge các file tạm đã sắp xếp
+</span></span><span class=line><span class=cl>         Dùng k-way merge với heap
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Độ phức tạp: O(n log n)
+</span></span><span class=line><span class=cl>Bộ nhớ: Có thể xử lý file lớn hơn RAM!</span></span></code></pre></td></tr></table></div></div><p><strong>Điều chỉnh bộ nhớ và file tạm:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Giới hạn bộ nhớ sử dụng</span>
+</span></span><span class=line><span class=cl>sort -S 2G file                <span class=c1># Dùng tối đa 2GB RAM</span>
+</span></span><span class=line><span class=cl>sort --buffer-size<span class=o>=</span>50% file    <span class=c1># Dùng 50% RAM</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Chỉ định thư mục tạm (quan trọng khi /tmp nhỏ)</span>
+</span></span><span class=line><span class=cl>sort -T /path/to/large/tmp file
+</span></span><span class=line><span class=cl>sort --temporary-directory<span class=o>=</span>/data/tmp file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Song song hóa (GNU sort)</span>
+</span></span><span class=line><span class=cl>sort --parallel<span class=o>=</span><span class=m>4</span> file         <span class=c1># Dùng 4 CPU cores</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=22-các-cờ-sắp-xếp><span>2.2 Các Cờ Sắp Xếp</span>
+<a href=#22-c%c3%a1c-c%e1%bb%9d-s%e1%ba%afp-x%e1%ba%bfp class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Thứ tự sắp xếp:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sort file               <span class=c1># Sắp xếp theo alphabet (mặc định)</span>
+</span></span><span class=line><span class=cl>sort -r file            <span class=c1># Đảo ngược (reverse) - Z đến A</span>
+</span></span><span class=line><span class=cl>sort -n file            <span class=c1># Theo số (numeric) - 1, 2, 10 thay vì 1, 10, 2</span>
+</span></span><span class=line><span class=cl>sort -h file            <span class=c1># Theo số human-readable (1K, 2M, 3G)</span>
+</span></span><span class=line><span class=cl>sort -V file            <span class=c1># Theo version (1.2.3, 1.10.1)</span>
+</span></span><span class=line><span class=cl>sort -R file            <span class=c1># Ngẫu nhiên (random)</span>
+</span></span><span class=line><span class=cl>sort -M file            <span class=c1># Theo tháng (Jan, Feb, Mar...)</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ sự khác biệt:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Dữ liệu: 1, 2, 10, 20, 100</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp alphabet (SAI cho số)</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;1\n2\n10\n20\n100&#34;</span> <span class=p>|</span> sort
+</span></span><span class=line><span class=cl><span class=c1># Kết quả: 1, 10, 100, 2, 20 (so sánh từng ký tự)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp số (ĐÚNG)</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;1\n2\n10\n20\n100&#34;</span> <span class=p>|</span> sort -n
+</span></span><span class=line><span class=cl><span class=c1># Kết quả: 1, 2, 10, 20, 100</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp human-readable</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;1K\n1M\n1G\n500K\n2M&#34;</span> <span class=p>|</span> sort -h
+</span></span><span class=line><span class=cl><span class=c1># Kết quả: 1K, 500K, 1M, 2M, 1G</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp version</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;1.2\n1.10\n1.1\n2.0&#34;</span> <span class=p>|</span> sort -V
+</span></span><span class=line><span class=cl><span class=c1># Kết quả: 1.1, 1.2, 1.10, 2.0</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=23-sắp-xếp-theo-cộttrường><span>2.3 Sắp Xếp Theo Cột/Trường</span>
+<a href=#23-s%e1%ba%afp-x%e1%ba%bfp-theo-c%e1%bb%99ttr%c6%b0%e1%bb%9dng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Cú pháp -k (key):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sort -k TRƯỜNG<span class=o>[</span>.KÝ_TỰ<span class=o>][</span>CỜ<span class=o>]</span> file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># TRƯỜNG: Số thứ tự trường (1, 2, 3...)</span>
+</span></span><span class=line><span class=cl><span class=c1># KÝ_TỰ: Vị trí ký tự trong trường (tùy chọn)</span>
+</span></span><span class=line><span class=cl><span class=c1># CỜ: n (số), r (đảo ngược), f (không phân biệt hoa thường)...</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ thực tế:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># File: name:age:salary</span>
+</span></span><span class=line><span class=cl><span class=c1># Alice:30:50000</span>
+</span></span><span class=line><span class=cl><span class=c1># Bob:25:60000</span>
+</span></span><span class=line><span class=cl><span class=c1># Charlie:35:45000</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp theo cột 2 (tuổi), số</span>
+</span></span><span class=line><span class=cl>sort -t: -k2 -n file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp theo cột 3 (lương), số, giảm dần</span>
+</span></span><span class=line><span class=cl>sort -t: -k3 -n -r file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp theo cột 2, nếu bằng thì theo cột 1</span>
+</span></span><span class=line><span class=cl>sort -t: -k2,2n -k1,1 file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Giải thích -k2,2n:</span>
+</span></span><span class=line><span class=cl><span class=c1># 2,2 = bắt đầu từ trường 2, kết thúc ở trường 2</span>
+</span></span><span class=line><span class=cl><span class=c1># n = so sánh số</span>
+</span></span><span class=line><span class=cl><span class=c1># Nếu chỉ -k2n, nó sẽ so sánh từ trường 2 đến cuối dòng!</span></span></span></code></pre></td></tr></table></div></div><p><strong>Cạm bẫy thường gặp với -k:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># SAI: -k2 có nghĩa là từ trường 2 đến CUỐI dòng</span>
+</span></span><span class=line><span class=cl>sort -k2 file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ĐÚNG: -k2,2 chỉ trường 2</span>
+</span></span><span class=line><span class=cl>sort -k2,2 file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># SAI: Quên chỉ định delimiter cho file CSV</span>
+</span></span><span class=line><span class=cl>sort -k2 file.csv    <span class=c1># Mặc định delimiter là khoảng trắng</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ĐÚNG: Chỉ định delimiter</span>
+</span></span><span class=line><span class=cl>sort -t, -k2,2 file.csv</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=24-loại-bỏ-trùng-lặp><span>2.4 Loại Bỏ Trùng Lặp</span>
+<a href=#24-lo%e1%ba%a1i-b%e1%bb%8f-tr%c3%b9ng-l%e1%ba%b7p class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Loại bỏ dòng trùng lặp liên tiếp (sau khi sắp xếp)</span>
+</span></span><span class=line><span class=cl>sort -u file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tương đương với</span>
+</span></span><span class=line><span class=cl>sort file <span class=p>|</span> uniq
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Đếm số lần xuất hiện</span>
+</span></span><span class=line><span class=cl>sort file <span class=p>|</span> uniq -c
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Chỉ in dòng trùng lặp</span>
+</span></span><span class=line><span class=cl>sort file <span class=p>|</span> uniq -d
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Chỉ in dòng duy nhất (không trùng)</span>
+</span></span><span class=line><span class=cl>sort file <span class=p>|</span> uniq -u</span></span></code></pre></td></tr></table></div></div><p><strong>Loại bỏ trùng dựa trên cột:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Loại bỏ trùng theo cột 1</span>
+</span></span><span class=line><span class=cl>sort -t: -k1,1 -u file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Giữ dòng đầu tiên của mỗi giá trị cột 1</span>
+</span></span><span class=line><span class=cl>sort -t: -k1,1 -s file <span class=p>|</span> sort -t: -k1,1 -u
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># -s = stable sort (giữ thứ tự gốc khi bằng nhau)</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=25-kiểm-tra-đã-sắp-xếp-chưa><span>2.5 Kiểm Tra Đã Sắp Xếp Chưa</span>
+<a href=#25-ki%e1%bb%83m-tra-%c4%91%c3%a3-s%e1%ba%afp-x%e1%ba%bfp-ch%c6%b0a class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Kiểm tra file đã sắp xếp chưa</span>
+</span></span><span class=line><span class=cl>sort -c file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Nếu đã sắp xếp: exit code 0, không in gì</span>
+</span></span><span class=line><span class=cl><span class=c1># Nếu chưa: exit code 1, in dòng sai thứ tự đầu tiên</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Kiểm tra im lặng (chỉ exit code)</span>
+</span></span><span class=line><span class=cl>sort -C file
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Dùng trong script</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> sort -C file<span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;File đã sắp xếp&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;File chưa sắp xếp&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=26-vấn-đề-locale><span>2.6 Vấn Đề Locale</span>
+<a href=#26-v%e1%ba%a5n-%c4%91%e1%bb%81-locale class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Locale ảnh hưởng thứ tự sắp xếp:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Locale mặc định có thể gây bất ngờ</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;a\nA\nb\nB&#34;</span> <span class=p>|</span> sort
+</span></span><span class=line><span class=cl><span class=c1># Có thể ra: a, A, b, B hoặc A, a, B, b tùy locale</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Dùng LC_ALL=C để sắp xếp theo byte (ASCII order)</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> -e <span class=s2>&#34;a\nA\nb\nB&#34;</span> <span class=p>|</span> <span class=nv>LC_ALL</span><span class=o>=</span>C sort
+</span></span><span class=line><span class=cl><span class=c1># Luôn ra: A, B, a, b (vì A=65, B=66, a=97, b=98)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># LC_ALL=C cũng NHANH hơn đáng kể</span>
+</span></span><span class=line><span class=cl><span class=nv>LC_ALL</span><span class=o>=</span>C sort huge_file    <span class=c1># Nhanh hơn 2-5 lần</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=27-merge-các-file-đã-sắp-xếp><span>2.7 Merge Các File Đã Sắp Xếp</span>
+<a href=#27-merge-c%c3%a1c-file-%c4%91%c3%a3-s%e1%ba%afp-x%e1%ba%bfp class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Merge các file đã sắp xếp (NHANH - không sắp xếp lại)</span>
+</span></span><span class=line><span class=cl>sort -m file1_sorted file2_sorted file3_sorted
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># So với cách chậm (sắp xếp lại tất cả)</span>
+</span></span><span class=line><span class=cl>cat file1 file2 file3 <span class=p>|</span> sort
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ứng dụng: Merge log files đã sắp xếp theo thời gian</span>
+</span></span><span class=line><span class=cl>sort -m -k1,1 server1.log server2.log server3.log</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=28-ví-dụ-thực-tế><span>2.8 Ví Dụ Thực Tế</span>
+<a href=#28-v%c3%ad-d%e1%bb%a5-th%e1%bb%b1c-t%e1%ba%bf class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Top 10 IP truy cập nhiều nhất</span>
+</span></span><span class=line><span class=cl>awk <span class=s1>&#39;{print $1}&#39;</span> access.log <span class=p>|</span> sort <span class=p>|</span> uniq -c <span class=p>|</span> sort -rn <span class=p>|</span> head -10
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp file theo kích thước</span>
+</span></span><span class=line><span class=cl>ls -l <span class=p>|</span> sort -k5 -n -r
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Hoặc dùng du</span>
+</span></span><span class=line><span class=cl>du -h * <span class=p>|</span> sort -h -r
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp CSV theo nhiều cột</span>
+</span></span><span class=line><span class=cl><span class=c1># Cột 1 tăng dần, cột 3 giảm dần (số)</span>
+</span></span><span class=line><span class=cl>sort -t, -k1,1 -k3,3nr data.csv
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp /etc/passwd theo UID</span>
+</span></span><span class=line><span class=cl>sort -t: -k3 -n /etc/passwd
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm 10 process dùng nhiều CPU nhất</span>
+</span></span><span class=line><span class=cl>ps aux <span class=p>|</span> sort -k3 -n -r <span class=p>|</span> head -10
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sắp xếp version của package</span>
+</span></span><span class=line><span class=cl>dpkg -l <span class=p>|</span> awk <span class=s1>&#39;/^ii/{print $2, $3}&#39;</span> <span class=p>|</span> sort -k2 -V</span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-3-diff---so-sánh-file><span>PHẦN 3: DIFF - SO SÁNH FILE</span>
+<a href=#ph%e1%ba%a7n-3-diff---so-s%c3%a1nh-file class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=31-thuật-toán-bên-trong><span>3.1 Thuật Toán Bên Trong</span>
+<a href=#31-thu%e1%ba%adt-to%c3%a1n-b%c3%aan-trong class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>diff dùng thuật toán LCS (Longest Common Subsequence):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────────────────────────────────────────┐
+</span></span><span class=line><span class=cl>│         THUẬT TOÁN LONGEST COMMON SUBSEQUENCE               │
+</span></span><span class=line><span class=cl>└─────────────────────────────────────────────────────────────┘
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bài toán: Tìm chuỗi con chung dài nhất giữa 2 chuỗi
+</span></span><span class=line><span class=cl>          Phần không chung = sự khác biệt
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>File A: dòng1, dòng2, dòng3, dòng4
+</span></span><span class=line><span class=cl>File B: dòng1, dòng2_sửa, dòng3, dòng5
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>LCS = dòng1, dòng3
+</span></span><span class=line><span class=cl>Khác biệt:
+</span></span><span class=line><span class=cl>  - A có dòng2, B có dòng2_sửa
+</span></span><span class=line><span class=cl>  - A có dòng4, B có dòng5
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Độ phức tạp: O(n*m) với n, m là số dòng mỗi file
+</span></span><span class=line><span class=cl>Bộ nhớ: O(n*m) cho bảng DP (có thể tối ưu xuống O(min(n,m)))</span></span></code></pre></td></tr></table></div></div><p><strong>diff của GNU dùng thuật toán Myers:</strong></p><ul><li>Cải tiến của LCS</li><li>Tìm đường đi ngắn nhất trong đồ thị chỉnh sửa</li><li>Thường nhanh hơn LCS cơ bản</li></ul><h3 class=heading-element id=32-các-định-dạng-output><span>3.2 Các Định Dạng Output</span>
+<a href=#32-c%c3%a1c-%c4%91%e1%bb%8bnh-d%e1%ba%a1ng-output class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Normal format (mặc định):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>diff file1 file2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output:</span>
+</span></span><span class=line><span class=cl><span class=c1># 2c2           ← dòng 2 của file1 Changed thành dòng 2 của file2</span>
+</span></span><span class=line><span class=cl><span class=c1># &lt; nội dung cũ ← từ file1</span>
+</span></span><span class=line><span class=cl><span class=c1># ---</span>
+</span></span><span class=line><span class=cl><span class=c1># &gt; nội dung mới ← từ file2</span>
+</span></span><span class=line><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=cl><span class=c1># 5d4           ← dòng 5 của file1 Deleted (không có trong file2)</span>
+</span></span><span class=line><span class=cl><span class=c1># &lt; dòng bị xóa</span>
+</span></span><span class=line><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=cl><span class=c1># 7a8           ← sau dòng 7 của file1, Added dòng 8 của file2</span>
+</span></span><span class=line><span class=cl><span class=c1># &gt; dòng thêm vào</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ký hiệu:</span>
+</span></span><span class=line><span class=cl><span class=c1># c = change (thay đổi)</span>
+</span></span><span class=line><span class=cl><span class=c1># d = delete (xóa)</span>
+</span></span><span class=line><span class=cl><span class=c1># a = add (thêm)</span></span></span></code></pre></td></tr></table></div></div><p><strong>Unified format (-u) - HAY DÙNG NHẤT:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>diff -u file1 file2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output:</span>
+</span></span><span class=line><span class=cl><span class=c1># --- file1    2024-01-01 10:00:00</span>
+</span></span><span class=line><span class=cl><span class=c1># +++ file2    2024-01-02 11:00:00</span>
+</span></span><span class=line><span class=cl><span class=c1># @@ -1,5 +1,5 @@       ← vị trí: file1 từ dòng 1 lấy 5 dòng, file2 từ dòng 1 lấy 5 dòng</span>
+</span></span><span class=line><span class=cl><span class=c1>#  dòng giống nhau      ← không có dấu = giống nhau</span>
+</span></span><span class=line><span class=cl><span class=c1># -dòng bị xóa          ← dấu - = từ file1 (bị xóa)</span>
+</span></span><span class=line><span class=cl><span class=c1># +dòng thêm vào        ← dấu + = từ file2 (thêm vào)</span>
+</span></span><span class=line><span class=cl><span class=c1>#  dòng giống nhau</span></span></span></code></pre></td></tr></table></div></div><p><strong>Context format (-c):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>diff -c file1 file2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Hiện nhiều ngữ cảnh hơn, dùng ! cho dòng thay đổi</span>
+</span></span><span class=line><span class=cl><span class=c1># Ít phổ biến hơn unified format</span></span></span></code></pre></td></tr></table></div></div><p><strong>Side-by-side (-y):</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>diff -y file1 file2
+</span></span><span class=line><span class=cl>diff -y -W <span class=m>80</span> file1 file2    <span class=c1># Giới hạn độ rộng 80 ký tự</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output:</span>
+</span></span><span class=line><span class=cl><span class=c1># dòng giống                    dòng giống</span>
+</span></span><span class=line><span class=cl><span class=c1># dòng khác file1             | dòng khác file2</span>
+</span></span><span class=line><span class=cl><span class=c1># dòng chỉ có file1           &lt;</span>
+</span></span><span class=line><span class=cl><span class=c1>#                             &gt; dòng chỉ có file2</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=33-các-cờ-quan-trọng><span>3.3 Các Cờ Quan Trọng</span>
+<a href=#33-c%c3%a1c-c%e1%bb%9d-quan-tr%e1%bb%8dng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Cờ so sánh:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-i          <span class=c1># Bỏ qua khác biệt hoa thường (ignore case)</span>
+</span></span><span class=line><span class=cl>-b          <span class=c1># Bỏ qua thay đổi số lượng khoảng trắng</span>
+</span></span><span class=line><span class=cl>-w          <span class=c1># Bỏ qua TẤT CẢ khoảng trắng</span>
+</span></span><span class=line><span class=cl>-B          <span class=c1># Bỏ qua dòng trống</span>
+</span></span><span class=line><span class=cl>-E          <span class=c1># Bỏ qua thay đổi do mở rộng tab</span>
+</span></span><span class=line><span class=cl>-Z          <span class=c1># Bỏ qua khoảng trắng cuối dòng</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ: So sánh code bỏ qua format</span>
+</span></span><span class=line><span class=cl>diff -bwB file1.py file2.py</span></span></code></pre></td></tr></table></div></div><p><strong>Cờ output:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-u          <span class=c1># Unified format (hay dùng nhất)</span>
+</span></span><span class=line><span class=cl>-c          <span class=c1># Context format</span>
+</span></span><span class=line><span class=cl>-y          <span class=c1># Side-by-side</span>
+</span></span><span class=line><span class=cl>-q          <span class=c1># Chỉ báo có khác hay không, không chi tiết</span>
+</span></span><span class=line><span class=cl>--color     <span class=c1># Tô màu (GNU diff)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Điều chỉnh ngữ cảnh</span>
+</span></span><span class=line><span class=cl>-U NUM      <span class=c1># Unified với NUM dòng ngữ cảnh (mặc định 3)</span>
+</span></span><span class=line><span class=cl>-C NUM      <span class=c1># Context với NUM dòng ngữ cảnh</span></span></span></code></pre></td></tr></table></div></div><p><strong>Cờ cho thư mục:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-r          <span class=c1># So sánh đệ quy</span>
+</span></span><span class=line><span class=cl>-N          <span class=c1># Coi file không tồn tại là file rỗng</span>
+</span></span><span class=line><span class=cl>-x MẪU      <span class=c1># Loại trừ file khớp mẫu</span>
+</span></span><span class=line><span class=cl>-X FILE     <span class=c1># Đọc mẫu loại trừ từ file</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ: So sánh 2 thư mục project</span>
+</span></span><span class=line><span class=cl>diff -rq --exclude<span class=o>=</span><span class=s1>&#39;.git&#39;</span> --exclude<span class=o>=</span><span class=s1>&#39;*.pyc&#39;</span> dir1 dir2</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=34-patch-workflow><span>3.4 Patch Workflow</span>
+<a href=#34-patch-workflow class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Tạo patch:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Patch cho 1 file</span>
+</span></span><span class=line><span class=cl>diff -u file_cũ file_mới &gt; thay_đổi.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Patch cho thư mục</span>
+</span></span><span class=line><span class=cl>diff -ruN thư_mục_cũ/ thư_mục_mới/ &gt; project.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># -N: Xử lý file mới (không tồn tại trong bản cũ)</span></span></span></code></pre></td></tr></table></div></div><p><strong>Áp dụng patch:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Áp dụng patch</span>
+</span></span><span class=line><span class=cl>patch &lt; thay_đổi.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Áp dụng patch vào file cụ thể</span>
+</span></span><span class=line><span class=cl>patch file_cũ &lt; thay_đổi.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Áp dụng patch vào thư mục</span>
+</span></span><span class=line><span class=cl>patch -p1 &lt; project.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># -p1: Bỏ 1 cấp thư mục trong đường dẫn</span>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ: --- a/src/file.c → src/file.c</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Dry run - xem trước không áp dụng</span>
+</span></span><span class=line><span class=cl>patch --dry-run &lt; thay_đổi.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Đảo ngược patch (undo)</span>
+</span></span><span class=line><span class=cl>patch -R &lt; thay_đổi.patch</span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ workflow thực tế:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. Tạo bản sao để sửa</span>
+</span></span><span class=line><span class=cl>cp -r project project_fixed
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. Sửa trong project_fixed</span>
+</span></span><span class=line><span class=cl>vim project_fixed/src/bug.py
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 3. Tạo patch</span>
+</span></span><span class=line><span class=cl>diff -ruN project/ project_fixed/ &gt; bugfix.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 4. Review patch</span>
+</span></span><span class=line><span class=cl>cat bugfix.patch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 5. Gửi patch cho người khác hoặc áp dụng vào repo chính</span>
+</span></span><span class=line><span class=cl><span class=nb>cd</span> project
+</span></span><span class=line><span class=cl>patch -p1 &lt; ../bugfix.patch</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=35-so-sánh-đặc-biệt><span>3.5 So Sánh Đặc Biệt</span>
+<a href=#35-so-s%c3%a1nh-%c4%91%e1%ba%b7c-bi%e1%bb%87t class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>So sánh với stdin:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># So sánh output của lệnh với file</span>
+</span></span><span class=line><span class=cl>some_command <span class=p>|</span> diff - expected_output.txt
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># So sánh output của 2 lệnh (dùng process substitution)</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>cmd1<span class=o>)</span> &lt;<span class=o>(</span>cmd2<span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ví dụ: So sánh danh sách file của 2 thư mục</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>ls dir1<span class=o>)</span> &lt;<span class=o>(</span>ls dir2<span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># So sánh config giữa 2 server</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>ssh server1 cat /etc/config<span class=o>)</span> &lt;<span class=o>(</span>ssh server2 cat /etc/config<span class=o>)</span></span></span></code></pre></td></tr></table></div></div><p><strong>So sánh binary:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># diff mặc định nói &#34;Binary files differ&#34;</span>
+</span></span><span class=line><span class=cl>diff file1.bin file2.bin
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Xem khác biệt hex</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>xxd file1.bin<span class=o>)</span> &lt;<span class=o>(</span>xxd file2.bin<span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Dùng cmp cho binary</span>
+</span></span><span class=line><span class=cl>cmp file1.bin file2.bin         <span class=c1># Báo byte đầu tiên khác</span>
+</span></span><span class=line><span class=cl>cmp -l file1.bin file2.bin      <span class=c1># Liệt kê tất cả byte khác</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=36-các-công-cụ-liên-quan><span>3.6 Các Công Cụ Liên Quan</span>
+<a href=#36-c%c3%a1c-c%c3%b4ng-c%e1%bb%a5-li%c3%aan-quan class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>colordiff - diff có màu:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Cài đặt</span>
+</span></span><span class=line><span class=cl>sudo apt install colordiff
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Sử dụng</span>
+</span></span><span class=line><span class=cl>colordiff file1 file2
+</span></span><span class=line><span class=cl>diff file1 file2 <span class=p>|</span> colordiff</span></span></code></pre></td></tr></table></div></div><p><strong>vimdiff / nvim -d - diff trong vim:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vimdiff file1 file2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Trong vim:</span>
+</span></span><span class=line><span class=cl><span class=c1># ]c - nhảy đến khác biệt tiếp theo</span>
+</span></span><span class=line><span class=cl><span class=c1># [c - nhảy đến khác biệt trước</span>
+</span></span><span class=line><span class=cl><span class=c1># do - lấy từ file kia (diff obtain)</span>
+</span></span><span class=line><span class=cl><span class=c1># dp - đẩy sang file kia (diff put)</span>
+</span></span><span class=line><span class=cl><span class=c1># :diffupdate - cập nhật sau khi sửa</span></span></span></code></pre></td></tr></table></div></div><p><strong>meld, kdiff3 - GUI diff:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>meld file1 file2
+</span></span><span class=line><span class=cl>meld dir1 dir2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Merge 3 chiều</span>
+</span></span><span class=line><span class=cl>meld file_base file_local file_remote</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=37-ví-dụ-thực-tế><span>3.7 Ví Dụ Thực Tế</span>
+<a href=#37-v%c3%ad-d%e1%bb%a5-th%e1%bb%b1c-t%e1%ba%bf class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># So sánh 2 file config, bỏ qua comment và dòng trống</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>grep -v <span class=s1>&#39;^#&#39;</span> file1 <span class=p>|</span> grep -v <span class=s1>&#39;^$&#39;</span><span class=o>)</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>     &lt;<span class=o>(</span>grep -v <span class=s1>&#39;^#&#39;</span> file2 <span class=p>|</span> grep -v <span class=s1>&#39;^$&#39;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm file khác nhau giữa 2 thư mục</span>
+</span></span><span class=line><span class=cl>diff -rq dir1 dir2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Chỉ xem tên file khác nhau</span>
+</span></span><span class=line><span class=cl>diff -rq dir1 dir2 <span class=p>|</span> grep <span class=s2>&#34;^Files&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Xem file chỉ có trong 1 thư mục</span>
+</span></span><span class=line><span class=cl>diff -rq dir1 dir2 <span class=p>|</span> grep <span class=s2>&#34;^Only&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># So sánh output của 2 câu lệnh SQL</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>mysql -e <span class=s2>&#34;SELECT * FROM users&#34;</span> db1<span class=o>)</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>     &lt;<span class=o>(</span>mysql -e <span class=s2>&#34;SELECT * FROM users&#34;</span> db2<span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Kiểm tra 2 file có giống nhau không (trong script)</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> diff -q file1 file2 &gt; /dev/null<span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;2 file giống nhau&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;2 file khác nhau&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Đếm số dòng thay đổi</span>
+</span></span><span class=line><span class=cl>diff file1 file2 <span class=p>|</span> grep -c <span class=s1>&#39;^[&lt;&gt;]&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Xem thay đổi giữa 2 commit trong git (diff được tích hợp)</span>
+</span></span><span class=line><span class=cl>git diff commit1 commit2
+</span></span><span class=line><span class=cl>git diff HEAD~5 HEAD</span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-4-kết-hợp-các-công-cụ><span>PHẦN 4: KẾT HỢP CÁC CÔNG CỤ</span>
+<a href=#ph%e1%ba%a7n-4-k%e1%ba%bft-h%e1%bb%a3p-c%c3%a1c-c%c3%b4ng-c%e1%bb%a5 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=41-các-mẫu-pipeline-hay-dùng><span>4.1 Các Mẫu Pipeline Hay Dùng</span>
+<a href=#41-c%c3%a1c-m%e1%ba%abu-pipeline-hay-d%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Tìm và đếm - grep + sort + uniq</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;ERROR&#39;</span> *.log <span class=p>|</span> cut -d: -f2- <span class=p>|</span> sort <span class=p>|</span> uniq -c <span class=p>|</span> sort -rn
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm sự khác biệt trong danh sách</span>
+</span></span><span class=line><span class=cl><span class=c1># File nào có trong list1 mà không có trong list2?</span>
+</span></span><span class=line><span class=cl>sort list1 &gt; list1.sorted
+</span></span><span class=line><span class=cl>sort list2 &gt; list2.sorted
+</span></span><span class=line><span class=cl>diff list1.sorted list2.sorted <span class=p>|</span> grep <span class=s1>&#39;^&lt;&#39;</span> <span class=p>|</span> cut -c3-
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Hoặc dùng comm (chuyên cho việc này)</span>
+</span></span><span class=line><span class=cl>comm -23 list1.sorted list2.sorted    <span class=c1># Chỉ trong list1</span>
+</span></span><span class=line><span class=cl>comm -13 list1.sorted list2.sorted    <span class=c1># Chỉ trong list2</span>
+</span></span><span class=line><span class=cl>comm -12 list1.sorted list2.sorted    <span class=c1># Trong cả hai</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># So sánh 2 file CSV theo cột cụ thể</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>sort -t, -k1,1 file1.csv<span class=o>)</span> &lt;<span class=o>(</span>sort -t, -k1,1 file2.csv<span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng trùng lặp giữa 2 file</span>
+</span></span><span class=line><span class=cl>grep -Fxf file1 file2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm dòng trong file1 mà không có trong file2</span>
+</span></span><span class=line><span class=cl>grep -Fxvf file2 file1</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=42-xử-lý-log><span>4.2 Xử Lý Log</span>
+<a href=#42-x%e1%bb%ad-l%c3%bd-log class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Top lỗi theo loại</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;ERROR&#39;</span> app.log <span class=p>|</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    sed <span class=s1>&#39;s/.*ERROR: //&#39;</span> <span class=p>|</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    sort <span class=p>|</span> uniq -c <span class=p>|</span> sort -rn <span class=p>|</span> head -20
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># So sánh log giữa 2 ngày</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>grep <span class=s1>&#39;2024-01-01&#39;</span> app.log <span class=p>|</span> cut -d<span class=s1>&#39; &#39;</span> -f4-<span class=o>)</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>     &lt;<span class=o>(</span>grep <span class=s1>&#39;2024-01-02&#39;</span> app.log <span class=p>|</span> cut -d<span class=s1>&#39; &#39;</span> -f4-<span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Tìm request chậm và sắp xếp theo thời gian</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;response_time&#39;</span> access.log <span class=p>|</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    awk <span class=s1>&#39;$NF &gt; 5.0 {print}&#39;</span> <span class=p>|</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    sort -t<span class=s1>&#39;[&#39;</span> -k2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Monitor log realtime, chỉ hiện ERROR</span>
+</span></span><span class=line><span class=cl>tail -f app.log <span class=p>|</span> grep --line-buffered <span class=s1>&#39;ERROR&#39;</span></span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=tóm-tắt-nhanh><span>TÓM TẮT NHANH</span>
+<a href=#t%c3%b3m-t%e1%ba%aft-nhanh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=grep><span>grep</span>
+<a href=#grep class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>grep -F <span class=s1>&#39;chuỗi&#39;</span> file      <span class=c1># Nhanh nhất cho chuỗi cố định</span>
+</span></span><span class=line><span class=cl>grep -E <span class=s1>&#39;a|b&#39;</span> file        <span class=c1># Extended regex</span>
+</span></span><span class=line><span class=cl>grep -P <span class=s1>&#39;\d+&#39;</span> file        <span class=c1># Perl regex (có \d, \w, lookahead)</span>
+</span></span><span class=line><span class=cl>grep -r --include<span class=o>=</span><span class=s1>&#39;*.py&#39;</span>  <span class=c1># Tìm đệ quy</span>
+</span></span><span class=line><span class=cl>grep -o <span class=s1>&#39;mẫu&#39;</span> file        <span class=c1># Chỉ in phần khớp</span>
+</span></span><span class=line><span class=cl>grep -c <span class=s1>&#39;mẫu&#39;</span> file        <span class=c1># Đếm dòng khớp</span>
+</span></span><span class=line><span class=cl>grep -A3 -B3 <span class=s1>&#39;mẫu&#39;</span> file   <span class=c1># Hiện ngữ cảnh</span>
+</span></span><span class=line><span class=cl><span class=nv>LC_ALL</span><span class=o>=</span>C grep             <span class=c1># Tăng tốc</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=sort><span>sort</span>
+<a href=#sort class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sort -n file              <span class=c1># Sắp xếp số</span>
+</span></span><span class=line><span class=cl>sort -h file              <span class=c1># Sắp xếp human (1K, 2M)</span>
+</span></span><span class=line><span class=cl>sort -V file              <span class=c1># Sắp xếp version</span>
+</span></span><span class=line><span class=cl>sort -t: -k2,2n file      <span class=c1># Theo cột 2, số</span>
+</span></span><span class=line><span class=cl>sort -u file              <span class=c1># Loại bỏ trùng</span>
+</span></span><span class=line><span class=cl>sort -c file              <span class=c1># Kiểm tra đã sắp xếp chưa</span>
+</span></span><span class=line><span class=cl>sort -m f1 f2             <span class=c1># Merge đã sắp xếp</span>
+</span></span><span class=line><span class=cl><span class=nv>LC_ALL</span><span class=o>=</span>C sort             <span class=c1># Tăng tốc</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=diff><span>diff</span>
+<a href=#diff class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>diff -u f1 f2             <span class=c1># Unified format (hay dùng)</span>
+</span></span><span class=line><span class=cl>diff -y f1 f2             <span class=c1># Side-by-side</span>
+</span></span><span class=line><span class=cl>diff -rq dir1 dir2        <span class=c1># So sánh thư mục</span>
+</span></span><span class=line><span class=cl>diff -bwi f1 f2           <span class=c1># Bỏ qua khoảng trắng, hoa thường</span>
+</span></span><span class=line><span class=cl>diff &lt;<span class=o>(</span>cmd1<span class=o>)</span> &lt;<span class=o>(</span>cmd2<span class=o>)</span>      <span class=c1># So sánh output lệnh</span>
+</span></span><span class=line><span class=cl>patch -p1 &lt; file.patch    <span class=c1># Áp dụng patch</span>
+</span></span><span class=line><span class=cl>patch -R &lt; file.patch     <span class=c1># Undo patch</span></span></span></code></pre></td></tr></table></div></div></div><hr class=awesome-hr><h2 id=see-also>Nội dung liên quan</h2><ul><li><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</a></li></ul><div class=collection-card><div class="collection-title text-secondary">Trong <a href=/collections/linux-cli/><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> <span>Bộ sưu tập・Linux Cli</span></span></a> 11</div><div class=collection-nav><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ class=collection-nav-item rel=prev title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i><span>Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</span>
+</a><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ class=collection-nav-item rel=next title="Linux Network Commands - Hướng Dẫn Chuyên Sâu"><span>Linux Network Commands - Hướng Dẫn Chuyên Sâu</span><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Cập nhật ngày 2025-12-11 16:05:24">Cập nhật ngày 2025-12-11&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>CC BY-NC-SA 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Chia sẻ trên X" data-sharer=twitter data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ data-title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu" data-hashtags="ai generated post"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên Facebook" data-sharer=facebook data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ data-hashtag="ai generated post"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên 微博" data-sharer=weibo data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ data-title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/ai-generated-post/ class=post-tag title="Nhãn - Ai Generated Post">Ai Generated Post</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Quay lại</a></span>&nbsp;|&nbsp;<span><a href=/>Trang chủ</a></span></section></div><div class=post-nav><a href=/bai-viet/hoc-vien-luat-tu-nhien/3-ky-nang-quan-trong/giai-doan-1/ class=post-nav-item rel=prev title="3 Kỹ Năng Quan Trọng Nhất (Giai Đoạn 1) - Thỏa Mãn Nhu Cầu"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i>3 Kỹ Năng Quan Trọng Nhất (Giai Đoạn 1) - Thỏa Mãn Nhu Cầu</a><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ class=post-nav-item rel=next title="Linux Network Commands - Hướng Dẫn Chuyên Sâu">Linux Network Commands - Hướng Dẫn Chuyên Sâu<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article><aside class=toc id=toc-auto aria-label="Nội dung"><h2 class=toc-title>Nội dung&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside><dialog id=toc-dialog aria-labelledby=toc-dialog-title role=dialog><div class=toc><h2 class=toc-title>Nội dung</h2><div class=toc-content id=toc-content-drawer><nav><ul><li><ul><li><a href=#phần-1-grep---công-cụ-tìm-kiếm>PHẦN 1: GREP - CÔNG CỤ TÌM KIẾM</a><ul><li><a href=#11-các-biến-thể-của-grep>1.1 Các Biến Thể của grep</a></li><li><a href=#12-các-cờ-quan-trọng>1.2 Các Cờ Quan Trọng</a></li><li><a href=#13-kỹ-thuật-nâng-cao>1.3 Kỹ Thuật Nâng Cao</a></li><li><a href=#14-hiệu-năng-và-tối-ưu>1.4 Hiệu Năng và Tối Ưu</a></li><li><a href=#15-dùng-trong-script>1.5 Dùng Trong Script</a></li><li><a href=#16-các-mẫu-hay-dùng>1.6 Các Mẫu Hay Dùng</a></li></ul></li><li><a href=#phần-2-sort---sắp-xếp-dữ-liệu>PHẦN 2: SORT - SẮP XẾP DỮ LIỆU</a><ul><li><a href=#21-thuật-toán-bên-trong>2.1 Thuật Toán Bên Trong</a></li><li><a href=#22-các-cờ-sắp-xếp>2.2 Các Cờ Sắp Xếp</a></li><li><a href=#23-sắp-xếp-theo-cộttrường>2.3 Sắp Xếp Theo Cột/Trường</a></li><li><a href=#24-loại-bỏ-trùng-lặp>2.4 Loại Bỏ Trùng Lặp</a></li><li><a href=#25-kiểm-tra-đã-sắp-xếp-chưa>2.5 Kiểm Tra Đã Sắp Xếp Chưa</a></li><li><a href=#26-vấn-đề-locale>2.6 Vấn Đề Locale</a></li><li><a href=#27-merge-các-file-đã-sắp-xếp>2.7 Merge Các File Đã Sắp Xếp</a></li><li><a href=#28-ví-dụ-thực-tế>2.8 Ví Dụ Thực Tế</a></li></ul></li><li><a href=#phần-3-diff---so-sánh-file>PHẦN 3: DIFF - SO SÁNH FILE</a><ul><li><a href=#31-thuật-toán-bên-trong>3.1 Thuật Toán Bên Trong</a></li><li><a href=#32-các-định-dạng-output>3.2 Các Định Dạng Output</a></li><li><a href=#33-các-cờ-quan-trọng>3.3 Các Cờ Quan Trọng</a></li><li><a href=#34-patch-workflow>3.4 Patch Workflow</a></li><li><a href=#35-so-sánh-đặc-biệt>3.5 So Sánh Đặc Biệt</a></li><li><a href=#36-các-công-cụ-liên-quan>3.6 Các Công Cụ Liên Quan</a></li><li><a href=#37-ví-dụ-thực-tế>3.7 Ví Dụ Thực Tế</a></li></ul></li><li><a href=#phần-4-kết-hợp-các-công-cụ>PHẦN 4: KẾT HỢP CÁC CÔNG CỤ</a><ul><li><a href=#41-các-mẫu-pipeline-hay-dùng>4.1 Các Mẫu Pipeline Hay Dùng</a></li><li><a href=#42-xử-lý-log>4.2 Xử Lý Log</a></li></ul></li><li><a href=#tóm-tắt-nhanh>TÓM TẮT NHANH</a><ul><li><a href=#grep>grep</a></li><li><a href=#sort>sort</a></li><li><a href=#diff>diff</a></li></ul></li></ul></li></ul></nav></div></div></dialog></main><footer class=footer><div class=footer-container><div class="footer-line powered">Cung cấp bởi <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreferrer" title="Hugo 0.152.0"><img class=hugo-icon src=/images/hugo.min.svg alt="Hugo logo"> Hugo</a> | Chủ đề - <a href=https://github.com/hugo-fixit/FixIt target=_blank rel=external title="FixIt v0.4.0-alpha.2"><img class=fixit-icon src=/images/fixit.min.svg alt="FixIt logo"> FixIt</a></div><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2025</span></div></div></footer></div><div class=widgets><div class=fixed-buttons><div class="fixed-button back-to-top animate__faster" role=button aria-label="Lên trên"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="50"/><circle class="progress" cx="50" cy="50" r="50"/></svg></div><div id=toc-drawer-button class="fixed-button toc-drawer-button" role=button aria-label="Nội dung"><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></div></div><div id=mask></div><div class=reading-progress-bar style=left:0;top:0;--bg-progress:#000;--bg-progress-dark:#fff></div><noscript><div class=noscript-warning>Trang web này hoạt động tốt nhất khi JavaScript được kích hoạt.</div></noscript></div><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><link rel=stylesheet href=/lib/pace/themes/blue/pace-theme-minimal.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/instant-page/instantpage.min.js async defer type=module></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script src=/lib/pace/pace.min.js async defer></script><script src=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/config/page.js defer></script><script src=/js/theme.min.js defer></script></body></html>

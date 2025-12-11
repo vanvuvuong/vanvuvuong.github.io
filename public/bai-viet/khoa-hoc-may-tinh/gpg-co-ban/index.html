@@ -1,0 +1,481 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=vi><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>GPG Cơ Bản - Kaizen - tốt hơn mỗi ngày</title><meta name=author content="Kaizen Teams"><meta name=description content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta name=keywords content='GPG cơ bản,bảo mật,mã hóa,gpg'><meta itemprop=name content="GPG cơ bản"><meta itemprop=description content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta itemprop=datePublished content="2025-11-18T19:58:20+07:00"><meta itemprop=dateModified content="2025-11-28T22:01:05+07:00"><meta itemprop=wordCount content="2733"><meta itemprop=keywords content="GPG cơ bản,bảo mật,mã hóa,gpg"><meta property="og:url" content="https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/"><meta property="og:site_name" content="Kaizen - tốt hơn mỗi ngày"><meta property="og:title" content="GPG cơ bản"><meta property="og:description" content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="bai-viet"><meta property="article:published_time" content="2025-11-18T19:58:20+07:00"><meta property="article:modified_time" content="2025-11-28T22:01:05+07:00"><meta property="article:tag" content="Bảo Mật"><meta property="article:tag" content="Mã Hóa"><meta property="article:tag" content="Gpg"><meta name=twitter:card content="summary"><meta name=twitter:title content="GPG cơ bản"><meta name=twitter:description content="Những điều cần biết khi sử dụng Gnu Privacy Guard"><meta name=application-name content="Kaizen - tốt hơn mỗi ngày"><meta name=apple-mobile-web-app-title content="Kaizen - tốt hơn mỗi ngày"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#2d89ef"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#FF7359><link rel=manifest href=/site.webmanifest><link rel=canonical type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ title="GPG cơ bản - Kaizen - tốt hơn mỗi ngày"><link rel=prev type=text/html href=https://vanvuvuong.github.io/gioi-thieu/ title="Giới thiệu"><link rel=next type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những điều cơ bản về Bash & Fish shell trong Linux"><link rel=stylesheet href=/css/config.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"GPG cơ bản","inLanguage":"vi","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/gpg-co-ban\/"},"image":[{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}],"genre":"posts","keywords":"bảo mật, mã hóa, gpg","wordcount":2733,"url":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/gpg-co-ban\/","datePublished":"2025-11-18T19:58:20+07:00","dateModified":"2025-11-28T22:01:05+07:00","publisher":{"@type":"Organization","name":"Kaizen","logo":{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}},"author":{"@type":"Person","name":"Kaizen Teams"},"description":"Những điều cần biết khi sử dụng Gnu Privacy Guard"}</script><script src=/js/head/color-scheme.min.js></script></head><body data-instant-intensity=viewport data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=32 width=32><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class="menu-item has-children"><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=26 width=26><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Huỷ</a></li><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class=menu-item><span class=nested-item><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a>
+<i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden=true></i></span><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=fi-container><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Bộ sưu tập"><div class="details collection-details open"><div class="details-summary collection-summary"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i>
+<span class=collection-name title="Bộ sưu tập">Bảo Mật</span>
+<span class=collection-count>1</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content collection-content"><nav><ul class=collection-list><li class=collection-item><span class=active title="GPG Cơ Bản">GPG Cơ Bản</span></li></ul><div class=collection-nav-simple><i class="fa-solid fa-angle-left fa-fw collection-nav-item text-secondary" aria-hidden=true></i><span class=text-secondary>1/1</span><i class="fa-solid fa-angle-right fa-fw collection-nav-item text-secondary" aria-hidden=true></i></div></nav></div></div><div class="details collection-details"><div class="details-summary collection-summary"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i>
+<span class=collection-name title="Bộ sưu tập">Linux</span>
+<span class=collection-count>2</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content collection-content"><nav><ul class=collection-list><li class=collection-item><span class=active title="GPG Cơ Bản">GPG Cơ Bản</span></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/10x-terminal/ title="Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường">Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường</a></li></ul><div class=collection-nav-simple><i class="fa-solid fa-angle-left fa-fw collection-nav-item text-secondary" aria-hidden=true></i><span class=text-secondary>1/2</span><a href=/bai-viet/khoa-hoc-may-tinh/10x-terminal/ class=collection-nav-item rel=next title="Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường"><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></nav></div></div></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>GPG Cơ Bản</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://vanvuvuong.github.io title="Tác giả" target=_blank rel="external nofollow noopener noreferrer author" class=author><i class="fa-solid fa-user-circle" aria-hidden=true></i>
+Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collections/b%E1%BA%A3o-m%E1%BA%ADt/ class=post-collection title="Bộ sưu tập - Bảo Mật"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Bảo Mật</a>&ensp;<a href=/collections/linux/ class=post-collection title="Bộ sưu tập - Linux"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Linux</a></span></div><div class=post-meta-line><span title="đăng ngày 2025-11-18 19:58:20"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2025-11-18>2025-11-18</time></span>&nbsp;<span title="Cập nhật ngày 2025-11-28 22:01:05"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2025-11-28>2025-11-28</time></span>&nbsp;<span title="2733 từ"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>Khoảng 2800 từ</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>13 phút</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Nội dung</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#dẫn-nhập>Dẫn nhập</a><ul><li><a href=#mã-băm-hashing>Mã băm (hashing)</a></li><li><a href=#mã-hóa-encryption>Mã hóa (encryption)</a></li></ul></li><li><a href=#gpg-là-gì>GPG là gì?</a></li><li><a href=#gpg-với-thuật-toán-bất-đối-xứng>GPG với thuật toán bất đối xứng</a><ul><li><a href=#ví-dụ-minh-họa>Ví dụ minh họa:</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><p>Bài này bao gồm những nội dung:</p><ul><li><p>GPG là gì? Đạt được mục đích khi sử dụng?</p></li><li><p>Những hướng dẫn sử dụng cơ bản</p></li><li><p>Cấu hình tốt nhất (nên) áp dụng</p></li><li><p>Một vài ví dụ cụ thể
+Thư mục cần cấu hình:</p></li><li><p><code>GNUPGHOME=~/.gnupg</code></p></li></ul><h2 class=heading-element id=dẫn-nhập><span>Dẫn nhập</span>
+<a href=#d%e1%ba%abn-nh%e1%ba%adp class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><p>Trong thế giới bảo mật sẽ chia làm nhiều phần với những mục đích khác nhau, mỗi một danh mục nhỏ lại có thể chia ra hàng tá những danh mục nhỏ hơn và sẽ khiến ta rối đầu với những danh mục & khái niệm đó. Hôm nay chúng ta sẽ chỉ quan tâm đến 2 phân mục rất nhỏ, đó là mã băm (hash) và mã hóa (encryption).</p><h3 class=heading-element id=mã-băm-hashing><span>Mã băm (hashing)</span>
+<a href=#m%c3%a3-b%c4%83m-hashing class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>Mỗi một máy tính sẽ bao gồm rất nhiều ty tỷ phần mềm, tệp, thư viện, &mldr; sử dụng kết hợp với nhau để có thể &ldquo;điều hành&rdquo; phần cứng của chiếc máy tính. Mỗi khi chúng ta trao đổi những thứ nhạy cảm như vậy qua mạng Internet, chúng ta cần chắc chắn rằng, những gì người lập trình viên tạo ra sau đó họ gửi lên mạnh chính xác 100% với những gì chúng ta tìm kiếm & tải xuống.</p><p>Đó là khi mã băm được phát minh ra. Mỗi một chữ, tệp, gói, hay phần mềm đều có một mã băm đặc biệt và không hề giống nhau:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>kris@fedora:~$ <span class=nb>echo</span> <span class=s2>&#34;ví dụ&#34;</span> <span class=p>|</span> sha256sum
+</span></span><span class=line><span class=cl>9737a22a063c9c8219a2b6c024cf20ecb33163be41f891885280d1d4350dca1f  -
+</span></span><span class=line><span class=cl>kris@fedora:~$ <span class=nb>echo</span> <span class=s2>&#34;ví dụ &#34;</span> <span class=p>|</span> sha256sum
+</span></span><span class=line><span class=cl>250eefdd4605412b81e927612d83e49332d8a53c9286386f3bbdef796554c901  -</span></span></code></pre></td></tr></table></div></div><p>Như các bạn có thể thấy, sự khác biệt của 2 từ chỉ là dấu cách đã cho ra một chuỗi mã băm khác nhau. Điều này đảm bảo việc người lập trình tạo một thứ và chia sẻ cho người khác dùng sẽ được đảm bảo là không bị thay đổi trong qua trình gửi/nhận trên mạng.</p><h3 class=heading-element id=mã-hóa-encryption><span>Mã hóa (encryption)</span>
+<a href=#m%c3%a3-h%c3%b3a-encryption class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>Khác với mục đích sử dụng của mã băm, mã hóa là một biện pháp sử dụng để chỉ người có đúng quyền hạn nhất định mới có thể đọc được nội dung của một mẩu tin, tệp,&mldr;</p><p>Mục đích của mã hóa là khiến cho một nội dung dễ hiểu trở nên khó hiểu cho máy tính và con người, chỉ người biết cách giải mới có thể &ldquo;biến&rdquo; nó thành một nội dung dễ hiểu trở lại.</p><p>Với những công cụ mã hóa, sẽ có 2 kiểu mã hóa được hình thành: đối xứng và bất đối xứng.</p><ul><li>Đối xứng có nghĩa là cùng một mẩu thông tin sẽ được mã hóa và giải mã theo cùng một cách, ví dụ như đặt mật khẩu khóa & nhập mật khẩu để mở khóa, sử dụng một thuật toán ngẫu nhiên để xáo trộn thông tin & dùng cách tương tự để giải</li><li>Bất đối xứng nghĩa là mã hóa dùng một phương pháp A, nhưng giải mã lại dùng phương pháp B.</li></ul><p>Mỗi một kiểu mã hóa sẽ có những lợi/bất lợi riêng, hãy xem bảng sau để hiểu rõ:</p><h2 class=heading-element id=gpg-là-gì><span>GPG là gì?</span>
+<a href=#gpg-l%c3%a0-g%c3%ac class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><p>Gnu Privacy Guard là một công cụ dùng để mã hóa (đối xứng hoặc bất đối xứng) một tệp, gói hoặc một tin nhắn,&mldr; bằng thuật toán đối xứng hay bất đối xứng. Ngoài công dụng này ra, GPG còn có thể sử dụng để xác nhận xem một tin nhắn, tệp hay gói,&mldr; có phải đã được tạo ra bởi một cá nhân/tổ chức nào đó hay không bằng cách kiểm tra <code>chữ ký số</code> (digital signature).</p><p>Không giống với mã băm (chỉ có tác dụng xác định xem một tệp,&mldr; có bị sửa đổi hay không), chữ ký số - cũng giống như chữ ký - mang đặc trưng định danh nhiều hơn, nghĩa là xác định cái gì đó có phải được tạo ra từ một cá nhân/tổ chức cụ thể hay không, đồng thời nó cũng có tác dụng xác định tính toàn vẹn của tin nhắn, tệp, gói,&mldr;</p><ul><li><p>Sử dụng GPG với thuật toán đối xứng có thể sử dụng như ví dụ sau:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>kris@fedora:/tmp/gpg$ <span class=nb>echo</span> <span class=s2>&#34;ví dụ &#34;</span> &gt; <span class=nb>test</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ cat <span class=nb>test</span>
+</span></span><span class=line><span class=cl>ví dụ
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --symmetric <span class=nb>test</span>
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật(passphrase)</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ ll
+</span></span><span class=line><span class=cl>total <span class=m>8</span>
+</span></span><span class=line><span class=cl>-rw-r--r--. <span class=m>1</span> kris kris <span class=m>10</span> Nov <span class=m>18</span> 14:33 <span class=nb>test</span>
+</span></span><span class=line><span class=cl>-rw-r--r--. <span class=m>1</span> kris kris <span class=m>84</span> Nov <span class=m>18</span> 14:34 test.gpg
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --decrypt test.gpg
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>gpg: AES256.CFB encrypted data
+</span></span><span class=line><span class=cl>gpg: encrypted with <span class=m>1</span> passphrase
+</span></span><span class=line><span class=cl>ví dụ</span></span></code></pre></td></tr></table></div></div></li></ul><h2 class=heading-element id=gpg-với-thuật-toán-bất-đối-xứng><span>GPG với thuật toán bất đối xứng</span>
+<a href=#gpg-v%e1%bb%9bi-thu%e1%ba%adt-to%c3%a1n-b%e1%ba%a5t-%c4%91%e1%bb%91i-x%e1%bb%a9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><ul><li>Những khái niệm cần nắm:<ul><li>Khóa công khai (public key): là khóa dùng để mã hóa tệp tin, lý tưởng nhất là người bạn muốn trò chuyện, trao đổi có thể xem/tải khóa này về được.</li><li>Khóa riêng tư (private key): là khóa dùng để giải mã, cần lưu trữ cẩn thận không được chia sẻ cho ai, cài cụm từ bảo mật mạnh (strong passphrase)</li><li>Khóa chủ (master key): là khóa mẹ dùng để tạo ra một cặp khóa riêng tư/công khai con</li><li>Khóa con (subkey): là khóa con, sẽ có thuộc về một khóa chủ nào đó sử dụng để mã hóa/giải mã (có thể là khóa chủ riêng tư/công khai)</li></ul></li></ul><p>Khi tạo cặp khóa riêng tư/công khai bằng câu lệnh, GPG sẽ tạo ra một chiếc khóa chủ (master key) cùng với một cặp khóa riêng tư/công khai con (private/public subkey).</p><h3 class=heading-element id=ví-dụ-minh-họa><span>Ví dụ minh họa:</span>
+<a href=#v%c3%ad-d%e1%bb%a5-minh-h%e1%bb%8da class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>Mục đích đằng sau thiết kế phức tạp này là để giảm thiểu rủi ro cho khóa chủ, tối ưu việc sử dụng nhiều cặp khóa riêng tư/công khai con. Mỗi một khóa chủ có thể tạo ra một định danh cho nhiều cặp khóa riêng tư/công khai con dùng cho mục đích mã hóa/giải mã trên nhiều thiết bị khác nhau.</p><p>Ví dụ như bạn có 3 thiết bị, 1 cái là máy tính cá nhân, 1 là máy tính công ty và 1 là máy tính cho việc viết báo, vậy bạn sẽ quản lý chúng như thế nào:</p><ul><li><p>việc tạo 3 cặp khóa khác nhau trên 3 máy không thể đảm bảo đồng bộ dữ liệu giữa các máy được, vì mỗi cặp khóa lại có khóa công khai khác nhau nên cần cặp khóa riêng tư khác nhau để giải mã.</p></li><li><p>việc tạo 1 cặp khóa rồi chia sẻ giữa các máy lại mang lại rủi ro nếu một trong những thiết bị bị mất/trộm thì bắt buộc phải tạo một cặp khóa mới để sử dụng.</p></li><li><p>giải pháp tốt nhất là sử dụng mô hình sau:</p><ul><li><p>tạo một khóa chủ trên một máy (trong quá trình này sẽ tự động tạo ra cặp khóa riêng tư/công khai con), liệt kê những khóa riêng tư, công khai ngay khi mới tạo khóa</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>kris@fedora:/tmp/gpg$ <span class=nb>export</span> <span class=nv>GNUPGHOME</span><span class=o>=</span>/tmp/gpg <span class=c1># để tách biệt thư mục mặc định với khóa hiện tại mình đang dùng</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --full-generate-key
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl>gpg <span class=o>(</span>GnuPG<span class=o>)</span> 2.4.7<span class=p>;</span> Copyright <span class=o>(</span>C<span class=o>)</span> <span class=m>2024</span> g10 Code GmbH
+</span></span><span class=line><span class=cl>This is free software: you are free to change and redistribute it.
+</span></span><span class=line><span class=cl>There is NO WARRANTY, to the extent permitted by law.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Please <span class=k>select</span> what kind of key you want:
+</span></span><span class=line><span class=cl>  <span class=o>(</span>1<span class=o>)</span> RSA and RSA
+</span></span><span class=line><span class=cl>  <span class=o>(</span>2<span class=o>)</span> DSA and Elgamal
+</span></span><span class=line><span class=cl>  <span class=o>(</span>3<span class=o>)</span> DSA <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>4<span class=o>)</span> RSA <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>9<span class=o>)</span> ECC <span class=o>(</span>sign and encrypt<span class=o>)</span> *default*
+</span></span><span class=line><span class=cl>  <span class=o>(</span>10<span class=o>)</span> ECC <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>14<span class=o>)</span> Existing key from card
+</span></span><span class=line><span class=cl>Your selection? <span class=m>9</span>
+</span></span><span class=line><span class=cl>Please <span class=k>select</span> which elliptic curve you want:
+</span></span><span class=line><span class=cl>  <span class=o>(</span>1<span class=o>)</span> Curve <span class=m>25519</span> *default*
+</span></span><span class=line><span class=cl>  <span class=o>(</span>4<span class=o>)</span> NIST P-384
+</span></span><span class=line><span class=cl>  <span class=o>(</span>6<span class=o>)</span> Brainpool P-256
+</span></span><span class=line><span class=cl>Your selection? <span class=m>1</span>
+</span></span><span class=line><span class=cl>Please specify how long the key should be valid.
+</span></span><span class=line><span class=cl>        <span class=nv>0</span> <span class=o>=</span> key does not expire
+</span></span><span class=line><span class=cl>      &lt;n&gt;  <span class=o>=</span> key expires in n days
+</span></span><span class=line><span class=cl>      &lt;n&gt;w <span class=o>=</span> key expires in n weeks
+</span></span><span class=line><span class=cl>      &lt;n&gt;m <span class=o>=</span> key expires in n months
+</span></span><span class=line><span class=cl>      &lt;n&gt;y <span class=o>=</span> key expires in n years
+</span></span><span class=line><span class=cl>Key is valid <span class=k>for</span>? <span class=o>(</span>0<span class=o>)</span> 1y
+</span></span><span class=line><span class=cl>Key expires at Wed <span class=m>18</span> Nov <span class=m>2026</span> 02:50:02 PM +07
+</span></span><span class=line><span class=cl>Is this correct? <span class=o>(</span>y/N<span class=o>)</span> y
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>GnuPG needs to construct a user ID to identify your key.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Real name: khoa-vi-du
+</span></span><span class=line><span class=cl>Email address: vi-du@gnupg.org
+</span></span><span class=line><span class=cl>Comment: Khoa vi du minh hoa
+</span></span><span class=line><span class=cl>You selected this USER-ID:
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;khoa-vi-du (Khoa vi du minh hoa) &lt;vi-du@gnupg.org&gt;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Change <span class=o>(</span>N<span class=o>)</span>ame, <span class=o>(</span>C<span class=o>)</span>omment, <span class=o>(</span>E<span class=o>)</span>mail or <span class=o>(</span>O<span class=o>)</span>kay/<span class=o>(</span>Q<span class=o>)</span>uit? o
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span class=line><span class=cl>some other action <span class=o>(</span><span class=nb>type</span> on the keyboard, move the mouse, utilize the
+</span></span><span class=line><span class=cl>disks<span class=o>)</span> during the prime generation<span class=p>;</span> this gives the random number
+</span></span><span class=line><span class=cl>generator a better chance to gain enough entropy.
+</span></span><span class=line><span class=cl>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span class=line><span class=cl>some other action <span class=o>(</span><span class=nb>type</span> on the keyboard, move the mouse, utilize the
+</span></span><span class=line><span class=cl>disks<span class=o>)</span> during the prime generation<span class=p>;</span> this gives the random number
+</span></span><span class=line><span class=cl>generator a better chance to gain enough entropy.
+</span></span><span class=line><span class=cl>gpg: /tmp/gpg/trustdb.gpg: trustdb created
+</span></span><span class=line><span class=cl>gpg: directory <span class=s1>&#39;/tmp/gpg/openpgp-revocs.d&#39;</span> created
+</span></span><span class=line><span class=cl>gpg: revocation certificate stored as <span class=s1>&#39;/tmp/gpg/openpgp-revocs.d/B94F9101C1665938968DAF797B314495163FC656.rev&#39;</span>
+</span></span><span class=line><span class=cl>public and secret key created and signed.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>pub   ed25519 2025-11-18 <span class=o>[</span>SC<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span class=line><span class=cl>uid                      khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>sub   cv25519 2025-11-18 <span class=o>[</span>E<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --list-secret-keys --with-subkey-fingerprint
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl>/tmp/gpg/pubring.kbx
+</span></span><span class=line><span class=cl>--------------------
+</span></span><span class=line><span class=cl>sec   ed25519 2025-11-18 <span class=o>[</span>SC<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span class=line><span class=cl>uid           <span class=o>[</span>ultimate<span class=o>]</span> khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>ssb   cv25519 2025-11-18 <span class=o>[</span>E<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --list-keys --with-subkey-fingerprint
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl>/tmp/gpg/pubring.kbx
+</span></span><span class=line><span class=cl>--------------------
+</span></span><span class=line><span class=cl>pub   ed25519 2025-11-18 <span class=o>[</span>SC<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span class=line><span class=cl>uid           <span class=o>[</span>ultimate<span class=o>]</span> khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>sub   cv25519 2025-11-18 <span class=o>[</span>E<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$</span></span></code></pre></td></tr></table></div></div><blockquote><p>Một khóa chủ + cặp mã khóa riêng tư/công khai vừa được tạo với &ldquo;mã vân tay&rdquo;(fingerprint) lần lượt là khóa chủ <code>B94F9101C1665938968DAF797B314495163FC656</code>, khóa riêng tư/công khai <code>0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B</code></p></blockquote></li><li><p>tạo thêm 2 khóa con riêng tư cho 2 máy khác để mã hóa bằng cách chỉnh sửa khóa chủ có mã vân tay <code>B94F9101C1665938968DAF797B314495163FC656</code> (trong quá trình này sẽ tự động tạo ra 2 cặp khóa công khai con tương ứng)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span><span class=lnt>85
+</span><span class=lnt>86
+</span><span class=lnt>87
+</span><span class=lnt>88
+</span><span class=lnt>89
+</span><span class=lnt>90
+</span><span class=lnt>91
+</span><span class=lnt>92
+</span><span class=lnt>93
+</span><span class=lnt>94
+</span><span class=lnt>95
+</span><span class=lnt>96
+</span><span class=lnt>97
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --edit-key B94F9101C1665938968DAF797B314495163FC656
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl>gpg <span class=o>(</span>GnuPG<span class=o>)</span> 2.4.7<span class=p>;</span> Copyright <span class=o>(</span>C<span class=o>)</span> <span class=m>2024</span> g10 Code GmbH
+</span></span><span class=line><span class=cl>This is free software: you are free to change and redistribute it.
+</span></span><span class=line><span class=cl>There is NO WARRANTY, to the extent permitted by law.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Secret key is available.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>sec  ed25519/7B314495163FC656
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: SC
+</span></span><span class=line><span class=cl>    trust: ultimate      validity: ultimate
+</span></span><span class=line><span class=cl>ssb  cv25519/4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span class=line><span class=cl><span class=o>[</span>ultimate<span class=o>]</span> <span class=o>(</span>1<span class=o>)</span>. khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>gpg&gt; addkey
+</span></span><span class=line><span class=cl>Please <span class=k>select</span> what kind of key you want:
+</span></span><span class=line><span class=cl>  <span class=o>(</span>3<span class=o>)</span> DSA <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>4<span class=o>)</span> RSA <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>5<span class=o>)</span> Elgamal <span class=o>(</span>encrypt only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>6<span class=o>)</span> RSA <span class=o>(</span>encrypt only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>10<span class=o>)</span> ECC <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>12<span class=o>)</span> ECC <span class=o>(</span>encrypt only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>14<span class=o>)</span> Existing key from card
+</span></span><span class=line><span class=cl>Your selection? <span class=m>12</span>
+</span></span><span class=line><span class=cl>Please <span class=k>select</span> which elliptic curve you want:
+</span></span><span class=line><span class=cl>  <span class=o>(</span>1<span class=o>)</span> Curve <span class=m>25519</span> *default*
+</span></span><span class=line><span class=cl>  <span class=o>(</span>4<span class=o>)</span> NIST P-384
+</span></span><span class=line><span class=cl>  <span class=o>(</span>6<span class=o>)</span> Brainpool P-256
+</span></span><span class=line><span class=cl>Your selection? <span class=m>1</span>
+</span></span><span class=line><span class=cl>Please specify how long the key should be valid.
+</span></span><span class=line><span class=cl>        <span class=nv>0</span> <span class=o>=</span> key does not expire
+</span></span><span class=line><span class=cl>      &lt;n&gt;  <span class=o>=</span> key expires in n days
+</span></span><span class=line><span class=cl>      &lt;n&gt;w <span class=o>=</span> key expires in n weeks
+</span></span><span class=line><span class=cl>      &lt;n&gt;m <span class=o>=</span> key expires in n months
+</span></span><span class=line><span class=cl>      &lt;n&gt;y <span class=o>=</span> key expires in n years
+</span></span><span class=line><span class=cl>Key is valid <span class=k>for</span>? <span class=o>(</span>0<span class=o>)</span> 1y
+</span></span><span class=line><span class=cl>Key expires at Wed <span class=m>18</span> Nov <span class=m>2026</span> 03:02:44 PM +07
+</span></span><span class=line><span class=cl>Is this correct? <span class=o>(</span>y/N<span class=o>)</span> y
+</span></span><span class=line><span class=cl>Really create? <span class=o>(</span>y/N<span class=o>)</span> y
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span class=line><span class=cl>some other action <span class=o>(</span><span class=nb>type</span> on the keyboard, move the mouse, utilize the
+</span></span><span class=line><span class=cl>disks<span class=o>)</span> during the prime generation<span class=p>;</span> this gives the random number
+</span></span><span class=line><span class=cl>generator a better chance to gain enough entropy.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>sec  ed25519/7B314495163FC656
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: SC
+</span></span><span class=line><span class=cl>    trust: ultimate      validity: ultimate
+</span></span><span class=line><span class=cl>ssb  cv25519/4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span class=line><span class=cl>ssb  cv25519/35D0125B7F62907E
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span class=line><span class=cl><span class=o>[</span>ultimate<span class=o>]</span> <span class=o>(</span>1<span class=o>)</span>. khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>gpg&gt; addkey
+</span></span><span class=line><span class=cl>Please <span class=k>select</span> what kind of key you want:
+</span></span><span class=line><span class=cl>  <span class=o>(</span>3<span class=o>)</span> DSA <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>4<span class=o>)</span> RSA <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>5<span class=o>)</span> Elgamal <span class=o>(</span>encrypt only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>6<span class=o>)</span> RSA <span class=o>(</span>encrypt only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>10<span class=o>)</span> ECC <span class=o>(</span>sign only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>12<span class=o>)</span> ECC <span class=o>(</span>encrypt only<span class=o>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>(</span>14<span class=o>)</span> Existing key from card
+</span></span><span class=line><span class=cl>Your selection? <span class=m>12</span>
+</span></span><span class=line><span class=cl>Please <span class=k>select</span> which elliptic curve you want:
+</span></span><span class=line><span class=cl>  <span class=o>(</span>1<span class=o>)</span> Curve <span class=m>25519</span> *default*
+</span></span><span class=line><span class=cl>  <span class=o>(</span>4<span class=o>)</span> NIST P-384
+</span></span><span class=line><span class=cl>  <span class=o>(</span>6<span class=o>)</span> Brainpool P-256
+</span></span><span class=line><span class=cl>Your selection? <span class=m>1</span>
+</span></span><span class=line><span class=cl>Please specify how long the key should be valid.
+</span></span><span class=line><span class=cl>        <span class=nv>0</span> <span class=o>=</span> key does not expire
+</span></span><span class=line><span class=cl>      &lt;n&gt;  <span class=o>=</span> key expires in n days
+</span></span><span class=line><span class=cl>      &lt;n&gt;w <span class=o>=</span> key expires in n weeks
+</span></span><span class=line><span class=cl>      &lt;n&gt;m <span class=o>=</span> key expires in n months
+</span></span><span class=line><span class=cl>      &lt;n&gt;y <span class=o>=</span> key expires in n years
+</span></span><span class=line><span class=cl>Key is valid <span class=k>for</span>? <span class=o>(</span>0<span class=o>)</span> 1y
+</span></span><span class=line><span class=cl>Key expires at Wed <span class=m>18</span> Nov <span class=m>2026</span> 03:03:01 PM +07
+</span></span><span class=line><span class=cl>Is this correct? <span class=o>(</span>y/N<span class=o>)</span> y
+</span></span><span class=line><span class=cl>Really create? <span class=o>(</span>y/N<span class=o>)</span> y
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>We need to generate a lot of random bytes. It is a good idea to perform
+</span></span><span class=line><span class=cl>some other action <span class=o>(</span><span class=nb>type</span> on the keyboard, move the mouse, utilize the
+</span></span><span class=line><span class=cl>disks<span class=o>)</span> during the prime generation<span class=p>;</span> this gives the random number
+</span></span><span class=line><span class=cl>generator a better chance to gain enough entropy.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>sec  ed25519/7B314495163FC656
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: SC
+</span></span><span class=line><span class=cl>    trust: ultimate      validity: ultimate
+</span></span><span class=line><span class=cl>ssb  cv25519/4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span class=line><span class=cl>ssb  cv25519/35D0125B7F62907E
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span class=line><span class=cl>ssb  cv25519/2669A0060F0D7ACA
+</span></span><span class=line><span class=cl>    created: 2025-11-18  expires: 2026-11-18  usage: E
+</span></span><span class=line><span class=cl><span class=o>[</span>ultimate<span class=o>]</span> <span class=o>(</span>1<span class=o>)</span>. khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>gpg&gt; save</span></span></code></pre></td></tr></table></div></div></li><li><p>liệt kê các khóa 1 lần nữa, xuất 1 khóa chủ, 3 khóa riêng tư con và khóa công khai ra thành những tệp</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --list-secret-keys --with-subkey-fingerprint
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl>/tmp/gpg/pubring.kbx
+</span></span><span class=line><span class=cl>--------------------
+</span></span><span class=line><span class=cl>sec   ed25519 2025-11-18 <span class=o>[</span>SC<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      B94F9101C1665938968DAF797B314495163FC656
+</span></span><span class=line><span class=cl>uid           <span class=o>[</span>ultimate<span class=o>]</span> khoa-vi-du <span class=o>(</span>Khoa vi du minh hoa<span class=o>)</span> &lt;vi-du@gnupg.org&gt;
+</span></span><span class=line><span class=cl>ssb   cv25519 2025-11-18 <span class=o>[</span>E<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>ssb   cv25519 2025-11-18 <span class=o>[</span>E<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      7D42F1C441FBD540E631259F35D0125B7F62907E
+</span></span><span class=line><span class=cl>ssb   cv25519 2025-11-18 <span class=o>[</span>E<span class=o>]</span> <span class=o>[</span>expires: 2026-11-18<span class=o>]</span>
+</span></span><span class=line><span class=cl>      2C05E3354FEC3496C3B14B522669A0060F0D7ACA
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-chu.gpg --export-secret-keys B94F9101C1665938968DAF797B314495163FC656 <span class=c1># hoặc sử dụng `vi-du@gnupg.org` thay cho mã vân tay</span>
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-1.gpg --export-secret-subkeys 0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-2.gpg --export-secret-subkeys 7D42F1C441FBD540E631259F35D0125B7F62907E
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-rieng-tu-may-3.gpg --export-secret-subkeys 2C05E3354FEC3496C3B14B522669A0060F0D7ACA
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl><span class=c1># Một cửa sổ sẽ hiện lên để điền cụm từ bảo mật</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ gpg --armor --output vidu-khoa-cong-khai.gpg --export vi-du@gnupg.org
+</span></span><span class=line><span class=cl>gpg: WARNING: unsafe permissions on homedir <span class=s1>&#39;/tmp/gpg&#39;</span>
+</span></span><span class=line><span class=cl>kris@fedora:/tmp/gpg$ ll <span class=p>|</span> grep gpg
+</span></span><span class=line><span class=cl>-rw-r--r--. <span class=m>1</span> kris kris    <span class=m>84</span> Nov <span class=m>18</span> 14:34 test.gpg
+</span></span><span class=line><span class=cl>-rw-------. <span class=m>1</span> kris kris  <span class=m>1280</span> Nov <span class=m>18</span> 14:52 trustdb.gpg
+</span></span><span class=line><span class=cl>-rw-------. <span class=m>1</span> kris kris  <span class=m>1641</span> Nov <span class=m>18</span> 15:08 vidu-khoa-chu.gpg
+</span></span><span class=line><span class=cl>-rw-r--r--. <span class=m>1</span> kris kris  <span class=m>1189</span> Nov <span class=m>18</span> 15:11 vidu-khoa-cong-khai.gpg
+</span></span><span class=line><span class=cl>-rw-------. <span class=m>1</span> kris kris  <span class=m>1540</span> Nov <span class=m>18</span> 15:09 vidu-khoa-rieng-tu-may-1.gpg
+</span></span><span class=line><span class=cl>-rw-------. <span class=m>1</span> kris kris  <span class=m>1540</span> Nov <span class=m>18</span> 15:10 vidu-khoa-rieng-tu-may-2.gpg
+</span></span><span class=line><span class=cl>-rw-------. <span class=m>1</span> kris kris  <span class=m>1540</span> Nov <span class=m>18</span> 15:10 vidu-khoa-rieng-tu-may-3.gpg</span></span></code></pre></td></tr></table></div></div></li><li><p>xóa khóa chủ, và các khóa riêng tư con trên máy vừa tạo</p></li><li><p>nhập lại từng khóa riêng tư con và khóa công khai lên từng máy</p></li><li><p>nhập khóa chủ và khóa công khai vào thiết bị khóa bảo mật (security key) (nếu có)</p></li></ul></li></ul></div><div class=collection-card><div class="collection-title text-secondary">Trong <a href=/collections/b%E1%BA%A3o-m%E1%BA%ADt/><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> <span>Bộ sưu tập・Bảo Mật</span></span></a> 1</div><div class=collection-nav></div></div><div class=collection-card><div class="collection-title text-secondary">Trong <a href=/collections/linux/><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> <span>Bộ sưu tập・Linux</span></span></a> 2</div><div class=collection-nav><a href=/bai-viet/khoa-hoc-may-tinh/10x-terminal/ class=collection-nav-item rel=next title="Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường"><span>Sử Dụng Cửa Sổ Câu Lệnh (Terminal) Linux Nhanh Gấp 10 Lần Người Bình Thường</span><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Cập nhật ngày 2025-11-28 22:01:05">Cập nhật ngày 2025-11-28&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>CC BY-NC-SA 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Chia sẻ trên X" data-sharer=twitter data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ data-title="GPG Cơ Bản" data-hashtags="bảo mật,mã hóa,gpg"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên Facebook" data-sharer=facebook data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ data-hashtag="bảo mật"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Chia sẻ trên 微博" data-sharer=weibo data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/ data-title="GPG Cơ Bản"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/b%E1%BA%A3o-m%E1%BA%ADt/ class=post-tag title="Nhãn - Bảo Mật">Bảo Mật</a><a href=/tags/m%C3%A3-h%C3%B3a/ class=post-tag title="Nhãn - Mã Hóa">Mã Hóa</a><a href=/tags/gpg/ class=post-tag title="Nhãn - Gpg">Gpg</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Quay lại</a></span>&nbsp;|&nbsp;<span><a href=/>Trang chủ</a></span></section></div><div class=post-nav><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ class=post-nav-item rel=next title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article><aside class=toc id=toc-auto aria-label="Nội dung"><h2 class=toc-title>Nội dung&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside><dialog id=toc-dialog aria-labelledby=toc-dialog-title role=dialog><div class=toc><h2 class=toc-title>Nội dung</h2><div class=toc-content id=toc-content-drawer><nav><ul><li><ul><li><a href=#dẫn-nhập>Dẫn nhập</a><ul><li><a href=#mã-băm-hashing>Mã băm (hashing)</a></li><li><a href=#mã-hóa-encryption>Mã hóa (encryption)</a></li></ul></li><li><a href=#gpg-là-gì>GPG là gì?</a></li><li><a href=#gpg-với-thuật-toán-bất-đối-xứng>GPG với thuật toán bất đối xứng</a><ul><li><a href=#ví-dụ-minh-họa>Ví dụ minh họa:</a></li></ul></li></ul></li></ul></nav></div></div></dialog></main><footer class=footer><div class=footer-container><div class="footer-line powered">Cung cấp bởi <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreferrer" title="Hugo 0.152.0"><img class=hugo-icon src=/images/hugo.min.svg alt="Hugo logo"> Hugo</a> | Chủ đề - <a href=https://github.com/hugo-fixit/FixIt target=_blank rel=external title="FixIt v0.4.0-alpha.2"><img class=fixit-icon src=/images/fixit.min.svg alt="FixIt logo"> FixIt</a></div><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2025</span></div></div></footer></div><div class=widgets><div class=fixed-buttons><div class="fixed-button back-to-top animate__faster" role=button aria-label="Lên trên"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="50"/><circle class="progress" cx="50" cy="50" r="50"/></svg></div><div id=toc-drawer-button class="fixed-button toc-drawer-button" role=button aria-label="Nội dung"><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></div></div><div id=mask></div><div class=reading-progress-bar style=left:0;top:0;--bg-progress:#000;--bg-progress-dark:#fff></div><noscript><div class=noscript-warning>Trang web này hoạt động tốt nhất khi JavaScript được kích hoạt.</div></noscript></div><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><link rel=stylesheet href=/lib/pace/themes/blue/pace-theme-minimal.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/instant-page/instantpage.min.js async defer type=module></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script src=/lib/pace/pace.min.js async defer></script><script src=/bai-viet/khoa-hoc-may-tinh/gpg-co-ban/config/page.js defer></script><script src=/js/theme.min.js defer></script></body></html>
