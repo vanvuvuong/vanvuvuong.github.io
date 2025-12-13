@@ -1,4 +1,4 @@
-<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=vi><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer - Kaizen - tốt hơn mỗi ngày</title><meta name=author content="Kaizen Teams"><meta name=description content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta name=keywords content='ai generated post'><meta itemprop=name content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta itemprop=description content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta itemprop=datePublished content="2025-12-10T14:17:23+07:00"><meta itemprop=dateModified content="2025-12-11T16:05:24+07:00"><meta itemprop=wordCount content="6285"><meta itemprop=keywords content="Ai Generated Post"><meta property="og:url" content="https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/"><meta property="og:site_name" content="Kaizen - tốt hơn mỗi ngày"><meta property="og:title" content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta property="og:description" content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="bai-viet"><meta property="article:published_time" content="2025-12-10T14:17:23+07:00"><meta property="article:modified_time" content="2025-12-11T16:05:24+07:00"><meta property="article:tag" content="Ai Generated Post"><meta name=twitter:card content="summary"><meta name=twitter:title content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta name=twitter:description content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta name=application-name content="Kaizen - tốt hơn mỗi ngày"><meta name=apple-mobile-web-app-title content="Kaizen - tốt hơn mỗi ngày"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#2d89ef"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#FF7359><link rel=manifest href=/site.webmanifest><link rel=canonical type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ title="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer - Kaizen - tốt hơn mỗi ngày"><link rel=prev type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu"><link rel=next type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu"><link rel=stylesheet href=/css/config.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Awk, Sed \u0026 Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer","inLanguage":"vi","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/regex-awk-sed\/"},"image":[{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}],"genre":"posts","keywords":"ai generated post","wordcount":6285,"url":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/regex-awk-sed\/","datePublished":"2025-12-10T14:17:23+07:00","dateModified":"2025-12-11T16:05:24+07:00","publisher":{"@type":"Organization","name":"Kaizen","logo":{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}},"author":{"@type":"Person","name":"Kaizen Teams"},"description":"Awk, Sed \u0026 Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"}</script><script src=/js/head/color-scheme.min.js></script></head><body data-instant-intensity=viewport data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=32 width=32><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class="menu-item has-children"><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-desktop>
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=vi><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer - Kaizen - tốt hơn mỗi ngày</title><meta name=author content="Kaizen Teams"><meta name=description content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta name=keywords content='ai generated post'><meta itemprop=name content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta itemprop=description content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta itemprop=datePublished content="2025-12-10T14:17:23+07:00"><meta itemprop=dateModified content="2025-12-11T16:05:24+07:00"><meta itemprop=wordCount content="5362"><meta itemprop=keywords content="Ai Generated Post"><meta property="og:url" content="https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/"><meta property="og:site_name" content="Kaizen - tốt hơn mỗi ngày"><meta property="og:title" content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta property="og:description" content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="bai-viet"><meta property="article:published_time" content="2025-12-10T14:17:23+07:00"><meta property="article:modified_time" content="2025-12-11T16:05:24+07:00"><meta property="article:tag" content="Ai Generated Post"><meta name=twitter:card content="summary"><meta name=twitter:title content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta name=twitter:description content="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"><meta name=application-name content="Kaizen - tốt hơn mỗi ngày"><meta name=apple-mobile-web-app-title content="Kaizen - tốt hơn mỗi ngày"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#2d89ef"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#FF7359><link rel=manifest href=/site.webmanifest><link rel=canonical type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ title="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer - Kaizen - tốt hơn mỗi ngày"><link rel=prev type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu"><link rel=next type=text/html href=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu"><link rel=stylesheet href=/css/config.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Awk, Sed \u0026 Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer","inLanguage":"vi","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/regex-awk-sed\/"},"image":[{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}],"genre":"posts","keywords":"ai generated post","wordcount":5362,"url":"https:\/\/vanvuvuong.github.io\/bai-viet\/khoa-hoc-may-tinh\/linux-cli\/regex-awk-sed\/","datePublished":"2025-12-10T14:17:23+07:00","dateModified":"2025-12-11T16:05:24+07:00","publisher":{"@type":"Organization","name":"Kaizen","logo":{"@type":"ImageObject","url":"https:\/\/vanvuvuong.github.io\/images\/avatar.jpeg","width":330,"height":330}},"author":{"@type":"Person","name":"Kaizen Teams"},"description":"Awk, Sed \u0026 Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer"}</script><script src=/js/head/color-scheme.min.js></script></head><body data-instant-intensity=viewport data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=32 width=32><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/gioi-thieu><i class="fa-solid fa-comments fa-fw fa-sm" aria-hidden=true></i> Giới thiệu</a></li><li class="menu-item has-children"><a class=menu-link href=/bai-viet><i class="fa-solid fa-newspaper fa-fw fa-sm" aria-hidden=true></i> Bài viết</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/bai-viet/khoa-hoc-may-tinh><i class="fa-solid fa-laptop fa-fw fa-sm" aria-hidden=true></i> Khoa học máy tính</a></li><li class=menu-item><a class=menu-link href=/bai-viet/cuoc-song><i class="fa-solid fa-life-ring fa-fw fa-sm" aria-hidden=true></i> Cuộc sống</a></li><li class=menu-item><a class=menu-link href=/bai-viet/hoc-vien-luat-tu-nhien><i class="fa-solid fa-dragon fa-fw fa-sm" aria-hidden=true></i> Học viện luật tự nhiên</a></li><li class=menu-item><a class=menu-link href=/collections><i class="fa-solid fa-layer-group fa-fw fa-sm" aria-hidden=true></i> Bộ sưu tập</a></li><li class=menu-item><a class=menu-link href=/tags><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li></ul></li><li class=menu-item><a class=menu-link href=/sach-hay><i class="fa-solid fa-book fa-fw fa-sm" aria-hidden=true></i> Sách hay</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-desktop>
 <a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title="Tìm kiếm"><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
 </a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Xoá><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
 </a><span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title="Đổi chủ đề"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kaizen - tốt hơn mỗi ngày"><img class=logo src=/images/kaizen-logo.png alt="Kaizen - tốt hơn mỗi ngày" height=26 width=26><span class=header-title-text>Kaizen</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Tìm tiêu đề hoặc nội dung..." id=search-input-mobile>
@@ -9,49 +9,16 @@
 <span class=collection-name title="Bộ sưu tập">Linux Cli</span>
 <span class=collection-count>11</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content collection-content"><nav><ul class=collection-list><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu">Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ title="Linux Network Commands - Hướng Dẫn Chuyên Sâu">Linux Network Commands - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu">Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><span class=active title="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer">Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer</span></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu">Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/user-group/ title="Linux User & Group Management - Hướng Dẫn Chuyên Sâu">Linux User & Group Management - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/encryption-and-security/ title="Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu">Linux Cryptography & Security Tools - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/package-manager/ title="Linux Package Management - Hướng Dẫn Chuyên Sâu">Linux Package Management - Hướng Dẫn Chuyên Sâu</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/selinux/ title="Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc">Selinux & Apparmor - Kiểm Soát Truy Cập Bắt Buộc</a></li><li class=collection-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/file-and-folder/ title="Find, Ln, Lsof, Tar, Chmod - Hướng Dẫn Chuyên Sâu">Find, Ln, Lsof, Tar, Chmod - Hướng Dẫn Chuyên Sâu</a></li></ul><div class=collection-nav-simple><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ class=collection-nav-item rel=prev title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i></a><span class=text-secondary>5/11</span><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ class=collection-nav-item rel=next title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu"><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></nav></div></div><div class="details related-details open"><div class="details-summary related-summary"><i class="fa-solid fa-fire fa-fade text-danger fa-fw" aria-hidden=true></i>
 <span class=related-title>Nội dung liên quan</span><i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class="details-content related-content"><ul class=related-list><li class=related-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu">Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu</a></li><li class=related-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ title="Linux Network Commands - Hướng Dẫn Chuyên Sâu">Linux Network Commands - Hướng Dẫn Chuyên Sâu</a></li><li class=related-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu">Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</a></li><li class=related-item><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</a></li></ul></div></div></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://vanvuvuong.github.io title="Tác giả" target=_blank rel="external nofollow noopener noreferrer author" class=author><i class="fa-solid fa-user-circle" aria-hidden=true></i>
-Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collections/linux-cli/ class=post-collection title="Bộ sưu tập - Linux Cli"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Linux Cli</a></span></div><div class=post-meta-line><span title="đăng ngày 2025-12-10 14:17:23"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-10>2025-12-10</time></span>&nbsp;<span title="Cập nhật ngày 2025-12-11 16:05:24"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-11>2025-12-11</time></span>&nbsp;<span title="6285 từ"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>Khoảng 6300 từ</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>30 phút</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Nội dung</span>
+Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collections/linux-cli/ class=post-collection title="Bộ sưu tập - Linux Cli"><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> Linux Cli</a></span></div><div class=post-meta-line><span title="đăng ngày 2025-12-10 14:17:23"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-10>2025-12-10</time></span>&nbsp;<span title="Cập nhật ngày 2025-12-11 16:05:24"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2025-12-11>2025-12-11</time></span>&nbsp;<span title="5362 từ"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>Khoảng 5400 từ</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>26 phút</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Nội dung</span>
 <span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#phần-1-regex-trong-linux---lịch-sử-và-các-biến-thể>PHẦN 1: REGEX TRONG LINUX - LỊCH SỬ VÀ CÁC BIẾN THỂ</a><ul><li><a href=#11-tại-sao-regex-linux-lạ-so-với-regex-hiện-đại>1.1 Tại sao regex Linux &ldquo;lạ&rdquo; so với regex hiện đại?</a></li><li><a href=#12-bảng-so-sánh-regex-bre-vs-ere-vs-pcre>1.2 BẢNG SO SÁNH REGEX: BRE vs ERE vs PCRE</a></li><li><a href=#13-ví-dụ-thực-tế-cùng-một-việc-khác-cú-pháp>1.3 Ví dụ thực tế: Cùng một việc, khác cú pháp</a></li><li><a href=#14-lớp-ký-tự-posix-hoạt-động-trong-cả-bre-và-ere>1.4 Lớp Ký Tự POSIX (hoạt động trong cả BRE và ERE)</a></li></ul></li><li><a href=#phần-2-awk-chuyên-sâu>PHẦN 2: AWK CHUYÊN SÂU</a><ul><li><a href=#21-mô-hình-thực-thi---hiểu-để-tối-ưu>2.1 Mô Hình Thực Thi - Hiểu để tối ưu</a></li><li><a href=#22-biến-có-sẵn---cái-hay-của-awk>2.2 Biến Có Sẵn - Cái hay của awk</a></li><li><a href=#23-các-loại-mẫu---khi-nào-dùng-cái-nào>2.3 Các Loại Mẫu - Khi nào dùng cái nào</a></li><li><a href=#24-mảng-kết-hợp---sức-mạnh-thực-sự-của-awk>2.4 Mảng Kết Hợp - Sức mạnh thực sự của awk</a></li><li><a href=#25-hàm-có-sẵn>2.5 Hàm Có Sẵn</a></li><li><a href=#26-luồng-điều-khiển>2.6 Luồng Điều Khiển</a></li><li><a href=#27-hàm-tự-định-nghĩa>2.7 Hàm Tự Định Nghĩa</a></li><li><a href=#28-printf---xuất-có-định-dạng>2.8 Printf - Xuất Có Định Dạng</a></li></ul></li><li><a href=#phần-3-sed-chuyên-sâu>PHẦN 3: SED CHUYÊN SÂU</a><ul><li><a href=#31-mô-hình-thực-thi>3.1 Mô Hình Thực Thi</a></li><li><a href=#32-các-loại-địa-chỉ---chỉ-định-dòng-để-xử-lý>3.2 Các Loại Địa Chỉ - Chỉ định dòng để xử lý</a></li><li><a href=#33-tham-khảo-lệnh>3.3 Tham Khảo Lệnh</a></li><li><a href=#34-nhiều-lệnh>3.4 Nhiều Lệnh</a></li><li><a href=#35-không-gian-giữ---thao-tác-bộ-đệm-nâng-cao>3.5 Không Gian Giữ - Thao Tác Bộ Đệm Nâng Cao</a></li><li><a href=#36-nhánh-và-nhãn-nâng-cao>3.6 Nhánh và Nhãn (Nâng Cao)</a></li><li><a href=#37-chỉnh-sửa-tại-chỗ>3.7 Chỉnh Sửa Tại Chỗ</a></li></ul></li><li><a href=#phần-4-phân-tích-độ-phức-tạp>PHẦN 4: PHÂN TÍCH ĐỘ PHỨC TẠP</a><ul><li><a href=#41-big-o-của-các-thao-tác>4.1 Big-O của các thao tác</a></li><li><a href=#42-cơ-chế-regex-bên-trong---khi-nào-nó-chậm>4.2 Cơ Chế Regex Bên Trong - Khi nào nó chậm</a></li><li><a href=#43-sử-dụng-bộ-nhớ>4.3 Sử Dụng Bộ Nhớ</a></li></ul></li><li><a href=#phần-5-ví-dụ-thực-tế>PHẦN 5: VÍ DỤ THỰC TẾ</a><ul><li><a href=#51-phân-tích-log>5.1 Phân Tích Log</a></li><li><a href=#52-thao-tác-file-cấu-hình>5.2 Thao Tác File Cấu Hình</a></li><li><a href=#53-chuyển-đổi-dữ-liệu>5.3 Chuyển Đổi Dữ Liệu</a></li><li><a href=#54-quản-trị-hệ-thống>5.4 Quản Trị Hệ Thống</a></li><li><a href=#55-đường-ống-xử-lý-văn-bản>5.5 Đường Ống Xử Lý Văn Bản</a></li></ul></li><li><a href=#phần-6-sai-lầm-và-thực-hành-tốt>PHẦN 6: SAI LẦM VÀ THỰC HÀNH TỐT</a><ul><li><a href=#61-những-sai-lầm-cần-tránh>6.1 Những Sai Lầm Cần Tránh</a></li><li><a href=#62-mẹo-hiệu-năng>6.2 Mẹo Hiệu Năng</a></li><li><a href=#63-cân-nhắc-tương-thích>6.3 Cân Nhắc Tương Thích</a></li></ul></li><li><a href=#phần-7-thẻ-tham-khảo-nhanh>PHẦN 7: THẺ THAM KHẢO NHANH</a><ul><li><a href=#71-một-dòng-awk-hay-dùng>7.1 Một Dòng AWK Hay Dùng</a></li><li><a href=#72-một-dòng-sed-hay-dùng>7.2 Một Dòng SED Hay Dùng</a></li></ul></li><li><a href=#kết-luận>KẾT LUẬN</a></li></ul></li></ul></nav></div></div><div class=content id=content><p><strong>Mục tiêu</strong>: Hiểu bản chất, không phải chỉ cú pháp. Sau bài này mày sẽ biết khi nào dùng cái gì, tại sao nó nhanh/chậm, và những lỗi sai cần tránh.</p><h2 class=heading-element id=phần-1-regex-trong-linux---lịch-sử-và-các-biến-thể><span>PHẦN 1: REGEX TRONG LINUX - LỊCH SỬ VÀ CÁC BIẾN THỂ</span>
 <a href=#ph%e1%ba%a7n-1-regex-trong-linux---l%e1%bb%8bch-s%e1%bb%ad-v%c3%a0-c%c3%a1c-bi%e1%ba%bfn-th%e1%bb%83 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=11-tại-sao-regex-linux-lạ-so-với-regex-hiện-đại><span>1.1 Tại sao regex Linux &ldquo;lạ&rdquo; so với regex hiện đại?</span>
-<a href=#11-t%e1%ba%a1i-sao-regex-linux-l%e1%ba%a1-so-v%e1%bb%9bi-regex-hi%e1%bb%87n-%c4%91%e1%ba%a1i class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Lịch sử ngắn gọn:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1968: Ken Thompson cài đặt regex trong trình soạn thảo ed (Bell Labs)
+<a href=#11-t%e1%ba%a1i-sao-regex-linux-l%e1%ba%a1-so-v%e1%bb%9bi-regex-hi%e1%bb%87n-%c4%91%e1%ba%a1i class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Lịch sử ngắn gọn:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1968: Ken Thompson cài đặt regex trong trình soạn thảo ed (Bell Labs)
 </span></span><span class=line><span class=cl>1973: grep ra đời (g/re/p = global/regular expression/print)
 </span></span><span class=line><span class=cl>1977: awk ra đời (Aho, Weinberger, Kernighan - tên 3 tác giả)
 </span></span><span class=line><span class=cl>1979: egrep ra đời với Biểu Thức Chính Quy Mở Rộng (ERE)
 </span></span><span class=line><span class=cl>1987: Perl ra đời, đưa regex lên tầm cao mới (PCRE)
-</span></span><span class=line><span class=cl>1997: Thư viện PCRE ra đời, trở thành &#34;regex hiện đại&#34;</span></span></code></pre></td></tr></table></div></div><p><strong>Hệ quả</strong>: Các công cụ Linux được viết trước khi &ldquo;regex hiện đại&rdquo; tồn tại. Chúng dùng 2 tiêu chuẩn cũ:</p><table><thead><tr><th>Loại</th><th>Công cụ</th><th>Đặc điểm</th></tr></thead><tbody><tr><td><strong>BRE</strong> (Cơ bản)</td><td>grep, sed</td><td>Ký tự đặc biệt cần thoát: <code>\+</code>, <code>\?</code>, <code>|</code>, <code>\(\)</code></td></tr><tr><td><strong>ERE</strong> (Mở rộng)</td><td>egrep, awk, grep -E</td><td>Ký tự đặc biệt KHÔNG cần thoát: <code>+</code>, <code>?</code>, <code>|</code>, <code>()</code></td></tr><tr><td><strong>PCRE</strong> (Hiện đại)</td><td>grep -P, perl</td><td>Có nhìn trước, nhìn sau, <code>\d</code>, <code>\w</code>, không tham lam <code>*?</code></td></tr></tbody></table><h3 class=heading-element id=12-bảng-so-sánh-regex-bre-vs-ere-vs-pcre><span>1.2 BẢNG SO SÁNH REGEX: BRE vs ERE vs PCRE</span>
-<a href=#12-b%e1%ba%a3ng-so-s%c3%a1nh-regex-bre-vs-ere-vs-pcre class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────┬────────────┬────────────┬────────────┐
+</span></span><span class=line><span class=cl>1997: Thư viện PCRE ra đời, trở thành &#34;regex hiện đại&#34;</span></span></code></pre></div><p><strong>Hệ quả</strong>: Các công cụ Linux được viết trước khi &ldquo;regex hiện đại&rdquo; tồn tại. Chúng dùng 2 tiêu chuẩn cũ:</p><table><thead><tr><th>Loại</th><th>Công cụ</th><th>Đặc điểm</th></tr></thead><tbody><tr><td><strong>BRE</strong> (Cơ bản)</td><td>grep, sed</td><td>Ký tự đặc biệt cần thoát: <code>\+</code>, <code>\?</code>, <code>|</code>, <code>\(\)</code></td></tr><tr><td><strong>ERE</strong> (Mở rộng)</td><td>egrep, awk, grep -E</td><td>Ký tự đặc biệt KHÔNG cần thoát: <code>+</code>, <code>?</code>, <code>|</code>, <code>()</code></td></tr><tr><td><strong>PCRE</strong> (Hiện đại)</td><td>grep -P, perl</td><td>Có nhìn trước, nhìn sau, <code>\d</code>, <code>\w</code>, không tham lam <code>*?</code></td></tr></tbody></table><h3 class=heading-element id=12-bảng-so-sánh-regex-bre-vs-ere-vs-pcre><span>1.2 BẢNG SO SÁNH REGEX: BRE vs ERE vs PCRE</span>
+<a href=#12-b%e1%ba%a3ng-so-s%c3%a1nh-regex-bre-vs-ere-vs-pcre class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────┬────────────┬────────────┬────────────┐
 </span></span><span class=line><span class=cl>│ Tính năng               │ BRE        │ ERE        │ PCRE       │
 </span></span><span class=line><span class=cl>│                         │ (sed/grep) │ (awk/egrep)│ (grep -P)  │
 </span></span><span class=line><span class=cl>├─────────────────────────┼────────────┼────────────┼────────────┤
@@ -77,17 +44,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>│ Nhìn sau                │ Không có   │ Không có   │ (?&lt;=)(?&lt;!) │
 </span></span><span class=line><span class=cl>│ Nhóm đặt tên            │ Không có   │ Không có   │ (?P&lt;tên&gt;)  │
 </span></span><span class=line><span class=cl>│ Lượng từ {n,m}          │ \{n,m\}    │ {n,m}      │ {n,m}      │
-</span></span><span class=line><span class=cl>└─────────────────────────┴────────────┴────────────┴────────────┘</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=13-ví-dụ-thực-tế-cùng-một-việc-khác-cú-pháp><span>1.3 Ví dụ thực tế: Cùng một việc, khác cú pháp</span>
-<a href=#13-v%c3%ad-d%e1%bb%a5-th%e1%bb%b1c-t%e1%ba%bf-c%c3%b9ng-m%e1%bb%99t-vi%e1%bb%87c-kh%c3%a1c-c%c3%ba-ph%c3%a1p class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Bài toán</strong>: Tìm dòng có địa chỉ IP</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span><span class=lnt>9
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># BRE (grep, sed) - phải thoát ký tự đặc biệt</span>
+</span></span><span class=line><span class=cl>└─────────────────────────┴────────────┴────────────┴────────────┘</span></span></code></pre></div><h3 class=heading-element id=13-ví-dụ-thực-tế-cùng-một-việc-khác-cú-pháp><span>1.3 Ví dụ thực tế: Cùng một việc, khác cú pháp</span>
+<a href=#13-v%c3%ad-d%e1%bb%a5-th%e1%bb%b1c-t%e1%ba%bf-c%c3%b9ng-m%e1%bb%99t-vi%e1%bb%87c-kh%c3%a1c-c%c3%ba-ph%c3%a1p class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Bài toán</strong>: Tìm dòng có địa chỉ IP</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># BRE (grep, sed) - phải thoát ký tự đặc biệt</span>
 </span></span><span class=line><span class=cl>grep <span class=s1>&#39;[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># ERE (egrep, awk) - không cần thoát</span>
@@ -95,16 +53,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># PCRE (grep -P) - có viết tắt</span>
-</span></span><span class=line><span class=cl>grep -P <span class=s1>&#39;\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}&#39;</span> file</span></span></code></pre></td></tr></table></div></div><p><strong>Bài toán</strong>: Tìm &ldquo;error&rdquo; hoặc &ldquo;warning&rdquo; (không phân biệt hoa thường)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span><span class=lnt>9
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># BRE</span>
+</span></span><span class=line><span class=cl>grep -P <span class=s1>&#39;\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}&#39;</span> file</span></span></code></pre></div><p><strong>Bài toán</strong>: Tìm &ldquo;error&rdquo; hoặc &ldquo;warning&rdquo; (không phân biệt hoa thường)</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># BRE</span>
 </span></span><span class=line><span class=cl>grep -i <span class=s1>&#39;error\|warning&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># ERE</span>
@@ -112,22 +61,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;tolower($0) ~ /error|warning/&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># PCRE</span>
-</span></span><span class=line><span class=cl>grep -Pi <span class=s1>&#39;error|warning&#39;</span> file</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=14-lớp-ký-tự-posix-hoạt-động-trong-cả-bre-và-ere><span>1.4 Lớp Ký Tự POSIX (hoạt động trong cả BRE và ERE)</span>
-<a href=#14-l%e1%bb%9bp-k%c3%bd-t%e1%bb%b1-posix-ho%e1%ba%a1t-%c4%91%e1%bb%99ng-trong-c%e1%ba%a3-bre-v%c3%a0-ere class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>:alnum:<span class=o>]</span>   <span class=c1># Chữ và số [a-zA-Z0-9]</span>
+</span></span><span class=line><span class=cl>grep -Pi <span class=s1>&#39;error|warning&#39;</span> file</span></span></code></pre></div><h3 class=heading-element id=14-lớp-ký-tự-posix-hoạt-động-trong-cả-bre-và-ere><span>1.4 Lớp Ký Tự POSIX (hoạt động trong cả BRE và ERE)</span>
+<a href=#14-l%e1%bb%9bp-k%c3%bd-t%e1%bb%b1-posix-ho%e1%ba%a1t-%c4%91%e1%bb%99ng-trong-c%e1%ba%a3-bre-v%c3%a0-ere class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>:alnum:<span class=o>]</span>   <span class=c1># Chữ và số [a-zA-Z0-9]</span>
 </span></span><span class=line><span class=cl><span class=o>[</span>:alpha:<span class=o>]</span>   <span class=c1># Chữ cái [a-zA-Z]</span>
 </span></span><span class=line><span class=cl><span class=o>[</span>:digit:<span class=o>]</span>   <span class=c1># Chữ số [0-9]</span>
 </span></span><span class=line><span class=cl><span class=o>[</span>:lower:<span class=o>]</span>   <span class=c1># Chữ thường [a-z]</span>
@@ -140,42 +75,9 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># Cách dùng - phải có ngoặc vuông kép</span>
 </span></span><span class=line><span class=cl>grep <span class=s1>&#39;[[:digit:]]&#39;</span> file        <span class=c1># Khớp số bất kỳ</span>
 </span></span><span class=line><span class=cl>grep <span class=s1>&#39;[[:alpha:]_]&#39;</span> file       <span class=c1># Khớp chữ hoặc gạch dưới</span>
-</span></span><span class=line><span class=cl>grep <span class=s1>&#39;[^[:space:]]&#39;</span> file       <span class=c1># Khớp ký tự không phải khoảng trắng</span></span></span></code></pre></td></tr></table></div></div><p><strong>Tại sao dùng lớp POSIX?</strong></p><ul><li>Nhận biết ngôn ngữ: <code>[[:alpha:]]</code> khớp cả ký tự có dấu trong tiếng Việt</li><li><code>[a-z]</code> chỉ khớp chữ thường ASCII</li></ul><hr><h2 class=heading-element id=phần-2-awk-chuyên-sâu><span>PHẦN 2: AWK CHUYÊN SÂU</span>
+</span></span><span class=line><span class=cl>grep <span class=s1>&#39;[^[:space:]]&#39;</span> file       <span class=c1># Khớp ký tự không phải khoảng trắng</span></span></span></code></pre></div><p><strong>Tại sao dùng lớp POSIX?</strong></p><ul><li>Nhận biết ngôn ngữ: <code>[[:alpha:]]</code> khớp cả ký tự có dấu trong tiếng Việt</li><li><code>[a-z]</code> chỉ khớp chữ thường ASCII</li></ul><hr><h2 class=heading-element id=phần-2-awk-chuyên-sâu><span>PHẦN 2: AWK CHUYÊN SÂU</span>
 <a href=#ph%e1%ba%a7n-2-awk-chuy%c3%aan-s%c3%a2u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=21-mô-hình-thực-thi---hiểu-để-tối-ưu><span>2.1 Mô Hình Thực Thi - Hiểu để tối ưu</span>
-<a href=#21-m%c3%b4-h%c3%acnh-th%e1%bb%b1c-thi---hi%e1%bb%83u-%c4%91%e1%bb%83-t%e1%bb%91i-%c6%b0u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>                    ┌─────────────────────────────────────┐
+<a href=#21-m%c3%b4-h%c3%acnh-th%e1%bb%b1c-thi---hi%e1%bb%83u-%c4%91%e1%bb%83-t%e1%bb%91i-%c6%b0u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>                    ┌─────────────────────────────────────┐
 </span></span><span class=line><span class=cl>                    │         QUY TRÌNH THỰC THI AWK      │
 </span></span><span class=line><span class=cl>                    └─────────────────────────────────────┘
 </span></span><span class=line><span class=cl>                                    │
@@ -207,46 +109,17 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>        │                           │                           │
 </span></span><span class=line><span class=cl>        ▼                           ▼                           ▼
 </span></span><span class=line><span class=cl>   Khởi tạo               Đọc bản ghi tiếp              Xuất kết quả
-</span></span><span class=line><span class=cl>   biến                                                 &amp; dọn dẹp</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=22-biến-có-sẵn---cái-hay-của-awk><span>2.2 Biến Có Sẵn - Cái hay của awk</span>
-<a href=#22-bi%e1%ba%bfn-c%c3%b3-s%e1%ba%b5n---c%c3%a1i-hay-c%e1%bb%a7a-awk class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Biến Bản Ghi & Trường:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>$0</span>          <span class=c1># Toàn bộ bản ghi (dòng) hiện tại</span>
+</span></span><span class=line><span class=cl>   biến                                                 &amp; dọn dẹp</span></span></code></pre></div><h3 class=heading-element id=22-biến-có-sẵn---cái-hay-của-awk><span>2.2 Biến Có Sẵn - Cái hay của awk</span>
+<a href=#22-bi%e1%ba%bfn-c%c3%b3-s%e1%ba%b5n---c%c3%a1i-hay-c%e1%bb%a7a-awk class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Biến Bản Ghi & Trường:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>$0</span>          <span class=c1># Toàn bộ bản ghi (dòng) hiện tại</span>
 </span></span><span class=line><span class=cl><span class=nv>$1</span>, <span class=nv>$2</span>...   <span class=c1># Trường thứ 1, 2...</span>
 </span></span><span class=line><span class=cl><span class=nv>$NF</span>         <span class=c1># Trường CUỐI CÙNG (không phải số trường!)</span>
 </span></span><span class=line><span class=cl><span class=k>$(</span>NF-1<span class=k>)</span>     <span class=c1># Trường áp chót</span>
 </span></span><span class=line><span class=cl>NF          <span class=c1># Số lượng trường trong bản ghi hiện tại</span>
 </span></span><span class=line><span class=cl>NR          <span class=c1># Số thứ tự bản ghi (số dòng tổng cộng)</span>
-</span></span><span class=line><span class=cl>FNR         <span class=c1># Số thứ tự bản ghi trong FILE hiện tại</span></span></span></code></pre></td></tr></table></div></div><p><strong>Biến Phân Cách:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>FS          <span class=c1># Ký tự phân cách trường (đầu vào) - mặc định: khoảng trắng</span>
+</span></span><span class=line><span class=cl>FNR         <span class=c1># Số thứ tự bản ghi trong FILE hiện tại</span></span></span></code></pre></div><p><strong>Biến Phân Cách:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>FS          <span class=c1># Ký tự phân cách trường (đầu vào) - mặc định: khoảng trắng</span>
 </span></span><span class=line><span class=cl>RS          <span class=c1># Ký tự phân cách bản ghi (đầu vào) - mặc định: xuống dòng</span>
 </span></span><span class=line><span class=cl>OFS         <span class=c1># Ký tự phân cách trường đầu ra - mặc định: dấu cách</span>
-</span></span><span class=line><span class=cl>ORS         <span class=c1># Ký tự phân cách bản ghi đầu ra - mặc định: xuống dòng</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ thực tế:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># File: access.log</span>
+</span></span><span class=line><span class=cl>ORS         <span class=c1># Ký tự phân cách bản ghi đầu ra - mặc định: xuống dòng</span></span></span></code></pre></div><p><strong>Ví dụ thực tế:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># File: access.log</span>
 </span></span><span class=line><span class=cl><span class=c1># 192.168.1.1 - - [10/Dec/2024:10:15:32] &#34;GET /api/users&#34; 200 1234</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Lấy IP và mã trạng thái</span>
@@ -263,32 +136,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>awk -F<span class=s1>&#39;:&#39;</span> <span class=s1>&#39;{print $1}&#39;</span> /etc/passwd     <span class=c1># Đúng</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># FS có thể là regex!</span>
-</span></span><span class=line><span class=cl>awk -F<span class=s1>&#39;[,;:\t]+&#39;</span> <span class=s1>&#39;{print $1, $2}&#39;</span> file_hon_tap.txt</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=23-các-loại-mẫu---khi-nào-dùng-cái-nào><span>2.3 Các Loại Mẫu - Khi nào dùng cái nào</span>
-<a href=#23-c%c3%a1c-lo%e1%ba%a1i-m%e1%ba%abu---khi-n%c3%a0o-d%c3%b9ng-c%c3%a1i-n%c3%a0o class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. Mẫu regex - khớp bất kỳ đâu trong dòng</span>
+</span></span><span class=line><span class=cl>awk -F<span class=s1>&#39;[,;:\t]+&#39;</span> <span class=s1>&#39;{print $1, $2}&#39;</span> file_hon_tap.txt</span></span></code></pre></div><h3 class=heading-element id=23-các-loại-mẫu---khi-nào-dùng-cái-nào><span>2.3 Các Loại Mẫu - Khi nào dùng cái nào</span>
+<a href=#23-c%c3%a1c-lo%e1%ba%a1i-m%e1%ba%abu---khi-n%c3%a0o-d%c3%b9ng-c%c3%a1i-n%c3%a0o class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. Mẫu regex - khớp bất kỳ đâu trong dòng</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/ERROR/&#39;</span> file                    <span class=c1># Dòng chứa ERROR</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/^ERROR/&#39;</span> file                   <span class=c1># Dòng BẮT ĐẦU bằng ERROR</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/ERROR$/&#39;</span> file                   <span class=c1># Dòng KẾT THÚC bằng ERROR</span>
@@ -311,32 +160,14 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;BEGIN {print &#34;Tiêu đề&#34;}&#39;</span>         <span class=c1># Trước khi đọc đầu vào</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;END {print &#34;Tổng:&#34;, NR}&#39;</span>         <span class=c1># Sau khi đọc hết đầu vào</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;FNR==1&#39;</span> file1 file2              <span class=c1># Dòng đầu của MỖI file</span>
-</span></span><span class=line><span class=cl>awk <span class=s1>&#39;NR==FNR&#39;</span> file1 file2             <span class=c1># Chỉ file đầu tiên</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=24-mảng-kết-hợp---sức-mạnh-thực-sự-của-awk><span>2.4 Mảng Kết Hợp - Sức mạnh thực sự của awk</span>
-<a href=#24-m%e1%ba%a3ng-k%e1%ba%bft-h%e1%bb%a3p---s%e1%bb%a9c-m%e1%ba%a1nh-th%e1%bb%b1c-s%e1%bb%b1-c%e1%bb%a7a-awk class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Khái niệm</strong>: Mảng trong awk là bảng băm (hash table), khóa có thể là bất kỳ chuỗi nào.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Mẫu đếm - Thời gian O(n), Bộ nhớ O(k) với k khóa duy nhất</span>
+</span></span><span class=line><span class=cl>awk <span class=s1>&#39;NR==FNR&#39;</span> file1 file2             <span class=c1># Chỉ file đầu tiên</span></span></span></code></pre></div><h3 class=heading-element id=24-mảng-kết-hợp---sức-mạnh-thực-sự-của-awk><span>2.4 Mảng Kết Hợp - Sức mạnh thực sự của awk</span>
+<a href=#24-m%e1%ba%a3ng-k%e1%ba%bft-h%e1%bb%a3p---s%e1%bb%a9c-m%e1%ba%a1nh-th%e1%bb%b1c-s%e1%bb%b1-c%e1%bb%a7a-awk class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Khái niệm</strong>: Mảng trong awk là bảng băm (hash table), khóa có thể là bất kỳ chuỗi nào.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Mẫu đếm - Thời gian O(n), Bộ nhớ O(k) với k khóa duy nhất</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{count[$1]++} END {for (k in count) print k, count[k]}&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Phân tích:</span>
 </span></span><span class=line><span class=cl><span class=c1># count[$1]++     : Dùng trường 1 làm khóa, tăng giá trị lên 1</span>
 </span></span><span class=line><span class=cl><span class=c1># for (k in count): Duyệt qua tất cả khóa</span>
-</span></span><span class=line><span class=cl><span class=c1># print k, count[k]: In khóa và giá trị</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ 1: Đếm mã trạng thái HTTP từ log nginx</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Đầu vào: access.log</span>
+</span></span><span class=line><span class=cl><span class=c1># print k, count[k]: In khóa và giá trị</span></span></span></code></pre></div><p><strong>Ví dụ 1: Đếm mã trạng thái HTTP từ log nginx</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Đầu vào: access.log</span>
 </span></span><span class=line><span class=cl><span class=c1># 192.168.1.1 - - [ngày] &#34;GET /đường_dẫn&#34; 200 1234</span>
 </span></span><span class=line><span class=cl><span class=c1># 192.168.1.2 - - [ngày] &#34;POST /api&#34; 500 567</span>
 </span></span><span class=line><span class=cl>
@@ -346,18 +177,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># 200 15234</span>
 </span></span><span class=line><span class=cl><span class=c1># 304 2341</span>
 </span></span><span class=line><span class=cl><span class=c1># 404 156</span>
-</span></span><span class=line><span class=cl><span class=c1># 500 23</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ 2: Tổng số byte theo địa chỉ IP</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>awk <span class=s1>&#39;{
+</span></span><span class=line><span class=cl><span class=c1># 500 23</span></span></span></code></pre></div><p><strong>Ví dụ 2: Tổng số byte theo địa chỉ IP</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>awk <span class=s1>&#39;{
 </span></span></span><span class=line><span class=cl><span class=s1>    ip = $1
 </span></span></span><span class=line><span class=cl><span class=s1>    bytes = $10
 </span></span></span><span class=line><span class=cl><span class=s1>    tong[ip] += bytes
@@ -367,20 +187,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>    for (ip in tong)
 </span></span></span><span class=line><span class=cl><span class=s1>        printf &#34;%s: %d yêu cầu, %d bytes, trung bình %.2f\n&#34;,
 </span></span></span><span class=line><span class=cl><span class=s1>               ip, dem[ip], tong[ip], tong[ip]/dem[ip]
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> access.log</span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ 3: Tìm file trùng lặp theo checksum</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Đầu vào từ md5sum</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> access.log</span></span></code></pre></div><p><strong>Ví dụ 3: Tìm file trùng lặp theo checksum</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Đầu vào từ md5sum</span>
 </span></span><span class=line><span class=cl>md5sum *.jpg <span class=p>|</span> awk <span class=s1>&#39;{
 </span></span></span><span class=line><span class=cl><span class=s1>    checksum = $1
 </span></span></span><span class=line><span class=cl><span class=s1>    ten_file = $2
@@ -392,30 +199,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>        if (dem[c] &gt; 1)
 </span></span></span><span class=line><span class=cl><span class=s1>            print dem[c], c &#34;:&#34; files[c]
 </span></span></span><span class=line><span class=cl><span class=s1>    }
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> <span class=p>|</span> sort -rn</span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ 4: Xử lý hai file - Thao tác JOIN</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># file1.txt: mã_người_dùng,tên</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> <span class=p>|</span> sort -rn</span></span></code></pre></div><p><strong>Ví dụ 4: Xử lý hai file - Thao tác JOIN</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># file1.txt: mã_người_dùng,tên</span>
 </span></span><span class=line><span class=cl><span class=c1># 1,Alice</span>
 </span></span><span class=line><span class=cl><span class=c1># 2,Bob</span>
 </span></span><span class=line><span class=cl>
@@ -437,31 +221,14 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># Kết quả:</span>
 </span></span><span class=line><span class=cl><span class=c1># Alice 100</span>
 </span></span><span class=line><span class=cl><span class=c1># Alice 200</span>
-</span></span><span class=line><span class=cl><span class=c1># Bob 150</span></span></span></code></pre></td></tr></table></div></div><p><strong>Giải thích mẫu <code>NR==FNR</code>:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>NR = Số thứ tự bản ghi tổng (qua tất cả file)
+</span></span><span class=line><span class=cl><span class=c1># Bob 150</span></span></span></code></pre></div><p><strong>Giải thích mẫu <code>NR==FNR</code>:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>NR = Số thứ tự bản ghi tổng (qua tất cả file)
 </span></span><span class=line><span class=cl>FNR = Số thứ tự bản ghi trong file hiện tại
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>File1: NR=1,FNR=1 → NR==FNR (đúng)
 </span></span><span class=line><span class=cl>       NR=2,FNR=2 → NR==FNR (đúng)
 </span></span><span class=line><span class=cl>File2: NR=3,FNR=1 → NR!=FNR (sai)
-</span></span><span class=line><span class=cl>       NR=4,FNR=2 → NR!=FNR (sai)</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=25-hàm-có-sẵn><span>2.5 Hàm Có Sẵn</span>
-<a href=#25-h%c3%a0m-c%c3%b3-s%e1%ba%b5n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Hàm Chuỗi:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>length<span class=o>(</span>s<span class=o>)</span>              <span class=c1># Độ dài chuỗi</span>
+</span></span><span class=line><span class=cl>       NR=4,FNR=2 → NR!=FNR (sai)</span></span></code></pre></div><h3 class=heading-element id=25-hàm-có-sẵn><span>2.5 Hàm Có Sẵn</span>
+<a href=#25-h%c3%a0m-c%c3%b3-s%e1%ba%b5n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Hàm Chuỗi:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>length<span class=o>(</span>s<span class=o>)</span>              <span class=c1># Độ dài chuỗi</span>
 </span></span><span class=line><span class=cl>substr<span class=o>(</span>s, bắt_đầu, độ_dài<span class=o>)</span>  <span class=c1># Chuỗi con (đánh số từ 1!)</span>
 </span></span><span class=line><span class=cl>index<span class=o>(</span>s, mục_tiêu<span class=o>)</span>     <span class=c1># Vị trí của mục_tiêu trong s (0 nếu không tìm thấy)</span>
 </span></span><span class=line><span class=cl>split<span class=o>(</span>s, mảng, phân_cách<span class=o>)</span>  <span class=c1># Tách chuỗi thành mảng</span>
@@ -470,30 +237,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>tolower<span class=o>(</span>s<span class=o>)</span>             <span class=c1># Chuyển thành chữ thường</span>
 </span></span><span class=line><span class=cl>toupper<span class=o>(</span>s<span class=o>)</span>             <span class=c1># Chuyển thành chữ hoa</span>
 </span></span><span class=line><span class=cl>match<span class=o>(</span>s, regex<span class=o>)</span>        <span class=c1># Trả về vị trí khớp (0 nếu không khớp)</span>
-</span></span><span class=line><span class=cl>sprintf<span class=o>(</span>định_dạng, ...<span class=o>)</span>   <span class=c1># Chuỗi có định dạng</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ thực tế:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Trích xuất tên miền từ email</span>
+</span></span><span class=line><span class=cl>sprintf<span class=o>(</span>định_dạng, ...<span class=o>)</span>   <span class=c1># Chuỗi có định dạng</span></span></span></code></pre></div><p><strong>Ví dụ thực tế:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Trích xuất tên miền từ email</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{
 </span></span></span><span class=line><span class=cl><span class=s1>    email = $1
 </span></span></span><span class=line><span class=cl><span class=s1>    vi_tri_at = index(email, &#34;@&#34;)
@@ -515,54 +259,14 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>    ngày = mảng[1]
 </span></span></span><span class=line><span class=cl><span class=s1>    giờ = mảng[2]
 </span></span></span><span class=line><span class=cl><span class=s1>    print ngày, giờ
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> access.log</span></span></code></pre></td></tr></table></div></div><p><strong>Hàm Toán Học:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>int<span class=o>(</span>x<span class=o>)</span>      <span class=c1># Cắt thành số nguyên</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> access.log</span></span></code></pre></div><p><strong>Hàm Toán Học:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>int<span class=o>(</span>x<span class=o>)</span>      <span class=c1># Cắt thành số nguyên</span>
 </span></span><span class=line><span class=cl>sqrt<span class=o>(</span>x<span class=o>)</span>     <span class=c1># Căn bậc hai</span>
 </span></span><span class=line><span class=cl>log<span class=o>(</span>x<span class=o>)</span>      <span class=c1># Logarit tự nhiên</span>
 </span></span><span class=line><span class=cl>exp<span class=o>(</span>x<span class=o>)</span>      <span class=c1># e mũ x</span>
 </span></span><span class=line><span class=cl>sin<span class=o>(</span>x<span class=o>)</span>, cos<span class=o>(</span>x<span class=o>)</span>, atan2<span class=o>(</span>y,x<span class=o>)</span>
 </span></span><span class=line><span class=cl>rand<span class=o>()</span>      <span class=c1># Số ngẫu nhiên 0-1</span>
-</span></span><span class=line><span class=cl>srand<span class=o>(</span>hạt<span class=o>)</span>  <span class=c1># Đặt hạt giống ngẫu nhiên</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=26-luồng-điều-khiển><span>2.6 Luồng Điều Khiển</span>
-<a href=#26-lu%e1%bb%93ng-%c4%91i%e1%bb%81u-khi%e1%bb%83n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Nếu-không thì</span>
+</span></span><span class=line><span class=cl>srand<span class=o>(</span>hạt<span class=o>)</span>  <span class=c1># Đặt hạt giống ngẫu nhiên</span></span></span></code></pre></div><h3 class=heading-element id=26-luồng-điều-khiển><span>2.6 Luồng Điều Khiển</span>
+<a href=#26-lu%e1%bb%93ng-%c4%91i%e1%bb%81u-khi%e1%bb%83n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Nếu-không thì</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{
 </span></span></span><span class=line><span class=cl><span class=s1>    if ($3 &gt; 100)
 </span></span></span><span class=line><span class=cl><span class=s1>        print &#34;cao:&#34;, $0
@@ -594,33 +298,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/^#/ {next} {print}&#39;</span> file    <span class=c1># Bỏ qua dòng ghi chú</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># exit - dừng xử lý</span>
-</span></span><span class=line><span class=cl>awk <span class=s1>&#39;/ERROR/ {print; exit}&#39;</span> file  <span class=c1># In lỗi đầu tiên và dừng</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=27-hàm-tự-định-nghĩa><span>2.7 Hàm Tự Định Nghĩa</span>
-<a href=#27-h%c3%a0m-t%e1%bb%b1-%c4%91%e1%bb%8bnh-ngh%c4%a9a class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>awk <span class=s1>&#39;
+</span></span><span class=line><span class=cl>awk <span class=s1>&#39;/ERROR/ {print; exit}&#39;</span> file  <span class=c1># In lỗi đầu tiên và dừng</span></span></span></code></pre></div><h3 class=heading-element id=27-hàm-tự-định-nghĩa><span>2.7 Hàm Tự Định Nghĩa</span>
+<a href=#27-h%c3%a0m-t%e1%bb%b1-%c4%91%e1%bb%8bnh-ngh%c4%a9a class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>awk <span class=s1>&#39;
 </span></span></span><span class=line><span class=cl><span class=s1>function max(a, b) {
 </span></span></span><span class=line><span class=cl><span class=s1>    return (a &gt; b) ? a : b
 </span></span></span><span class=line><span class=cl><span class=s1>}
@@ -644,31 +323,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>    print &#34;Lớn nhất:&#34;, max(giá_trị[1], giá_trị[NR])
 </span></span></span><span class=line><span class=cl><span class=s1>    print &#34;Trung bình:&#34;, trung_binh(giá_trị, NR)
 </span></span></span><span class=line><span class=cl><span class=s1>}
-</span></span></span><span class=line><span class=cl><span class=s1>&#39;</span> số.txt</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=28-printf---xuất-có-định-dạng><span>2.8 Printf - Xuất Có Định Dạng</span>
-<a href=#28-printf---xu%e1%ba%a5t-c%c3%b3-%c4%91%e1%bb%8bnh-d%e1%ba%a1ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Ký hiệu định dạng</span>
+</span></span></span><span class=line><span class=cl><span class=s1>&#39;</span> số.txt</span></span></code></pre></div><h3 class=heading-element id=28-printf---xuất-có-định-dạng><span>2.8 Printf - Xuất Có Định Dạng</span>
+<a href=#28-printf---xu%e1%ba%a5t-c%c3%b3-%c4%91%e1%bb%8bnh-d%e1%ba%a1ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Ký hiệu định dạng</span>
 </span></span><span class=line><span class=cl>%s      <span class=c1># Chuỗi</span>
 </span></span><span class=line><span class=cl>%d, %i  <span class=c1># Số nguyên</span>
 </span></span><span class=line><span class=cl>%f      <span class=c1># Số thực</span>
@@ -690,44 +346,9 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>}
 </span></span></span><span class=line><span class=cl><span class=s1>{
 </span></span></span><span class=line><span class=cl><span class=s1>    printf &#34;%-20s %10d %10d\n&#34;, $1, $2, $3
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> dữ_liệu.txt</span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-3-sed-chuyên-sâu><span>PHẦN 3: SED CHUYÊN SÂU</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> dữ_liệu.txt</span></span></code></pre></div><hr><h2 class=heading-element id=phần-3-sed-chuyên-sâu><span>PHẦN 3: SED CHUYÊN SÂU</span>
 <a href=#ph%e1%ba%a7n-3-sed-chuy%c3%aan-s%c3%a2u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=31-mô-hình-thực-thi><span>3.1 Mô Hình Thực Thi</span>
-<a href=#31-m%c3%b4-h%c3%acnh-th%e1%bb%b1c-thi class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────────────────────────────────────────┐
+<a href=#31-m%c3%b4-h%c3%acnh-th%e1%bb%b1c-thi class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────────────────────────────────────────┐
 </span></span><span class=line><span class=cl>│                MÔ HÌNH THỰC THI SED                         │
 </span></span><span class=line><span class=cl>└─────────────────────────────────────────────────────────────┘
 </span></span><span class=line><span class=cl>
@@ -761,27 +382,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>KHÁI NIỆM QUAN TRỌNG:
 </span></span><span class=line><span class=cl>- Không Gian Mẫu (Pattern Space): Bộ đệm làm việc, tự động in cuối chu kỳ
-</span></span><span class=line><span class=cl>- Không Gian Giữ (Hold Space): Bộ đệm phụ, tồn tại qua các chu kỳ</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=32-các-loại-địa-chỉ---chỉ-định-dòng-để-xử-lý><span>3.2 Các Loại Địa Chỉ - Chỉ định dòng để xử lý</span>
-<a href=#32-c%c3%a1c-lo%e1%ba%a1i-%c4%91%e1%bb%8ba-ch%e1%bb%89---ch%e1%bb%89-%c4%91%e1%bb%8bnh-d%c3%b2ng-%c4%91%e1%bb%83-x%e1%bb%ad-l%c3%bd class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Số dòng</span>
+</span></span><span class=line><span class=cl>- Không Gian Giữ (Hold Space): Bộ đệm phụ, tồn tại qua các chu kỳ</span></span></code></pre></div><h3 class=heading-element id=32-các-loại-địa-chỉ---chỉ-định-dòng-để-xử-lý><span>3.2 Các Loại Địa Chỉ - Chỉ định dòng để xử lý</span>
+<a href=#32-c%c3%a1c-lo%e1%ba%a1i-%c4%91%e1%bb%8ba-ch%e1%bb%89---ch%e1%bb%89-%c4%91%e1%bb%8bnh-d%c3%b2ng-%c4%91%e1%bb%83-x%e1%bb%ad-l%c3%bd class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Số dòng</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;5d&#39;</span> file               <span class=c1># Xóa dòng 5</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;1,10d&#39;</span> file            <span class=c1># Xóa dòng 1-10</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;$d&#39;</span> file               <span class=c1># Xóa dòng cuối</span>
@@ -799,61 +401,20 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Địa chỉ bước (GNU sed)</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;1~2d&#39;</span> file             <span class=c1># Xóa dòng lẻ (1,3,5...)</span>
-</span></span><span class=line><span class=cl>sed <span class=s1>&#39;0~3d&#39;</span> file             <span class=c1># Xóa mỗi dòng thứ 3</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=33-tham-khảo-lệnh><span>3.3 Tham Khảo Lệnh</span>
-<a href=#33-tham-kh%e1%ba%a3o-l%e1%bb%87nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Lệnh Cơ Bản:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>d       <span class=c1># Xóa không gian mẫu, bắt đầu chu kỳ mới</span>
+</span></span><span class=line><span class=cl>sed <span class=s1>&#39;0~3d&#39;</span> file             <span class=c1># Xóa mỗi dòng thứ 3</span></span></span></code></pre></div><h3 class=heading-element id=33-tham-khảo-lệnh><span>3.3 Tham Khảo Lệnh</span>
+<a href=#33-tham-kh%e1%ba%a3o-l%e1%bb%87nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>Lệnh Cơ Bản:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>d       <span class=c1># Xóa không gian mẫu, bắt đầu chu kỳ mới</span>
 </span></span><span class=line><span class=cl>p       <span class=c1># In không gian mẫu</span>
 </span></span><span class=line><span class=cl>q       <span class=c1># Thoát (in không gian mẫu và thoát)</span>
 </span></span><span class=line><span class=cl>Q       <span class=c1># Thoát (không in) - GNU</span>
 </span></span><span class=line><span class=cl>n       <span class=c1># In không gian mẫu, đọc dòng tiếp</span>
-</span></span><span class=line><span class=cl>N       <span class=c1># Nối dòng tiếp vào không gian mẫu (với \n)</span></span></span></code></pre></td></tr></table></div></div><p><strong>Thay Thế - Cái quan trọng nhất:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>s/regex/thay_thế/cờ
+</span></span><span class=line><span class=cl>N       <span class=c1># Nối dòng tiếp vào không gian mẫu (với \n)</span></span></span></code></pre></div><p><strong>Thay Thế - Cái quan trọng nhất:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>s/regex/thay_thế/cờ
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Các cờ:</span>
 </span></span><span class=line><span class=cl>g       <span class=c1># Toàn cục - thay thế tất cả lần xuất hiện</span>
 </span></span><span class=line><span class=cl>i       <span class=c1># Không phân biệt hoa thường (GNU)</span>
 </span></span><span class=line><span class=cl>p       <span class=c1># In nếu có thay thế</span>
 </span></span><span class=line><span class=cl>w file  <span class=c1># Ghi vào file nếu có thay thế</span>
-</span></span><span class=line><span class=cl>SỐ      <span class=c1># Chỉ thay thế lần xuất hiện thứ N</span></span></span></code></pre></td></tr></table></div></div><p><strong>Ví dụ thay thế:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Thay thế cơ bản</span>
+</span></span><span class=line><span class=cl>SỐ      <span class=c1># Chỉ thay thế lần xuất hiện thứ N</span></span></span></code></pre></div><p><strong>Ví dụ thay thế:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Thay thế cơ bản</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/cũ/mới/&#39;</span> file           <span class=c1># Lần xuất hiện đầu tiên mỗi dòng</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/cũ/mới/g&#39;</span> file          <span class=c1># Tất cả lần xuất hiện</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/cũ/mới/2&#39;</span> file          <span class=c1># Chỉ lần xuất hiện thứ 2</span>
@@ -879,28 +440,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># Ví dụ</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/.*/[&amp;]/&#39;</span> file                <span class=c1># Bọc mỗi dòng trong []</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/[a-z]*/\U&amp;/&#39;</span> file            <span class=c1># Chuyển từ đầu tiên thành chữ hoa</span>
-</span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/\(.*\)/\L\1/&#39;</span> file           <span class=c1># Chuyển toàn bộ dòng thành chữ thường</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=34-nhiều-lệnh><span>3.4 Nhiều Lệnh</span>
-<a href=#34-nhi%e1%bb%81u-l%e1%bb%87nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Phân cách bằng dấu chấm phẩy</span>
+</span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/\(.*\)/\L\1/&#39;</span> file           <span class=c1># Chuyển toàn bộ dòng thành chữ thường</span></span></span></code></pre></div><h3 class=heading-element id=34-nhiều-lệnh><span>3.4 Nhiều Lệnh</span>
+<a href=#34-nhi%e1%bb%81u-l%e1%bb%87nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Phân cách bằng dấu chấm phẩy</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/a/A/g; s/b/B/g&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Cờ -e</span>
@@ -919,28 +460,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>    s/error/LỖI/gi
 </span></span></span><span class=line><span class=cl><span class=s1>    s/$/!!!/
 </span></span></span><span class=line><span class=cl><span class=s1>    p
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> file</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=35-không-gian-giữ---thao-tác-bộ-đệm-nâng-cao><span>3.5 Không Gian Giữ - Thao Tác Bộ Đệm Nâng Cao</span>
-<a href=#35-kh%c3%b4ng-gian-gi%e1%bb%af---thao-t%c3%a1c-b%e1%bb%99-%c4%91%e1%bb%87m-n%c3%a2ng-cao class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Các lệnh:</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> file</span></span></code></pre></div><h3 class=heading-element id=35-không-gian-giữ---thao-tác-bộ-đệm-nâng-cao><span>3.5 Không Gian Giữ - Thao Tác Bộ Đệm Nâng Cao</span>
+<a href=#35-kh%c3%b4ng-gian-gi%e1%bb%af---thao-t%c3%a1c-b%e1%bb%99-%c4%91%e1%bb%87m-n%c3%a2ng-cao class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Các lệnh:</span>
 </span></span><span class=line><span class=cl>h       <span class=c1># Sao chép không gian mẫu sang không gian giữ</span>
 </span></span><span class=line><span class=cl>H       <span class=c1># Nối không gian mẫu vào không gian giữ</span>
 </span></span><span class=line><span class=cl>g       <span class=c1># Sao chép không gian giữ sang không gian mẫu</span>
@@ -959,19 +480,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;N; s/\n/ /&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Ví dụ: In dòng trước dòng khớp</span>
-</span></span><span class=line><span class=cl>sed -n <span class=s1>&#39;/ERROR/{x;p;x;p}&#39;</span> file  <span class=c1># In dòng trước và dòng hiện tại</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=36-nhánh-và-nhãn-nâng-cao><span>3.6 Nhánh và Nhãn (Nâng Cao)</span>
-<a href=#36-nh%c3%a1nh-v%c3%a0-nh%c3%a3n-n%c3%a2ng-cao class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Nhãn và nhánh cho logic phức tạp</span>
+</span></span><span class=line><span class=cl>sed -n <span class=s1>&#39;/ERROR/{x;p;x;p}&#39;</span> file  <span class=c1># In dòng trước và dòng hiện tại</span></span></span></code></pre></div><h3 class=heading-element id=36-nhánh-và-nhãn-nâng-cao><span>3.6 Nhánh và Nhãn (Nâng Cao)</span>
+<a href=#36-nh%c3%a1nh-v%c3%a0-nh%c3%a3n-n%c3%a2ng-cao class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Nhãn và nhánh cho logic phức tạp</span>
 </span></span><span class=line><span class=cl>:nhãn       <span class=c1># Định nghĩa nhãn</span>
 </span></span><span class=line><span class=cl>b nhãn      <span class=c1># Nhảy đến nhãn (không điều kiện)</span>
 </span></span><span class=line><span class=cl>t nhãn      <span class=c1># Nhảy nếu s/// vừa thành công</span>
@@ -981,18 +491,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;:vòng; s/  / /g; t vòng&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Ví dụ: Nối dòng tiếp nối (kết thúc bằng \)</span>
-</span></span><span class=line><span class=cl>sed <span class=s1>&#39;:a; /\\$/{N; s/\\\n//; ta}&#39;</span> file</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=37-chỉnh-sửa-tại-chỗ><span>3.7 Chỉnh Sửa Tại Chỗ</span>
-<a href=#37-ch%e1%bb%89nh-s%e1%bb%ada-t%e1%ba%a1i-ch%e1%bb%97 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Cờ -i (GNU sed)</span>
+</span></span><span class=line><span class=cl>sed <span class=s1>&#39;:a; /\\$/{N; s/\\\n//; ta}&#39;</span> file</span></span></code></pre></div><h3 class=heading-element id=37-chỉnh-sửa-tại-chỗ><span>3.7 Chỉnh Sửa Tại Chỗ</span>
+<a href=#37-ch%e1%bb%89nh-s%e1%bb%ada-t%e1%ba%a1i-ch%e1%bb%97 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Cờ -i (GNU sed)</span>
 </span></span><span class=line><span class=cl>sed -i <span class=s1>&#39;s/cũ/mới/g&#39;</span> file           <span class=c1># Sửa tại chỗ</span>
 </span></span><span class=line><span class=cl>sed -i.bak <span class=s1>&#39;s/cũ/mới/g&#39;</span> file       <span class=c1># Tạo bản sao lưu</span>
 </span></span><span class=line><span class=cl>
@@ -1001,43 +501,9 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>sed -i .bak <span class=s1>&#39;s/cũ/mới/g&#39;</span> file      <span class=c1># Có sao lưu</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Mẫu an toàn - luôn sao lưu trước</span>
-</span></span><span class=line><span class=cl>cp file file.bak <span class=o>&amp;&amp;</span> sed -i <span class=s1>&#39;s/cũ/mới/g&#39;</span> file</span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-4-phân-tích-độ-phức-tạp><span>PHẦN 4: PHÂN TÍCH ĐỘ PHỨC TẠP</span>
+</span></span><span class=line><span class=cl>cp file file.bak <span class=o>&amp;&amp;</span> sed -i <span class=s1>&#39;s/cũ/mới/g&#39;</span> file</span></span></code></pre></div><hr><h2 class=heading-element id=phần-4-phân-tích-độ-phức-tạp><span>PHẦN 4: PHÂN TÍCH ĐỘ PHỨC TẠP</span>
 <a href=#ph%e1%ba%a7n-4-ph%c3%a2n-t%c3%adch-%c4%91%e1%bb%99-ph%e1%bb%a9c-t%e1%ba%a1p class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=41-big-o-của-các-thao-tác><span>4.1 Big-O của các thao tác</span>
-<a href=#41-big-o-c%e1%bb%a7a-c%c3%a1c-thao-t%c3%a1c class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────────────────────────────────────────┐
+<a href=#41-big-o-c%e1%bb%a7a-c%c3%a1c-thao-t%c3%a1c class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>┌─────────────────────────────────────────────────────────────┐
 </span></span><span class=line><span class=cl>│              PHÂN TÍCH ĐỘ PHỨC TẠP                          │
 </span></span><span class=line><span class=cl>└─────────────────────────────────────────────────────────────┘
 </span></span><span class=line><span class=cl>
@@ -1070,19 +536,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>│ gsub()             │ O(n*m)     │ n=chuỗi, m=mẫu           │
 </span></span><span class=line><span class=cl>│ split()            │ O(n)       │ n = độ dài chuỗi         │
 </span></span><span class=line><span class=cl>│ sort (qua pipe)    │ O(n log n) │ Sắp xếp bên ngoài        │
-</span></span><span class=line><span class=cl>└────────────────────┴────────────┴──────────────────────────┘</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=42-cơ-chế-regex-bên-trong---khi-nào-nó-chậm><span>4.2 Cơ Chế Regex Bên Trong - Khi nào nó chậm</span>
-<a href=#42-c%c6%a1-ch%e1%ba%bf-regex-b%c3%aan-trong---khi-n%c3%a0o-n%c3%b3-ch%e1%ba%adm class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>DFA vs NFA:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>DFA (Máy Tự Động Hữu Hạn Xác Định):
+</span></span><span class=line><span class=cl>└────────────────────┴────────────┴──────────────────────────┘</span></span></code></pre></div><h3 class=heading-element id=42-cơ-chế-regex-bên-trong---khi-nào-nó-chậm><span>4.2 Cơ Chế Regex Bên Trong - Khi nào nó chậm</span>
+<a href=#42-c%c6%a1-ch%e1%ba%bf-regex-b%c3%aan-trong---khi-n%c3%a0o-n%c3%b3-ch%e1%ba%adm class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p><strong>DFA vs NFA:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>DFA (Máy Tự Động Hữu Hạn Xác Định):
 </span></span><span class=line><span class=cl>- Mỗi trạng thái chỉ có 1 chuyển tiếp cho mỗi đầu vào
 </span></span><span class=line><span class=cl>- Đảm bảo O(n)
 </span></span><span class=line><span class=cl>- Không hỗ trợ tham chiếu ngược
@@ -1092,20 +547,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>- Có thể có nhiều chuyển tiếp
 </span></span><span class=line><span class=cl>- Hỗ trợ tham chiếu ngược, nhìn trước
 </span></span><span class=line><span class=cl>- Có thể quay lui → trường hợp xấu nhất mũ
-</span></span><span class=line><span class=cl>- Dùng bởi: sed, grep -P, PCRE</span></span></code></pre></td></tr></table></div></div><p><strong>Quay Lui Thảm Họa:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Các mẫu NGUY HIỂM - có thể O(2^n):</span>
+</span></span><span class=line><span class=cl>- Dùng bởi: sed, grep -P, PCRE</span></span></code></pre></div><p><strong>Quay Lui Thảm Họa:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Các mẫu NGUY HIỂM - có thể O(2^n):</span>
 </span></span><span class=line><span class=cl><span class=o>(</span>a+<span class=o>)</span>+$              <span class=c1># Lượng từ lồng nhau</span>
 </span></span><span class=line><span class=cl><span class=o>(</span>a<span class=p>|</span>aa<span class=o>)</span>+$            <span class=c1># Lựa chọn chồng lấp</span>
 </span></span><span class=line><span class=cl><span class=o>(</span>.*a<span class=o>){</span>10<span class=o>}</span>           <span class=c1># Tham lam với lặp lại</span>
@@ -1117,25 +559,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># Thay thế AN TOÀN:</span>
 </span></span><span class=line><span class=cl>a+$                 <span class=c1># Bỏ lồng nhau</span>
 </span></span><span class=line><span class=cl><span class=o>(</span>?:a<span class=o>)</span>+$             <span class=c1># Nhóm không bắt (PCRE)</span>
-</span></span><span class=line><span class=cl><span class=o>[</span>a<span class=o>]</span>+$               <span class=c1># Lớp ký tự</span></span></span></code></pre></td></tr></table></div></div><p><strong>Quy tắc tránh regex chậm:</strong></p><ol><li>Tránh lượng từ lồng nhau: <code>(a+)+</code>, <code>(a*)*</code></li><li>Tránh lựa chọn chồng lấp: <code>(a|ab)+</code></li><li>Dùng neo khi có thể: <code>^mẫu</code>, <code>mẫu$</code></li><li>Ưu tiên lớp ký tự hơn lựa chọn: <code>[aeiou]</code> thay vì <code>a|e|i|o|u</code></li><li>Cụ thể hóa: <code>[0-9]{4}</code> thay vì <code>.*[0-9].*[0-9].*[0-9].*[0-9]</code></li></ol><h3 class=heading-element id=43-sử-dụng-bộ-nhớ><span>4.3 Sử Dụng Bộ Nhớ</span>
-<a href=#43-s%e1%bb%ad-d%e1%bb%a5ng-b%e1%bb%99-nh%e1%bb%9b class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Bộ nhớ awk dùng:</span>
+</span></span><span class=line><span class=cl><span class=o>[</span>a<span class=o>]</span>+$               <span class=c1># Lớp ký tự</span></span></span></code></pre></div><p><strong>Quy tắc tránh regex chậm:</strong></p><ol><li>Tránh lượng từ lồng nhau: <code>(a+)+</code>, <code>(a*)*</code></li><li>Tránh lựa chọn chồng lấp: <code>(a|ab)+</code></li><li>Dùng neo khi có thể: <code>^mẫu</code>, <code>mẫu$</code></li><li>Ưu tiên lớp ký tự hơn lựa chọn: <code>[aeiou]</code> thay vì <code>a|e|i|o|u</code></li><li>Cụ thể hóa: <code>[0-9]{4}</code> thay vì <code>.*[0-9].*[0-9].*[0-9].*[0-9]</code></li></ol><h3 class=heading-element id=43-sử-dụng-bộ-nhớ><span>4.3 Sử Dụng Bộ Nhớ</span>
+<a href=#43-s%e1%bb%ad-d%e1%bb%a5ng-b%e1%bb%99-nh%e1%bb%9b class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Bộ nhớ awk dùng:</span>
 </span></span><span class=line><span class=cl><span class=c1># - Mỗi bản ghi: O(m) với m = kích thước bản ghi</span>
 </span></span><span class=line><span class=cl><span class=c1># - Mảng: O(k * kích_thước_giá_trị_tb) với k = số khóa</span>
 </span></span><span class=line><span class=cl><span class=c1># - Không nạp toàn bộ file vào bộ nhớ</span>
@@ -1151,47 +576,9 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># NHƯNG nếu nạp tất cả vào mảng:</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{dòng[NR] = $0} END {for (i in dòng) print dòng[i]}&#39;</span> file_khổng_lồ.txt
-</span></span><span class=line><span class=cl><span class=c1># Bộ nhớ: O(n) - sẽ hết RAM!</span></span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-5-ví-dụ-thực-tế><span>PHẦN 5: VÍ DỤ THỰC TẾ</span>
+</span></span><span class=line><span class=cl><span class=c1># Bộ nhớ: O(n) - sẽ hết RAM!</span></span></span></code></pre></div><hr><h2 class=heading-element id=phần-5-ví-dụ-thực-tế><span>PHẦN 5: VÍ DỤ THỰC TẾ</span>
 <a href=#ph%e1%ba%a7n-5-v%c3%ad-d%e1%bb%a5-th%e1%bb%b1c-t%e1%ba%bf class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=51-phân-tích-log><span>5.1 Phân Tích Log</span>
-<a href=#51-ph%c3%a2n-t%c3%adch-log class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Phân tích log truy cập nginx</span>
+<a href=#51-ph%c3%a2n-t%c3%adch-log class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Phân tích log truy cập nginx</span>
 </span></span><span class=line><span class=cl><span class=c1># Định dạng: IP - - [ngày] &#34;phương_thức đường_dẫn giao_thức&#34; trạng_thái bytes &#34;referer&#34; &#34;ua&#34;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Top 10 IP theo số lượng yêu cầu</span>
@@ -1228,26 +615,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>            printf &#34;%s=%d &#34;, s, thống_kê[h][s]
 </span></span></span><span class=line><span class=cl><span class=s1>        print &#34;&#34;
 </span></span></span><span class=line><span class=cl><span class=s1>    }
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> access.log</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=52-thao-tác-file-cấu-hình><span>5.2 Thao Tác File Cấu Hình</span>
-<a href=#52-thao-t%c3%a1c-file-c%e1%ba%a5u-h%c3%acnh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Thay đổi giá trị trong cấu hình kiểu INI</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> access.log</span></span></code></pre></div><h3 class=heading-element id=52-thao-tác-file-cấu-hình><span>5.2 Thao Tác File Cấu Hình</span>
+<a href=#52-thao-t%c3%a1c-file-c%e1%ba%a5u-h%c3%acnh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Thay đổi giá trị trong cấu hình kiểu INI</span>
 </span></span><span class=line><span class=cl>sed -i <span class=s1>&#39;s/^max_connections=.*/max_connections=500/&#39;</span> my.cnf
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Thay đổi giá trị trong phần cụ thể</span>
@@ -1264,35 +633,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Thay thế giữa các dấu hiệu</span>
 </span></span><span class=line><span class=cl>sed -i <span class=s1>&#39;/^# BẮT ĐẦU QUẢN LÝ/,/^# KẾT THÚC QUẢN LÝ/{//!d}&#39;</span> file
-</span></span><span class=line><span class=cl><span class=c1># Sau đó chèn nội dung mới sau BẮT ĐẦU QUẢN LÝ</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=53-chuyển-đổi-dữ-liệu><span>5.3 Chuyển Đổi Dữ Liệu</span>
-<a href=#53-chuy%e1%bb%83n-%c4%91%e1%bb%95i-d%e1%bb%af-li%e1%bb%87u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># CSV sang TSV</span>
+</span></span><span class=line><span class=cl><span class=c1># Sau đó chèn nội dung mới sau BẮT ĐẦU QUẢN LÝ</span></span></span></code></pre></div><h3 class=heading-element id=53-chuyển-đổi-dữ-liệu><span>5.3 Chuyển Đổi Dữ Liệu</span>
+<a href=#53-chuy%e1%bb%83n-%c4%91%e1%bb%95i-d%e1%bb%af-li%e1%bb%87u class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># CSV sang TSV</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/,/\t/g&#39;</span> file.csv &gt; file.tsv
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Trích xuất kiểu JSON (trường hợp đơn giản)</span>
@@ -1318,35 +660,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span></span><span class=line><span class=cl><span class=s1>    close(cmd)
 </span></span></span><span class=line><span class=cl><span class=s1>    $1 = đã_định_dạng
 </span></span></span><span class=line><span class=cl><span class=s1>    print
-</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> timestamps.txt</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=54-quản-trị-hệ-thống><span>5.4 Quản Trị Hệ Thống</span>
-<a href=#54-qu%e1%ba%a3n-tr%e1%bb%8b-h%e1%bb%87-th%e1%bb%91ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Giết tiến trình theo mẫu</span>
+</span></span></span><span class=line><span class=cl><span class=s1>}&#39;</span> timestamps.txt</span></span></code></pre></div><h3 class=heading-element id=54-quản-trị-hệ-thống><span>5.4 Quản Trị Hệ Thống</span>
+<a href=#54-qu%e1%ba%a3n-tr%e1%bb%8b-h%e1%bb%87-th%e1%bb%91ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Giết tiến trình theo mẫu</span>
 </span></span><span class=line><span class=cl>ps aux <span class=p>|</span> awk <span class=s1>&#39;/mẫu/ &amp;&amp; !/awk/ {print $2}&#39;</span> <span class=p>|</span> xargs <span class=nb>kill</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Báo cáo sử dụng đĩa</span>
@@ -1372,26 +687,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>    free -m <span class=p>|</span> awk <span class=s1>&#39;/Mem:/ {printf &#34;%s: Đã dùng %dMB / %dMB (%.1f%%)\n&#34;,
 </span></span></span><span class=line><span class=cl><span class=s1>        strftime(&#34;%H:%M:%S&#34;), $3, $2, $3/$2*100}&#39;</span>
 </span></span><span class=line><span class=cl>    sleep <span class=m>5</span>
-</span></span><span class=line><span class=cl><span class=k>done</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=55-đường-ống-xử-lý-văn-bản><span>5.5 Đường Ống Xử Lý Văn Bản</span>
-<a href=#55-%c4%91%c6%b0%e1%bb%9dng-%e1%bb%91ng-x%e1%bb%ad-l%c3%bd-v%c4%83n-b%e1%ba%a3n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Trích xuất tên miền email duy nhất và đếm</span>
+</span></span><span class=line><span class=cl><span class=k>done</span></span></span></code></pre></div><h3 class=heading-element id=55-đường-ống-xử-lý-văn-bản><span>5.5 Đường Ống Xử Lý Văn Bản</span>
+<a href=#55-%c4%91%c6%b0%e1%bb%9dng-%e1%bb%91ng-x%e1%bb%ad-l%c3%bd-v%c4%83n-b%e1%ba%a3n class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Trích xuất tên miền email duy nhất và đếm</span>
 </span></span><span class=line><span class=cl>grep -oE <span class=s1>&#39;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&#39;</span> file <span class=p>|</span> <span class=se>\
 </span></span></span><span class=line><span class=cl><span class=se></span>    awk -F<span class=s1>&#39;@&#39;</span> <span class=s1>&#39;{print $2}&#39;</span> <span class=p>|</span> <span class=se>\
 </span></span></span><span class=line><span class=cl><span class=se></span>    sort <span class=p>|</span> uniq -c <span class=p>|</span> sort -rn
@@ -1408,48 +705,9 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># An toàn hơn với xem trước:</span>
 </span></span><span class=line><span class=cl>ls *.JPG <span class=p>|</span> sed <span class=s1>&#39;s/\(.*\)\.JPG/mv &#34;&amp;&#34; &#34;\1.jpg&#34;/&#39;</span>      <span class=c1># Xem trước</span>
-</span></span><span class=line><span class=cl>ls *.JPG <span class=p>|</span> sed <span class=s1>&#39;s/\(.*\)\.JPG/mv &#34;&amp;&#34; &#34;\1.jpg&#34;/&#39;</span> <span class=p>|</span> sh <span class=c1># Thực thi</span></span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-6-sai-lầm-và-thực-hành-tốt><span>PHẦN 6: SAI LẦM VÀ THỰC HÀNH TỐT</span>
+</span></span><span class=line><span class=cl>ls *.JPG <span class=p>|</span> sed <span class=s1>&#39;s/\(.*\)\.JPG/mv &#34;&amp;&#34; &#34;\1.jpg&#34;/&#39;</span> <span class=p>|</span> sh <span class=c1># Thực thi</span></span></span></code></pre></div><hr><h2 class=heading-element id=phần-6-sai-lầm-và-thực-hành-tốt><span>PHẦN 6: SAI LẦM VÀ THỰC HÀNH TỐT</span>
 <a href=#ph%e1%ba%a7n-6-sai-l%e1%ba%a7m-v%c3%a0-th%e1%bb%b1c-h%c3%a0nh-t%e1%bb%91t class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=61-những-sai-lầm-cần-tránh><span>6.1 Những Sai Lầm Cần Tránh</span>
-<a href=#61-nh%e1%bb%afng-sai-l%e1%ba%a7m-c%e1%ba%a7n-tr%c3%a1nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># ❌ DÙNG CAT VÔ ÍCH</span>
+<a href=#61-nh%e1%bb%afng-sai-l%e1%ba%a7m-c%e1%ba%a7n-tr%c3%a1nh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># ❌ DÙNG CAT VÔ ÍCH</span>
 </span></span><span class=line><span class=cl>cat file <span class=p>|</span> awk <span class=s1>&#39;{print $1}&#39;</span>
 </span></span><span class=line><span class=cl><span class=c1># ✅ ĐÚNG</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{print $1}&#39;</span> file
@@ -1487,38 +745,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># ❌ REGEX THAM LAM KHÔNG SUY NGHĨ</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/&lt;.*&gt;//&#39;</span> file.html  <span class=c1># Xóa quá nhiều</span>
 </span></span><span class=line><span class=cl><span class=c1># ✅ KHÔNG THAM LAM HOẶC LỚP PHỦ ĐỊNH</span>
-</span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/&lt;[^&gt;]*&gt;//g&#39;</span> file.html</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=62-mẹo-hiệu-năng><span>6.2 Mẹo Hiệu Năng</span>
-<a href=#62-m%e1%ba%b9o-hi%e1%bb%87u-n%c4%83ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. Mẫu có neo nhanh hơn mẫu trôi nổi</span>
+</span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/&lt;[^&gt;]*&gt;//g&#39;</span> file.html</span></span></code></pre></div><h3 class=heading-element id=62-mẹo-hiệu-năng><span>6.2 Mẹo Hiệu Năng</span>
+<a href=#62-m%e1%ba%b9o-hi%e1%bb%87u-n%c4%83ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. Mẫu có neo nhanh hơn mẫu trôi nổi</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/^ERROR/&#39;</span> file        <span class=c1># Nhanh hơn</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;/ERROR/&#39;</span> file         <span class=c1># Chậm hơn (kiểm tra mọi nơi)</span>
 </span></span><span class=line><span class=cl>
@@ -1547,29 +775,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>mawk <span class=s1>&#39;{print $1}&#39;</span> file     <span class=c1># Nhanh hơn gawk 2-10 lần cho tác vụ đơn giản</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># 6. LC_ALL=C cho xử lý theo byte</span>
-</span></span><span class=line><span class=cl><span class=nv>LC_ALL</span><span class=o>=</span>C grep mẫu file     <span class=c1># Nhanh hơn, nhưng không hỗ trợ Unicode</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=63-cân-nhắc-tương-thích><span>6.3 Cân Nhắc Tương Thích</span>
-<a href=#63-c%c3%a2n-nh%e1%ba%afc-t%c6%b0%c6%a1ng-th%c3%adch class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Khác biệt giữa GNU và BSD sed</span>
+</span></span><span class=line><span class=cl><span class=nv>LC_ALL</span><span class=o>=</span>C grep mẫu file     <span class=c1># Nhanh hơn, nhưng không hỗ trợ Unicode</span></span></span></code></pre></div><h3 class=heading-element id=63-cân-nhắc-tương-thích><span>6.3 Cân Nhắc Tương Thích</span>
+<a href=#63-c%c3%a2n-nh%e1%ba%afc-t%c6%b0%c6%a1ng-th%c3%adch class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Khác biệt giữa GNU và BSD sed</span>
 </span></span><span class=line><span class=cl><span class=c1># GNU sed:</span>
 </span></span><span class=line><span class=cl>sed -i <span class=s1>&#39;s/cũ/mới/&#39;</span> file           <span class=c1># Tại chỗ, không sao lưu</span>
 </span></span><span class=line><span class=cl>sed -i.bak <span class=s1>&#39;s/cũ/mới/&#39;</span> file       <span class=c1># Có sao lưu</span>
@@ -1589,50 +796,9 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl><span class=c1># Khác biệt awk:</span>
 </span></span><span class=line><span class=cl><span class=c1># gawk có nhiều mở rộng không có trong POSIX awk</span>
 </span></span><span class=line><span class=cl><span class=c1># Để tương thích, dùng tính năng POSIX</span>
-</span></span><span class=line><span class=cl><span class=c1># Hoặc gọi rõ ràng gawk khi cần</span></span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=phần-7-thẻ-tham-khảo-nhanh><span>PHẦN 7: THẺ THAM KHẢO NHANH</span>
+</span></span><span class=line><span class=cl><span class=c1># Hoặc gọi rõ ràng gawk khi cần</span></span></span></code></pre></div><hr><h2 class=heading-element id=phần-7-thẻ-tham-khảo-nhanh><span>PHẦN 7: THẺ THAM KHẢO NHANH</span>
 <a href=#ph%e1%ba%a7n-7-th%e1%ba%bb-tham-kh%e1%ba%a3o-nhanh class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=71-một-dòng-awk-hay-dùng><span>7.1 Một Dòng AWK Hay Dùng</span>
-<a href=#71-m%e1%bb%99t-d%c3%b2ng-awk-hay-d%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># In trường cụ thể</span>
+<a href=#71-m%e1%bb%99t-d%c3%b2ng-awk-hay-d%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># In trường cụ thể</span>
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{print $1, $3}&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># In dòng khớp mẫu</span>
@@ -1672,58 +838,8 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>awk <span class=s1>&#39;{printf &#34;%s&#34;, $0} END {print &#34;&#34;}&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Xóa dòng trùng lặp (giữ thứ tự)</span>
-</span></span><span class=line><span class=cl>awk <span class=s1>&#39;!đã_thấy[$0]++&#39;</span> file</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=72-một-dòng-sed-hay-dùng><span>7.2 Một Dòng SED Hay Dùng</span>
-<a href=#72-m%e1%bb%99t-d%c3%b2ng-sed-hay-d%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span><span class=lnt>50
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Thay thế lần xuất hiện đầu tiên</span>
+</span></span><span class=line><span class=cl>awk <span class=s1>&#39;!đã_thấy[$0]++&#39;</span> file</span></span></code></pre></div><h3 class=heading-element id=72-một-dòng-sed-hay-dùng><span>7.2 Một Dòng SED Hay Dùng</span>
+<a href=#72-m%e1%bb%99t-d%c3%b2ng-sed-hay-d%c3%b9ng class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Thay thế lần xuất hiện đầu tiên</span>
 </span></span><span class=line><span class=cl>sed <span class=s1>&#39;s/cũ/mới/&#39;</span> file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Thay thế tất cả lần xuất hiện</span>
@@ -1772,7 +888,7 @@ Kaizen Teams</a></span><span class=post-included-in>&nbsp;trong <a href=/collect
 </span></span><span class=line><span class=cl>sed G file
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># Đảo ngược file</span>
-</span></span><span class=line><span class=cl>sed -n <span class=s1>&#39;1!G;h;$p&#39;</span> file</span></span></code></pre></td></tr></table></div></div><hr><h2 class=heading-element id=kết-luận><span>KẾT LUẬN</span>
+</span></span><span class=line><span class=cl>sed -n <span class=s1>&#39;1!G;h;$p&#39;</span> file</span></span></code></pre></div><hr><h2 class=heading-element id=kết-luận><span>KẾT LUẬN</span>
 <a href=#k%e1%ba%bft-lu%e1%ba%adn class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><p><strong>Kim Chỉ Nam (Nguyên Tắc Hướng Dẫn):</strong></p><ol><li><p><strong>Chọn công cụ đúng:</strong></p><ul><li>Chỉ cần tìm? → <code>grep</code></li><li>Cần trích xuất cột đơn giản? → <code>cut</code></li><li>Cần tìm & thay thế? → <code>sed</code></li><li>Cần logic, tính toán, tổng hợp? → <code>awk</code></li><li>Cần cả đống? → <code>perl</code> hoặc <code>python</code></li></ul></li><li><p><strong>Về hiệu năng:</strong></p><ul><li>Một lượt > nhiều lượt</li><li>Regex có neo > regex trôi nổi</li><li>Chuỗi cố định > regex khi có thể</li><li>Lớp ký tự > lựa chọn</li><li>Tránh lượng từ lồng nhau trong regex</li></ul></li><li><p><strong>Về bảo trì:</strong></p><ul><li>Ghi chú script awk phức tạp</li><li>Dùng tên biến có nghĩa</li><li>Chia đường ống phức tạp thành các bước</li><li>Thử với dữ liệu mẫu trước</li></ul></li><li><p><strong>Về tương thích:</strong></p><ul><li>Dùng tính năng POSIX khi có thể</li><li>Ghi chú các tính năng không tương thích</li><li>Thử trên hệ thống đích</li></ul></li></ol><hr><p><em>Tài liệu này khoảng 700 dòng. Đánh dấu lại và dùng làm tham khảo khi cần.</em></p></div><hr class=awesome-hr><h2 id=see-also>Nội dung liên quan</h2><ul><li><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu">Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu</a></li><li><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/network/ title="Linux Network Commands - Hướng Dẫn Chuyên Sâu">Linux Network Commands - Hướng Dẫn Chuyên Sâu</a></li><li><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/grep-diff-sort/ title="Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu">Grep, Sort, Diff - Hướng Dẫn Chuyên Sâu</a></li><li><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/shell-co-ban/ title="Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux">Những Điều Cơ Bản Về Bash & Fish Shell Trong Linux</a></li></ul><div class=collection-card><div class="collection-title text-secondary">Trong <a href=/collections/linux-cli/><i class="fa-solid fa-layer-group fa-fw" aria-hidden=true></i> <span>Bộ sưu tập・Linux Cli</span></span></a> 11</div><div class=collection-nav><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/process-service-log/ class=collection-nav-item rel=prev title="Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i><span>Process Management, Systemd & Logging - Hướng Dẫn Chuyên Sâu</span>
 </a><a href=/bai-viet/khoa-hoc-may-tinh/linux-cli/storage/ class=collection-nav-item rel=next title="Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu"><span>Disk, Storage & Filesystem - Hướng Dẫn Chuyên Sâu</span><i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Cập nhật ngày 2025-12-11 16:05:24">Cập nhật ngày 2025-12-11&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>CC BY-NC-SA 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Chia sẻ trên X" data-sharer=twitter data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ data-title="Awk, Sed & Regex - Hướng Dẫn Chuyên Sâu Cho System Engineer" data-hashtags="ai generated post"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden=true></i></a>
 <a href=javascript:void(0); title="Chia sẻ trên Facebook" data-sharer=facebook data-url=https://vanvuvuong.github.io/bai-viet/khoa-hoc-may-tinh/linux-cli/regex-awk-sed/ data-hashtag="ai generated post"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>

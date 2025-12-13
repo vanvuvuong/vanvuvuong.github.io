@@ -28,11 +28,10 @@ Thư mục cần cấu hình:&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h3&gt;&lt;p&gt;Mỗi một máy tính sẽ bao gồm rất nhiều ty tỷ phần mềm, tệp, thư viện, &amp;hellip; sử dụng kết hợp với nhau để có thể &amp;ldquo;điều hành&amp;rdquo; phần cứng của chiếc máy tính. Mỗi khi chúng ta trao đổi những thứ nhạy cảm như vậy qua mạng Internet, chúng ta cần chắc chắn rằng, những gì người lập trình viên tạo ra sau đó họ gửi lên mạnh chính xác 100% với những gì chúng ta tìm kiếm &amp;amp; tải xuống.&lt;/p&gt;
 &lt;p&gt;Đó là khi mã băm được phát minh ra. Mỗi một chữ, tệp, gói, hay phần mềm đều có một mã băm đặc biệt và không hề giống nhau:&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;#34;&lt;/span&gt;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;sha256sum
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;#34;&lt;/span&gt;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;sha256sum
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;9737a22a063c9c8219a2b6c024cf20ecb33163be41f891885280d1d4350dca1f&amp;ensp;&amp;ensp;-
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:~$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;ensp;&amp;#34;&lt;/span&gt;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;sha256sum
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;250eefdd4605412b81e927612d83e49332d8a53c9286386f3bbdef796554c901&amp;ensp;&amp;ensp;-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Như các bạn có thể thấy, sự khác biệt của 2 từ chỉ là dấu cách đã cho ra một chuỗi mã băm khác nhau. Điều này đảm bảo việc người lập trình tạo một thứ và chia sẻ cho người khác dùng sẽ được đảm bảo là không bị thay đổi trong qua trình gửi/nhận trên mạng.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;250eefdd4605412b81e927612d83e49332d8a53c9286386f3bbdef796554c901&amp;ensp;&amp;ensp;-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Như các bạn có thể thấy, sự khác biệt của 2 từ chỉ là dấu cách đã cho ra một chuỗi mã băm khác nhau. Điều này đảm bảo việc người lập trình tạo một thứ và chia sẻ cho người khác dùng sẽ được đảm bảo là không bị thay đổi trong qua trình gửi/nhận trên mạng.&lt;/p&gt;
 &lt;h3 class="heading-element" id="mã-hóa-encryption"&gt;&lt;span&gt;Mã hóa (encryption)&lt;/span&gt;
  &lt;a href="#m%c3%a3-h%c3%b3a-encryption" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -54,8 +53,7 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Sử dụng GPG với thuật toán đối xứng có thể sử dụng như ví dụ sau:&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;ensp;&amp;#34;&lt;/span&gt;&amp;ensp;&amp;gt;&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;&lt;span class="nb"&gt;echo&lt;/span&gt;&amp;ensp;&lt;span class="s2"&gt;&amp;#34;ví&amp;ensp;dụ&amp;ensp;&amp;#34;&lt;/span&gt;&amp;ensp;&amp;gt;&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;cat&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví&amp;ensp;dụ
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--symmetric&amp;ensp;&lt;span class="nb"&gt;test&lt;/span&gt;
@@ -68,7 +66,7 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;Một&amp;ensp;cửa&amp;ensp;sổ&amp;ensp;sẽ&amp;ensp;hiện&amp;ensp;lên&amp;ensp;để&amp;ensp;điền&amp;ensp;cụm&amp;ensp;từ&amp;ensp;bảo&amp;ensp;mật&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;AES256.CFB&amp;ensp;encrypted&amp;ensp;data
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;encrypted&amp;ensp;with&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;passphrase
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví&amp;ensp;dụ&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ví&amp;ensp;dụ&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 class="heading-element" id="gpg-với-thuật-toán-bất-đối-xứng"&gt;&lt;span&gt;GPG với thuật toán bất đối xứng&lt;/span&gt;
  &lt;a href="#gpg-v%e1%bb%9bi-thu%e1%ba%adt-to%c3%a1n-b%e1%ba%a5t-%c4%91%e1%bb%91i-x%e1%bb%a9ng" class="heading-mark"&gt;
@@ -103,8 +101,7 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;tạo một khóa chủ trên một máy (trong quá trình này sẽ tự động tạo ra cặp khóa riêng tư/công khai con), liệt kê những khóa riêng tư, công khai ngay khi mới tạo khóa&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;&lt;span class="nb"&gt;export&lt;/span&gt;&amp;ensp;&lt;span class="nv"&gt;GNUPGHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/tmp/gpg&amp;ensp;&lt;span class="c1"&gt;#&amp;ensp;để&amp;ensp;tách&amp;ensp;biệt&amp;ensp;thư&amp;ensp;mục&amp;ensp;mặc&amp;ensp;định&amp;ensp;với&amp;ensp;khóa&amp;ensp;hiện&amp;ensp;tại&amp;ensp;mình&amp;ensp;đang&amp;ensp;dùng&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;&lt;span class="nb"&gt;export&lt;/span&gt;&amp;ensp;&lt;span class="nv"&gt;GNUPGHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/tmp/gpg&amp;ensp;&lt;span class="c1"&gt;#&amp;ensp;để&amp;ensp;tách&amp;ensp;biệt&amp;ensp;thư&amp;ensp;mục&amp;ensp;mặc&amp;ensp;định&amp;ensp;với&amp;ensp;khóa&amp;ensp;hiện&amp;ensp;tại&amp;ensp;mình&amp;ensp;đang&amp;ensp;dùng&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--full-generate-key
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;2.4.7&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;Copyright&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&lt;span class="m"&gt;2024&lt;/span&gt;&amp;ensp;g10&amp;ensp;Code&amp;ensp;GmbH
@@ -183,14 +180,13 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sub&amp;ensp;&amp;ensp;&amp;ensp;cv25519&amp;ensp;2025-11-18&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;expires:&amp;ensp;2026-11-18&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Một khóa chủ + cặp mã khóa riêng tư/công khai vừa được tạo với &amp;ldquo;mã vân tay&amp;rdquo;(fingerprint) lần lượt là khóa chủ &lt;code&gt;B94F9101C1665938968DAF797B314495163FC656&lt;/code&gt;, khóa riêng tư/công khai &lt;code&gt;0101992D9DC2FC203CAA254D4A9D2D0DB3A5612B&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;tạo thêm 2 khóa con riêng tư cho 2 máy khác để mã hóa bằng cách chỉnh sửa khóa chủ có mã vân tay &lt;code&gt;B94F9101C1665938968DAF797B314495163FC656&lt;/code&gt; (trong quá trình này sẽ tự động tạo ra 2 cặp khóa công khai con tương ứng)&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--edit-key&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--edit-key&amp;ensp;B94F9101C1665938968DAF797B314495163FC656
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;2.4.7&lt;span class="p"&gt;;&lt;/span&gt;&amp;ensp;Copyright&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&lt;span class="m"&gt;2024&lt;/span&gt;&amp;ensp;g10&amp;ensp;Code&amp;ensp;GmbH
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This&amp;ensp;is&amp;ensp;free&amp;ensp;software:&amp;ensp;you&amp;ensp;are&amp;ensp;free&amp;ensp;to&amp;ensp;change&amp;ensp;and&amp;ensp;redistribute&amp;ensp;it.
@@ -286,11 +282,10 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssb&amp;ensp;&amp;ensp;cv25519/2669A0060F0D7ACA
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;created:&amp;ensp;2025-11-18&amp;ensp;&amp;ensp;expires:&amp;ensp;2026-11-18&amp;ensp;&amp;ensp;usage:&amp;ensp;E
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;.&amp;ensp;khoa-vi-du&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;Khoa&amp;ensp;vi&amp;ensp;du&amp;ensp;minh&amp;ensp;hoa&lt;span class="o"&gt;)&lt;/span&gt;&amp;ensp;&amp;lt;vi-du@gnupg.org&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt;&amp;ensp;save&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg&amp;gt;&amp;ensp;save&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;liệt kê các khóa 1 lần nữa, xuất 1 khóa chủ, 3 khóa riêng tư con và khóa công khai ra thành những tệp&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--list-secret-keys&amp;ensp;--with-subkey-fingerprint
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kris@fedora:/tmp/gpg$&amp;ensp;gpg&amp;ensp;--list-secret-keys&amp;ensp;--with-subkey-fingerprint
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg:&amp;ensp;WARNING:&amp;ensp;unsafe&amp;ensp;permissions&amp;ensp;on&amp;ensp;homedir&amp;ensp;&lt;span class="s1"&gt;&amp;#39;/tmp/gpg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/tmp/gpg/pubring.kbx
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;--------------------
@@ -325,7 +320,7 @@ Thư mục cần cấu hình:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-r--r--.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1189&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:11&amp;ensp;vidu-khoa-cong-khai.gpg
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:09&amp;ensp;vidu-khoa-rieng-tu-may-1.gpg
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:10&amp;ensp;vidu-khoa-rieng-tu-may-2.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:10&amp;ensp;vidu-khoa-rieng-tu-may-3.gpg&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rw-------.&amp;ensp;&lt;span class="m"&gt;1&lt;/span&gt;&amp;ensp;kris&amp;ensp;kris&amp;ensp;&amp;ensp;&lt;span class="m"&gt;1540&lt;/span&gt;&amp;ensp;Nov&amp;ensp;&lt;span class="m"&gt;18&lt;/span&gt;&amp;ensp;15:10&amp;ensp;vidu-khoa-rieng-tu-may-3.gpg&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;xóa khóa chủ, và các khóa riêng tư con trên máy vừa tạo&lt;/p&gt;
 &lt;/li&gt;
