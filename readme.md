@@ -2,14 +2,15 @@
 
 > Kaizen - tốt hơn mỗi ngày
 
-22 bài viết by [Kaizen Teams](https://vanvuvuong.github.io).
+23 bài viết by [Kaizen Teams](https://vanvuvuong.github.io).
 
 ## 2026
 
 <details open>
-<summary>3 bài viết</summary>
+<summary>4 bài viết</summary>
 
 - 01-01 [12 Luật Sống Đòn Bẩy](https://vanvuvuong.github.io/bai-viet/cuoc-song/3-ky-nang-quan-trong/rules/ "2026-01-01 21:29:56")
+- 01-01 [Bridge Talent Playbook](https://vanvuvuong.github.io/bai-viet/cuoc-song/bridge-talent-master-playbook/ "2026-01-01 21:07:04")
 - 01-01 [12 Luật Của Bridge Talent](https://vanvuvuong.github.io/bai-viet/cuoc-song/bridge-talent-rules/ "2026-01-01 21:06:19")
 - 01-01 [Thói Quen Bridge Talent - Nền Tảng](https://vanvuvuong.github.io/bai-viet/cuoc-song/bridge-talent-foundation/ "2026-01-01 20:01:54")
 
