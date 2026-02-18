@@ -1,0 +1,1 @@
+(()=>{var n={fallback:"https://example.org/nctvtvn/",homes:{en:"https://example.org/nctvtvn/"}};(()=>{let o=navigator.language||navigator.userLanguage;if(o in n.homes){window.location.href=n.homes[o];return}let e=o.split("-");for(let a in n.homes)if(a.indexOf(e[0])===0){window.location.href=n.homes[a];return}window.location.href=n.fallback})();})();
