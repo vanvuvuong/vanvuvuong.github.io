@@ -25,13 +25,15 @@
 
   <meta itemprop="name" content="Phần II.I - NHỮNG CÂY THUỐC VÀ VỊ THUỐC">
   <meta itemprop="description" content="CÁC CÂY THUỐC VÀ VỊ THUỐC CHỮA BỆNH PHỤ NỮ">
-  <meta itemprop="wordCount" content="30242">
+  <meta itemprop="wordCount" content="30244">
   <meta property="og:image" content="https://example.org/nctvtvn/images/logo.png"/>
   <meta name="twitter:image" content="https://example.org/nctvtvn/images/logo.png"/>
   <meta property="og:image:alt" content="Phần II.I - NHỮNG CÂY THUỐC VÀ VỊ THUỐC" />
   <meta name="twitter:image:alt" content="Phần II.I - NHỮNG CÂY THUỐC VÀ VỊ THUỐC" />
 
-<link data-precache rel="stylesheet" href="/nctvtvn/assets/main/bundle.min.84f1e23051d05d02b53b69fee6dbf6f1cf3af0ef01b1e47a88d09284cf7b6c90.css" integrity="sha256-hPHiMFHQXQK1O2n+5tv28c868O8BseR6iNCShM97bJA=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/nctvtvn/assets/main/bundle.min.18c2e066f368b5f3b07a59757cbaacb1561a25c4e87ee491dd1d91f47c0e023f.css" integrity="sha256-GMLgZvNotfOwell1fLqssVYaJcTofuSR3R2R9HwOAj8=" crossorigin="anonymous">
+
+<link data-precache rel="stylesheet" href="/nctvtvn/assets/katex/bundle.min.da6ad5e8ba65e2c3cfc9cf5c0431235f64b050adaa411d8a67d589c0d40b4f56.css" integrity="sha256-2mrV6Lpl4sPPyc9cBDEjX2SwUK2qQR2KZ9WJwNQLT1Y=" crossorigin="anonymous">
 
     <link data-precache rel="stylesheet" href="/nctvtvn/assets/viewer/bundle.min.16d2c85c4cae39a98f8cb7a977e95e554b174f91a5484c32605637156f49ca6b.css" integrity="sha256-FtLIXEyuOamPjLepd&#43;leVUsXT5GlSEwyYFY3FW9Jyms=" crossorigin="anonymous">
 
@@ -62,24 +64,21 @@ Những cây thuốc vị thuốc Việt Nam
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto">
         </ul>
         
-    <hr class="d-xxl-none">
-    <form class="search-bar ms-auto my-auto" action="" novalidate>
-      <div class="input-group align-items-center">
-        <span class="btn btn-search disabled position-absolute left-0 border-0 px-1">
-          <i class="fas fa-fw fa-search fa-lg"></i>
-        </span>
-        <input
-          class="my-1 form-control border-white rounded-5 search-input bg-body"
-          name="q"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          required>
-          <span class="search-shortcut position-absolute end-0 top-0 me-2">
-            <kbd class="text-dark bg-white opacity-75 rounded-3 shadow border border-primary py-1 fw-bold">/</kbd>
-          </span>
-      </div>
-    </form><hr class="d-xxl-none">
+  <hr class="d-xxl-none">
+  <div class="search-bar ms-auto my-auto">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <div id="search"></div>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false
+        });
+      });
+    </script>
+  </div><hr class="d-xxl-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
 <li class="nav-item dropdown col-6 col-xxl-auto">
     <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -328,9 +327,11 @@ Những cây thuốc vị thuốc Việt Nam
 
 <h4 id="e-công-dụng-và-liều-dùng" data-numberify>E. Công dụng và liều dùng<a class="anchor ms-1" href="#e-công-dụng-và-liều-dùng"></a></h4>
 <p>Từ lâu vị ích mẫu được nhân dân ta dùng chữa bệnh phụ nữ, nhất là đối với phụ nữ sau khi sinh nở, do đó có câu ca dao:</p>
-<pre tabindex="0"><code>      Nhân trần, ích mẫu đi đâu
+<div class="math-output">$$
+      Nhân trần, ích mẫu đi đâu
    Để cho gái đẻ đớn đau thế này?
-</code></pre><p>Thường ích mẫu dùng trong trường hợp đẻ xong bị rong huyết (cầm máu tử cung), chữa viêm niêm mạc dạ con, kinh nguyệt quá nhiều.</p>
+$$</div>
+<p>Thường ích mẫu dùng trong trường hợp đẻ xong bị rong huyết (cầm máu tử cung), chữa viêm niêm mạc dạ con, kinh nguyệt quá nhiều.</p>
 <p>Còn dùng chữa huyết áp cao, thuốc bổ huyết, các bệnh về tuần hoàn cơ tim, thần kinh của tim, chứng tim hẹp nhẹ (stenocardie), chữa lỵ.</p>
 <p>Quả ích mẫu dùng với tên sung úy tử làm thuốc thông tiểu, chữa phù thũng, thiên đầu thống (glôcôm).</p>
 <p>Dùng ngoài thân và quả ích mẫu giã đắp hay sắc lấy nước rửa chữa một số bệnh như sưng vú, chốc đầu, lở ngứa.</p>
@@ -1584,20 +1585,126 @@ Bộ môn dược liệu Trưòng đại học dược khoa có phối hợp cù
   <ul>
     <li><a href="#i-các-cây-thuốc-và-vị-thuốc-chữa-bệnh-phụ-nữ">I. CÁC CÂY THUỐC VÀ VỊ THUỐC CHỮA BỆNH PHỤ NỮ</a>
       <ul>
-        <li><a href="#ích-mẫu-益母草">ÍCH MẪU 益母草</a></li>
-        <li><a href="#hương-phụ-香附">HƯƠNG PHỤ 香附</a></li>
-        <li><a href="#ngải-cứu-北艾">NGẢI CỨU 北艾</a></li>
-        <li><a href="#bạch-đồng-nữ-白侗女">BẠCH ĐỒNG NỮ 白侗女</a></li>
-        <li><a href="#cây-diếp-cá-魚腥草">CÂY DIẾP CÁ 魚腥草</a></li>
-        <li><a href="#cây-hồng-hoa-紅花">CÂY HỒNG HOA 紅花</a></li>
-        <li><a href="#cây-gai-宁麻">CÂY GAI 宁麻</a></li>
-        <li><a href="#cây-hoa-cứt-lợn-馬缨丹">CÂY HOA CỨT LỢN 馬缨丹</a></li>
-        <li><a href="#bán-hạ-半复">BÁN HẠ 半复</a></li>
-        <li><a href="#cây-bông-棉株">CÂY BÔNG 棉株</a></li>
-        <li><a href="#hạt-bông-棉籽">HẠT BÔNG 棉籽</a></li>
-        <li><a href="#cây-ngưu-tất-牛膝">CÂY NGƯU TẤT 牛膝</a></li>
-        <li><a href="#cây-tô-mộc-蘇木">CÂY TÔ MỘC 蘇木</a></li>
-        <li><a href="#cây-rau-ngót-冬闽菜">CÂY RAU NGÓT 冬闽菜</a></li>
+        <li><a href="#ích-mẫu-益母草">ÍCH MẪU 益母草</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-phối-thu-hái-và-chế-biến">B. Phân phối thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#hương-phụ-香附">HƯƠNG PHỤ 香附</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-1">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học-1">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-1">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-1">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#ngải-cứu-北艾">NGẢI CỨU 北艾</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-2">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-1">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học-2">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-2">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-2">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#bạch-đồng-nữ-白侗女">BẠCH ĐỒNG NỮ 白侗女</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-3">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-2">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hoá-học">C. Thành phần hoá học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-3">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-3">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-diếp-cá-魚腥草">CÂY DIẾP CÁ 魚腥草</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-4">A. Mô tả cây.</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-3">B. Phân bố thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hoá-học-1">C. Thành phần hoá học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-4">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-4">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-hồng-hoa-紅花">CÂY HỒNG HOA 紅花</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-5">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-4">B. Phân bố thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học-3">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-5">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-5">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-gai-宁麻">CÂY GAI 宁麻</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-6">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-5">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học-4">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-6">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-6">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-hoa-cứt-lợn-馬缨丹">CÂY HOA CỨT LỢN 馬缨丹</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-7">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-6">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hoá-học-2">C. Thành phần hoá học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-7">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-7">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#bán-hạ-半复">BÁN HẠ 半复</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-8">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-7">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hoá-học-3">C. Thành phần hoá học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-8">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-8">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-bông-棉株">CÂY BÔNG 棉株</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#hạt-bông-棉籽">HẠT BÔNG 棉籽</a>
+          <ul>
+            <li><a href="#a-thành-phần-hoá-học-của-hạt-bông">A. Thành phần hoá học của hạt bông</a></li>
+            <li><a href="#b-tác-dụng-dược-lý">B. Tác dụng dược lý</a></li>
+            <li><a href="#làm-thuốc-lợi-sữa-dùng-với-liều-5g-dưới-dạng-thuốc-sắc">Làm thuốc lợi sữa, dùng với liều 5g, dưới dạng thuốc sắc.</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-ngưu-tất-牛膝">CÂY NGƯU TẤT 牛膝</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-9">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-8">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hoá-học-4">C. Thành phần hoá học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-9">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-9">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-tô-mộc-蘇木">CÂY TÔ MỘC 蘇木</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-10">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-9">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học-5">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-10">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-10">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cây-rau-ngót-冬闽菜">CÂY RAU NGÓT 冬闽菜</a>
+          <ul>
+            <li><a href="#a-mô-tả-cây-11">A. Mô tả cây</a></li>
+            <li><a href="#b-phân-bố-thu-hái-và-chế-biến-10">B. Phân bố, thu hái và chế biến</a></li>
+            <li><a href="#c-thành-phần-hóa-học-6">C. Thành phần hóa học</a></li>
+            <li><a href="#d-tác-dụng-dược-lý-11">D. Tác dụng dược lý</a></li>
+            <li><a href="#e-công-dụng-và-liều-dùng-11">E. Công dụng và liều dùng</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1664,8 +1771,10 @@ Bộ môn dược liệu Trưòng đại học dược khoa có phối hợp cù
   <div class="col-12 col-lg-8 offset-0 offset-lg-1"></div>
 </div>
 </footer>
-<script data-precache src="/nctvtvn/assets/main/bundle.min.55d420591bdc419f1ead1f3d11f8c864796d2035bb5ce4f3fb9c43cb52fc6bcc.js" integrity="sha256-VdQgWRvcQZ8erR89EfjIZHltIDW7XOTz&#43;5xDy1L8a8w=" crossorigin="anonymous" async></script><script data-precache src="/nctvtvn/assets/icons/bundle.min.2afb6643b7cdde837754668abae3dceedc993b71ebefe8bc9c80af3e2e349075.js" integrity="sha256-KvtmQ7fN3oN3VGaKuuPc7tyZO3Hr7&#43;i8nICvPi40kHU=" crossorigin="anonymous" defer></script>
-<script data-precache src="/nctvtvn/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script>
+<script data-precache src="/nctvtvn/assets/main/bundle.min.40dc474b1a24fb2879fd47ee596f72f06eadecaf129eeae13d73e581e6c6471d.js" integrity="sha256-QNxHSxok&#43;yh5/UfuWW9y8G6t7K8SnurhPXPlgebGRx0=" crossorigin="anonymous" async></script><script data-precache src="/nctvtvn/assets/icons/bundle.min.a0ef099608ceb5121a368d10e043f74bf84852708a4b098661b2d2bdaaa9adb0.js" integrity="sha256-oO8JlgjOtRIaNo0Q4EP3S/hIUnCKSwmGYbLSvaqprbA=" crossorigin="anonymous" defer></script>
+<script data-precache src="/nctvtvn/assets/viewer/bundle.min.945567884be417f2aa4a3f7fb0171fc00a214c3c63dd586d110fc7b77d4d6077.js" integrity="sha256-lFVniEvkF/KqSj9/sBcfwAohTDxj3VhtEQ/Ht31NYHc=" crossorigin="anonymous" defer></script>
+  <script data-precache defer src="/nctvtvn/assets/katex/bundle.min.03ac5398efe9cd5ff276ab89d435a6957c1091f56b856658abfb204408d141ea.js" integrity="sha256-A6xTmO/pzV/ydquJ1DWmlXwQkfVrhWZYq/sgRAjRQeo=" crossorigin="anonymous"></script>
+
 
 
   </body>

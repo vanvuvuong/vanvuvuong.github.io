@@ -26,7 +26,7 @@
   <meta property="og:image:alt" content="Series" />
   <meta name="twitter:image:alt" content="Series" />
 <link rel="alternate" type="application/rss+xml" href="/nctvtvn/series/index.xml" title="Những cây thuốc vị thuốc Việt Nam" />
-<link data-precache rel="stylesheet" href="/nctvtvn/assets/main/bundle.min.84f1e23051d05d02b53b69fee6dbf6f1cf3af0ef01b1e47a88d09284cf7b6c90.css" integrity="sha256-hPHiMFHQXQK1O2n+5tv28c868O8BseR6iNCShM97bJA=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/nctvtvn/assets/main/bundle.min.18c2e066f368b5f3b07a59757cbaacb1561a25c4e87ee491dd1d91f47c0e023f.css" integrity="sha256-GMLgZvNotfOwell1fLqssVYaJcTofuSR3R2R9HwOAj8=" crossorigin="anonymous">
 
     <link data-precache rel="stylesheet" href="/nctvtvn/assets/viewer/bundle.min.16d2c85c4cae39a98f8cb7a977e95e554b174f91a5484c32605637156f49ca6b.css" integrity="sha256-FtLIXEyuOamPjLepd&#43;leVUsXT5GlSEwyYFY3FW9Jyms=" crossorigin="anonymous">
 
@@ -57,24 +57,21 @@ Những cây thuốc vị thuốc Việt Nam
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto">
         </ul>
         
-    <hr class="d-xxl-none">
-    <form class="search-bar ms-auto my-auto" action="" novalidate>
-      <div class="input-group align-items-center">
-        <span class="btn btn-search disabled position-absolute left-0 border-0 px-1">
-          <i class="fas fa-fw fa-search fa-lg"></i>
-        </span>
-        <input
-          class="my-1 form-control border-white rounded-5 search-input bg-body"
-          name="q"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          required>
-          <span class="search-shortcut position-absolute end-0 top-0 me-2">
-            <kbd class="text-dark bg-white opacity-75 rounded-3 shadow border border-primary py-1 fw-bold">/</kbd>
-          </span>
-      </div>
-    </form><hr class="d-xxl-none">
+  <hr class="d-xxl-none">
+  <div class="search-bar ms-auto my-auto">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <div id="search"></div>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false
+        });
+      });
+    </script>
+  </div><hr class="d-xxl-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
 <li class="nav-item dropdown col-6 col-xxl-auto">
     <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -266,8 +263,8 @@ Những cây thuốc vị thuốc Việt Nam
   <div class="col-12 col-lg-8 offset-0 offset-lg-1"></div>
 </div>
 </footer>
-<script data-precache src="/nctvtvn/assets/main/bundle.min.55d420591bdc419f1ead1f3d11f8c864796d2035bb5ce4f3fb9c43cb52fc6bcc.js" integrity="sha256-VdQgWRvcQZ8erR89EfjIZHltIDW7XOTz&#43;5xDy1L8a8w=" crossorigin="anonymous" async></script><script data-precache src="/nctvtvn/assets/icons/bundle.min.2afb6643b7cdde837754668abae3dceedc993b71ebefe8bc9c80af3e2e349075.js" integrity="sha256-KvtmQ7fN3oN3VGaKuuPc7tyZO3Hr7&#43;i8nICvPi40kHU=" crossorigin="anonymous" defer></script>
-<script data-precache src="/nctvtvn/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script>
+<script data-precache src="/nctvtvn/assets/main/bundle.min.40dc474b1a24fb2879fd47ee596f72f06eadecaf129eeae13d73e581e6c6471d.js" integrity="sha256-QNxHSxok&#43;yh5/UfuWW9y8G6t7K8SnurhPXPlgebGRx0=" crossorigin="anonymous" async></script><script data-precache src="/nctvtvn/assets/icons/bundle.min.a0ef099608ceb5121a368d10e043f74bf84852708a4b098661b2d2bdaaa9adb0.js" integrity="sha256-oO8JlgjOtRIaNo0Q4EP3S/hIUnCKSwmGYbLSvaqprbA=" crossorigin="anonymous" defer></script>
+<script data-precache src="/nctvtvn/assets/viewer/bundle.min.945567884be417f2aa4a3f7fb0171fc00a214c3c63dd586d110fc7b77d4d6077.js" integrity="sha256-lFVniEvkF/KqSj9/sBcfwAohTDxj3VhtEQ/Ht31NYHc=" crossorigin="anonymous" defer></script>
 
   </body>
 </html>
