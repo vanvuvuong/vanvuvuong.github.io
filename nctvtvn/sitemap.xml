@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/nctvtvn/authors/</loc>
+    <loc>http://localhost:1313/nctvtvn/authors/</loc>
   </url><url>
-    <loc>https://example.org/nctvtvn/categories/</loc>
+    <loc>http://localhost:1313/nctvtvn/categories/</loc>
   </url><url>
-    <loc>https://example.org/nctvtvn/</loc>
+    <loc>http://localhost:1313/nctvtvn/</loc>
   </url><url>
-    <loc>https://example.org/nctvtvn/1-phan-1-phan-chung/</loc>
+    <loc>http://localhost:1313/nctvtvn/1-phan-1-phan-chung/</loc>
   </url><url>
-    <loc>https://example.org/nctvtvn/2-phan-2-1-benh-phu-nu/</loc>
+    <loc>http://localhost:1313/nctvtvn/2-phan-2-1-benh-phu-nu/</loc>
   </url><url>
-    <loc>https://example.org/nctvtvn/series/</loc>
+    <loc>http://localhost:1313/nctvtvn/series/</loc>
   </url><url>
-    <loc>https://example.org/nctvtvn/tags/</loc>
+    <loc>http://localhost:1313/nctvtvn/tags/</loc>
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Những cây thuốc và vị thuốc Việt Nam on Những cây thuốc vị thuốc Việt Nam</title>
-    <link>https://example.org/nctvtvn/</link>
+    <link>http://localhost:1313/nctvtvn/</link>
     <description>Recent content in Những cây thuốc và vị thuốc Việt Nam on Những cây thuốc vị thuốc Việt Nam</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>
-</copyright><atom:link href="https://example.org/nctvtvn/index.xml" rel="self" type="application/rss+xml" />
+</copyright><atom:link href="http://localhost:1313/nctvtvn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Phần I - Phần chung</title>
-      <link>https://example.org/nctvtvn/1-phan-1-phan-chung/</link>
+      <link>http://localhost:1313/nctvtvn/1-phan-1-phan-chung/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/nctvtvn/1-phan-1-phan-chung/</guid>
+      <guid>http://localhost:1313/nctvtvn/1-phan-1-phan-chung/</guid>
       <description><![CDATA[<p>Giáo sư Tiến sĩ Đỗ Tất Lợi
 Những cây thuốc và vị thuốc Việt Nam
 Nhà xuất bản Y học
@@ -37,9 +37,9 @@ KHUẤT DUY LINH ANH</p>]]></description>
     
     <item>
       <title>Phần II.I - NHỮNG CÂY THUỐC VÀ VỊ THUỐC</title>
-      <link>https://example.org/nctvtvn/2-phan-2-1-benh-phu-nu/</link>
+      <link>http://localhost:1313/nctvtvn/2-phan-2-1-benh-phu-nu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/nctvtvn/2-phan-2-1-benh-phu-nu/</guid>
+      <guid>http://localhost:1313/nctvtvn/2-phan-2-1-benh-phu-nu/</guid>
       <description><![CDATA[<h1 id="phần-ii-những-cây-thuốc-và-vị-thuốc" data-numberify>Phần II: NHỮNG CÂY THUỐC VÀ VỊ THUỐC<a class="anchor ms-1" href="#phần-ii-những-cây-thuốc-và-vị-thuốc"></a></h1>
 
 <h2 id="i-các-cây-thuốc-và-vị-thuốc-chữa-bệnh-phụ-nữ" data-numberify>I. CÁC CÂY THUỐC VÀ VỊ THUỐC CHỮA BỆNH PHỤ NỮ<a class="anchor ms-1" href="#i-các-cây-thuốc-và-vị-thuốc-chữa-bệnh-phụ-nữ"></a></h2>

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Series on Những cây thuốc vị thuốc Việt Nam</title>
-    <link>https://example.org/nctvtvn/series/</link>
+    <link>http://localhost:1313/nctvtvn/series/</link>
     <description>Recent content in Series on Những cây thuốc vị thuốc Việt Nam</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>
-</copyright><atom:link href="https://example.org/nctvtvn/series/index.xml" rel="self" type="application/rss+xml" />
+</copyright><atom:link href="http://localhost:1313/nctvtvn/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
 
