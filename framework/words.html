@@ -930,6 +930,7 @@
     outline: 2px solid var(--red);
     outline-offset: 2px
   }
+
   #card .sec-stroke.hidden {
     display: none
   }
@@ -1003,6 +1004,7 @@
       flex: 1 1 100%
     }
   }
+
 </style>
 </head>
 <body>
@@ -1074,7 +1076,6 @@
         <button class="strokebtn" type="button" aria-label="Xem lại nét vẽ">↻ Xem lại</button>
       </div>
     </div>
-
     <div class="cq"></div>
     <div class="big"><span class="n mono">0</span><span class="u"></span></div>
     <div class="sub"></div>
@@ -1632,7 +1633,8 @@ var HanziWriter=function(){"use strict";var t;const e="undefined"==typeof window
         const label = owner.labels[i];
         let advance = 0;
         for (const char of label) advance += /^\s$/u.test(char) ? this.spaceAdvance : this.glyphs.get(char)?.advance ?? 1;
-        const maxFontSize = Math.min(28, 12 * Math.sqrt(scene.camera.zoom));
+        const dotZoom = Math.max(0.65, scene.camera.zoom);
+        const maxFontSize = Math.min(28, 12 * dotZoom);
         let fontSize = Math.min(maxFontSize, radius);
         const maxWidth = radius * 1.9;
         if (fontSize * advance > maxWidth) fontSize = maxWidth / advance;
@@ -1802,9 +1804,10 @@ var HanziWriter=function(){"use strict";var t;const e="undefined"==typeof window
             context.beginPath(); context.arc(x, y, radius + 2.5, 0, TAU); context.stroke();
           }
           const label = owner.labels[i].join('');
+          const dotZoom = Math.max(0.65, scene.camera.zoom);
           if (label && radius >= 7) {
             const maxWidth = radius * 1.9;
-            const maxFontSize = Math.min(28, 12 * Math.sqrt(scene.camera.zoom));
+            const maxFontSize = Math.min(28, 12 * dotZoom);
             let fontSize = Math.min(maxFontSize, radius);
             if (fontSize * owner.labels[i].length > maxWidth) fontSize = maxWidth / owner.labels[i].length;
             if (fontSize >= 5) {
